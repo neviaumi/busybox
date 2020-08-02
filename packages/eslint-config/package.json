@@ -1,0 +1,30 @@
+{
+  "name": "@busybox/eslint-config",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@spotify/eslint-config": "8.0.2",
+    "@spotify/web-scripts-utils": "8.0.0",
+    "@typescript-eslint/eslint-plugin": "3.7.1",
+    "@typescript-eslint/parser": "3.7.1",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-jest": "23.20.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-react": "7.20.5",
+    "eslint-plugin-react-hooks": "4.0.8"
+  },
+  "peerDependencies": {
+    "eslint": ">=7 <8",
+    "prettier": ">=2 <3",
+    "typescript": ">=3 <4"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "devDependencies": {
+    "eslint": "7.6.0"
+  }
+}

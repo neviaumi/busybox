@@ -1,0 +1,15 @@
+{
+  "name": "@busybox/prettier-config",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "prettier": ">=2 <3"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "dependencies": {
+    "@spotify/prettier-config": "8.0.0"
+  }
+}
