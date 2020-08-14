@@ -6,6 +6,8 @@ module.exports = {
     {
       patterns: ['packages/**/package.json'],
       rules: {
+        'require-repository': 'error',
+        'require-repository-directory': 'error',
         'require-publishConfig': 'error',
         'valid-values-publishConfig': [
           'error',

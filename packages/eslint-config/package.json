@@ -3,6 +3,11 @@
   "version": "0.0.0",
   "license": "MIT",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:davidNHK/busybox.git",
+    "directory": "packages/eslint-config"
+  },
   "dependencies": {
     "@spotify/eslint-config": "8.0.2",
     "@spotify/web-scripts-utils": "8.0.0",

@@ -11,6 +11,11 @@
       "automerge": true
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:davidNHK/busybox.git",
+    "directory": "packages/renovate-config"
+  },
   "engines": {
     "node": ">=12"
   },
