@@ -31,8 +31,7 @@
     "typescript": ">=3 <4"
   },
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
   "repository": {
     "directory": "packages/eslint-config",

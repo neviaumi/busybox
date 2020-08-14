@@ -10,10 +10,7 @@ module.exports = {
         'require-repository': 'error',
         'require-repository-directory': 'error',
         'valid-values-name-scope': ['error', ['@busybox']],
-        'valid-values-publishConfig': [
-          'error',
-          [{ access: 'public', registry: 'https://npm.pkg.github.com/' }],
-        ],
+        'valid-values-publishConfig': ['error', [{ access: 'public' }]],
       },
     },
   ],
