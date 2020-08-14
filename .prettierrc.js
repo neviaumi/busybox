@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('./packages/prettier-config'),
+  ...require('@busybox/prettier-config'),
 };
