@@ -22,6 +22,10 @@
   "engines": {
     "node": ">=12"
   },
+  "files": [
+    "index.js",
+    "preset"
+  ],
   "license": "MIT",
   "main": "index.js",
   "name": "@busybox/eslint-config",

@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  '*.{json,js,ts}': ['prettier --write', 'eslint --fix'],
+  '*.{json,js,ts}': ['eslint --fix', 'prettier --write'],
   '*.{md,yml,yaml}': ['prettier --write'],
-  'package.json': ['prettier --write', 'npmPkgJsonLint'],
+  'package.json': ['eslint --fix', 'prettier --write', 'npmPkgJsonLint'],
 };
