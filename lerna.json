@@ -1,5 +1,19 @@
 {
-  "packages": ["packages/*"],
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "ignoreChanges": [
+        "**/__fixtures__/**",
+        "**/__mocks__/**",
+        "**/__tests__/**",
+        "yarn.lock",
+        "CHANGELOG.md"
+      ],
+      "message": "chore(release): publish"
+    }
+  },
   "npmClient": "yarn",
+  "packages": ["packages/*"],
+  "useWorkspaces": true,
   "version": "independent"
 }

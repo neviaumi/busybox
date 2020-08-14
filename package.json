@@ -1,27 +1,14 @@
 {
-  "name": "busybox",
-  "version": "1.0.0",
-  "license": "MIT",
   "author": "David Ng <david.ng.dev@gmail.com>",
-  "repository": "git@github.com:davidNHK/busybox.git",
-  "workspaces": [
-    "packages/*"
-  ],
-  "scripts": {
-    "eslint": "eslint --fix --ext=ts,js",
-    "lint:js": "yarn eslint .",
-    "lint:package-json": "yarn npmPkgJsonLint ."
-  },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "@commitlint/prompt"
     }
   },
   "devDependencies": {
     "@commitlint/cli": "9.1.1",
     "@commitlint/config-lerna-scopes": "9.1.1",
     "commitizen": "4.1.2",
-    "cz-conventional-changelog": "3.2.0",
     "eslint": "7.6.0",
     "husky": "4.2.5",
     "lerna": "3.22.1",
@@ -33,13 +20,29 @@
   "engines": {
     "node": ">=12"
   },
-  "private": true,
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged",
       "pre-push": "yarn lerna run test",
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
+  },
+  "license": "MIT",
+  "name": "busybox",
+  "private": true,
+  "repository": "git@github.com:davidNHK/busybox.git",
+  "scripts": {
+    "eslint": "eslint --fix --ext=ts,js,json",
+    "lint:js": "yarn eslint .",
+    "lint:package-json": "yarn npmPkgJsonLint .",
+    "test": "yarn lerna run test"
+  },
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "@commitlint/prompt": "9.1.1"
   }
 }

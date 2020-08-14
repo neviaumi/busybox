@@ -1,9 +1,6 @@
 {
-  "name": "@busybox/eslint-config",
-  "version": "0.0.0",
-  "license": "MIT",
-  "main": "index.js",
   "dependencies": {
+    "@busybox/eslint-plugin-json": "0.0.0",
     "@spotify/eslint-config": "8.0.2",
     "@spotify/web-scripts-utils": "8.0.0",
     "@typescript-eslint/eslint-plugin": "3.9.0",
@@ -15,20 +12,32 @@
     "eslint-plugin-prettier": "3.1.4",
     "eslint-plugin-react": "7.20.5",
     "eslint-plugin-react-hooks": "4.0.8",
-    "eslint-plugin-testing-library": "3.6.0"
+    "eslint-plugin-sort-keys-fix": "1.1.1",
+    "eslint-plugin-testing-library": "3.6.0",
+    "eslint-plugin-typescript-sort-keys": "1.3.0"
   },
   "devDependencies": {
     "eslint": "7.6.0"
   },
+  "engines": {
+    "node": ">=12"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@busybox/eslint-config",
   "peerDependencies": {
     "eslint": ">=7 <8",
     "prettier": ">=2 <3",
     "typescript": ">=3 <4"
   },
-  "engines": {
-    "node": ">=12"
-  },
   "publishConfig": {
-    "access": "public"
-  }
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "directory": "packages/eslint-config",
+    "type": "git",
+    "url": "git@github.com:davidNHK/busybox.git"
+  },
+  "version": "0.0.0"
 }

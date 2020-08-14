@@ -1,20 +1,26 @@
 {
-  "name": "@busybox/renovate-config",
-  "version": "1.0.0",
-  "license": "MIT",
-  "renovate-config": {
-    "default": {
-      "extends": [
-        "config:base",
-        ":pinAllExceptPeerDependencies"
-      ],
-      "automerge": true
-    }
-  },
   "engines": {
     "node": ">=12"
   },
+  "license": "MIT",
+  "name": "@busybox/renovate-config",
   "publishConfig": {
-    "access": "public"
-  }
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "renovate-config": {
+    "default": {
+      "automerge": true,
+      "extends": [
+        "config:base",
+        ":pinAllExceptPeerDependencies"
+      ]
+    }
+  },
+  "repository": {
+    "directory": "packages/renovate-config",
+    "type": "git",
+    "url": "git@github.com:davidNHK/busybox.git"
+  },
+  "version": "1.0.0"
 }
