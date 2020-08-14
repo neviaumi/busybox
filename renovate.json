@@ -1,7 +1,4 @@
 {
-  "extends": [
-    "config:base",
-    ":pinAllExceptPeerDependencies"
-  ],
-  "automerge": true
+  "automerge": true,
+  "extends": ["config:base", ":pinAllExceptPeerDependencies"]
 }

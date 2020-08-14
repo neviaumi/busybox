@@ -6,14 +6,14 @@ module.exports = {
     {
       patterns: ['packages/**/package.json'],
       rules: {
+        'require-publishConfig': 'error',
         'require-repository': 'error',
         'require-repository-directory': 'error',
-        'require-publishConfig': 'error',
+        'valid-values-name-scope': ['error', ['@busybox']],
         'valid-values-publishConfig': [
           'error',
           [{ access: 'public', registry: 'https://npm.pkg.github.com/' }],
         ],
-        'valid-values-name-scope': ['error', ['@busybox']],
       },
     },
   ],

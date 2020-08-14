@@ -1,24 +1,24 @@
 {
-  "name": "@busybox/npm-package-json-lint-config",
-  "version": "1.0.0",
-  "license": "MIT",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:davidNHK/busybox.git",
-    "directory": "packages/npm-package-json-lint-config"
-  },
   "dependencies": {
     "npm-package-json-lint-config-default": "3.0.0"
-  },
-  "peerDependencies": {
-    "npm-package-json-lint": ">=5"
   },
   "engines": {
     "node": ">=12"
   },
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@busybox/npm-package-json-lint-config",
+  "peerDependencies": {
+    "npm-package-json-lint": ">=5"
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
-  }
+  },
+  "repository": {
+    "directory": "packages/npm-package-json-lint-config",
+    "type": "git",
+    "url": "git@github.com:davidNHK/busybox.git"
+  },
+  "version": "1.0.0"
 }

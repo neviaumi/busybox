@@ -1,10 +1,17 @@
 module.exports = {
-  extends: [
-    'plugin:react/recommended',
-    'eslint-config-prettier/react',
-    'plugin:testing-library/react',
-  ],
   overrides: [
+    {
+      extends: [
+        'plugin:react/recommended',
+        'eslint-config-prettier/react',
+        'plugin:testing-library/react',
+      ],
+      files: ['*.jsx', '*.tsx'],
+      rules: {
+        'react-hooks/exhaustive-deps': 'error',
+        'react-hooks/rules-of-hooks': 'error',
+      },
+    },
     {
       files: ['*.test.*'],
       rules: {
@@ -19,8 +26,4 @@ module.exports = {
     'eslint-plugin-react-hooks',
     'testing-library',
   ],
-  rules: {
-    'react-hooks/exhaustive-deps': 'error',
-    'react-hooks/rules-of-hooks': 'error',
-  },
 };
