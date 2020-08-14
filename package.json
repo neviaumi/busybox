@@ -10,7 +10,8 @@
   "scripts": {
     "eslint": "eslint --fix --ext=ts,js",
     "lint:js": "yarn eslint .",
-    "lint:package-json": "yarn npmPkgJsonLint ."
+    "lint:package-json": "yarn npmPkgJsonLint .",
+    "test": "yarn lerna run test"
   },
   "config": {
     "commitizen": {
