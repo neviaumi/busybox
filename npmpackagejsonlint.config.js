@@ -12,6 +12,7 @@ module.exports = {
             exceptions: ['@busybox/eslint-plugin-json'],
           },
         ],
+        'require-files': 'error',
         'require-publishConfig': 'error',
         'require-repository': 'error',
         'require-repository-directory': 'error',
