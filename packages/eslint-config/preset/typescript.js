@@ -2,9 +2,8 @@ module.exports = {
   extends: [
     'plugin:@typescript-eslint/recommended',
     'plugin:import/typescript',
-  ].filter(s => !!s),
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint/eslint-plugin'],
+    'plugin:typescript-sort-keys/recommended',
+  ],
   overrides: [
     {
       files: ['typings/**/*.d.ts'],
@@ -19,4 +18,7 @@ module.exports = {
       },
     },
   ],
+  parser: '@typescript-eslint/parser',
+
+  plugins: ['@typescript-eslint/eslint-plugin', 'typescript-sort-keys'],
 };
