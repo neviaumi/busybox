@@ -6,7 +6,7 @@ module.exports = {
         '@busybox/json/sorted-keys': [
           'error',
           {
-            indentSpaces: 4,
+            indentSpaces: 2,
             order: 'asc',
           },
         ],
