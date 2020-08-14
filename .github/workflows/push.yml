@@ -18,4 +18,5 @@ jobs:
         with:
           node-version: 12.x
       - run: bash ./scripts/setup.sh
+      - run: bash ./scripts/lint.sh
       - run: bash ./scripts/test.sh
