@@ -1,4 +1,17 @@
 {
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "message": "chore(release): publish",
+      "ignoreChanges": [
+        "**/__fixtures__/**",
+        "**/__mocks__/**",
+        "**/__tests__/**",
+        "yarn.lock",
+        "CHANGELOG.md"
+      ]
+    }
+  },
   "packages": ["packages/*"],
   "npmClient": "yarn",
   "version": "independent"
