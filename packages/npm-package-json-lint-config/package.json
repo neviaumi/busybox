@@ -1,0 +1,18 @@
+{
+  "name": "@busybox/npm-package-json-lint-config",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "npm-package-json-lint-config-default": "3.0.0"
+  },
+  "peerDependencies": {
+    "npm-package-json-lint": ">=5"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
