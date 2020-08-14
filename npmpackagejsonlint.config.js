@@ -6,6 +6,12 @@ module.exports = {
     {
       patterns: ['packages/**/package.json'],
       rules: {
+        'prefer-absolute-version-dependencies': [
+          'error',
+          {
+            exceptions: ['@busybox/eslint-plugin-json'],
+          },
+        ],
         'require-publishConfig': 'error',
         'require-repository': 'error',
         'require-repository-directory': 'error',

@@ -9,7 +9,7 @@
         "yarn.lock",
         "CHANGELOG.md"
       ],
-      "message": "chore(release): publish"
+      "message": "chore(release): publish[skip ci]"
     }
   },
   "npmClient": "yarn",
