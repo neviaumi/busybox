@@ -1,26 +1,26 @@
 {
-    "dependencies": {
-        "@spotify/prettier-config": "8.0.0"
-    },
-    "engines": {
-        "node": ">=12"
-    },
-    "files": [
-        "index.js"
-    ],
-    "license": "MIT",
-    "main": "index.js",
-    "name": "@busybox/prettier-config",
-    "peerDependencies": {
-        "prettier": ">=2 <3"
-    },
-    "publishConfig": {
-        "access": "public"
-    },
-    "repository": {
-        "directory": "packages/prettier-config",
-        "type": "git",
-        "url": "git@github.com:davidNHK/busybox.git"
-    },
-    "version": "1.1.0"
+  "dependencies": {
+    "@spotify/prettier-config": "8.0.0"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "files": [
+    "index.js"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@busybox/prettier-config",
+  "peerDependencies": {
+    "prettier": ">=2 <3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": "packages/prettier-config",
+    "type": "git",
+    "url": "git@github.com:davidNHK/busybox.git"
+  },
+  "version": "1.1.0"
 }
