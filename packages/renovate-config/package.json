@@ -1,0 +1,20 @@
+{
+  "name": "@busybox/renovate-config",
+  "version": "1.0.0",
+  "license": "MIT",
+  "renovate-config": {
+    "default": {
+      "extends": [
+        "config:base",
+        ":pinAllExceptPeerDependencies"
+      ],
+      "automerge": true
+    }
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

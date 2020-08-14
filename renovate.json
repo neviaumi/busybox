@@ -1,4 +1,7 @@
 {
-  "extends": ["monorepo:lerna"],
+  "extends": [
+    "config:base",
+    ":pinAllExceptPeerDependencies"
+  ],
   "automerge": true
 }
