@@ -1,8 +1,8 @@
 {
   "name": "@busybox/eslint-config",
   "version": "0.0.0",
-  "main": "index.js",
   "license": "MIT",
+  "main": "index.js",
   "dependencies": {
     "@spotify/eslint-config": "8.0.2",
     "@spotify/web-scripts-utils": "8.0.0",
@@ -14,7 +14,11 @@
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "3.1.4",
     "eslint-plugin-react": "7.20.5",
-    "eslint-plugin-react-hooks": "4.0.8"
+    "eslint-plugin-react-hooks": "4.0.8",
+    "eslint-plugin-testing-library": "3.6.0"
+  },
+  "devDependencies": {
+    "eslint": "7.6.0"
   },
   "peerDependencies": {
     "eslint": ">=7 <8",
@@ -24,7 +28,7 @@
   "engines": {
     "node": ">=12"
   },
-  "devDependencies": {
-    "eslint": "7.6.0"
+  "publishConfig": {
+    "access": "public"
   }
 }

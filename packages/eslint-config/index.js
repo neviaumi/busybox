@@ -5,13 +5,17 @@ const hasReact = hasConfig([
   { type: 'dependency', dependency: 'react', dependencyType: 'peer' },
 ]);
 
+const hasTypescript = hasConfig([
+  { type: 'dependency', dependency: 'typescript' },
+  { type: 'dependency', dependency: 'typescript', dependencyType: 'dev' },
+  { type: 'file', pattern: 'tsconfig.json' },
+]);
+
 module.exports = {
   extends: [
     '@spotify',
-    './preset/typescript.js',
+    './preset/base.js',
+    hasTypescript ? './preset/typescript.js' : '',
     hasReact ? './preset/react.js' : '',
   ].filter(s => !!s),
-  parserOptions: {
-    ecmaVersion: 2020,
-  },
 };
