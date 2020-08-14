@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@busybox/eslint-plugin-json": "^0.1.0",
+    "@busybox/eslint-plugin-json": "^0.1.1",
     "@spotify/eslint-config": "8.0.2",
     "@spotify/web-scripts-utils": "8.0.0",
     "@typescript-eslint/eslint-plugin": "3.9.0",
@@ -42,5 +42,5 @@
     "type": "git",
     "url": "git@github.com:davidNHK/busybox.git"
   },
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
