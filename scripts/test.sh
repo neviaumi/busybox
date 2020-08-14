@@ -2,6 +2,4 @@
 
 set -ex
 
-yarn lint:package-json
-yarn lint:js
 yarn test

@@ -24,5 +24,3 @@ jobs:
       - run: bash ./scripts/setup.sh
       - run: bash ./scripts/test.sh
       - run: bash ./scripts/publish.sh
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v2
