@@ -8,7 +8,7 @@
   },
   "description": "eslint plugin for JSON files.",
   "devDependencies": {
-    "eslint": "7.6.0",
+    "eslint": "7.7.0",
     "jest": "26.4.0"
   },
   "engines": {
