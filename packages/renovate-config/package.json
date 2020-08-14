@@ -5,8 +5,7 @@
   "license": "MIT",
   "name": "@busybox/renovate-config",
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
   "renovate-config": {
     "default": {

@@ -12,8 +12,7 @@
     "npm-package-json-lint": ">=5"
   },
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
   "repository": {
     "directory": "packages/npm-package-json-lint-config",
