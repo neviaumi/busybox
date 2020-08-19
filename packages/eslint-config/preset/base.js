@@ -60,10 +60,10 @@ module.exports = {
       },
     },
     {
-      extends: ['plugin:@busybox/json/recommended'],
+      extends: ['plugin:jsonc/recommended-with-json'],
       files: ['*.json'],
       rules: {
-        'no-unused-expressions': 'off',
+        'jsonc/sort-keys': 'error',
       },
     },
   ],
@@ -72,6 +72,5 @@ module.exports = {
     'eslint-plugin-jest',
     'eslint-plugin-prettier',
     'sort-keys-fix',
-    '@busybox/json',
   ],
 };
