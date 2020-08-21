@@ -1,0 +1,37 @@
+{
+  "dependencies": {
+    "@babel/core": "7.11.4",
+    "@babel/plugin-proposal-decorators": "7.10.5",
+    "@babel/plugin-transform-runtime": "7.11.0",
+    "@babel/preset-env": "7.11.0",
+    "@babel/preset-typescript": "7.10.4",
+    "@spotify/web-scripts-utils": "8.0.0",
+    "babel-plugin-transform-typescript-metadata": "0.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.10.5"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "files": [
+    "index.js"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@busybox/babel-preset",
+  "peerDependencies": {
+    "@babel/cli": ">= 7",
+    "@babel/core": ">= 7",
+    "typescript": ">= 4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": "packages/babel-preset",
+    "type": "git",
+    "url": "git@github.com:davidNHK/busybox.git"
+  },
+  "version": "1.0.0"
+}

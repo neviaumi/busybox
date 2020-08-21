@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/davidNHK/busybox/compare/@busybox/npm-package-json-lint-config@1.1.0...@busybox/npm-package-json-lint-config@1.1.3) (2020-08-19)
+
+
+### Bug Fixes
+
+* package version ([4682c2e](https://github.com/davidNHK/busybox/commit/4682c2e32dd0f0cdcf3e2803c6718fa528a86bf2))
+
+
+
+
+
 # 1.1.0 (2020-08-14)
 
 

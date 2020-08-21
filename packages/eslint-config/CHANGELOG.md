@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@0.1.0...@busybox/eslint-config@3.0.0) (2020-08-19)
+
+
+### Bug Fixes
+
+* package version ([4682c2e](https://github.com/davidNHK/busybox/commit/4682c2e32dd0f0cdcf3e2803c6718fa528a86bf2))
+
+
+* feat!(eslint-config): remove my own eslint-plugin-json ([23b52bc](https://github.com/davidNHK/busybox/commit/23b52bca7056b4598c57940e1707817155a3502a))
+
+
+### BREAKING CHANGES
+
+* replace my own eslint-plugin-json with eslint-plugin-jsonc
+
+
+
+
+
 # 0.1.0 (2020-08-14)
 
 

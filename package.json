@@ -6,6 +6,8 @@
     }
   },
   "devDependencies": {
+    "@babel/cli": "7.10.5",
+    "@babel/core": "7.11.4",
     "@commitlint/cli": "9.1.2",
     "@commitlint/config-lerna-scopes": "9.1.2",
     "@commitlint/prompt": "9.1.2",
@@ -34,6 +36,7 @@
   "private": true,
   "repository": "git@github.com:davidNHK/busybox.git",
   "scripts": {
+    "build": "yarn lerna run build",
     "eslint": "eslint --fix --ext=ts,js,json",
     "lint:js": "yarn eslint .",
     "lint:package-json": "yarn npmPkgJsonLint .",
