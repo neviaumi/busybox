@@ -1,4 +1,4 @@
-name: Auto merged PR
+name: Auto merge PR
 on:
   pull_request:
     types: [labeled]
