@@ -1,21 +1,15 @@
 {
   "compilerOptions": {
-    "declaration": true,
-    "esModuleInterop": true,
     "experimentalDecorators": true,
     "importsNotUsedAsValues": "error",
     "incremental": true,
-    "isolatedModules": true,
     "jsx": "react",
-    "lib": ["ES2020", "DOM"],
-    "moduleResolution": "node",
-    "noEmit": true,
-    "noEmitOnError": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": true,
-    "strict": true,
-    "target": "ES2020",
+    "target": "ESNext",
     "useDefineForClassFields": true
-  }
+  },
+  "extends": "@spotify/tsconfig"
 }
