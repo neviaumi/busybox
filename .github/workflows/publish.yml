@@ -24,3 +24,10 @@ jobs:
       - run: bash ./scripts/setup.sh
       - run: bash ./scripts/test.sh
       - run: bash ./scripts/publish.sh
+      - name: pull-request
+        uses: repo-sync/pull-request@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          destination_branch: 'development'
+          pr_title: 'docs: publish changes log and version bump'
+          pr_label: 'automerge'
