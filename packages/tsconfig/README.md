@@ -23,6 +23,7 @@ In tsconfig.json for lib
 ```json
 {
   "compilerOptions": {
+    "declaration": true,
     "emitDeclarationOnly": true,
     "noEmit": false,
     "outDir": "./dist",
