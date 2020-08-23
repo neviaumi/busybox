@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.0.0...@busybox/eslint-config@5.1.0) (2020-08-23)
+
+
+### Features
+
+* **eslint-config:** disable some typescript rules ([f3e9a51](https://github.com/davidNHK/busybox/commit/f3e9a51b7ac95031a4fbe7db71430efc548f2e1e))
+
+
+
+
+
 # [5.0.0](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@4.0.0...@busybox/eslint-config@5.0.0) (2020-08-22)
 
 

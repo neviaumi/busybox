@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/davidNHK/busybox/compare/@busybox/tsconfig@1.2.0...@busybox/tsconfig@1.3.0) (2020-08-23)
+
+
+### Features
+
+* **tsconfig:** enable allowSyntheticDefaultImports ([1cd7d99](https://github.com/davidNHK/busybox/commit/1cd7d99f7d383aeee42d852cf25ff1557c46e145))
+
+
+
+
+
 # 1.2.0 (2020-08-22)
 
 
