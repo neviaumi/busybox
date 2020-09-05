@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.1.1](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.1.0...@busybox/eslint-config@5.1.1) (2020-09-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-jest to v24 ([64a90ce](https://github.com/davidNHK/busybox/commit/64a90cebb5c69b8b01d9a9299eaaee277eef4aa5))
+* **deps:** update dependency eslint-plugin-testing-library to v3.8.0 ([1cfaade](https://github.com/davidNHK/busybox/commit/1cfaadeae182ef08b8eff3fe2709ff4da767dd4b))
+* **deps:** update typescript-eslint monorepo to v3.10.0 ([3e309c4](https://github.com/davidNHK/busybox/commit/3e309c458bc6f2f78c61395617659493e397d7a9))
+* **deps:** update typescript-eslint monorepo to v3.10.1 ([b1fcb4c](https://github.com/davidNHK/busybox/commit/b1fcb4c6f1ac90efbf3b93a2f7173d2fb9b83097))
+* **deps:** update typescript-eslint monorepo to v4 ([c635a52](https://github.com/davidNHK/busybox/commit/c635a5271956dc52438aa1c5d319f8b939660bfe))
+
+
+
+
+
 # [5.1.0](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.0.0...@busybox/eslint-config@5.1.0) (2020-08-23)
 
 
