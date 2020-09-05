@@ -18,7 +18,7 @@ module.exports = {
 
         'jest/expect-expect': 'error',
 
-        'jest/no-test-callback': 'error',
+        'jest/no-done-callback': 'error',
 
         'jest/prefer-spy-on': 'error',
 
