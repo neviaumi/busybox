@@ -3621,10 +3621,10 @@ commander@^6.0.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-6.0.0.tgz#2b270da94f8fb9014455312f829a1129dbf8887e"
   integrity sha512-s7EA+hDtTYNhuXkTlhqew4txMZVdszBmKWSPEMxGr8ru8JXR7bLUFIAtPhcSuFdJQ0ILMxnJi8GkQL0yvDy/YA==
 
-commitiquette@1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/commitiquette/-/commitiquette-1.0.7.tgz#5b71dd6965757e93c09d6a328c046f6e068a37f8"
-  integrity sha512-YVt1TNMw7tk8w83Te7QyQXJMamwVa1ycHOcbWFKtwSQ72BSZKhRK3l37tkmcB9MuffKd8aa3l2UXSaz3/HzmUQ==
+commitiquette@1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/commitiquette/-/commitiquette-1.0.8.tgz#551f01c9e15bd5cbce895cd8fe44f9146308017c"
+  integrity sha512-c8x7uqASY8PczgdIdVHAnghM0RosfCDJjp1ZNrbIgPY1lCHiddOV0R4hOa+bIE02Se3teI0c7aXyB0EnYdFMPw==
   dependencies:
     chalk "^3.0.0"
     change-case "^4.1.1"
