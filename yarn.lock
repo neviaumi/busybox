@@ -2276,22 +2276,22 @@
   resolved "https://registry.yarnpkg.com/@spotify/eslint-config-react/-/eslint-config-react-8.0.2.tgz#91af3c58b22d49a96795336ed66927e722cda430"
   integrity sha512-V0gzO/jWmjhODLINAfeunHj+OBdj/cQeVDw+92ZUlkonAg6BZLjX6Vy8jeIUFjfgmVOtI9eKbcApxaurj1jN6g==
 
-"@spotify/eslint-config-typescript@^8.0.1":
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/@spotify/eslint-config-typescript/-/eslint-config-typescript-8.0.1.tgz#2d3ee56a8a3f945454109086639cde47251d1e62"
-  integrity sha512-ALkA4WA2ZikX7grkptZ36J1N/iap0IJeViy6/ZcxSkm6yEy2BYslmS2MdoJ5PV/DfZ3Z/21d/+XYFqVEpcbrXg==
+"@spotify/eslint-config-typescript@^8.1.1":
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/@spotify/eslint-config-typescript/-/eslint-config-typescript-8.1.1.tgz#a8c6f74ef9445fe740008ae3a26003a2eef78f93"
+  integrity sha512-0NkE6ZiSRf9IBWwCxzn/l7UdwcL/KZsbzjjOSweafyYueajEn+eIpKjOgDGUL/ebxSrOtjEp+YeFc4lSPkP0qg==
 
-"@spotify/eslint-config@8.1.0":
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/@spotify/eslint-config/-/eslint-config-8.1.0.tgz#00801a892a8f51df3f1074f7bc695052df4c9cd6"
-  integrity sha512-A3THg4Y2eK+hijUO+kt2ZL278XciFo/s/pwZ93c4/cYwFXYf1mcB2tmnmhP/6kK4QxF7rYmO8nYJMwPZ1sOkyQ==
+"@spotify/eslint-config@8.1.1":
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/@spotify/eslint-config/-/eslint-config-8.1.1.tgz#61c4203fbf8436abd5683f4f123c8b2d978dcf65"
+  integrity sha512-AN/cnT4LaN2s4ddBmiPC5nto+xVvewowX+8sJqHLAXs6SXpPqg2Swr0zZZY+pkWyhkexLuY8aP0z6YSTX+4A7g==
   dependencies:
     "@spotify/eslint-config-base" "^8.0.0"
     "@spotify/eslint-config-react" "^8.0.2"
-    "@spotify/eslint-config-typescript" "^8.0.1"
-    "@spotify/eslint-plugin" "^8.1.0"
+    "@spotify/eslint-config-typescript" "^8.1.1"
+    "@spotify/eslint-plugin" "^8.1.1"
     "@spotify/web-scripts-utils" "^8.0.0"
-    "@typescript-eslint/eslint-plugin" "^3.4.0"
+    "@typescript-eslint/eslint-plugin" "^4.1.0"
     "@typescript-eslint/parser" "^3.4.0"
     eslint-config-prettier "^6.0.0"
     eslint-plugin-jest "^23.17.1"
@@ -2299,10 +2299,10 @@
     eslint-plugin-react "^7.12.4"
     eslint-plugin-react-hooks "^4.0.0"
 
-"@spotify/eslint-plugin@^8.1.0":
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/@spotify/eslint-plugin/-/eslint-plugin-8.1.0.tgz#a9c5f971537c647d20d6f8c608018aec8d1b882a"
-  integrity sha512-/VBOF0vMRhVQFqdsNQ5NKhZeD8IWimqKZzsp2yrjLKDajXOfCsA8VpCtm/j4T6/8j/mqb7Rz9ePT+thHfGtBxg==
+"@spotify/eslint-plugin@^8.1.1":
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/@spotify/eslint-plugin/-/eslint-plugin-8.1.1.tgz#33d590a302b6d556726e298e1cb69712e3d435f4"
+  integrity sha512-Fhne6TbLTtuMrp8PYSvN3naz9d3oSKjfVV6yzkJDf8nJIxrHus+1ZUm8r2b2TrLA5ZV6BXqUUyh05cDInwn2YA==
 
 "@spotify/prettier-config@8.0.0":
   version "8.0.0"
@@ -2456,25 +2456,13 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@typescript-eslint/eslint-plugin@4.2.0":
+"@typescript-eslint/eslint-plugin@4.2.0", "@typescript-eslint/eslint-plugin@^4.1.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-4.2.0.tgz#a3d5c11b377b7e18f3cd9c4e87d465fe9432669b"
   integrity sha512-zBNRkzvLSwo6y5TG0DVcmshZIYBHKtmzD4N+LYnfTFpzc4bc79o8jNRSb728WV7A4Cegbs+MV5IRAj8BKBgOVQ==
   dependencies:
     "@typescript-eslint/experimental-utils" "4.2.0"
     "@typescript-eslint/scope-manager" "4.2.0"
-    debug "^4.1.1"
-    functional-red-black-tree "^1.0.1"
-    regexpp "^3.0.0"
-    semver "^7.3.2"
-    tsutils "^3.17.1"
-
-"@typescript-eslint/eslint-plugin@^3.4.0":
-  version "3.9.1"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-3.9.1.tgz#8cf27b6227d12d66dd8dc1f1a4b04d1daad51c2e"
-  integrity sha512-XIr+Mfv7i4paEdBf0JFdIl9/tVxyj+rlilWIfZ97Be0lZ7hPvUbS5iHt9Glc8kRI53dsr0PcAEudbf8rO2wGgg==
-  dependencies:
-    "@typescript-eslint/experimental-utils" "3.9.1"
     debug "^4.1.1"
     functional-red-black-tree "^1.0.1"
     regexpp "^3.0.0"
