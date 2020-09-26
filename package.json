@@ -12,7 +12,7 @@
     "@commitlint/config-lerna-scopes": "11.0.0",
     "commitiquette": "1.0.8",
     "commitizen": "4.2.1",
-    "eslint": "7.9.0",
+    "eslint": "7.10.0",
     "eslint-plugin-typescript-sort-keys": "1.5.0",
     "husky": "4.3.0",
     "jest": "26.4.2",
