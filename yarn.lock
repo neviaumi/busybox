@@ -2459,10 +2459,10 @@
   resolved "https://registry.yarnpkg.com/@spotify/eslint-plugin/-/eslint-plugin-9.0.0.tgz#0dc3e49babc1f0546f202369d8525e9068f60f68"
   integrity sha512-PgkkYtROFNCmfXbTRR7xsmcOon8jBm3vfODo++slIZhxvWpnqY8fiFNxbkLL/sovmBNkzUIISBBb+Yyis4kLJw==
 
-"@spotify/prettier-config@8.0.0":
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@spotify/prettier-config/-/prettier-config-8.0.0.tgz#8b6c2bd579ddc54887155a0721fe04e96c89f7f2"
-  integrity sha512-so8w32ZV42CHWxOEXcBtbNO/hLXFrQNXVmhfzhUI6dVB9cq2xjRaiqu8GjFj8LvKbWpPj+S+KwTIS4aDVWqrFQ==
+"@spotify/prettier-config@9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@spotify/prettier-config/-/prettier-config-9.0.0.tgz#7b562d56573c6fc0094446fbc92b22bc318945dc"
+  integrity sha512-In1q0tIiqTYKAGe3KOHDcFDdZRFISyQeSeipeTHGfki23ebHRZcjxvqj5SSdBkw65D4VpSREMi0s9i5iJiMcTw==
 
 "@spotify/tsconfig@8.0.0":
   version "8.0.0"
