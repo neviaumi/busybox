@@ -2469,15 +2469,7 @@
   resolved "https://registry.yarnpkg.com/@spotify/tsconfig/-/tsconfig-9.0.0.tgz#09cbb74fd8cda153d3fb5ced6f135395f4f27862"
   integrity sha512-ccFQ0kJ1FeTZXoPi89llJpsUDzM26HOvVxP20+yXw+BNvCKawWqE1cz15FNdXlk/qShCoXsAvMy4C/1T6k6r5g==
 
-"@spotify/web-scripts-utils@8.0.0":
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@spotify/web-scripts-utils/-/web-scripts-utils-8.0.0.tgz#83e49a0050e0ca553769cea4052fe438bc0378a7"
-  integrity sha512-5ADUaRRW+ZJHYhfSiaJVVq+9hVfAin+WYaJzEd/3oTvd6P1BrVsAdyxBdmXtacTHu+vjlVoye/kxdpUhlIq9Iw==
-  dependencies:
-    glob "^7.1.4"
-    read-pkg-up "^7.0.1"
-
-"@spotify/web-scripts-utils@^9.0.0":
+"@spotify/web-scripts-utils@9.0.0", "@spotify/web-scripts-utils@^9.0.0":
   version "9.0.0"
   resolved "https://registry.yarnpkg.com/@spotify/web-scripts-utils/-/web-scripts-utils-9.0.0.tgz#b5f797c213f63e8af62b265d7c5dbec79fd37423"
   integrity sha512-irxK1fCeTD7uA7A1t4cs7KsxrVz8P2n/NC8QDGjvCqTHNbquxS2iuCb1LGo3Jav1u2+3JmCgWbjyfeqEw/0dhw==

@@ -5,7 +5,7 @@
     "@babel/plugin-transform-runtime": "7.12.1",
     "@babel/preset-env": "7.12.1",
     "@babel/preset-typescript": "7.12.1",
-    "@spotify/web-scripts-utils": "8.0.0",
+    "@spotify/web-scripts-utils": "9.0.0",
     "babel-plugin-transform-typescript-metadata": "0.3.1"
   },
   "devDependencies": {
