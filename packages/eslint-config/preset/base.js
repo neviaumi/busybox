@@ -7,8 +7,15 @@ module.exports = {
         'block-scoped-var': 'error',
         // I out of control when work with third party library
         'import/default': 'off',
+
+        'import/first': 'error',
+
+        'import/newline-after-import': 'error',
+
+        'import/no-duplicates': 'error',
         // auto sort import statements
         'import/order': 'off',
+
         'jest/consistent-test-it': [
           'error',
           {
@@ -16,7 +23,9 @@ module.exports = {
             withinDescribe: 'it',
           },
         ],
+
         'jest/expect-expect': 'error',
+
         'jest/no-done-callback': 'error',
 
         'jest/prefer-spy-on': 'error',
@@ -53,12 +62,12 @@ module.exports = {
 
         // Promise reject always is instance of error
         'prefer-promise-reject-errors': 'error',
-
         'prettier/prettier': 'error',
-
         radix: 'error',
+        'simple-import-sort/exports': 'error',
+        'simple-import-sort/imports': 'error',
+        'sort-imports': 'off',
 
-        'simple-import-sort/sort': 'error',
         'sort-keys-fix/sort-keys-fix': 'error',
       },
     },
