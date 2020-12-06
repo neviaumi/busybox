@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.2.1](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.2.0...@busybox/eslint-config@5.2.1) (2020-12-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-simple-import-sort to v6 ([9c295bf](https://github.com/davidNHK/busybox/commit/9c295bf62219a9065bbe00bf381623e63e75f60f))
+
+
+
+
+
 # [5.2.0](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.1.1...@busybox/eslint-config@5.2.0) (2020-12-06)
 
 
