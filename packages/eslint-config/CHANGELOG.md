@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.3.0](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.2.1...@busybox/eslint-config@5.3.0) (2020-12-06)
+
+
+### Features
+
+* **eslint-config:** enable import/no-default-export ([6a763ba](https://github.com/davidNHK/busybox/commit/6a763bac4ade7c980380337599b222a13a7b2170))
+
+
+
+
+
 ## [5.2.1](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.2.0...@busybox/eslint-config@5.2.1) (2020-12-06)
 
 
