@@ -11,7 +11,7 @@
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-lerna-scopes": "11.0.0",
     "commitiquette": "1.0.9",
-    "commitizen": "4.2.2",
+    "commitizen": "4.2.3",
     "eslint": "7.17.0",
     "eslint-plugin-typescript-sort-keys": "1.5.0",
     "husky": "5.0.6",
