@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/davidNHK/busybox/compare/@busybox/babel-preset@1.1.2...@busybox/babel-preset@1.1.3) (2021-01-26)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @babel/plugin-proposal-decorators to v7.12.12 ([99bea5d](https://github.com/davidNHK/busybox/commit/99bea5dba5368613488650ca86e4a141547f9382))
+* **deps:** update dependency @babel/preset-env to v7.12.11 ([42128fe](https://github.com/davidNHK/busybox/commit/42128feefde7a81b23634ce693bc72273f6a8805))
+
+
+
+
+
 ## [1.1.2](https://github.com/davidNHK/busybox/compare/@busybox/babel-preset@1.1.1...@busybox/babel-preset@1.1.2) (2020-12-06)
 
 
