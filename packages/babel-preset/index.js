@@ -12,7 +12,7 @@ module.exports = () => ({
         modules: 'commonjs',
         shippedProposals: true,
         targets: {
-          node: '12',
+          node: '14',
         },
       },
     ],
