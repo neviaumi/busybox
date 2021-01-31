@@ -5,12 +5,14 @@ module.exports = {
       files: ['*.js', '*.jsx'],
       rules: {
         'block-scoped-var': 'error',
+
         // I out of control when work with third party library
         'import/default': 'off',
 
         'import/first': 'error',
 
         'import/newline-after-import': 'error',
+
         'import/no-default-export': 'error',
         'import/no-duplicates': 'error',
         // auto sort import statements
@@ -52,6 +54,8 @@ module.exports = {
             max: 40,
           },
         ],
+
+        'new-cap': 'off',
 
         'no-console': 'error',
 

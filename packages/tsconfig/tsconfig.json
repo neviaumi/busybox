@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importsNotUsedAsValues": "error",
     "incremental": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "noUnusedLocals": false,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": true,
