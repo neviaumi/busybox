@@ -12,26 +12,19 @@
     "@commitlint/config-lerna-scopes": "11.0.0",
     "commitiquette": "1.0.9",
     "commitizen": "4.2.3",
-    "eslint": "7.18.0",
+    "eslint": "7.19.0",
     "eslint-plugin-typescript-sort-keys": "1.5.0",
-    "husky": "5.0.6",
+    "husky": "5.0.8",
     "jest": "26.6.3",
     "lerna": "3.22.1",
     "lint-staged": "10.5.3",
     "npm-package-json-lint": "5.1.0",
+    "pinst": "2.1.4",
     "prettier": "2.2.1",
     "typescript": "4.1.3"
   },
   "engines": {
     "node": ">=12"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn lerna run test",
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
-    }
   },
   "license": "MIT",
   "name": "busybox",
@@ -42,6 +35,9 @@
     "eslint": "eslint --fix --ext=ts,js,json",
     "lint:js": "yarn eslint .",
     "lint:package-json": "yarn npmPkgJsonLint .",
+    "postinstall": "husky install",
+    "postpublish": "pinst --enable",
+    "prepublishOnly": "pinst --disable",
     "test": "yarn lerna run test"
   },
   "version": "1.0.0",
