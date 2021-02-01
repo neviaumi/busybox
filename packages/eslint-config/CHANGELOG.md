@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.4.0](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.3.2...@busybox/eslint-config@5.4.0) (2021-02-01)
+
+
+### Features
+
+* **eslint-config:** import/resolver use tsconfig to support root import ([b761079](https://github.com/davidNHK/busybox/commit/b761079ce94d7b995c96d1348a809603a2a6a322))
+
+
+
+
+
 ## [5.3.2](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.3.1...@busybox/eslint-config@5.3.2) (2021-01-26)
 
 
