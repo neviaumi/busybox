@@ -136,4 +136,7 @@ module.exports = {
     },
   ],
   plugins: ['@typescript-eslint/eslint-plugin', 'typescript-sort-keys'],
+  settings: {
+    'import/resolver': {},
+  },
 };
