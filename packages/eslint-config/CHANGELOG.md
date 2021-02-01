@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.4.1](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.4.0...@busybox/eslint-config@5.4.1) (2021-02-01)
+
+
+### Bug Fixes
+
+* **eslint-config:** import-resolver-typescript setting incorrect ([60a3219](https://github.com/davidNHK/busybox/commit/60a3219e62c0e0c5988a1529789728b57b7ca408))
+
+
+
+
+
 # [5.4.0](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.3.2...@busybox/eslint-config@5.4.0) (2021-02-01)
 
 
