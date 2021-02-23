@@ -1,15 +1,15 @@
 {
   "dependencies": {
-    "@babel/core": "7.12.17",
-    "@babel/plugin-proposal-decorators": "7.12.13",
-    "@babel/plugin-transform-runtime": "7.12.17",
-    "@babel/preset-env": "7.12.17",
-    "@babel/preset-typescript": "7.12.17",
+    "@babel/core": "7.13.1",
+    "@babel/plugin-proposal-decorators": "7.13.0",
+    "@babel/plugin-transform-runtime": "7.13.2",
+    "@babel/preset-env": "7.13.0",
+    "@babel/preset-typescript": "7.13.0",
     "@spotify/web-scripts-utils": "9.0.0",
     "babel-plugin-transform-typescript-metadata": "0.3.1"
   },
   "devDependencies": {
-    "@babel/cli": "7.12.17"
+    "@babel/cli": "7.13.0"
   },
   "engines": {
     "node": ">=12"
