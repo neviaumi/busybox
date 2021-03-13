@@ -4805,10 +4805,10 @@ eslint-plugin-jest@^23.17.1:
   dependencies:
     "@typescript-eslint/experimental-utils" "^2.5.0"
 
-eslint-plugin-jsonc@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jsonc/-/eslint-plugin-jsonc-1.2.0.tgz#1def409e89d710da02b5480e7ddd1bef7a341a4b"
-  integrity sha512-8VSwIXrCsrP5dbqioj2ylfYmSJl4pKQsA/ItpfUpdXiXZ8VcB+2A5pXeZHExUZXgwPTs8lww2KuKM6+3KaP/+Q==
+eslint-plugin-jsonc@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jsonc/-/eslint-plugin-jsonc-1.2.1.tgz#974c8d2737785224308eef88488bded0628b1f14"
+  integrity sha512-m7o4gaNKojSwRJDNP0/7HK1vGfGgynX6DeTHTXhYGxWn2DB8E2RU5jeK95CYw1/mwej4ku2Xd9Tevn6WOlI6Dg==
   dependencies:
     eslint-utils "^2.1.0"
     jsonc-eslint-parser "^1.0.0"
