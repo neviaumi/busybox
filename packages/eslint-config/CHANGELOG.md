@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.4.2](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.4.1...@busybox/eslint-config@5.4.2) (2021-03-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @spotify/eslint-config to v9.0.1 ([742e66d](https://github.com/davidNHK/busybox/commit/742e66dec37c93f439ccbecfc2484fba3cdca492))
+* **deps:** update dependency @spotify/eslint-config to v9.0.2 ([3ea3535](https://github.com/davidNHK/busybox/commit/3ea3535a90e7e3afd50c62cba016da5c2ba67b60))
+* **deps:** update dependency eslint-config-prettier to v8 ([703b2a9](https://github.com/davidNHK/busybox/commit/703b2a9bc4b38649e542e7482f8b71cc1a4e8c79))
+* **deps:** update dependency eslint-config-prettier to v8.1.0 ([30145d6](https://github.com/davidNHK/busybox/commit/30145d671fae042c62b00b65ccaaba1fce34afb6))
+* **deps:** update dependency eslint-import-resolver-typescript to v2.4.0 ([d99ae22](https://github.com/davidNHK/busybox/commit/d99ae224d456c9e771fe63108c6605eaac457f98))
+* **deps:** update dependency eslint-plugin-jest to v24.1.4 ([d2f3762](https://github.com/davidNHK/busybox/commit/d2f376280165ddbdc0d3b6b6ce040b66cdfe3f2d))
+* **deps:** update dependency eslint-plugin-jest to v24.1.5 ([f6c3278](https://github.com/davidNHK/busybox/commit/f6c3278237521f08826d2c3dcd779fffadfcdaa3))
+* **deps:** update dependency eslint-plugin-jest to v24.1.7 ([0123ef6](https://github.com/davidNHK/busybox/commit/0123ef6aa55d777d824742d4374cb1a0b8327f3f))
+* **deps:** update dependency eslint-plugin-jest to v24.1.8 ([6676214](https://github.com/davidNHK/busybox/commit/66762141f6482dfd56073d2b5924d0bec8fcbae3))
+* **deps:** update dependency eslint-plugin-jest to v24.1.9 ([3cc1e30](https://github.com/davidNHK/busybox/commit/3cc1e300b5d6f334dfff4e50b433366d59cff46c))
+* **deps:** update dependency eslint-plugin-jest to v24.2.0 ([ec70c8b](https://github.com/davidNHK/busybox/commit/ec70c8b6eb2b8104ad34f9ff49b6d39457a30911))
+* **deps:** update dependency eslint-plugin-jest to v24.2.1 ([6f4ddf9](https://github.com/davidNHK/busybox/commit/6f4ddf92aade025cba210d523c73e832b360fb18))
+* **deps:** update dependency eslint-plugin-jest to v24.3.1 ([085598f](https://github.com/davidNHK/busybox/commit/085598fd3277b3ff8b9697568a3a7ab88442b5d5))
+* **deps:** update dependency eslint-plugin-jsonc to v1 ([27ef9e1](https://github.com/davidNHK/busybox/commit/27ef9e1deec81ffd685e8c1f2baa0a872072c8a3))
+* **deps:** update dependency eslint-plugin-jsonc to v1.1.0 ([ee5f65a](https://github.com/davidNHK/busybox/commit/ee5f65aef1f15eb72f089beb4855db7f622c605a))
+* **deps:** update dependency eslint-plugin-jsonc to v1.2.0 ([c3e88dc](https://github.com/davidNHK/busybox/commit/c3e88dc0ff4c51e4964ce1dc76f0a05927de508b))
+* **deps:** update dependency eslint-plugin-jsonc to v1.2.1 ([1b49511](https://github.com/davidNHK/busybox/commit/1b495115122ef70a33033f5b6d28558bac87b299))
+* **deps:** update typescript-eslint monorepo to v4.14.2 ([ed70ed5](https://github.com/davidNHK/busybox/commit/ed70ed5167b4c826a8ed7bb679d7e02bdfa02db8))
+* **deps:** update typescript-eslint monorepo to v4.15.0 ([3925741](https://github.com/davidNHK/busybox/commit/3925741ec0386678dbf14a3b10fbf4380f2dcbae))
+* **deps:** update typescript-eslint monorepo to v4.15.1 ([f01421e](https://github.com/davidNHK/busybox/commit/f01421ea04e535c2ad701bf4d13ecc21bf9dfcf0))
+* **deps:** update typescript-eslint monorepo to v4.15.2 ([32ccff6](https://github.com/davidNHK/busybox/commit/32ccff6b5c85a1430769cff2fc2beebfc8b9328f))
+* **deps:** update typescript-eslint monorepo to v4.16.1 ([4da81ca](https://github.com/davidNHK/busybox/commit/4da81ca3395f89352aeea2faa8326edae68825f4))
+* **deps:** update typescript-eslint monorepo to v4.17.0 ([c4779b4](https://github.com/davidNHK/busybox/commit/c4779b4ad82fb599c1f7365019d0df01147825a8))
+* **deps:** update typescript-eslint monorepo to v4.18.0 ([a51c22f](https://github.com/davidNHK/busybox/commit/a51c22fcb16351f4ed8c23dc135314c4a848613f))
+
+
+
+
+
 ## [5.4.1](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.4.0...@busybox/eslint-config@5.4.1) (2021-02-01)
 
 
