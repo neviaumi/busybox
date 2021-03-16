@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/davidNHK/busybox/compare/@busybox/babel-preset@1.1.4...@busybox/babel-preset@1.1.5) (2021-03-16)
+
+
+### Bug Fixes
+
+* **deps:** update babel monorepo ([e20b18b](https://github.com/davidNHK/busybox/commit/e20b18b25ab7a9a9231a96df90e420aca3ab12a3))
+* **deps:** update babel monorepo to v7.13.8 ([e22c6d6](https://github.com/davidNHK/busybox/commit/e22c6d6ef40c36ae9071f2795868302605a1870a))
+* **deps:** update babel monorepo to v7.13.9 ([ffcd52a](https://github.com/davidNHK/busybox/commit/ffcd52a2292ba9e92978b235232c2b591f2c33cf))
+* **deps:** update dependency @babel/plugin-transform-runtime to v7.12.15 ([645534c](https://github.com/davidNHK/busybox/commit/645534c01a19105f1ad69a0615baa8d124bffd39))
+* **deps:** update dependency @babel/plugin-transform-runtime to v7.13.4 ([5cebca3](https://github.com/davidNHK/busybox/commit/5cebca329c6bdba7473dfa56544fe32d47ba25ea))
+* **deps:** update dependency @babel/plugin-transform-runtime to v7.13.7 ([2b401c3](https://github.com/davidNHK/busybox/commit/2b401c3a04b8fb214c67b127bfeb54b052d010a2))
+
+
+
+
+
 ## [1.1.4](https://github.com/davidNHK/busybox/compare/@busybox/babel-preset@1.1.3...@busybox/babel-preset@1.1.4) (2021-02-01)
 
 **Note:** Version bump only for package @busybox/babel-preset
