@@ -1,4 +1,8 @@
 module.exports = {
+  env: {
+    jest: true,
+  },
+  extends: ['prettier'],
   overrides: [
     {
       extends: ['plugin:import/recommended', 'plugin:jest/recommended'],
@@ -83,6 +87,10 @@ module.exports = {
       },
     },
   ],
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: 'module',
+  },
   plugins: [
     'eslint-plugin-import',
     'eslint-plugin-jest',

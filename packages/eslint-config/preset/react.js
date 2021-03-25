@@ -26,4 +26,7 @@ module.exports = {
     'eslint-plugin-react-hooks',
     'testing-library',
   ],
+  react: {
+    version: 'detect',
+  },
 };

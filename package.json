@@ -1,17 +1,11 @@
 {
   "author": "David Ng <david.ng.dev@gmail.com>",
-  "config": {
-    "commitizen": {
-      "path": "commitiquette"
-    }
-  },
   "devDependencies": {
     "@babel/cli": "7.13.10",
     "@babel/core": "7.13.10",
     "@commitlint/cli": "12.0.1",
+    "@commitlint/config-conventional": "12.0.1",
     "@commitlint/config-lerna-scopes": "12.0.1",
-    "commitiquette": "1.0.9",
-    "commitizen": "4.2.3",
     "eslint": "7.22.0",
     "eslint-plugin-typescript-sort-keys": "1.5.0",
     "husky": "5.2.0",
