@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.6](https://github.com/davidNHK/busybox/compare/@busybox/babel-preset@1.1.5...@busybox/babel-preset@1.1.6) (2021-03-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @babel/preset-env to v7.13.12 ([377bd22](https://github.com/davidNHK/busybox/commit/377bd2268e4836e11f0207f15616957fd7e0022c))
+* **deps:** update dependency babel-plugin-transform-typescript-metadata to v0.3.2 ([389f2f4](https://github.com/davidNHK/busybox/commit/389f2f48220256e061c61f56022134bd191598ea))
+
+
+
+
+
 ## [1.1.5](https://github.com/davidNHK/busybox/compare/@busybox/babel-preset@1.1.4...@busybox/babel-preset@1.1.5) (2021-03-16)
 
 
