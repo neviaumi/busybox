@@ -1,11 +1,5 @@
-const { rules } = require('@commitlint/config-lerna-scopes');
-
 module.exports = {
-  extends: ['@commitlint/config-lerna-scopes'],
-  rules: {
-    'scope-enum': async ctx => {
-      const [level, applicable, values] = await rules['scope-enum'](ctx);
-      return [level, applicable, [...values, 'deps']];
-    },
-  },
+  // https://github.com/conventional-changelog/commitlint/issues/2452 - 12.1.0 should fixed
+  // extends: ['@commitlint/config-lerna-scopes'],
+  extends: ['@commitlint/config-conventional'],
 };
