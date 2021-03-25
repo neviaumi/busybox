@@ -13,7 +13,7 @@ const hasTypescript = hasConfig([
 
 module.exports = {
   extends: [
-    '@spotify',
+    '@spotify/eslint-config-base',
     './preset/base.js',
     hasTypescript ? './preset/typescript.js' : '',
     hasReact ? './preset/react.js' : '',

@@ -101,6 +101,8 @@ module.exports = {
           },
         ],
 
+        '@typescript-eslint/no-explicit-any': 'off',
+
         '@typescript-eslint/no-non-null-assertion': 'off',
 
         // use no-unused-vars-experimental instead
@@ -108,7 +110,7 @@ module.exports = {
 
         '@typescript-eslint/no-unused-vars-experimental': 'error',
 
-        // enum will prompt already declared in the upper scope buggly
+        // enum will prompt already declared in the upper scope
         'no-shadow': 'off',
         // Unable work with Global namespace
         'no-undef': 'off',
@@ -135,6 +137,7 @@ module.exports = {
       },
     },
   ],
+  parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint/eslint-plugin', 'typescript-sort-keys'],
   settings: {
     'import/resolver': {
