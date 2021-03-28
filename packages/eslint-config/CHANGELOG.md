@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.4.5](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.4.4...@busybox/eslint-config@5.4.5) (2021-03-28)
+
+
+### Bug Fixes
+
+* disable camelcase ([e30608e](https://github.com/davidNHK/busybox/commit/e30608ec7e89fc272470c2bd16d1478811b1dd84))
+
+
+
+
+
 ## [5.4.4](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.4.3...@busybox/eslint-config@5.4.4) (2021-03-28)
 
 
