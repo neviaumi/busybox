@@ -110,10 +110,15 @@ module.exports = {
 
         '@typescript-eslint/no-unused-vars-experimental': 'error',
 
+        camelcase: 'off',
+
         // enum will prompt already declared in the upper scope
         'no-shadow': 'off',
+
         // Unable work with Global namespace
         'no-undef': 'off',
+
+        'no-use-before-define': 'off',
       },
     },
     {
