@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.4.4](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.4.3...@busybox/eslint-config@5.4.4) (2021-03-28)
+
+
+### Bug Fixes
+
+* unexpected top-level property "react" ([bacbb1b](https://github.com/davidNHK/busybox/commit/bacbb1b06a626342399dd1b1034573adf5efd6fb))
+
+
+
+
+
 ## [5.4.3](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.4.2...@busybox/eslint-config@5.4.3) (2021-03-25)
 
 
