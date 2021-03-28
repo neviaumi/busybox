@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.7](https://github.com/davidNHK/busybox/compare/@busybox/babel-preset@1.1.6...@busybox/babel-preset@1.1.7) (2021-03-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @babel/core to v7.13.13 ([ba2dcd6](https://github.com/davidNHK/busybox/commit/ba2dcd667a270fe1a24726de80b65387ae42d985))
+
+
+
+
+
 ## [1.1.6](https://github.com/davidNHK/busybox/compare/@busybox/babel-preset@1.1.5...@busybox/babel-preset@1.1.6) (2021-03-25)
 
 
