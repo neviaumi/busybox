@@ -21,12 +21,19 @@ module.exports = {
       },
     },
   ],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
   plugins: [
     'eslint-plugin-react',
     'eslint-plugin-react-hooks',
     'testing-library',
   ],
-  react: {
-    version: 'detect',
+  settings: {
+    react: {
+      version: 'detect',
+    },
   },
 };
