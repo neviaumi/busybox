@@ -15,7 +15,7 @@ module.exports = {
   extends: [
     '@spotify/eslint-config-base',
     './preset/base.js',
-    hasTypescript ? './preset/typescript.js' : '',
     hasReact ? './preset/react.js' : '',
+    hasTypescript ? './preset/typescript.js' : '',
   ].filter(s => !!s),
 };
