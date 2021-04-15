@@ -2712,10 +2712,10 @@
   resolved "https://registry.yarnpkg.com/@spotify/tsconfig/-/tsconfig-10.0.0.tgz#d1b38a67fe9cf8fb8e0e980943110dd8a41ba957"
   integrity sha512-d9tJlAEEtFZ/k63+xe+cmHdXkp5hRbS/hzimZ5CNu0sBlqjX1M4aBKC5eOpZARCumDR3c26ip8qQnktMjRlUyg==
 
-"@spotify/web-scripts-utils@9.0.0":
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@spotify/web-scripts-utils/-/web-scripts-utils-9.0.0.tgz#b5f797c213f63e8af62b265d7c5dbec79fd37423"
-  integrity sha512-irxK1fCeTD7uA7A1t4cs7KsxrVz8P2n/NC8QDGjvCqTHNbquxS2iuCb1LGo3Jav1u2+3JmCgWbjyfeqEw/0dhw==
+"@spotify/web-scripts-utils@10.0.0":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/@spotify/web-scripts-utils/-/web-scripts-utils-10.0.0.tgz#421b65b12e74bb35778bb9cbb8f5dd0c18e25125"
+  integrity sha512-/6dzzgvKXmDZp/YG9+uy5t3R5mMZL2YhZE5O0/YAdZd2eFEnRzg83TJhGuN06LZ0iAPMwdW+BWJsekAxePk5eg==
   dependencies:
     glob "^7.1.4"
     read-pkg-up "^7.0.1"
