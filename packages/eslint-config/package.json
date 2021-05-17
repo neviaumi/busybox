@@ -2,8 +2,8 @@
   "dependencies": {
     "@spotify/eslint-config-base": "10.0.0",
     "@spotify/web-scripts-utils": "10.0.0",
-    "@typescript-eslint/eslint-plugin": "4.23.0",
-    "@typescript-eslint/parser": "4.23.0",
+    "@typescript-eslint/eslint-plugin": "4.24.0",
+    "@typescript-eslint/parser": "4.24.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-import-resolver-typescript": "2.4.0",
     "eslint-plugin-import": "2.23.2",
