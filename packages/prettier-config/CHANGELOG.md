@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/davidNHK/busybox/compare/@busybox/prettier-config@1.1.4...@busybox/prettier-config@1.1.5) (2021-05-29)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @spotify/prettier-config to v10 ([2ac8ab5](https://github.com/davidNHK/busybox/commit/2ac8ab53906f809dafbb1ff81823c99d378fbd13))
+
+
+
+
+
 ## [1.1.4](https://github.com/davidNHK/busybox/compare/@busybox/prettier-config@1.1.3...@busybox/prettier-config@1.1.4) (2020-12-06)
 
 
