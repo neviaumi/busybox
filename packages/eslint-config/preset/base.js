@@ -9,7 +9,6 @@ module.exports = {
       files: ['*.js', '*.jsx'],
       rules: {
         'block-scoped-var': 'error',
-
         // I out of control when work with third party library
         'import/default': 'off',
 
@@ -18,6 +17,7 @@ module.exports = {
         'import/newline-after-import': 'error',
 
         'import/no-default-export': 'error',
+
         'import/no-duplicates': 'error',
         // auto sort import statements
         'import/order': 'off',
@@ -66,6 +66,8 @@ module.exports = {
         // No unnecessary else branch
         'no-else-return': 'error',
 
+        'no-useless-constructor': 'off',
+
         'prefer-const': 'error',
 
         // Promise reject always is instance of error
@@ -75,12 +77,11 @@ module.exports = {
         'simple-import-sort/exports': 'error',
         'simple-import-sort/imports': 'error',
         'sort-imports': 'off',
-
         'sort-keys-fix/sort-keys-fix': 'error',
       },
     },
     {
-      extends: ['plugin:jsonc/recommended-with-json'],
+      extends: ['plugin:jsonc/prettier'],
       files: ['*.json'],
       rules: {
         'jsonc/sort-keys': 'error',
