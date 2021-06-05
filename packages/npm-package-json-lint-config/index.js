@@ -5,11 +5,9 @@ module.exports = {
   rules: {
     'prefer-absolute-version-dependencies': 'error',
     'prefer-absolute-version-devDependencies': 'error',
-    'prefer-alphabetical-dependencies': 'error',
-    'prefer-alphabetical-devDependencies': 'error',
-    'prefer-alphabetical-scripts': 'error',
     'require-engines': 'error',
     'require-license': 'error',
+    'require-repository': 'error',
     'require-version': 'error',
     'valid-values-license': ['error', ['MIT']],
   },
