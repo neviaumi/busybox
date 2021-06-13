@@ -3,6 +3,7 @@ module.exports = {
     {
       extends: ['plugin:react/recommended'],
       files: ['*.jsx', '*.tsx'],
+      plugins: ['eslint-plugin-react', 'eslint-plugin-react-hooks'],
       rules: {
         'react-hooks/exhaustive-deps': 'error',
         'react-hooks/rules-of-hooks': 'error',
@@ -12,7 +13,12 @@ module.exports = {
     },
     {
       extends: ['plugin:testing-library/react'],
-      files: ['*.test.*'],
+      files: ['*.test.jsx', '*.test.tsx', '*.spec.jsx', '*.spec.tsx'],
+      plugins: [
+        'eslint-plugin-react',
+        'eslint-plugin-react-hooks',
+        'testing-library',
+      ],
       rules: {
         'react/display-name': 'off',
         // https://react-hooks-testing-library.com/usage/advanced-hooks#eslint-warning
@@ -26,11 +32,6 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: [
-    'eslint-plugin-react',
-    'eslint-plugin-react-hooks',
-    'testing-library',
-  ],
   settings: {
     react: {
       version: 'detect',
