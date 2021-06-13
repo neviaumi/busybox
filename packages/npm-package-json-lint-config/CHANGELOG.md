@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/davidNHK/busybox/compare/@busybox/npm-package-json-lint-config@1.1.4...@busybox/npm-package-json-lint-config@1.2.0) (2021-06-13)
+
+
+### Features
+
+* **npm-package-json-lint-config:** preset for mono-repo ([cf2a429](https://github.com/davidNHK/busybox/commit/cf2a429a030d3c45e4532ea813ad15d6ba9a7e87))
+
+
+
+
+
 ## [1.1.4](https://github.com/davidNHK/busybox/compare/@busybox/npm-package-json-lint-config@1.1.3...@busybox/npm-package-json-lint-config@1.1.4) (2021-06-05)
 
 **Note:** Version bump only for package @busybox/npm-package-json-lint-config
