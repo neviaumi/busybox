@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.4.9](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.4.8...@busybox/eslint-config@5.4.9) (2021-06-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-jsonc to v1.3.0 ([77867c4](https://github.com/davidNHK/busybox/commit/77867c41ff3f40e8475e686e1ea6ec949c3c2248))
+* **deps:** update typescript-eslint monorepo to v4.26.1 ([951f741](https://github.com/davidNHK/busybox/commit/951f7415fef78c608c066ab1235c6031d57bb589))
+* **eslint-config:** json sort not working ([61a3b70](https://github.com/davidNHK/busybox/commit/61a3b70b570923e113a204ecac627f3141aab70f))
+
+
+
+
+
 ## [5.4.8](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.4.7...@busybox/eslint-config@5.4.8) (2021-06-05)
 
 
