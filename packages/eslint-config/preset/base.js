@@ -5,7 +5,7 @@ module.exports = {
   extends: ['prettier'],
   overrides: [
     {
-      extends: ['plugin:import/recommended', 'plugin:jest/recommended'],
+      extends: ['plugin:import/recommended'],
       files: ['*.js', '*.jsx'],
       rules: {
         'block-scoped-var': 'error',
@@ -21,22 +21,6 @@ module.exports = {
         'import/no-duplicates': 'error',
         // auto sort import statements
         'import/order': 'off',
-
-        'jest/consistent-test-it': [
-          'error',
-          {
-            fn: 'it',
-            withinDescribe: 'it',
-          },
-        ],
-
-        'jest/expect-expect': 'error',
-
-        'jest/no-done-callback': 'error',
-
-        'jest/prefer-spy-on': 'error',
-
-        'jest/valid-expect': ['error', { maxArgs: 2, minArgs: 1 }],
 
         'lines-between-class-members': 'error',
 
@@ -81,8 +65,30 @@ module.exports = {
       },
     },
     {
+      extends: ['plugin:jest/recommended'],
+      files: ['*.test.js', '*.test.jsx', '*.spec.js', '*.spec.jsx'],
+      rules: {
+        'jest/consistent-test-it': [
+          'error',
+          {
+            fn: 'it',
+            withinDescribe: 'it',
+          },
+        ],
+
+        'jest/expect-expect': 'error',
+
+        'jest/no-done-callback': 'error',
+
+        'jest/prefer-spy-on': 'error',
+
+        'jest/valid-expect': ['error', { maxArgs: 2, minArgs: 1 }],
+      },
+    },
+    {
       extends: ['plugin:jsonc/prettier'],
       files: ['*.json'],
+      parser: require.resolve('jsonc-eslint-parser'),
       rules: {
         'jsonc/sort-keys': 'error',
       },

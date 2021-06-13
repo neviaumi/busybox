@@ -6,7 +6,8 @@
     "node": ">=12"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "mono-repo.js"
   ],
   "license": "MIT",
   "main": "index.js",
