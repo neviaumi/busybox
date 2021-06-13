@@ -9,6 +9,6 @@ module.exports = {
     'require-license': 'error',
     'require-repository': 'error',
     'require-version': 'error',
-    'valid-values-license': ['error', ['MIT']],
+    'valid-values-license': ['error', ['MIT', 'UNLICENSED']],
   },
 };
