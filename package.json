@@ -9,7 +9,7 @@
     "eslint": "7.29.0",
     "husky": "6.0.0",
     "is-ci": "3.0.0",
-    "jest": "27.0.5",
+    "jest": "27.0.6",
     "lerna": "4.0.0",
     "lint-staged": "11.0.0",
     "npm-package-json-lint": "5.1.0",
