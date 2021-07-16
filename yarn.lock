@@ -2865,10 +2865,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@spotify/eslint-config-base@10.0.0":
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/@spotify/eslint-config-base/-/eslint-config-base-10.0.0.tgz#53002dc8b1522d5f67039c43b6464eee8a4b00d7"
-  integrity sha512-xa0S9s/BVPe+lyhyyCbEjlW7TQUnxDb+htPOOVoj2SpTJkS1jyecLrwnzo1sKaWNGryGTL5O6W0Pha4UGWqNLA==
+"@spotify/eslint-config-base@11.0.0":
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/@spotify/eslint-config-base/-/eslint-config-base-11.0.0.tgz#1d272fcf85430c22d1ee8983a51b5834a76650ac"
+  integrity sha512-Miw+1pPfKdWIquxYVMrh5/SXO+L1DMPfJ/gNcfCgLRZfLBZKwc5bOjSgyaXkEcEHCQjjLIzvUjhxfKn0sAIyQA==
 
 "@spotify/prettier-config@10.0.0":
   version "10.0.0"
