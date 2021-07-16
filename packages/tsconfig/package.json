@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@spotify/tsconfig": "10.0.0"
+    "@spotify/tsconfig": "11.0.0"
   },
   "engines": {
     "node": ">=12"
