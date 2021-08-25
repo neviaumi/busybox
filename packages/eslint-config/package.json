@@ -6,7 +6,7 @@
     "@typescript-eslint/parser": "4.29.3",
     "eslint-config-prettier": "8.3.0",
     "eslint-import-resolver-typescript": "2.4.0",
-    "eslint-plugin-import": "2.24.1",
+    "eslint-plugin-import": "2.24.2",
     "eslint-plugin-jest": "24.4.0",
     "eslint-plugin-jsonc": "1.6.0",
     "eslint-plugin-node": "11.1.0",
