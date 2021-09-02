@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.4](https://github.com/davidNHK/busybox/compare/@busybox/tsconfig@1.3.3...@busybox/tsconfig@1.3.4) (2021-08-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @spotify/tsconfig to v11 ([d4eeee6](https://github.com/davidNHK/busybox/commit/d4eeee6458146766799eeb5e18af5abba2b49458))
+
+
+
+
+
 ## [1.3.3](https://github.com/davidNHK/busybox/compare/@busybox/tsconfig@1.3.2...@busybox/tsconfig@1.3.3) (2021-05-29)
 
 

@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.10](https://github.com/davidNHK/busybox/compare/@busybox/babel-preset@1.1.9...@busybox/babel-preset@1.1.10) (2021-08-15)
+
+
+### Bug Fixes
+
+* **deps:** update babel monorepo to v7.15.0 ([842d172](https://github.com/davidNHK/busybox/commit/842d172482c1fd10f49a725304029e89bbdc477e))
+* **deps:** update dependency @babel/core to v7.14.6 ([91583ae](https://github.com/davidNHK/busybox/commit/91583ae7c1777d5230e95900d20553fb42af15e3))
+* **deps:** update dependency @babel/preset-env to v7.14.7 ([43aa09f](https://github.com/davidNHK/busybox/commit/43aa09f2c7e9fbfa005da0ada2a27db6eb75fad8))
+* **deps:** update dependency @babel/preset-env to v7.14.9 ([e729503](https://github.com/davidNHK/busybox/commit/e729503bb4aed93aebed77d854e4284e154f2e75))
+* **deps:** update dependency @spotify/web-scripts-utils to v11 ([7c17382](https://github.com/davidNHK/busybox/commit/7c173826ab41dc50b93f420e21d0e8428505921d))
+
+
+
+
+
 ## [1.1.9](https://github.com/davidNHK/busybox/compare/@busybox/babel-preset@1.1.8...@busybox/babel-preset@1.1.9) (2021-06-13)
 
 **Note:** Version bump only for package @busybox/babel-preset

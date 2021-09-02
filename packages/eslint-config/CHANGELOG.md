@@ -3,6 +3,89 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.4.11](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.4.10...@busybox/eslint-config@5.4.11) (2021-09-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @spotify/eslint-config-base to v11 ([5451166](https://github.com/davidNHK/busybox/commit/5451166a778eb8c5214004cd351c9e7286854ba3))
+* **deps:** update dependency @spotify/web-scripts-utils to v11 ([7c17382](https://github.com/davidNHK/busybox/commit/7c173826ab41dc50b93f420e21d0e8428505921d))
+* **deps:** update dependency eslint-plugin-import to v2.24.0 ([3680487](https://github.com/davidNHK/busybox/commit/36804872094bffab6b809704a4ff45dca74a217a))
+* **deps:** update dependency eslint-plugin-import to v2.24.1 ([b763c59](https://github.com/davidNHK/busybox/commit/b763c59e5f9ccc4b44e48d981cac7913457a8dd5))
+* **deps:** update dependency eslint-plugin-import to v2.24.2 ([79cd573](https://github.com/davidNHK/busybox/commit/79cd573760852a62e79a9771730d1110bef23e8b))
+* **deps:** update dependency eslint-plugin-jest to v24.3.7 ([b722423](https://github.com/davidNHK/busybox/commit/b7224236149086f878dd69c5af762fb80816fc15))
+* **deps:** update dependency eslint-plugin-jest to v24.4.0 ([b3cd457](https://github.com/davidNHK/busybox/commit/b3cd457650224bcbc29ab424bf2c0cf6c16d44d7))
+* **deps:** update dependency eslint-plugin-jsonc to v1.3.1 ([36fcd1d](https://github.com/davidNHK/busybox/commit/36fcd1d66d63e29d8e4d4148d24c5e500a183d35))
+* **deps:** update dependency eslint-plugin-jsonc to v1.4.0 ([db8095e](https://github.com/davidNHK/busybox/commit/db8095e6fa2a87cbd65709a08638b7dca7d94849))
+* **deps:** update dependency eslint-plugin-jsonc to v1.5.0 ([c520d40](https://github.com/davidNHK/busybox/commit/c520d401b02dc2aa3c222d0cee50f6f22ed71173))
+* **deps:** update dependency eslint-plugin-jsonc to v1.6.0 ([2aa227f](https://github.com/davidNHK/busybox/commit/2aa227fcae3764c3608b78c156c80ded258541f8))
+* **deps:** update dependency eslint-plugin-prettier to v3.4.1 ([5b60460](https://github.com/davidNHK/busybox/commit/5b604607f113f94448e2291d0822aa5220e79d36))
+* **deps:** update dependency eslint-plugin-prettier to v4 ([5b83759](https://github.com/davidNHK/busybox/commit/5b83759915c1d45e80b71111b4ff33428d8f10f6))
+* **deps:** update dependency eslint-plugin-react to v7.25.0 ([6117487](https://github.com/davidNHK/busybox/commit/61174878d62915117a18b8e828818a610f326f7f))
+* **deps:** update dependency eslint-plugin-react to v7.25.1 ([48cbda4](https://github.com/davidNHK/busybox/commit/48cbda4f51866589330ef190019d0281c1082bf2))
+* **deps:** update dependency eslint-plugin-sort-keys-fix to v1.1.2 ([0a3ee63](https://github.com/davidNHK/busybox/commit/0a3ee6352cf07d97ba466c8cd2c246a31beefd9e))
+* **deps:** update dependency eslint-plugin-testing-library to v4.10.0 ([ac93404](https://github.com/davidNHK/busybox/commit/ac93404e5dcb52727b1ea87cd151508a33ab08a2))
+* **deps:** update dependency eslint-plugin-testing-library to v4.10.1 ([c463d08](https://github.com/davidNHK/busybox/commit/c463d08211b3b2b42d453cacf4c0f0feb0650a74))
+* **deps:** update dependency eslint-plugin-testing-library to v4.11.0 ([4950f1d](https://github.com/davidNHK/busybox/commit/4950f1ddc4f89ff39229e2df42b5269d230a60c9))
+* **deps:** update dependency eslint-plugin-testing-library to v4.12.0 ([be57b73](https://github.com/davidNHK/busybox/commit/be57b7360d2f45e34c740406949a9e8e904cf2cc))
+* **deps:** update dependency eslint-plugin-testing-library to v4.7.0 ([b138008](https://github.com/davidNHK/busybox/commit/b1380088374d216173a64f6b43d8391f1b19ffd8))
+* **deps:** update dependency eslint-plugin-testing-library to v4.8.0 ([220635b](https://github.com/davidNHK/busybox/commit/220635bb11d40a90bcb509bdb316a4cdb7b679e2))
+* **deps:** update dependency eslint-plugin-testing-library to v4.9.0 ([1e508a0](https://github.com/davidNHK/busybox/commit/1e508a00c7cbafc7bf37ba9aab910639cedd63ad))
+* **deps:** update dependency eslint-plugin-testing-library to v4.9.1 ([feeb72a](https://github.com/davidNHK/busybox/commit/feeb72a5493fcbe458a662931dcd26ef03cec481))
+* **deps:** update dependency eslint-plugin-typescript-sort-keys to v1.7.0 ([1f5f83b](https://github.com/davidNHK/busybox/commit/1f5f83bad85b210e97a9f5c1b650992db03fd9ce))
+* **deps:** update dependency eslint-plugin-typescript-sort-keys to v1.8.0 ([772d40b](https://github.com/davidNHK/busybox/commit/772d40be7a2da08a71ce0c069fb986eb73dad160))
+* **deps:** update typescript-eslint monorepo to v4.27.0 ([7cb4b72](https://github.com/davidNHK/busybox/commit/7cb4b72acce5b92bbcfd76c89a8ecbed05bf6401))
+* **deps:** update typescript-eslint monorepo to v4.28.0 ([6743851](https://github.com/davidNHK/busybox/commit/6743851a5857749b7824072b8bbbf5403c2e100a))
+* **deps:** update typescript-eslint monorepo to v4.28.1 ([7c29664](https://github.com/davidNHK/busybox/commit/7c296641839d13ecfac47d667d7ae30c9972934b))
+* **deps:** update typescript-eslint monorepo to v4.28.2 ([db46a11](https://github.com/davidNHK/busybox/commit/db46a113b6d17d755780dddabb3e0ce9a10f0cc3))
+* **deps:** update typescript-eslint monorepo to v4.28.3 ([7ed9750](https://github.com/davidNHK/busybox/commit/7ed975069334a41035c1044075875782d3a60ed2))
+* **deps:** update typescript-eslint monorepo to v4.28.4 ([df4b558](https://github.com/davidNHK/busybox/commit/df4b5581c422da412c1e4aae097521ecd88f650a))
+* **deps:** update typescript-eslint monorepo to v4.28.5 ([8c06d29](https://github.com/davidNHK/busybox/commit/8c06d29e9011d1d9515278ee56fe1d4f26a652ee))
+* **deps:** update typescript-eslint monorepo to v4.29.0 ([82534a4](https://github.com/davidNHK/busybox/commit/82534a493edaed5cc032854a5caccf3da03f8b4e))
+* **deps:** update typescript-eslint monorepo to v4.29.1 ([bc95111](https://github.com/davidNHK/busybox/commit/bc951114f650e379aa36b92032574fb8aa32d610))
+* **deps:** update typescript-eslint monorepo to v4.29.2 ([7d31b49](https://github.com/davidNHK/busybox/commit/7d31b494e5b9bd1070e0530de88e9765445f143d))
+* **deps:** update typescript-eslint monorepo to v4.29.3 ([6963097](https://github.com/davidNHK/busybox/commit/69630978474e676d0e7b2b4e5c4b4df37872267d))
+* **deps:** update typescript-eslint monorepo to v4.30.0 ([551874d](https://github.com/davidNHK/busybox/commit/551874d18ad61d5853921d992318e9001194a227))
+
+
+
+
+
+## [5.4.10](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.4.9...@busybox/eslint-config@5.4.10) (2021-08-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @spotify/eslint-config-base to v11 ([5451166](https://github.com/davidNHK/busybox/commit/5451166a778eb8c5214004cd351c9e7286854ba3))
+* **deps:** update dependency @spotify/web-scripts-utils to v11 ([7c17382](https://github.com/davidNHK/busybox/commit/7c173826ab41dc50b93f420e21d0e8428505921d))
+* **deps:** update dependency eslint-plugin-import to v2.24.0 ([3680487](https://github.com/davidNHK/busybox/commit/36804872094bffab6b809704a4ff45dca74a217a))
+* **deps:** update dependency eslint-plugin-jest to v24.3.7 ([b722423](https://github.com/davidNHK/busybox/commit/b7224236149086f878dd69c5af762fb80816fc15))
+* **deps:** update dependency eslint-plugin-jest to v24.4.0 ([b3cd457](https://github.com/davidNHK/busybox/commit/b3cd457650224bcbc29ab424bf2c0cf6c16d44d7))
+* **deps:** update dependency eslint-plugin-jsonc to v1.3.1 ([36fcd1d](https://github.com/davidNHK/busybox/commit/36fcd1d66d63e29d8e4d4148d24c5e500a183d35))
+* **deps:** update dependency eslint-plugin-jsonc to v1.4.0 ([db8095e](https://github.com/davidNHK/busybox/commit/db8095e6fa2a87cbd65709a08638b7dca7d94849))
+* **deps:** update dependency eslint-plugin-jsonc to v1.5.0 ([c520d40](https://github.com/davidNHK/busybox/commit/c520d401b02dc2aa3c222d0cee50f6f22ed71173))
+* **deps:** update dependency eslint-plugin-sort-keys-fix to v1.1.2 ([0a3ee63](https://github.com/davidNHK/busybox/commit/0a3ee6352cf07d97ba466c8cd2c246a31beefd9e))
+* **deps:** update dependency eslint-plugin-testing-library to v4.10.0 ([ac93404](https://github.com/davidNHK/busybox/commit/ac93404e5dcb52727b1ea87cd151508a33ab08a2))
+* **deps:** update dependency eslint-plugin-testing-library to v4.10.1 ([c463d08](https://github.com/davidNHK/busybox/commit/c463d08211b3b2b42d453cacf4c0f0feb0650a74))
+* **deps:** update dependency eslint-plugin-testing-library to v4.7.0 ([b138008](https://github.com/davidNHK/busybox/commit/b1380088374d216173a64f6b43d8391f1b19ffd8))
+* **deps:** update dependency eslint-plugin-testing-library to v4.8.0 ([220635b](https://github.com/davidNHK/busybox/commit/220635bb11d40a90bcb509bdb316a4cdb7b679e2))
+* **deps:** update dependency eslint-plugin-testing-library to v4.9.0 ([1e508a0](https://github.com/davidNHK/busybox/commit/1e508a00c7cbafc7bf37ba9aab910639cedd63ad))
+* **deps:** update dependency eslint-plugin-testing-library to v4.9.1 ([feeb72a](https://github.com/davidNHK/busybox/commit/feeb72a5493fcbe458a662931dcd26ef03cec481))
+* **deps:** update dependency eslint-plugin-typescript-sort-keys to v1.7.0 ([1f5f83b](https://github.com/davidNHK/busybox/commit/1f5f83bad85b210e97a9f5c1b650992db03fd9ce))
+* **deps:** update typescript-eslint monorepo to v4.27.0 ([7cb4b72](https://github.com/davidNHK/busybox/commit/7cb4b72acce5b92bbcfd76c89a8ecbed05bf6401))
+* **deps:** update typescript-eslint monorepo to v4.28.0 ([6743851](https://github.com/davidNHK/busybox/commit/6743851a5857749b7824072b8bbbf5403c2e100a))
+* **deps:** update typescript-eslint monorepo to v4.28.1 ([7c29664](https://github.com/davidNHK/busybox/commit/7c296641839d13ecfac47d667d7ae30c9972934b))
+* **deps:** update typescript-eslint monorepo to v4.28.2 ([db46a11](https://github.com/davidNHK/busybox/commit/db46a113b6d17d755780dddabb3e0ce9a10f0cc3))
+* **deps:** update typescript-eslint monorepo to v4.28.3 ([7ed9750](https://github.com/davidNHK/busybox/commit/7ed975069334a41035c1044075875782d3a60ed2))
+* **deps:** update typescript-eslint monorepo to v4.28.4 ([df4b558](https://github.com/davidNHK/busybox/commit/df4b5581c422da412c1e4aae097521ecd88f650a))
+* **deps:** update typescript-eslint monorepo to v4.28.5 ([8c06d29](https://github.com/davidNHK/busybox/commit/8c06d29e9011d1d9515278ee56fe1d4f26a652ee))
+* **deps:** update typescript-eslint monorepo to v4.29.0 ([82534a4](https://github.com/davidNHK/busybox/commit/82534a493edaed5cc032854a5caccf3da03f8b4e))
+* **deps:** update typescript-eslint monorepo to v4.29.1 ([bc95111](https://github.com/davidNHK/busybox/commit/bc951114f650e379aa36b92032574fb8aa32d610))
+
+
+
+
+
 ## [5.4.9](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.4.8...@busybox/eslint-config@5.4.9) (2021-06-13)
 
 
