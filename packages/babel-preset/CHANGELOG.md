@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/davidNHK/busybox/compare/@busybox/babel-preset@1.1.9...@busybox/babel-preset@1.2.0) (2021-09-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @babel/core to v7.15.5 ([b180c21](https://github.com/davidNHK/busybox/commit/b180c216045409e65df76f1f12ad8851dc7e0174))
+
+
+### Features
+
+* replace yarn with npm ([835b1e0](https://github.com/davidNHK/busybox/commit/835b1e0e285c2d396cfb189550aff0e780c9a3cd))
+
+
+
+
+
 ## [1.1.10](https://github.com/davidNHK/busybox/compare/@busybox/babel-preset@1.1.9...@busybox/babel-preset@1.1.10) (2021-08-15)
 
 
