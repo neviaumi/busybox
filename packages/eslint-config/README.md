@@ -1,13 +1,11 @@
 # @busybox/eslint-config
 
-**That config assumes your are using typescript for development**
-
 # Installation
 
 1. Install peerDependencies
 
 ```
-yarn add --dev eslint prettier typescript
+npm install --save-dev @busybox/eslint-config
 ```
 
 2. Setup [prettier](../prettier-config)

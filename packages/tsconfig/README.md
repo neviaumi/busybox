@@ -3,7 +3,7 @@
 # Installation
 
 ```
-yarn add --dev @busybox/tsconfig
+npm install --save-dev @busybox/tsconfig
 ```
 
 In tsconfig.json for normally application

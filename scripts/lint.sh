@@ -2,5 +2,5 @@
 
 set -ex
 
-yarn lint:package-json
-yarn lint:js
+npm run lint:package-json
+npm run lint:js
