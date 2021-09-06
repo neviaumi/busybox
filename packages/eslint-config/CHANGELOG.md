@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.5.0](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.4.11...@busybox/eslint-config@5.5.0) (2021-09-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-testing-library to v4.12.1 ([23b079c](https://github.com/davidNHK/busybox/commit/23b079c2bb0bc00ee939caf8aa2f1b45ad3840ff))
+
+
+### Features
+
+* replace yarn with npm ([835b1e0](https://github.com/davidNHK/busybox/commit/835b1e0e285c2d396cfb189550aff0e780c9a3cd))
+* upgrade node16 ([2cb9f52](https://github.com/davidNHK/busybox/commit/2cb9f5278b0dbfba9b3e8a03fe4404195602b115))
+
+
+
+
+
 ## [5.4.11](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.4.10...@busybox/eslint-config@5.4.11) (2021-09-02)
 
 

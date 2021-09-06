@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/davidNHK/busybox/compare/@busybox/tsconfig@1.3.3...@busybox/tsconfig@1.4.0) (2021-09-06)
+
+
+### Features
+
+* replace yarn with npm ([835b1e0](https://github.com/davidNHK/busybox/commit/835b1e0e285c2d396cfb189550aff0e780c9a3cd))
+* upgrade node16 ([2cb9f52](https://github.com/davidNHK/busybox/commit/2cb9f5278b0dbfba9b3e8a03fe4404195602b115))
+
+
+
+
+
 ## [1.3.4](https://github.com/davidNHK/busybox/compare/@busybox/tsconfig@1.3.3...@busybox/tsconfig@1.3.4) (2021-08-15)
 
 
