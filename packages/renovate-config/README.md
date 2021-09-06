@@ -3,8 +3,9 @@
 # Installation
 
 1. Install config
+
 ```
-yarn add --dev @busybox/renovate-config
+npm install --save-dev @busybox/renovate-config
 ```
 
 2. In your project root `rennovate.json`

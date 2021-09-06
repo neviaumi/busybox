@@ -6,3 +6,4 @@ node_modules/
 packages/.*/node_modules/
 out/
 **/__fixtures__/*.json
+package-lock.json

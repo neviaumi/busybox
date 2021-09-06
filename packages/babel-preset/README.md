@@ -3,7 +3,7 @@
 # Installation
 
 ```
-yarn add --dev @busybox/babel-preset @babel/cli @babel/core
+npm install --save-dev @busybox/babel-preset
 ```
 
 In .babelrc.js
