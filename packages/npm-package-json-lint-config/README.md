@@ -3,8 +3,9 @@
 # Installation
 
 1. Install prettier and config
+
 ```
-yarn add --dev npm-package-json-lint @busybox/npm-package-json-lint-config
+npm install --save-dev @busybox/npm-package-json-lint-config
 ```
 
 2. In your project root `npmpackagejsonlint.config`
@@ -13,8 +14,8 @@ yarn add --dev npm-package-json-lint @busybox/npm-package-json-lint-config
 'use strict';
 
 module.exports = {
-  extends: '@busybox/npm-package-json-lint-config'
+  extends: '@busybox/npm-package-json-lint-config',
 };
-
 ```
+
 [Example](../../npmpackagejsonlint.config.js)

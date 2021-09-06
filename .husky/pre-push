@@ -1,4 +1,4 @@
 #!/bin/sh
 
 set -e
-yarn lerna run test
+npx lerna run test

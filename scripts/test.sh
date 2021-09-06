@@ -2,4 +2,4 @@
 
 set -ex
 
-yarn test
+npm test

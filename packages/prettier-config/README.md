@@ -3,8 +3,9 @@
 # Installation
 
 1. Install prettier and config
+
 ```
-yarn add --dev prettier @busybox/prettier-config
+npm install --save-dev @busybox/prettier-config
 ```
 
 2. In your project root `.prettierrc.js`
@@ -14,4 +15,5 @@ module.exports = {
   ...require('@busybox/prettier-config'),
 };
 ```
+
 [Example](../../.prettierrc.js)

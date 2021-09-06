@@ -25,19 +25,16 @@
   "private": true,
   "repository": "git@github.com:davidNHK/busybox.git",
   "scripts": {
-    "build": "yarn lerna run build",
-    "eslint": "eslint --fix --ext=ts,js,json",
-    "lint:js": "yarn eslint .",
-    "lint:package-json": "yarn npmPkgJsonLint .",
+    "build": "lerna run build",
+    "lint:js": "eslint --fix --ext=ts,js,json .",
+    "lint:package-json": "npmPkgJsonLint .",
     "postinstall": "is-ci || husky install",
     "postpublish": "pinst --enable",
     "prepublishOnly": "pinst --disable",
-    "test": "yarn lerna run test"
+    "test": "lerna run test"
   },
   "version": "1.0.0",
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  }
+  "workspaces": [
+    "./packages/*"
+  ]
 }
