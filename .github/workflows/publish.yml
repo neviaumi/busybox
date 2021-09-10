@@ -17,17 +17,17 @@ jobs:
         with:
           fetch-depth: '0'
       - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+      - name: Read .nvmrc
+        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+        id: nvm
       - name: Use Node.js 16.x
         uses: actions/setup-node@v2
         with:
-          node-version: 16.x
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
       - run: bash ./scripts/setup.sh
       - run: bash ./scripts/test.sh
       - run: bash ./scripts/publish.sh
-      - name: pull-request
-        uses: repo-sync/pull-request@v2
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          destination_branch: 'development'
-          pr_title: 'docs: publish changes log and version bump'
-          pr_label: 'automerge'
+      - name: Open PR to development
+        run: "gh pr create --title 'docs: publish changes log and version bump' --base development"
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
