@@ -6,13 +6,13 @@
         "**/__fixtures__/**",
         "**/__mocks__/**",
         "**/__tests__/**",
-        "yarn.lock",
+        "package-lock.json",
         "CHANGELOG.md"
       ],
       "message": "chore(release): publish[skip ci]"
     }
   },
-  "npmClient": "yarn",
+  "npmClient": "npm",
   "packages": ["packages/*"],
   "useWorkspaces": true,
   "version": "independent"
