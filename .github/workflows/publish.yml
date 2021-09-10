@@ -28,6 +28,6 @@ jobs:
       - run: bash ./scripts/test.sh
       - run: bash ./scripts/publish.sh
       - name: Open PR to development
-        run: "gh pr create --title 'docs: publish changes log and version bump' --base development"
+        run: 'gh pr create --fill --base development'
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
