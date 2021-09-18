@@ -1,11 +1,6 @@
 const { overrides } = require('./base');
 
 const jsConfig = overrides.find(override => override.files.includes('*.js'));
-const jsTestConfig = overrides.find(override =>
-  override.files.some(file =>
-    ['*.test.js', '*.test.jsx', '*.spec.js', '*.spec.jsx'].includes(file),
-  ),
-);
 
 module.exports = {
   overrides: [
@@ -56,24 +51,6 @@ module.exports = {
       plugins: ['@typescript-eslint/eslint-plugin', 'typescript-sort-keys'],
       rules: {
         '@typescript-eslint/no-unused-vars': 'off', // Not work for type declaration file
-      },
-    },
-    {
-      extends: jsTestConfig.extends,
-      files: ['*.test.ts', '*.test.tsx', '*.spec.ts', '*.spec.tsx'],
-      parser: '@typescript-eslint/parser',
-      plugins: ['@typescript-eslint/eslint-plugin', 'typescript-sort-keys'],
-      rules: {
-        ...jsTestConfig.rules,
-        '@typescript-eslint/ban-ts-comment': [
-          'error',
-          {
-            'ts-check': false,
-            'ts-expect-error': false,
-            'ts-ignore': true,
-            'ts-nocheck': true,
-          },
-        ],
       },
     },
   ],
