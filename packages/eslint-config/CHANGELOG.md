@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.6.0](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.5.1...@busybox/eslint-config@5.6.0) (2021-09-18)
+
+
+### Features
+
+* **eslint-conifg:** split jest config ([53230fe](https://github.com/davidNHK/busybox/commit/53230fe03446a8d2be661acd30d20bd61e37463a))
+
+
+
+
+
 ## [5.5.1](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.5.0...@busybox/eslint-config@5.5.1) (2021-09-10)
 
 
