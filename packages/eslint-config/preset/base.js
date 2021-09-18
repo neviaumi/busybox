@@ -1,12 +1,9 @@
 module.exports = {
-  env: {
-    jest: true,
-  },
   extends: ['prettier'],
   overrides: [
     {
       extends: ['plugin:import/recommended'],
-      files: ['*.js', '*.jsx'],
+      files: ['*.js', '*.jsx', '*.cjs', '*.mjs'],
       rules: {
         'block-scoped-var': 'error',
         // I out of control when work with third party library
@@ -65,27 +62,6 @@ module.exports = {
       },
     },
     {
-      extends: ['plugin:jest/recommended'],
-      files: ['*.test.js', '*.test.jsx', '*.spec.js', '*.spec.jsx'],
-      rules: {
-        'jest/consistent-test-it': [
-          'error',
-          {
-            fn: 'it',
-            withinDescribe: 'it',
-          },
-        ],
-
-        'jest/expect-expect': 'error',
-
-        'jest/no-done-callback': 'error',
-
-        'jest/prefer-spy-on': 'error',
-
-        'jest/valid-expect': ['error', { maxArgs: 2, minArgs: 1 }],
-      },
-    },
-    {
       extends: ['plugin:jsonc/prettier'],
       files: ['*.json'],
       parser: require.resolve('jsonc-eslint-parser'),
@@ -95,7 +71,7 @@ module.exports = {
     },
   ],
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 'latest',
     sourceType: 'module',
   },
   plugins: [
