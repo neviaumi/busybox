@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.6.2](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.6.1...@busybox/eslint-config@5.6.2) (2021-09-19)
+
+
+### Bug Fixes
+
+* **eslint-config:** react/prop-types should disabled for typescript ([67962da](https://github.com/davidNHK/busybox/commit/67962da2c87f0af8ac4e81337b0b3b5ad73d23a8))
+* **eslint-config:** typescript-jest should include jest rules ([65b8cf0](https://github.com/davidNHK/busybox/commit/65b8cf0844d0c62e9a402fbbd1959d9aa178d455))
+
+
+
+
+
 ## [5.6.1](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.6.0...@busybox/eslint-config@5.6.1) (2021-09-19)
 
 ### Bug Fixes
