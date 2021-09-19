@@ -12,6 +12,12 @@ module.exports = {
       },
     },
     {
+      files: ['*.tsx'],
+      rules: {
+        'react/prop-types': 'off',
+      },
+    },
+    {
       extends: ['plugin:testing-library/react'],
       files: ['*.test.jsx', '*.test.tsx', '*.spec.jsx', '*.spec.tsx'],
       plugins: [
