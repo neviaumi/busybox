@@ -27,6 +27,7 @@ module.exports = {
       parser: '@typescript-eslint/parser',
       plugins: ['@typescript-eslint/eslint-plugin', 'typescript-sort-keys'],
       rules: {
+        ...jestConfig.rules,
         '@typescript-eslint/ban-ts-comment': [
           'error',
           {
