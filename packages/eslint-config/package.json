@@ -19,7 +19,7 @@
     "eslint-plugin-typescript-sort-keys": "1.8.0"
   },
   "devDependencies": {
-    "eslint": "7.32.0"
+    "eslint": "8.0.0"
   },
   "engines": {
     "node": ">=16"
