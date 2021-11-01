@@ -9,7 +9,7 @@
     "babel-plugin-transform-typescript-metadata": "0.3.2"
   },
   "devDependencies": {
-    "@babel/cli": "7.15.7"
+    "@babel/cli": "7.16.0"
   },
   "engines": {
     "node": ">=12"
