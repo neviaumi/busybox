@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/davidNHK/busybox/compare/@busybox/tsconfig@1.4.0...@busybox/tsconfig@1.5.0) (2021-11-21)
+
+
+### Features
+
+* **tsconfig:** enable all strict rule ([c36d91c](https://github.com/davidNHK/busybox/commit/c36d91c573fe6b97e1bef0fec8cf642b354d6fd3))
+
+
+
+
+
 # [1.4.0](https://github.com/davidNHK/busybox/compare/@busybox/tsconfig@1.3.3...@busybox/tsconfig@1.4.0) (2021-09-06)
 
 
