@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.6.4](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.6.3...@busybox/eslint-config@5.6.4) (2021-11-21)
+
+**Note:** Version bump only for package @busybox/eslint-config
+
+
+
+
+
 ## [5.6.3](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.6.2...@busybox/eslint-config@5.6.3) (2021-11-21)
 
 **Note:** Version bump only for package @busybox/eslint-config
