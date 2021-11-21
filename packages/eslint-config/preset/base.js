@@ -76,7 +76,6 @@ module.exports = {
   },
   plugins: [
     'eslint-plugin-import',
-    'eslint-plugin-jest',
     'eslint-plugin-prettier',
     'sort-keys-fix',
     'simple-import-sort',
