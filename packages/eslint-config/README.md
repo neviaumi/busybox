@@ -2,7 +2,7 @@
 
 # Installation
 
-1. Install peerDependencies
+1. Install dependencies
 
 ```
 npm install --save-dev @busybox/eslint-config
