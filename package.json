@@ -1,8 +1,6 @@
 {
   "author": "David Ng <david.ng.dev@gmail.com>",
   "devDependencies": {
-    "@babel/cli": "7.16.0",
-    "@babel/core": "7.16.0",
     "@commitlint/cli": "15.0.0",
     "@commitlint/config-conventional": "15.0.0",
     "@commitlint/config-lerna-scopes": "15.0.0",
@@ -26,7 +24,8 @@
   "repository": "git@github.com:davidNHK/busybox.git",
   "scripts": {
     "build": "lerna run build",
-    "lint:js": "eslint --fix --ext=ts,js,json .",
+    "eslint": "eslint --resolve-plugins-relative-to ./packages/eslint-config --ext=ts,js,json",
+    "lint:js": "npm run eslint --fix --ext=ts,js,json .",
     "lint:package-json": "npmPkgJsonLint .",
     "postinstall": "is-ci || husky install",
     "postpublish": "pinst --enable",
