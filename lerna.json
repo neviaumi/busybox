@@ -6,7 +6,6 @@
         "**/__fixtures__/**",
         "**/__mocks__/**",
         "**/__tests__/**",
-        "package-lock.json",
         "CHANGELOG.md"
       ],
       "message": "chore(release): publish[skip ci]"
