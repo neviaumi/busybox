@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/davidNHK/busybox/compare/@busybox/tsconfig@1.5.0...@busybox/tsconfig@1.6.0) (2021-12-02)
+
+
+### Features
+
+* update typescript version ([f0372b8](https://github.com/davidNHK/busybox/commit/f0372b89b6993a5b153ce582d951254c8e5833ee))
+
+
+
+
+
 # [1.5.0](https://github.com/davidNHK/busybox/compare/@busybox/tsconfig@1.4.0...@busybox/tsconfig@1.5.0) (2021-11-21)
 
 
