@@ -32,7 +32,7 @@
   "main": "index.js",
   "name": "@busybox/eslint-config",
   "peerDependencies": {
-    "eslint": ">=8 <9",
+    "eslint": ">=7 <9",
     "prettier": ">=2 <3",
     "typescript": ">=4"
   },
