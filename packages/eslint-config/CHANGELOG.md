@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.7.1](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.7.0...@busybox/eslint-config@5.7.1) (2021-12-02)
+
+
+### Bug Fixes
+
+* bigger eslint support ([ca3fef9](https://github.com/davidNHK/busybox/commit/ca3fef953f6c421316235dac6d2efd56f49bb107))
+
+
+
+
+
 # [5.7.0](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.6.4...@busybox/eslint-config@5.7.0) (2021-12-02)
 
 
