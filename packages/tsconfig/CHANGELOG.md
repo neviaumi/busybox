@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.1](https://github.com/davidNHK/busybox/compare/@busybox/tsconfig@1.6.0...@busybox/tsconfig@1.6.1) (2021-12-03)
+
+
+### Bug Fixes
+
+* moduleResolution keep default value ([ec1dc7d](https://github.com/davidNHK/busybox/commit/ec1dc7d4b12af06f5fa48f68facbda55e5120a61))
+
+
+
+
+
 # [1.6.0](https://github.com/davidNHK/busybox/compare/@busybox/tsconfig@1.5.0...@busybox/tsconfig@1.6.0) (2021-12-02)
 
 
