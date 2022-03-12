@@ -3,7 +3,8 @@
     "@spotify/prettier-config": "12.0.0"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=16",
+    "yarn": "Use npm"
   },
   "files": [
     "index.js"
