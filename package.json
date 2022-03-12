@@ -10,13 +10,13 @@
     "jest": "27.5.1",
     "lerna": "4.0.0",
     "lint-staged": "12.3.5",
-    "npm-package-json-lint": "5.4.2",
     "pinst": "3.0.0",
     "prettier": "2.5.1",
     "typescript": "4.6.2"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=16",
+    "yarn": "Use npm"
   },
   "license": "MIT",
   "name": "busybox",
@@ -25,8 +25,8 @@
   "scripts": {
     "build": "lerna run build",
     "eslint": "eslint --resolve-plugins-relative-to ./packages/eslint-config --ext=ts,js,json",
-    "lint:js": "npm run eslint --fix --ext=ts,js,json .",
-    "lint:package-json": "npmPkgJsonLint .",
+    "lint": "npm run eslint .",
+    "lint:fix": "npm run eslint -- --fix .",
     "postinstall": "is-ci || husky install",
     "postpublish": "pinst --enable",
     "prepublishOnly": "pinst --disable",

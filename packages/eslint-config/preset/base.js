@@ -62,10 +62,69 @@ module.exports = {
       },
     },
     {
-      extends: ['plugin:jsonc/prettier'],
+      extends: [
+        'plugin:jsonc/prettier',
+        'plugin:json-schema-validator/recommended',
+      ],
       files: ['*.json'],
       parser: require.resolve('jsonc-eslint-parser'),
       rules: {
+        'json-schema-validator/no-invalid': [
+          'error',
+          {
+            schemas: [
+              {
+                fileMatch: ['package.json'],
+                schema: {
+                  $schema: 'https://json-schema.org/draft/2020-12/schema',
+                  properties: {
+                    engines: {
+                      properties: {
+                        node: {
+                          const: '>=16',
+                          type: 'string',
+                        },
+                        yarn: {
+                          const: 'Use npm',
+                          type: 'string',
+                        },
+                      },
+                      required: ['node', 'yarn'],
+                      type: 'object',
+                    },
+                    license: {
+                      enum: ['MIT', 'UNLICENSED'],
+                      type: 'string',
+                    },
+                    repository: {
+                      oneOf: [
+                        {
+                          properties: {
+                            directory: { type: 'string' },
+                            type: { const: 'git', type: 'string' },
+                            url: {
+                              type: 'string',
+                            },
+                          },
+                          required: ['url', 'type', 'directory'],
+                          type: 'object',
+                        },
+                        {
+                          type: 'string',
+                        },
+                      ],
+                    },
+                    version: {
+                      type: 'string',
+                    },
+                  },
+
+                  required: ['engines', 'version', 'license'],
+                },
+              },
+            ],
+          },
+        ],
         'jsonc/sort-keys': 'error',
       },
     },
