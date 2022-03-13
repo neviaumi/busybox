@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/davidNHK/busybox/compare/@busybox/tsconfig@1.6.2...@busybox/tsconfig@1.7.0) (2022-03-13)
+
+
+### Features
+
+* split tsconfig ([3e0f4ff](https://github.com/davidNHK/busybox/commit/3e0f4ff30d8683fcb2e26da1b1329d95092fddc2))
+
+
+
+
+
 ## [1.6.2](https://github.com/davidNHK/busybox/compare/@busybox/tsconfig@1.6.1...@busybox/tsconfig@1.6.2) (2022-03-13)
 
 **Note:** Version bump only for package @busybox/tsconfig
