@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.8.0](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.7.2...@busybox/eslint-config@5.8.0) (2022-03-13)
+
+
+### Features
+
+* auto sort deconstruct keys ([0557438](https://github.com/davidNHK/busybox/commit/0557438223ec305dcafd368453077a9cec74b9b7))
+* enable eslint on yaml file ([9ff7ec1](https://github.com/davidNHK/busybox/commit/9ff7ec133a8c564586bbedb97e2dfcdcf2c199f0))
+
+
+
+
+
 ## [5.7.2](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.7.1...@busybox/eslint-config@5.7.2) (2022-02-13)
 
 **Note:** Version bump only for package @busybox/eslint-config
