@@ -65,6 +65,15 @@ module.exports = {
       },
     },
     {
+      extends: ['plugin:yml/standard'],
+      files: ['*.yml', '*.yaml'],
+      parser: require.resolve('yaml-eslint-parser'),
+      rules: {
+        'yml/quotes': ['error', { prefer: 'single' }],
+        'yml/sort-keys': 'error',
+      },
+    },
+    {
       extends: [
         'plugin:jsonc/prettier',
         'plugin:json-schema-validator/recommended',
