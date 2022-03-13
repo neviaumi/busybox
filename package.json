@@ -1,22 +1,22 @@
 {
   "author": "David Ng <david.ng.dev@gmail.com>",
   "devDependencies": {
-    "@commitlint/cli": "16.1.0",
-    "@commitlint/config-conventional": "16.0.0",
-    "@commitlint/config-lerna-scopes": "16.0.0",
-    "eslint": "8.8.0",
+    "@commitlint/cli": "16.2.1",
+    "@commitlint/config-conventional": "16.2.1",
+    "@commitlint/config-lerna-scopes": "16.2.2",
+    "eslint": "8.11.0",
     "husky": "7.0.4",
     "is-ci": "3.0.1",
     "jest": "27.5.1",
     "lerna": "4.0.0",
-    "lint-staged": "12.3.3",
-    "npm-package-json-lint": "5.4.2",
-    "pinst": "2.1.6",
+    "lint-staged": "12.3.5",
+    "pinst": "3.0.0",
     "prettier": "2.5.1",
-    "typescript": "4.5.5"
+    "typescript": "4.6.2"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=16",
+    "yarn": "Use npm"
   },
   "license": "MIT",
   "name": "busybox",
@@ -24,9 +24,9 @@
   "repository": "git@github.com:davidNHK/busybox.git",
   "scripts": {
     "build": "lerna run build",
-    "eslint": "eslint --resolve-plugins-relative-to ./packages/eslint-config --ext=ts,js,json",
-    "lint:js": "npm run eslint --fix --ext=ts,js,json .",
-    "lint:package-json": "npmPkgJsonLint .",
+    "eslint": "eslint --resolve-plugins-relative-to ./packages/eslint-config --ext=ts,js,json,yml,yaml",
+    "lint": "npm run eslint .",
+    "lint:fix": "npm run eslint -- --fix .",
     "postinstall": "is-ci || husky install",
     "postpublish": "pinst --enable",
     "prepublishOnly": "pinst --disable",

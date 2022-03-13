@@ -2,27 +2,31 @@
   "dependencies": {
     "@spotify/eslint-config-base": "12.0.0",
     "@spotify/web-scripts-utils": "12.0.0",
-    "@typescript-eslint/eslint-plugin": "5.11.0",
-    "@typescript-eslint/parser": "5.11.0",
-    "eslint-config-prettier": "8.3.0",
+    "@typescript-eslint/eslint-plugin": "5.14.0",
+    "@typescript-eslint/parser": "5.14.0",
+    "eslint-config-prettier": "8.5.0",
     "eslint-import-resolver-typescript": "2.5.0",
     "eslint-plugin-import": "2.25.4",
-    "eslint-plugin-jest": "26.1.0",
-    "eslint-plugin-jsonc": "2.1.0",
+    "eslint-plugin-jest": "26.1.1",
+    "eslint-plugin-json-schema-validator": "^2.3.15",
+    "eslint-plugin-jsonc": "^2.2.1",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "4.0.0",
-    "eslint-plugin-react": "7.28.0",
+    "eslint-plugin-react": "7.29.3",
     "eslint-plugin-react-hooks": "4.3.0",
     "eslint-plugin-simple-import-sort": "7.0.0",
+    "eslint-plugin-sort-destructure-keys": "^1.4.0",
     "eslint-plugin-sort-keys-fix": "1.1.2",
-    "eslint-plugin-testing-library": "5.0.5",
-    "eslint-plugin-typescript-sort-keys": "2.1.0"
+    "eslint-plugin-testing-library": "5.1.0",
+    "eslint-plugin-typescript-sort-keys": "2.1.0",
+    "eslint-plugin-yml": "^0.14.0"
   },
   "devDependencies": {
-    "eslint": "8.8.0"
+    "eslint": "8.11.0"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=16",
+    "yarn": "Use npm"
   },
   "files": [
     "index.js",

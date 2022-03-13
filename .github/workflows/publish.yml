@@ -1,10 +1,3 @@
-name: publish-after-push-master
-
-on:
-  push:
-    branches:
-      - master
-
 env:
   CI: true
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -13,21 +6,27 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: '0'
       - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
-      - name: Read .nvmrc
+      - id: nvm
+        name: Read .nvmrc
         run: echo ::set-output name=NVMRC::$(cat .nvmrc)
-        id: nvm
       - name: Use Node.js 16.x
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '${{ steps.nvm.outputs.NVMRC }}'
       - run: bash ./scripts/setup.sh
       - run: bash ./scripts/test.sh
       - run: bash ./scripts/publish.sh
-      - name: Open PR to development
-        run: 'gh pr create --fill --base development'
-        env:
+      - env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        name: Open PR to development
+        run: gh pr create --fill --base development
+name: publish-after-push-master
+
+on:
+  push:
+    branches:
+      - master
