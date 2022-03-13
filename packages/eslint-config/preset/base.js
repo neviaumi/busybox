@@ -74,11 +74,16 @@ module.exports = {
       },
     },
     {
-      extends: [
-        'plugin:jsonc/prettier',
-        'plugin:json-schema-validator/recommended',
-      ],
+      extends: ['plugin:jsonc/prettier'],
       files: ['*.json'],
+      parser: require.resolve('jsonc-eslint-parser'),
+      rules: {
+        'jsonc/sort-keys': 'error',
+      },
+    },
+    {
+      extends: ['plugin:json-schema-validator/recommended'],
+      files: ['package.json'],
       parser: require.resolve('jsonc-eslint-parser'),
       rules: {
         'json-schema-validator/no-invalid': [
@@ -137,7 +142,6 @@ module.exports = {
             ],
           },
         ],
-        'jsonc/sort-keys': 'error',
       },
     },
   ],
