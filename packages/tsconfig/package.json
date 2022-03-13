@@ -7,7 +7,8 @@
     "yarn": "Use npm"
   },
   "files": [
-    "tsconfig.json"
+    "tsconfig.json",
+    "tsconfig-react.json"
   ],
   "license": "MIT",
   "main": "tsconfig.json",
