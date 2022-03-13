@@ -16,6 +16,7 @@ module.exports = {
         'import/no-default-export': 'error',
 
         'import/no-duplicates': 'error',
+
         // auto sort import statements
         'import/order': 'off',
 
@@ -53,10 +54,12 @@ module.exports = {
 
         // Promise reject always is instance of error
         'prefer-promise-reject-errors': 'error',
+
         'prettier/prettier': 'error',
         radix: 'error',
         'simple-import-sort/exports': 'error',
         'simple-import-sort/imports': 'error',
+        'sort-destructure-keys/sort-destructure-keys': 'error',
         'sort-imports': 'off',
         'sort-keys-fix/sort-keys-fix': 'error',
       },
@@ -146,6 +149,7 @@ module.exports = {
     'eslint-plugin-import',
     'eslint-plugin-prettier',
     'sort-keys-fix',
+    'sort-destructure-keys',
     'simple-import-sort',
   ],
 };
