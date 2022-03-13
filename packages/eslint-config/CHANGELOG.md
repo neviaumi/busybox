@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.8.1](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.8.0...@busybox/eslint-config@5.8.1) (2022-03-13)
+
+
+### Bug Fixes
+
+* only apply json schema check to package json ([ef020bf](https://github.com/davidNHK/busybox/commit/ef020bfa2080922dd2bd90c4b685fdab0258cf2c))
+
+
+
+
+
 # [5.8.0](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.7.2...@busybox/eslint-config@5.8.0) (2022-03-13)
 
 
