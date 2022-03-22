@@ -98,7 +98,7 @@ module.exports = {
                     engines: {
                       properties: {
                         node: {
-                          const: '>=16',
+                          enum: ['>=14', '>=16'],
                           type: 'string',
                         },
                         yarn: {
