@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.9.1](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.9.0...@busybox/eslint-config@5.9.1) (2022-03-22)
+
+
+### Bug Fixes
+
+* min version set to v14 ([00f0911](https://github.com/davidNHK/busybox/commit/00f0911025fafc04bf0cf2d64228acbe027db07e))
+
+
+
+
+
 # [5.9.0](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.8.1...@busybox/eslint-config@5.9.0) (2022-03-22)
 
 

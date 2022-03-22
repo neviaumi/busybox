@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.1](https://github.com/davidNHK/busybox/compare/@busybox/tsconfig@1.7.0...@busybox/tsconfig@1.7.1) (2022-03-22)
+
+
+### Bug Fixes
+
+* min version set to v14 ([00f0911](https://github.com/davidNHK/busybox/commit/00f0911025fafc04bf0cf2d64228acbe027db07e))
+
+
+
+
+
 # [1.7.0](https://github.com/davidNHK/busybox/compare/@busybox/tsconfig@1.6.2...@busybox/tsconfig@1.7.0) (2022-03-13)
 
 
