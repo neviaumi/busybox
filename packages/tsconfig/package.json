@@ -3,7 +3,7 @@
     "@spotify/tsconfig": "13.0.0"
   },
   "engines": {
-    "node": ">=16",
+    "node": ">=14",
     "yarn": "Use npm"
   },
   "files": [
