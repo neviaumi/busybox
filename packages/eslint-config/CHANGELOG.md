@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.9.0](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.8.1...@busybox/eslint-config@5.9.0) (2022-03-22)
+
+
+### Features
+
+* allow node 14 ([3a6009f](https://github.com/davidNHK/busybox/commit/3a6009f96adb0ca6d3fb648e156def48efd99dca))
+
+
+
+
+
 ## [5.8.1](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.8.0...@busybox/eslint-config@5.8.1) (2022-03-13)
 
 
