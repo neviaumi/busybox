@@ -5,13 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - id: nvm
-        name: Read .nvmrc
-        run: echo ::set-output name=NVMRC::$(cat .nvmrc)
-      - name: Use Node.js 16.x
+      - name: Use Node.js lts
         uses: actions/setup-node@v3
         with:
-          node-version: '${{ steps.nvm.outputs.NVMRC }}'
+          node-version-file: .nvmrc
       - run: bash ./scripts/setup.sh
       - run: bash ./scripts/lint.sh
       - run: bash ./scripts/test.sh
