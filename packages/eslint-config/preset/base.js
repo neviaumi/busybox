@@ -82,7 +82,10 @@ module.exports = {
       },
     },
     {
-      extends: ['plugin:json-schema-validator/recommended'],
+      extends: [
+        'plugin:json-schema-validator/recommended',
+        'plugin:node-dependencies/recommended',
+      ],
       files: ['package.json'],
       parser: require.resolve('jsonc-eslint-parser'),
       rules: {
@@ -142,6 +145,9 @@ module.exports = {
             ],
           },
         ],
+        'node-dependencies/absolute-version': 'error',
+        'node-dependencies/compat-engines': 'off',
+        'node-dependencies/valid-semver': 'off',
       },
     },
   ],
@@ -155,5 +161,6 @@ module.exports = {
     'sort-keys-fix',
     'sort-destructure-keys',
     'simple-import-sort',
+    'node-dependencies',
   ],
 };
