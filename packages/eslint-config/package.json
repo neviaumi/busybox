@@ -49,5 +49,5 @@
     "type": "git",
     "url": "git@github.com:davidNHK/busybox.git"
   },
-  "version": "5.9.1"
+  "version": "5.10.0"
 }

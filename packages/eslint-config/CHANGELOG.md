@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.10.0](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.9.1...@busybox/eslint-config@5.10.0) (2022-04-13)
+
+
+### Features
+
+* enforce absolute version ([74205a4](https://github.com/davidNHK/busybox/commit/74205a44e2a4b4bc5ca1d5fe1180629c994330f1))
+
+
+
+
+
 ## [5.9.1](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.9.0...@busybox/eslint-config@5.9.1) (2022-03-22)
 
 
