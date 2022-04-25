@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@spotify/prettier-config": "13.0.0"
+    "@spotify/prettier-config": "13.0.1"
   },
   "engines": {
     "node": ">=14",
