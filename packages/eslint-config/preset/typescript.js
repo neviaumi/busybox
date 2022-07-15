@@ -1,12 +1,7 @@
-const { overrides } = require('./base');
-
-const jsConfig = overrides.find(override => override.files.includes('*.js'));
-
 module.exports = {
   overrides: [
     {
       extends: [
-        ...jsConfig.extends,
         'plugin:@typescript-eslint/recommended',
         'plugin:import/typescript',
         'plugin:typescript-sort-keys/recommended',
@@ -15,23 +10,15 @@ module.exports = {
       parser: '@typescript-eslint/parser',
       plugins: ['@typescript-eslint/eslint-plugin', 'typescript-sort-keys'],
       rules: {
-        ...jsConfig.rules,
-
-        // Disable this rule because when integrate third party the property name is out of control, E.X. it using snake_case
-        '@typescript-eslint/camelcase': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
 
         '@typescript-eslint/explicit-module-boundary-types': 'off',
-
-        '@typescript-eslint/member-ordering': 'off',
 
         '@typescript-eslint/no-explicit-any': 'off',
 
         '@typescript-eslint/no-non-null-assertion': 'off',
 
         '@typescript-eslint/no-unused-vars': 'error',
-
-        camelcase: 'off',
 
         // Conflict with TS4111 https://www.typescriptlang.org/tsconfig#noPropertyAccessFromIndexSignature
         'dot-notation': 'off',
@@ -43,19 +30,17 @@ module.exports = {
         'no-undef': 'off',
         'no-use-before-define': 'off',
       },
+      settings: {
+        'import/resolver': {
+          typescript: {},
+        },
+      },
     },
     {
       files: ['typings/**/*.d.ts'],
-      parser: '@typescript-eslint/parser',
-      plugins: ['@typescript-eslint/eslint-plugin', 'typescript-sort-keys'],
       rules: {
         '@typescript-eslint/no-unused-vars': 'off', // Not work for type declaration file
       },
     },
   ],
-  settings: {
-    'import/resolver': {
-      typescript: {},
-    },
-  },
 };
