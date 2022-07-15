@@ -17,8 +17,8 @@ const hasJest = hasConfig([
 
 module.exports = {
   extends: [
-    'prettier',
     '@spotify/eslint-config-base',
+    './preset/prettier',
     './preset/javascript.js',
     './preset/json.js',
     './preset/yml.js',
