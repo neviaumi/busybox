@@ -1,21 +1,14 @@
 module.exports = {
-  env: {
-    jest: true,
-  },
-  extends: ['prettier'],
   overrides: [
     {
+      env: {
+        jest: true,
+      },
       extends: ['plugin:jest/recommended'],
-      files: [
-        '*.test.js',
-        '*.test.cjs',
-        '*.test.mjs',
-        '*.test.jsx',
-        '*.spec.js',
-        '*.spec.cjs',
-        '*.spec.mjs',
-        '*.spec.jsx',
-      ],
+      files: ['js', 'cjs', 'mjs', 'jsx', 'ts', 'tsx']
+        .map(ext => [`*.test.${ext}`, `*.spec.${ext}`])
+        .flat(),
+      plugins: ['eslint-plugin-jest'],
       rules: {
         'jest/consistent-test-it': [
           'error',
@@ -34,10 +27,21 @@ module.exports = {
         'jest/valid-expect': ['error', { maxArgs: 2, minArgs: 1 }],
       },
     },
+    {
+      files: ['*.test.ts', '*.test.tsx', '*.spec.ts', '*.spec.tsx'],
+      parser: '@typescript-eslint/parser',
+      plugins: ['@typescript-eslint/eslint-plugin'],
+      rules: {
+        '@typescript-eslint/ban-ts-comment': [
+          'error',
+          {
+            'ts-check': false,
+            'ts-expect-error': false,
+            'ts-ignore': true,
+            'ts-nocheck': true,
+          },
+        ],
+      },
+    },
   ],
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-  },
-  plugins: ['eslint-plugin-jest'],
 };

@@ -17,11 +17,13 @@ const hasJest = hasConfig([
 
 module.exports = {
   extends: [
+    'prettier',
     '@spotify/eslint-config-base',
-    './preset/base.js',
+    './preset/javascript.js',
+    './preset/json.js',
+    './preset/yml.js',
     hasJest ? './preset/jest.js' : '',
-    hasReact ? './preset/react.js' : '',
+    hasReact ? './preset/react-jsx.js' : '',
     hasTypescript ? './preset/typescript.js' : '',
-    hasTypescript && hasJest ? './preset/typescript-jest.js' : '',
   ].filter(s => !!s),
 };
