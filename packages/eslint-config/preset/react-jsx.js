@@ -3,12 +3,22 @@ module.exports = {
     {
       extends: ['plugin:react/recommended'],
       files: ['*.jsx', '*.tsx'],
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
       plugins: ['eslint-plugin-react', 'eslint-plugin-react-hooks'],
       rules: {
         'react-hooks/exhaustive-deps': 'error',
         'react-hooks/rules-of-hooks': 'error',
         'react/jsx-sort-props': 'error',
         'react/react-in-jsx-scope': 'off',
+      },
+      settings: {
+        react: {
+          version: 'detect',
+        },
       },
     },
     {
@@ -33,14 +43,4 @@ module.exports = {
       },
     },
   ],
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
 };
