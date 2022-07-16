@@ -5,6 +5,11 @@ const hasReact = hasConfig([
   { dependency: 'react', dependencyType: 'peer', type: 'dependency' },
 ]);
 
+const hasAngular = hasConfig([
+  { dependency: '@angular/core', type: 'dependency' },
+  { dependency: '@angular/core', dependencyType: 'peer', type: 'dependency' },
+]);
+
 const hasTypescript = hasConfig([
   { dependency: 'typescript', type: 'dependency' },
   { dependency: 'typescript', dependencyType: 'dev', type: 'dependency' },
@@ -18,10 +23,11 @@ const hasJest = hasConfig([
 module.exports = {
   extends: [
     '@spotify/eslint-config-base',
-    './preset/prettier',
+    './preset/prettier.js',
     './preset/javascript.js',
     './preset/json.js',
     './preset/yml.js',
+    hasAngular ? './preset/angular.js' : '',
     hasJest ? './preset/jest.js' : '',
     hasReact ? './preset/react-jsx.js' : '',
     hasTypescript ? './preset/typescript.js' : '',
