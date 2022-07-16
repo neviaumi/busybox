@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.12.0](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.11.0...@busybox/eslint-config@5.12.0) (2022-07-16)
+
+
+### Bug Fixes
+
+* **eslint-config:** no more configuration outside override ([ad48db1](https://github.com/davidNHK/busybox/commit/ad48db1f6185e7cf407626c0dc6099680e0ef3d2))
+
+
+### Features
+
+* disable import/no-named-as-default ([3b3c3a8](https://github.com/davidNHK/busybox/commit/3b3c3a8a7f95c7b7e7f92ff073aa4fb040bc6f5a))
+* **eslint-config:** avoid conflict between eslint and prettier ([b00d2d9](https://github.com/davidNHK/busybox/commit/b00d2d991151bcc5c820f179f47fd0582ea746a0))
+* **eslint-config:** include angular preset ([cb293ec](https://github.com/davidNHK/busybox/commit/cb293ec6a3f75f13f3c195eaf0fcba94bd6963f8))
+
+
+
+
+
 # [5.11.0](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.10.1...@busybox/eslint-config@5.11.0) (2022-07-15)
 
 
