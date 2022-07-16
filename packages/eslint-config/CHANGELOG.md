@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.13.0](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.12.0...@busybox/eslint-config@5.13.0) (2022-07-16)
+
+
+### Features
+
+* **eslint-config:** present of NestJS ([0f6e832](https://github.com/davidNHK/busybox/commit/0f6e832d9fda6f459c43b79b46c1c09dcd24de8a))
+
+
+
+
+
 # [5.12.0](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.11.0...@busybox/eslint-config@5.12.0) (2022-07-16)
 
 
