@@ -26,9 +26,9 @@ module.exports = {
 
         'import/no-duplicates': 'error',
 
+        'import/no-named-as-default': 'off',
         // auto sort import statements
         'import/order': 'off',
-
         'lines-between-class-members': 'error',
 
         'max-lines': [
