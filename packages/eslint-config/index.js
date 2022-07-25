@@ -1,4 +1,5 @@
-const { hasConfig } = require('@spotify/web-scripts-utils');
+const { getConsumingRoot, hasConfig } = require('@spotify/web-scripts-utils');
+const readPkgUp = require('read-pkg-up');
 
 const hasReact = hasConfig([
   { dependency: 'react', type: 'dependency' },
@@ -25,6 +26,14 @@ const hasJest = hasConfig([
   { dependency: 'jest', dependencyType: 'dev', type: 'dependency' },
 ]);
 
+function isESM() {
+  const { packageJson } = readPkgUp.sync({
+    cwd: getConsumingRoot(),
+  }) || { packageJson: {}, path: getConsumingRoot() };
+  return packageJson?.type === 'module';
+}
+const hasESM = isESM();
+
 module.exports = {
   extends: [
     '@spotify/eslint-config-base',
@@ -37,5 +46,6 @@ module.exports = {
     hasJest ? './preset/jest.js' : '',
     hasReact ? './preset/react-jsx.js' : '',
     hasTypescript ? './preset/typescript.js' : '',
+    hasESM ? './preset/esm.js' : '',
   ].filter(s => !!s),
 };
