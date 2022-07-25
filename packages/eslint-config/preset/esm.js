@@ -8,7 +8,14 @@ module.exports = {
       },
       plugins: ['eslint-plugin-import'],
       rules: {
-        'import/extensions': 'error',
+        'import/extensions': [
+          'error',
+          'ignorePackages',
+          {
+            ts: 'never',
+            tsx: 'never',
+          },
+        ],
       },
     },
   ],
