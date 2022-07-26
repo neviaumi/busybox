@@ -64,7 +64,7 @@
     "build:tsc": "tsc ./src",
     "lint": "eslint .",
     "storybook": "start-storybook -p 6006",
-    "test": "cypress run --component",
+    "test:ci": "cypress run --component",
     "test:debug": "cypress open --component -b chrome"
   },
   "version": "1.0.0"

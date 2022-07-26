@@ -2,4 +2,4 @@
 
 set -ex
 
-npx lerna run test:ci
+npm run test:ci

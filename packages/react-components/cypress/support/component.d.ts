@@ -1,4 +1,5 @@
-/// <reference path="./component.ts" />
+import './component.js';
+
 import type { mount } from 'cypress/react';
 
 declare global {

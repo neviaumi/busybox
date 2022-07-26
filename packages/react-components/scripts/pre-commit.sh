@@ -2,4 +2,4 @@
 
 set -ex
 
-npx lerna run test:ci
+npx lint-staged

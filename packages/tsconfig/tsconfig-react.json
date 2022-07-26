@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
+    "esModuleInterop": true,
     "jsx": "react-jsx",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "esModuleInterop": true
+    "lib": ["DOM", "DOM.Iterable", "ESNext"]
   },
   "extends": "./tsconfig.json"
 }
