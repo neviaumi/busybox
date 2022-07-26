@@ -11,8 +11,7 @@
     "lerna": "5.2.0",
     "lint-staged": "13.0.3",
     "pinst": "3.0.0",
-    "prettier": "2.7.1",
-    "typescript": "4.7.4"
+    "prettier": "2.7.1"
   },
   "engines": {
     "node": ">=14",
@@ -24,13 +23,9 @@
   "repository": "git@github.com:davidNHK/busybox.git",
   "scripts": {
     "build": "lerna run build",
-    "eslint": "eslint --resolve-plugins-relative-to ./packages/eslint-config --ext=ts,js,json,yml,yaml",
-    "lint": "npm run eslint .",
-    "lint:fix": "npm run eslint -- --fix .",
     "postinstall": "is-ci || husky install",
     "postpublish": "pinst --enable",
-    "prepublishOnly": "pinst --disable",
-    "test": "lerna run test"
+    "prepublishOnly": "pinst --disable"
   },
   "version": "1.0.0",
   "workspaces": [

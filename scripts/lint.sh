@@ -2,4 +2,5 @@
 
 set -ex
 
-npm run lint
+npx eslint --ignore-pattern package-lock.json .
+npx lerna run lint

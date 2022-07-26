@@ -26,6 +26,14 @@ const hasJest = hasConfig([
   { dependency: 'jest', dependencyType: 'dev', type: 'dependency' },
 ]);
 
+const hasStorybook = hasConfig([
+  { dependency: 'storybook', dependencyType: 'dev', type: 'dependency' },
+]);
+
+const hasCypress = hasConfig([
+  { dependency: 'cypress', dependencyType: 'dev', type: 'dependency' },
+]);
+
 function isESM() {
   const { packageJson } = readPkgUp.sync({
     cwd: getConsumingRoot(),
@@ -41,11 +49,13 @@ module.exports = {
     './preset/javascript.js',
     './preset/json.js',
     './preset/yml.js',
-    hasAngular ? './preset/angular.js' : '',
-    hasNest ? './preset/nest.js' : '',
-    hasJest ? './preset/jest.js' : '',
-    hasReact ? './preset/react-jsx.js' : '',
     hasTypescript ? './preset/typescript.js' : '',
     hasESM ? './preset/esm.js' : '',
+    hasNest ? './preset/nest.js' : '',
+    hasAngular ? './preset/angular.js' : '',
+    hasReact ? './preset/react-jsx.js' : '',
+    hasStorybook ? './preset/storybook.js' : '',
+    hasJest ? './preset/jest.js' : '',
+    hasCypress ? './preset/cypress.js' : '',
   ].filter(s => !!s),
 };
