@@ -42,8 +42,9 @@
     "node": ">=16",
     "yarn": "Use npm"
   },
+  "exports": "./dist/index.mjs",
   "license": "MIT",
-  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "name": "@busybox/react-components",
   "peerDependencies": {
     "react": ">= 18",
@@ -59,7 +60,6 @@
   },
   "scripts": {
     "build": "webpack",
-    "build:babel": "babel --out-dir ./dist-babel --extensions .tsx ./src",
     "build:storybook": "build-storybook",
     "build:tsc": "tsc ./src",
     "lint": "eslint .",
@@ -67,5 +67,8 @@
     "test:ci": "cypress run --component",
     "test:debug": "cypress open --component -b chrome"
   },
+  "sideEffects": [
+    "./cypress/support/*.ts"
+  ],
   "version": "1.0.0"
 }

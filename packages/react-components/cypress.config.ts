@@ -15,5 +15,6 @@ export default defineConfig({
       },
     },
   },
+  screenshotOnRunFailure: false,
   video: false,
 });

@@ -4,7 +4,6 @@ const isDevelopment = ['development', 'test'].includes(process.env.NODE_ENV);
 
 module.exports = {
   entry: {
-    Button: './src/Button/Button.tsx',
     index: './src/index.tsx',
   },
   experiments: {
@@ -26,9 +25,12 @@ module.exports = {
       },
     ],
   },
+  optimization: {
+    usedExports: true,
+  },
   output: {
     clean: true,
-    filename: '[name].js',
+    filename: '[name].mjs',
     library: {
       type: 'module',
     },

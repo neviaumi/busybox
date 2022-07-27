@@ -118,3 +118,4 @@ dist
 
 dist-babel/
 cypress/videos/
+cypress/screenshots/
