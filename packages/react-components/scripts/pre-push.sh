@@ -2,4 +2,4 @@
 
 set -ex
 
-npm run test:ci
+bash scripts/ci/test.sh

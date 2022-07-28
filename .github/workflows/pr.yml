@@ -9,9 +9,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
-      - run: bash ./scripts/setup.sh
-      - run: bash ./scripts/lint.sh
-      - run: bash ./scripts/test.sh
+      - run: bash ./scripts/ci/setup.sh
+      - run: bash ./scripts/ci/test.sh
 name: verify-pr
 
 on: pull_request

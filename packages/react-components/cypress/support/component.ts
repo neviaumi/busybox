@@ -16,11 +16,16 @@
 // Import commands.js using ES2015 syntax:
 import './commands.js';
 
+import { setGlobalConfig } from '@storybook/testing-react';
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 import { mount } from 'cypress/react';
 
+// @ts-expect-error import js no type
+import * as globalStorybookConfig from '../../.storybook/preview.js';
 import { cy, Cypress } from '../../src/test-helpers/test-runner.js';
+
+setGlobalConfig(globalStorybookConfig);
 
 // Augment the Cypress namespace to include type definitions for
 // your custom command.
