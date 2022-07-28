@@ -1,3 +1,2 @@
-/* eslint-disable import/prefer-default-export */
-
 export { default as Button } from './Button/Button.js';
+export * as Layout from './Layout/Layout.js';

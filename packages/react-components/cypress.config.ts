@@ -12,6 +12,15 @@ export default defineConfig({
       webpackConfig: {
         ...existingWebPackConfig,
         externals: {},
+        module: {
+          rules: [
+            ...existingWebPackConfig.module.rules,
+            {
+              test: /\.css$/i,
+              use: ['style-loader', 'css-loader', 'postcss-loader'],
+            },
+          ],
+        },
       },
     },
   },
