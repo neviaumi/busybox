@@ -34,6 +34,10 @@ const hasCypress = hasConfig([
   { dependency: 'cypress', dependencyType: 'dev', type: 'dependency' },
 ]);
 
+const hasTailwindcss = hasConfig([
+  { dependency: 'tailwindcss', dependencyType: 'dev', type: 'dependency' },
+]);
+
 function isESM() {
   const { packageJson } = readPkgUp.sync({
     cwd: getConsumingRoot(),
@@ -57,5 +61,6 @@ module.exports = {
     hasStorybook ? './preset/storybook.js' : '',
     hasJest ? './preset/jest.js' : '',
     hasCypress ? './preset/cypress.js' : '',
+    hasTailwindcss ? './preset/tailwindcss.js' : '',
   ].filter(s => !!s),
 };

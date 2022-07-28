@@ -33,12 +33,12 @@ export function Footer({
   children,
   className = '',
 }: PropsWithChildren<LayoutProps>) {
-  return <footer className={`w-full ${className}`}>{children}</footer>;
+  return <footer className={`tw-w-full ${className}`}>{children}</footer>;
 }
 
 export function Side({
   children,
   className = '',
 }: PropsWithChildren<LayoutProps>) {
-  return <aside className={`w-full ${className}`}>{children}</aside>;
+  return <aside className={`tw-w-full ${className}`}>{children}</aside>;
 }
