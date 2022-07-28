@@ -17,6 +17,9 @@ module.exports = {
   core: {
     builder: 'webpack5',
   },
+  features: {
+    interactionsDebugger: true,
+  },
   framework: '@storybook/react',
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   webpackFinal: async config => {
