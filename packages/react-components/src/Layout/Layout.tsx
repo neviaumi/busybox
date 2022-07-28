@@ -1,44 +1,43 @@
 import type { PropsWithChildren } from 'react';
 
-interface LayoutProps {
+export interface LayoutProps {
   className?: string;
+  'data-testId'?: string;
 }
 
 export function Page({
   children,
   className = '',
+  ...rest
 }: PropsWithChildren<LayoutProps>) {
   return (
-    <div className={`tw-container ${className}`} role={'document'} tabIndex={0}>
+    <div
+      className={`tw-container ${className}`}
+      role={'document'}
+      tabIndex={0}
+      {...rest}
+    >
       {children}
     </div>
   );
 }
 
-export function Main({
-  children,
-  className = '',
-}: PropsWithChildren<LayoutProps>) {
-  return <main className={`tw-w-full ${className}`}>{children}</main>;
+export function Main({ children, ...rest }: PropsWithChildren<LayoutProps>) {
+  return <article {...rest}>{children}</article>;
 }
 
-export function Header({
-  children,
-  className = '',
-}: PropsWithChildren<LayoutProps>) {
-  return <header className={`tw-w-full ${className}`}>{children}</header>;
+export function Content({ children, ...rest }: PropsWithChildren<LayoutProps>) {
+  return <main {...rest}>{children}</main>;
 }
 
-export function Footer({
-  children,
-  className = '',
-}: PropsWithChildren<LayoutProps>) {
-  return <footer className={`w-full ${className}`}>{children}</footer>;
+export function Header({ children, ...rest }: PropsWithChildren<LayoutProps>) {
+  return <header {...rest}>{children}</header>;
 }
 
-export function Side({
-  children,
-  className = '',
-}: PropsWithChildren<LayoutProps>) {
-  return <aside className={`w-full ${className}`}>{children}</aside>;
+export function Footer({ children, ...rest }: PropsWithChildren<LayoutProps>) {
+  return <footer {...rest}>{children}</footer>;
+}
+
+export function Side({ children, ...rest }: PropsWithChildren<LayoutProps>) {
+  return <aside {...rest}>{children}</aside>;
 }

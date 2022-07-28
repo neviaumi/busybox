@@ -9,7 +9,7 @@ export default {
    * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
    * to learn how to generate automatic titles
    */
-  title: 'Button',
+  title: 'Component/Button',
 } as ComponentMeta<typeof ButtonComponent>;
 
 // 👇 We create a “template” of how args map to rendering
