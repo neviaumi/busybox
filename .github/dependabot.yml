@@ -9,8 +9,4 @@ updates:
     schedule:
       interval: daily
 
-  - directory: /
-    package-ecosystem: docker
-    schedule:
-      interval: daily
 version: 2
