@@ -1,15 +1,14 @@
-import type { PropsWithChildren } from 'react';
+import type { ComponentProps } from '../components';
 
 export interface LayoutProps {
   className?: string;
-  'data-testId'?: string;
 }
 
 export function Page({
   children,
   className = '',
   ...rest
-}: PropsWithChildren<LayoutProps>) {
+}: ComponentProps<LayoutProps>) {
   return (
     <div
       className={`tw-container ${className}`}
@@ -22,22 +21,22 @@ export function Page({
   );
 }
 
-export function Main({ children, ...rest }: PropsWithChildren<LayoutProps>) {
+export function Main({ children, ...rest }: ComponentProps<LayoutProps>) {
   return <article {...rest}>{children}</article>;
 }
 
-export function Content({ children, ...rest }: PropsWithChildren<LayoutProps>) {
+export function Content({ children, ...rest }: ComponentProps<LayoutProps>) {
   return <main {...rest}>{children}</main>;
 }
 
-export function Header({ children, ...rest }: PropsWithChildren<LayoutProps>) {
+export function Header({ children, ...rest }: ComponentProps<LayoutProps>) {
   return <header {...rest}>{children}</header>;
 }
 
-export function Footer({ children, ...rest }: PropsWithChildren<LayoutProps>) {
+export function Footer({ children, ...rest }: ComponentProps<LayoutProps>) {
   return <footer {...rest}>{children}</footer>;
 }
 
-export function Side({ children, ...rest }: PropsWithChildren<LayoutProps>) {
+export function Side({ children, ...rest }: ComponentProps<LayoutProps>) {
   return <aside {...rest}>{children}</aside>;
 }
