@@ -10,7 +10,7 @@ export default defineConfig({
       bundler: 'webpack',
       framework: 'react',
       webpackConfig: {
-        ...existingWebPackConfig,
+        // ...existingWebPackConfig,
         externals: {},
         module: {
           rules: [
@@ -20,6 +20,12 @@ export default defineConfig({
               use: ['style-loader', 'css-loader', 'postcss-loader'],
             },
           ],
+        },
+        resolve: {
+          extensionAlias: {
+            '.js': ['.js', '.jsx', '.tsx', '.ts'],
+            '.jsx': ['.jsx', '.tsx'],
+          },
         },
       },
     },

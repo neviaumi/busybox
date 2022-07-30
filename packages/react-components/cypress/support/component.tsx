@@ -20,6 +20,7 @@ import { setGlobalConfig } from '@storybook/testing-react';
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 import { mount } from 'cypress/react';
+import type { PropsWithChildren } from 'react';
 
 // @ts-expect-error import js no type
 import * as globalStorybookConfig from '../../.storybook/preview.js';
@@ -27,12 +28,26 @@ import { cy, Cypress } from '../../src/test-helpers/test-runner.js';
 
 setGlobalConfig(globalStorybookConfig);
 
-// Augment the Cypress namespace to include type definitions for
-// your custom command.
-// Alternatively, can be defined in cypress/support/component.d.ts
-// with a <reference path="./component" /> at the top of your spec.
+function TestBed(props: PropsWithChildren) {
+  // @ts-expect-error https://github.com/cypress-io/cypress/issues/23025
+  import('../../.storybook/preview.css');
+  return (
+    <main>
+      <h1
+        className={
+          'tw-mb-1 tw-block tw-border-b-2 tw-border-red-400 tw-bg-blue-100 tw-text-center tw-text-9xl' +
+          ' tw-font-bold tw-text-gray-600'
+        }
+      >
+        TestBed
+      </h1>
+      {props.children}
+    </main>
+  );
+}
 
-Cypress.Commands.add('mount', mount);
+Cypress.Commands.add('mount', element => mount(<TestBed>{element}</TestBed>));
+
 // Example use:
 // cy.mount(<MyComponent />)
 Cypress.Commands.add('getComponentCanvasRoot', () => {
