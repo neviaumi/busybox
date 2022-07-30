@@ -4,6 +4,8 @@
   "dependencies": {
     "@lit-labs/react": "1.0.7",
     "classnames": "2.3.1",
+    "parse-ms": "3.0.0",
+    "roughjs": "4.4.5",
     "wired-elements": "3.0.0-rc.6"
   },
   "description": "",
@@ -39,6 +41,7 @@
     "eslint": "8.20.0",
     "eslint-plugin-simple-import-sort": "7.0.0",
     "eslint-plugin-sort-keys-fix": "1.1.2",
+    "file-loader": "6.2.0",
     "local-cypress": "1.2.6",
     "postcss": "8.4.14",
     "postcss-loader": "7.0.1",
@@ -63,6 +66,11 @@
   "license": "MIT",
   "module": "dist/index.mjs",
   "name": "@busybox/react-components",
+  "overrides": {
+    "wired-elements": {
+      "roughjs": "@roughjs"
+    }
+  },
   "peerDependencies": {
     "react": ">= 17",
     "react-dom": ">= 17"

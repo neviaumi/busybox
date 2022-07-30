@@ -6,7 +6,7 @@ import * as stories from './Image.stories.js';
 const { ImagePreviewWhenFileUpload } = composeStories(stories);
 
 describe('ImagePreviewWhenFileUpload stories', () => {
-  it('Should trigger onChange when selected file to upload', () => {
+  it('Should show image when selected file to upload', () => {
     cy.mount(
       <ImagePreviewWhenFileUpload data-testid={'test-file-upload'}>
         File upload test
