@@ -1,7 +1,9 @@
 import { createComponent } from '@lit-labs/react';
 import React from 'react';
 
-export function createReactComponentFromLitElement<T = React.PropsWithChildren>(
+export function createReactComponentFromLitElement<
+  T extends React.PropsWithChildren = React.PropsWithChildren,
+>(
   name: string,
   litElement: any,
 ): React.FunctionComponent<
@@ -11,5 +13,7 @@ export function createReactComponentFromLitElement<T = React.PropsWithChildren>(
   }
 > {
   // @ts-expect-error I don't want spent time to fight with that
-  return createComponent(React, name, litElement);
+  return createComponent(React, name, litElement, {
+    onChange: 'change',
+  });
 }

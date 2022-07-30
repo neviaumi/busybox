@@ -10,7 +10,6 @@ export default defineConfig({
       bundler: 'webpack',
       framework: 'react',
       webpackConfig: {
-        // ...existingWebPackConfig,
         externals: {},
         module: {
           rules: [
@@ -18,6 +17,14 @@ export default defineConfig({
             {
               test: /\.css$/i,
               use: ['style-loader', 'css-loader', 'postcss-loader'],
+            },
+            {
+              test: /\.(mp3)$/i,
+              use: [
+                {
+                  loader: 'file-loader',
+                },
+              ],
             },
           ],
         },

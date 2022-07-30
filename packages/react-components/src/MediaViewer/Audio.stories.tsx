@@ -1,42 +1,36 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
-import { within } from '@storybook/testing-library';
 import { ChangeEvent, useCallback, useState } from 'react';
 
 import FileUpload from '../Upload/FileUpload.js';
-import ImageComponent from './Image.js';
+import AudioComponent from './Audio.js';
+// @ts-expect-error static file with file loader not working?
+import mp3Fixture from './sunshine-of-your-love.mp3';
 
 export default {
-  component: ImageComponent,
+  component: AudioComponent,
   /* 👇 The title prop is optional.
    * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
    * to learn how to generate automatic titles
    */
-  title: 'Component/MediaViewer/Image',
-} as ComponentMeta<typeof ImageComponent>;
+  title: 'Component/MediaViewer/Audio',
+} as ComponentMeta<typeof AudioComponent>;
 
-export const Image: ComponentStory<typeof ImageComponent> = ({
+export const Audio: ComponentStory<typeof AudioComponent> = ({
   children,
   ...rest
-}) => <ImageComponent {...rest}>{children}</ImageComponent>;
+}) => <AudioComponent {...rest}>{children}</AudioComponent>;
 
-Image.args = {
-  alt: 'Cat 201 Created',
-  src: 'https://http.cat/201',
+Audio.args = {
+  src: mp3Fixture,
+  type: 'audio/mpeg',
 };
 
-Image.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  await canvas.getByRole('img', {
-    name: 'Cat 201 Created',
-  });
-};
-
-export const ImagePreviewWhenFileUpload: ComponentStory<
-  typeof ImageComponent
+export const AudioPreviewWhenFileUpload: ComponentStory<
+  typeof AudioComponent
 > = args => {
-  const [uploadedImg, setUploadedImg] = useState<{
-    alt: string;
+  const [uploadedAudio, setUploadedAudio] = useState<{
     src: string;
+    type: string;
   } | null>(null);
   const uploadImg = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     if (!event.target.files) return;
@@ -47,9 +41,9 @@ export const ImagePreviewWhenFileUpload: ComponentStory<
       'load',
       () => {
         // convert image file to base64 string
-        setUploadedImg({
-          alt: uploadFile.name,
+        setUploadedAudio({
           src: reader.result as string,
+          type: 'audio/mpeg',
         });
       },
       false,
@@ -58,11 +52,15 @@ export const ImagePreviewWhenFileUpload: ComponentStory<
   }, []);
   return (
     <div className={'tw-flex tw-flex-col'}>
-      {uploadedImg && (
-        <ImageComponent alt={uploadedImg.alt} src={uploadedImg.src} />
+      {uploadedAudio && (
+        <AudioComponent
+          data-testid={args['data-testid']}
+          src={uploadedAudio.src}
+          type={uploadedAudio.type}
+        />
       )}
       <FileUpload data-testid={args['data-testid']} onChange={uploadImg}>
-        Click and upload image here
+        Click and upload MP3 here
       </FileUpload>
     </div>
   );
