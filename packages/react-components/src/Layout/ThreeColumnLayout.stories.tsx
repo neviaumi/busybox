@@ -4,6 +4,9 @@ import { Content, Footer, Header, Main, Page, Side } from './LayoutForStories';
 
 export default {
   component: Page,
+  parameters: {
+    layout: 'fullscreen',
+  },
   subcomponents: { Footer, Header, Main, Side },
   /* 👇 The title prop is optional.
    * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
