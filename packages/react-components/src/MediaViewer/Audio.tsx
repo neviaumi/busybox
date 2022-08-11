@@ -1,50 +1,15 @@
 import { PauseIcon, PlayIcon, VolumeUpIcon } from '@heroicons/react/outline';
 import parseMilliseconds from 'parse-ms';
-import {
-  MutableRefObject,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
-import { WiredIconButton } from 'wired-elements/lib/wired-icon-button.js';
-import { WiredSlider } from 'wired-elements/lib/wired-slider.js';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 import type { ComponentProps } from '../components.js';
-import { createReactComponentFromLitElement } from '../wc-to-react.js';
+import WiredIconButton from '../wired-elements/WiredIconButton';
+import WiredSlider from '../wired-elements/WiredSlider';
 
 export type AudioProps = ComponentProps<{
   src: string;
   type: string;
 }>;
-
-type SliderProps = ComponentProps<{
-  disabled?: boolean;
-  max?: number;
-  min: number;
-  onChange: (event: CustomEvent) => void;
-  value: number;
-}>;
-
-const ReactWiredSlider = createReactComponentFromLitElement<
-  SliderProps & {
-    ref: MutableRefObject<null | WiredSlider>;
-  }
->('wired-slider', WiredSlider);
-
-function Slider(props: SliderProps) {
-  const sliderRef = useRef<WiredSlider>(null);
-  if (sliderRef.current) {
-    sliderRef.current.value = props.value;
-  }
-  return <ReactWiredSlider {...props} ref={sliderRef} />;
-}
-
-const ReactWiredIconButton = createReactComponentFromLitElement<
-  ComponentProps<{
-    onClick: () => void;
-  }>
->('wired-icon-button', WiredIconButton);
 
 function formatSecond(second: number) {
   if (isNaN(second)) return '00:00';
@@ -108,13 +73,13 @@ export default function Audio({
         className={'tw-flex tw-items-center'}
         data-testid={testId && `${testId}-audio-controls`}
       >
-        <ReactWiredIconButton onClick={toggleAudioPlay}>
+        <WiredIconButton onClick={toggleAudioPlay}>
           {audioPlaying ? (
             <PauseIcon className={'tw-h-3 tw-w-3'} />
           ) : (
             <PlayIcon className={'tw-h-3 tw-w-3'} />
           )}
-        </ReactWiredIconButton>
+        </WiredIconButton>
         <div>
           <div>
             <span className={'tw-font-bold'}>{audioDuration}</span> /{' '}
@@ -122,7 +87,7 @@ export default function Audio({
           </div>
           <div className={'tw-flex tw-items-center'}>
             <VolumeUpIcon className={'tw-h-3 tw-w-3'} />
-            <Slider
+            <WiredSlider
               disabled={audioRef.current === null}
               max={100}
               min={0}
