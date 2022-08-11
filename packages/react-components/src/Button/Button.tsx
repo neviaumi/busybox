@@ -1,24 +1,18 @@
 import classnames from 'classnames';
-import { WiredButton } from 'wired-elements/lib/wired-button.js';
 
-import type { ComponentProps } from '../components.js';
-import { createReactComponentFromLitElement } from '../wc-to-react.js';
-
-export type ButtonProps = ComponentProps<{
-  onClick: () => void;
-}>;
-
-const ReactWiredButton = createReactComponentFromLitElement<
-  ButtonProps & {
-    className: string;
-  }
->('wired-button', WiredButton);
+import { palette } from '../theme.js';
+import WiredButton, { ButtonProps } from '../wired-elements/WiredButton.js';
 
 export default function Button(props: ButtonProps) {
-  const classes = classnames('hover:tw-bg-blue-400', 'hover:tw-text-gray-200');
+  const classes = classnames(
+    palette.primary.main,
+    palette.primary.contrastText,
+    palette.primary.hover.main,
+    palette.primary.hover.contrastText,
+  );
   return (
     <div className={'tw-inline-block'}>
-      <ReactWiredButton
+      <WiredButton
         aria-label={props.children}
         className={classes}
         data-testid={props['data-testid'] ?? 'wired-button'}
@@ -26,7 +20,7 @@ export default function Button(props: ButtonProps) {
         role={'button'}
       >
         {props.children}
-      </ReactWiredButton>
+      </WiredButton>
     </div>
   );
 }

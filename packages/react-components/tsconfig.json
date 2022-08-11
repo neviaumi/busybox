@@ -3,6 +3,7 @@
     "baseUrl": ".",
     "declaration": true,
     "emitDeclarationOnly": true,
+    "moduleResolution": "node",
     "noEmit": false,
     "outDir": "./dist/out-tsc",
     "types": ["cypress", "@testing-library/cypress"]

@@ -2,6 +2,7 @@
   "author": "",
   "browser": "dist/index.js",
   "dependencies": {
+    "@heroicons/react": "1.0.6",
     "@lit-labs/react": "1.0.7",
     "classnames": "2.3.1",
     "parse-ms": "3.0.0",
