@@ -1,9 +1,15 @@
 import classnames from 'classnames';
 
-import WiredButton, { ButtonProps } from '../wired-elements/WiredButton';
+import { palette } from '../theme.js';
+import WiredButton, { ButtonProps } from '../wired-elements/WiredButton.js';
 
 export default function Button(props: ButtonProps) {
-  const classes = classnames('hover:tw-bg-blue-400', 'hover:tw-text-gray-200');
+  const classes = classnames(
+    palette.primary.main,
+    palette.primary.contrastText,
+    palette.primary.hover.main,
+    palette.primary.hover.contrastText,
+  );
   return (
     <div className={'tw-inline-block'}>
       <WiredButton

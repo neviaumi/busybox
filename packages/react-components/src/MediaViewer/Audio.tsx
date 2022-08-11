@@ -1,10 +1,10 @@
-import { PauseIcon, PlayIcon, VolumeUpIcon } from '@heroicons/react/outline';
 import parseMilliseconds from 'parse-ms';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 import type { ComponentProps } from '../components.js';
-import WiredIconButton from '../wired-elements/WiredIconButton';
-import WiredSlider from '../wired-elements/WiredSlider';
+import { PauseIcon, PlayIcon, VolumeUpIcon } from '../icons/solid.js';
+import WiredIconButton from '../wired-elements/WiredIconButton.js';
+import WiredSlider from '../wired-elements/WiredSlider.js';
 
 export type AudioProps = ComponentProps<{
   src: string;
@@ -70,23 +70,19 @@ export default function Audio({
         <source src={src} type={type} />
       </audio>
       <div
-        className={'tw-flex tw-items-center'}
+        className={'tw-flex tw-items-center tw-gap-1'}
         data-testid={testId && `${testId}-audio-controls`}
       >
         <WiredIconButton onClick={toggleAudioPlay}>
-          {audioPlaying ? (
-            <PauseIcon className={'tw-h-3 tw-w-3'} />
-          ) : (
-            <PlayIcon className={'tw-h-3 tw-w-3'} />
-          )}
+          {audioPlaying ? <PauseIcon /> : <PlayIcon />}
         </WiredIconButton>
         <div>
           <div>
             <span className={'tw-font-bold'}>{audioDuration}</span> /{' '}
             {formatSecond(audioRef.current?.duration ?? 0)}
           </div>
-          <div className={'tw-flex tw-items-center'}>
-            <VolumeUpIcon className={'tw-h-3 tw-w-3'} />
+          <div className={'tw-flex tw-items-center tw-gap-0.5'}>
+            <VolumeUpIcon />
             <WiredSlider
               disabled={audioRef.current === null}
               max={100}

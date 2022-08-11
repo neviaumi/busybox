@@ -1,4 +1,4 @@
-import WiredImage, { ImageProps } from '../wired-elements/WiredImage';
+import WiredImage, { ImageProps } from '../wired-elements/WiredImage.js';
 
 export default function Image({ alt, src, ...props }: ImageProps) {
   return (
