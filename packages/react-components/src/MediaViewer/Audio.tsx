@@ -1,9 +1,9 @@
 import parseMilliseconds from 'parse-ms';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
+import IconButton from '../Button/IconButton.js';
 import type { ComponentProps } from '../components.js';
 import { PauseIcon, PlayIcon, VolumeUpIcon } from '../icons/solid.js';
-import WiredIconButton from '../wired-elements/WiredIconButton.js';
 import WiredSlider from '../wired-elements/WiredSlider.js';
 
 export type AudioProps = ComponentProps<{
@@ -13,6 +13,7 @@ export type AudioProps = ComponentProps<{
 
 function formatSecond(second: number) {
   if (isNaN(second)) return '00:00';
+  if (!Number.isFinite(second)) return '00:00';
   const { minutes, seconds } = parseMilliseconds(second * 1000);
   return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(
     2,
@@ -73,9 +74,9 @@ export default function Audio({
         className={'tw-flex tw-items-center tw-gap-1'}
         data-testid={testId && `${testId}-audio-controls`}
       >
-        <WiredIconButton onClick={toggleAudioPlay}>
+        <IconButton onClick={toggleAudioPlay}>
           {audioPlaying ? <PauseIcon /> : <PlayIcon />}
-        </WiredIconButton>
+        </IconButton>
         <div>
           <div>
             <span className={'tw-font-bold'}>{audioDuration}</span> /{' '}

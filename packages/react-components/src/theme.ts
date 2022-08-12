@@ -12,11 +12,11 @@ export const icon = {
 
 export const palette = {
   primary: {
-    contrastText: 'tw-text-inherit',
+    contrastText: 'tw-text-black',
     hover: {
-      contrastText: 'hover:tw-text-gray-200',
-      main: 'hover:tw-bg-blue-400',
+      contrastText: 'hover:tw-text-gray-700',
+      main: 'hover:tw-bg-gray-50',
     },
-    main: 'tw-bg-transparent',
+    main: 'tw-bg-white',
   },
 };

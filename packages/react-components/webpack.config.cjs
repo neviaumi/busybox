@@ -3,6 +3,7 @@ const path = require('path');
 const isDevelopment = ['development', 'test'].includes(process.env.NODE_ENV);
 
 module.exports = {
+  devtool: 'source-map',
   entry: {
     index: './src/index.tsx',
   },
@@ -22,6 +23,11 @@ module.exports = {
         use: {
           loader: 'babel-loader',
         },
+      },
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        use: ['source-map-loader'],
       },
     ],
   },
