@@ -3,14 +3,14 @@ import { composeStories } from '@storybook/testing-react';
 import { cy, describe, it } from '../test-helpers/test-runner.js';
 import * as stories from './Audio.stories.js';
 
-const { AudioPreviewWhenFileUpload } = composeStories(stories);
+const { AudioPreviewWithFileUpload } = composeStories(stories);
 
 describe('AudioPreviewWhenFileUpload stories', () => {
   it('Should show audio control when selected file to upload', () => {
     cy.mount(
-      <AudioPreviewWhenFileUpload data-testid={'test-file-upload'}>
+      <AudioPreviewWithFileUpload data-testid={'test-file-upload'}>
         Audio File upload test
-      </AudioPreviewWhenFileUpload>,
+      </AudioPreviewWithFileUpload>,
     );
 
     cy.fixture('sunshine-of-your-love.mp3').as('testUploadFixture');

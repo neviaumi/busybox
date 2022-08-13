@@ -3,9 +3,9 @@
     "baseUrl": ".",
     "declaration": true,
     "emitDeclarationOnly": true,
-    "moduleResolution": "node",
     "noEmit": false,
     "outDir": "./dist/out-tsc",
+    "sourceMap": true,
     "types": ["cypress", "@testing-library/cypress"]
   },
   "extends": "@busybox/tsconfig/tsconfig-react.json",

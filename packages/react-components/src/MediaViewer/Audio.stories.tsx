@@ -8,10 +8,7 @@ import mp3Fixture from './sunshine-of-your-love.mp3';
 
 export default {
   component: AudioComponent,
-  /* 👇 The title prop is optional.
-   * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
-   * to learn how to generate automatic titles
-   */
+  subcomponents: { FileUpload },
   title: 'Component/MediaViewer/Audio',
 } as ComponentMeta<typeof AudioComponent>;
 
@@ -25,7 +22,7 @@ Audio.args = {
   type: 'audio/mpeg',
 };
 
-export const AudioPreviewWhenFileUpload: ComponentStory<
+export const AudioPreviewWithFileUpload: ComponentStory<
   typeof AudioComponent
 > = args => {
   const [uploadedAudio, setUploadedAudio] = useState<{
