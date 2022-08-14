@@ -13,10 +13,10 @@ export default function Button(props: ButtonProps) {
   return (
     <div className={'tw-inline-block'}>
       <WiredButton
-        aria-label={props.children}
-        className={classes}
+        aria-label={props.children as string}
         data-testid={props['data-testid'] ?? 'wired-button'}
-        onClick={props.onClick}
+        {...props}
+        className={classes}
         role={'button'}
       >
         {props.children}

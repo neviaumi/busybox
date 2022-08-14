@@ -11,6 +11,9 @@ export const icon = {
 };
 
 export const palette = {
+  error: {
+    text: 'tw-text-red-500',
+  },
   primary: {
     contrastText: 'tw-text-black',
     hover: {
