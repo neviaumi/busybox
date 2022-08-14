@@ -1,4 +1,4 @@
-import { useCallback, useRef } from 'react';
+import { MutableRefObject, useEffect, useRef } from 'react';
 import { WiredLink } from 'wired-elements/lib/wired-link.js';
 
 import type { ComponentProps } from '../components.js';
@@ -13,23 +13,24 @@ export type LinkProps = ComponentProps<{
 const ReactWiredLink = createReactComponentFromLitElement<
   LinkProps & {
     onClick?: (event: Event) => void;
+    ref: MutableRefObject<any>;
   }
 >('wired-link', WiredLink);
 
 export default function Link(props: LinkProps) {
-  const hiddenLink = useRef<HTMLAnchorElement | null>(null);
-  const onLinkClicked = useCallback((event: Event) => {
-    event.preventDefault();
-    if (!hiddenLink.current) return;
-    hiddenLink.current.click();
-  }, []);
+  const linkRef = useRef<WiredLink | null>(null);
 
+  useEffect(() => {
+    if (!linkRef.current) return;
+    if (props.download)
+      linkRef.current['anchor']?.setAttribute(
+        'download',
+        props.download === true ? '' : props.download,
+      );
+  }, [linkRef, props.download]);
   return (
-    <>
-      <a {...props} className={'tw-hidden'} ref={hiddenLink} />
-      <ReactWiredLink href={props.href} onClick={onLinkClicked}>
-        {props.children}
-      </ReactWiredLink>
-    </>
+    <ReactWiredLink href={props.href} ref={linkRef}>
+      {props.children}
+    </ReactWiredLink>
   );
 }

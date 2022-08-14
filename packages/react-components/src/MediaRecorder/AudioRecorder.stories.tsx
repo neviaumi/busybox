@@ -2,7 +2,7 @@ import type { ComponentMeta, ComponentStory } from '@storybook/react';
 import { useCallback, useState } from 'react';
 
 import Audio from '../MediaViewer/Audio.js';
-import { testId } from '../test-helpers/test-id.js';
+import { generateTestIdWithPrefix } from '../test-helpers/test-id.js';
 import Link from '../wired-elements/WiredLink.js';
 import AudioRecorderComponent from './AudioRecorder.js';
 
@@ -25,7 +25,10 @@ export const AudioRecorderWithPreview: ComponentStory<
       <AudioRecorderComponent {...args} onFinishRecording={onFinishRecording} />
       {downloadUrl && (
         <div
-          data-testid={testId({ id: 'preview', prefix: args['data-testid'] })}
+          data-testid={generateTestIdWithPrefix({
+            id: 'preview',
+            prefix: args['data-testid'],
+          })}
         >
           <Audio src={downloadUrl} type={'audio/webm'} />
           <Link download={'recording.webm'} href={downloadUrl}>

@@ -4,10 +4,6 @@ import FileUploadComponent from './FileUpload.js';
 
 export default {
   component: FileUploadComponent,
-  /* 👇 The title prop is optional.
-   * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
-   * to learn how to generate automatic titles
-   */
   title: 'Component/FileUpload',
 } as ComponentMeta<typeof FileUploadComponent>;
 
