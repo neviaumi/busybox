@@ -62,7 +62,10 @@
   "name": "@busybox/react-components",
   "overrides": {
     "react": "$react",
-    "react-dom": "$react-dom"
+    "react-dom": "$react-dom",
+    "wired-elements": {
+      "roughjs": "@roughjs"
+    }
   },
   "peerDependencies": {
     "react": ">= 18",

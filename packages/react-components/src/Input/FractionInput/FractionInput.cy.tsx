@@ -6,7 +6,7 @@ import * as stories from './FractionInput.stories.js';
 
 const { FractionInput } = composeStories(stories);
 
-describe('FractionInput stories', () => {
+describe('FractionNumberDisplay stories', () => {
   it('should mark input border red when value not have expected format', () => {
     cy.mount(<FractionInput onChange={cy.stub()} />);
     cy.findByTestId('test-fraction-input')
