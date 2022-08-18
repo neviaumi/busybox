@@ -1,17 +1,15 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import FileUploadComponent from './FileUpload.js';
+import CardComponent from './Card.js';
 
 export default {
-  component: FileUploadComponent,
-  title: 'Component/FileUpload',
-} as ComponentMeta<typeof FileUploadComponent>;
+  component: CardComponent,
+  title: 'Component/Card',
+} as ComponentMeta<typeof CardComponent>;
 
-export const FileUpload: ComponentStory<typeof FileUploadComponent> = ({
-  children,
-  ...rest
-}) => <FileUploadComponent {...rest}>{children}</FileUploadComponent>;
-
-FileUpload.args = {
-  children: 'Click to Upload',
-};
+export const CardWithHeader: ComponentStory<typeof CardComponent> = () => (
+  <CardComponent className={'tw-w-20'}>
+    <h1>Card Header</h1>
+    <section>Card Body</section>
+  </CardComponent>
+);
