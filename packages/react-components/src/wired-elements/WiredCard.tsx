@@ -1,7 +1,7 @@
 import { WiredCard } from 'wired-elements/lib/wired-card.js';
 
-import type { ComponentProps } from '../components';
-import { createReactComponentFromLitElement } from './wc-to-react';
+import type { ComponentProps } from '../components.js';
+import { createReactComponentFromLitElement } from './wc-to-react.js';
 
 const ReactWiredCard = createReactComponentFromLitElement<
   ComponentProps<unknown>

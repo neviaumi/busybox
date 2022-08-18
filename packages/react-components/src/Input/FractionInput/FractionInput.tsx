@@ -1,5 +1,9 @@
 import type { ChangeEventHandler } from 'react';
 
+import {
+  Fraction,
+  parseFraction,
+} from '../../NumberFormat/FractionNumberDisplay/parse-fraction.js';
 import ReactWiredInput, {
   InputProps,
 } from '../../wired-elements/WiredInput.js';
@@ -8,7 +12,7 @@ import { useFieldContext } from '../Field.js';
 export type FractionInputProps = Omit<InputProps, 'type' | 'onChange'> & {
   onChange: (
     e: CustomEvent<{
-      value: { denominator: number | null; numerator: number | null };
+      value: Fraction;
     }>,
   ) => void;
 };
@@ -20,17 +24,15 @@ export default function FractionInput(props: FractionInputProps) {
     HTMLInputElement
   > = event => {
     const value = event.target?.value;
-    const [numerator, denominator]: string[] = value.split('/');
-    const [intNumerator, intDenominator]: [number, number] = [
-      parseInt(numerator, 10),
-      parseInt(denominator, 10),
-    ];
+    const { denominator, numerator } = parseFraction(value);
+
     onChange?.(
       new CustomEvent('change', {
         detail: {
           value: {
-            denominator: Number.isNaN(intDenominator) ? null : intDenominator,
-            numerator: Number.isNaN(intNumerator) ? null : intNumerator,
+            denominator: denominator,
+            numerator: numerator,
+            raw: value,
           },
         },
       }),
