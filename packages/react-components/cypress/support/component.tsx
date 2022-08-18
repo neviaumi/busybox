@@ -19,7 +19,7 @@ import './commands.js';
 import { setGlobalConfig } from '@storybook/testing-react';
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
-import { mount } from 'cypress/react';
+import { mount } from 'cypress/react18';
 import type { PropsWithChildren } from 'react';
 
 import * as globalStorybookConfig from '../../.storybook/preview.js';

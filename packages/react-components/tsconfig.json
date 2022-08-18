@@ -3,9 +3,9 @@
     "baseUrl": ".",
     "declaration": true,
     "emitDeclarationOnly": true,
+    "module": "CommonJS",
     "noEmit": false,
     "outDir": "./dist/out-tsc",
-    "skipLibCheck": true,
     "sourceMap": true,
     "types": ["cypress", "@testing-library/cypress"]
   },

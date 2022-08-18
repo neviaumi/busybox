@@ -1,5 +1,6 @@
-/** @typedef {import('@storybook/builder-vite').StorybookViteConfig} StorybookViteConfig*/
-const config = {
+import type { StorybookViteConfig } from '@storybook/builder-vite';
+
+const config: StorybookViteConfig = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
@@ -13,7 +14,7 @@ const config = {
       },
     },
   ],
-  core: { builder: '@storybook/builder-vite' },
+  core: { builder: '@storybook/builder-vite', disableTelemetry: true },
   features: {
     interactionsDebugger: true,
   },
@@ -22,6 +23,10 @@ const config = {
   viteFinal(viteConfig) {
     return viteConfig;
   },
+  webpackFinal() {
+    throw new Error('Should not loaded webpack');
+  },
 };
 
-module.exports = config;
+// eslint-disable-next-line import/no-default-export
+export default config;
