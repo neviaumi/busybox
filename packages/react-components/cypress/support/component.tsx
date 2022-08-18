@@ -22,7 +22,6 @@ import { setGlobalConfig } from '@storybook/testing-react';
 import { mount } from 'cypress/react';
 import type { PropsWithChildren } from 'react';
 
-// @ts-expect-error import js no type
 import * as globalStorybookConfig from '../../.storybook/preview.js';
 import { cy, Cypress } from '../../src/test-helpers/test-runner.js';
 
