@@ -27,4 +27,9 @@ export default defineConfig({
     sourcemap: true,
   },
   plugins: [react()],
+  resolve: {
+    alias: [
+      { find: /^roughjs(.*)/, replacement: './node_modules/roughjs$1.js' },
+    ],
+  },
 });

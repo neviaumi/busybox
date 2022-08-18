@@ -8,7 +8,7 @@ export default {
 } as ComponentMeta<typeof CardComponent>;
 
 export const CardWithHeader: ComponentStory<typeof CardComponent> = () => (
-  <CardComponent className={'tw-w-20'}>
+  <CardComponent className={'tw-w-20'} fill={'#F00'}>
     <h1>Card Header</h1>
     <section>Card Body</section>
   </CardComponent>
