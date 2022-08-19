@@ -4,9 +4,13 @@ import IconButton from '../Button/IconButton.js';
 import { MicrophoneIcon, StopIcon } from '../icons/solid.js';
 import { useAudioRecorder } from './use-media-recorder.js';
 
+export type StartRecordingHandler = () => void;
+export type StopRecordingHandler = (e: CustomEvent<{ value: Blob[] }>) => void;
+
 export type AudioRecordProps = {
   'data-testid'?: string;
-  onFinishRecording: (chunks: Blob[]) => void;
+  onStartRecording?: StartRecordingHandler;
+  onStopRecording: StopRecordingHandler;
 };
 
 export default function AudioRecorder(props: AudioRecordProps) {
@@ -23,13 +27,20 @@ export default function AudioRecorder(props: AudioRecordProps) {
     } else {
       recordingChunks.current = [];
       audioRecorder?.start();
+      props.onStartRecording?.();
       setIsRecording(true);
     }
-  }, [audioRecorder, isRecording]);
+  }, [audioRecorder, isRecording, props]);
   useEffect(() => {
     if (!audioRecorder) return undefined;
     const onRecorderStop = () => {
-      props.onFinishRecording(recordChunks.current!);
+      props.onStopRecording(
+        new CustomEvent('finishRecording', {
+          detail: {
+            value: recordChunks.current!,
+          },
+        }),
+      );
       recordChunks.current = null;
     };
     audioRecorder.addEventListener('stop', onRecorderStop);
