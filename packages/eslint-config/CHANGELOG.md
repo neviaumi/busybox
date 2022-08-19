@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.14.1](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.14.0...@busybox/eslint-config@5.14.1) (2022-08-19)
+
+
+### Bug Fixes
+
+* package.json version ([6363dcd](https://github.com/davidNHK/busybox/commit/6363dcdae74c8c98691cb58987eeeda9d526e277))
+
+
+
+
+
 # [5.14.0](https://github.com/davidNHK/busybox/compare/@busybox/eslint-config@5.13.0...@busybox/eslint-config@5.14.0) (2022-08-19)
 
 

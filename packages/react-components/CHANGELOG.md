@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/davidNHK/busybox/compare/@busybox/react-components@1.1.0...@busybox/react-components@1.2.0) (2022-08-19)
+
+
+### Bug Fixes
+
+* package.json version ([6363dcd](https://github.com/davidNHK/busybox/commit/6363dcdae74c8c98691cb58987eeeda9d526e277))
+
+
+### Features
+
+* onStartRecording in AudioRecorder props ([274f8d6](https://github.com/davidNHK/busybox/commit/274f8d662ba77db8206e7b0bde8c8ae774e2268e))
+
+
+
+
+
 # 1.1.0 (2022-08-19)
 
 
