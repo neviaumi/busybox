@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/davidNHK/busybox/compare/@busybox/prettier-config@1.2.4...@busybox/prettier-config@1.3.0) (2022-08-19)
+
+
+### Features
+
+* setup tailwindcss ([009cf4f](https://github.com/davidNHK/busybox/commit/009cf4f787dd4a4acdad13ce99e800aaaff8ff9a))
+
+
+
+
+
 ## [1.2.4](https://github.com/davidNHK/busybox/compare/@busybox/prettier-config@1.2.3...@busybox/prettier-config@1.2.4) (2022-07-15)
 
 **Note:** Version bump only for package @busybox/prettier-config
