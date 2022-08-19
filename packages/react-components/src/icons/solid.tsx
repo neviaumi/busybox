@@ -3,6 +3,7 @@ import {
   PauseIcon as _PauseIcon,
   PlayIcon as _PlayIcon,
   StopIcon as _StopIcon,
+  UploadIcon as _UploadIcon,
   VolumeUpIcon as _VolumeUpIcon,
 } from '@heroicons/react/solid';
 import classnames from 'classnames';
@@ -25,3 +26,4 @@ export const PlayIcon = withHeroSolidIcon(_PlayIcon);
 export const VolumeUpIcon = withHeroSolidIcon(_VolumeUpIcon);
 export const MicrophoneIcon = withHeroSolidIcon(_MicrophoneIcon);
 export const StopIcon = withHeroSolidIcon(_StopIcon);
+export const UploadIcon = withHeroSolidIcon(_UploadIcon);
