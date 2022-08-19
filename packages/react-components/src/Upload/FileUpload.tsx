@@ -3,6 +3,7 @@ import { useCallback, useRef } from 'react';
 
 import Button from '../Button/Button.js';
 import type { ComponentProps } from '../components.js';
+import { UploadIcon } from '../icons/solid.js';
 
 export default function FileUpload(
   props: ComponentProps<{
@@ -24,7 +25,10 @@ export default function FileUpload(
         type="file"
       />
       <Button data-testid={testId} onClick={onUploadButtonClick}>
-        {props.children}
+        <span className={'tw-flex tw-flex-row tw-content-center tw-gap-0.5'}>
+          <UploadIcon />
+          {props.children}
+        </span>
       </Button>
     </>
   );
