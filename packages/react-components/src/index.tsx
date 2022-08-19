@@ -10,3 +10,4 @@ export { default as AudioViewer } from './MediaViewer/Audio.js';
 export { default as FractionNumberDisplay } from './NumberFormat/FractionNumberDisplay/FractionNumberDisplay.js';
 export * as theme from './theme.js';
 export { default as FileUpload } from './Upload/FileUpload.js';
+export { default as Divider } from './wired-elements/WiredDivider';
