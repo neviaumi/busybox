@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "module": "CommonJS",
+    "noEmit": false,
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "types": ["cypress", "@testing-library/cypress"]
+  },
+  "extends": "@busybox/tsconfig/tsconfig-react.json",
+  "include": ["src", "cypress/support/component.d.ts", ".storybook/"]
+}

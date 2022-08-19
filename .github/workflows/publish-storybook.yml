@@ -1,0 +1,24 @@
+env:
+  CHROMATIC_PROJECT_TOKEN: ${{ secrets.REACT_COMPONENTS_CHROMATIC_PROJECT_TOKEN }}
+  CI: true
+jobs:
+  publish-chromatic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: '0'
+      - name: Use Node.js lts
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: .nvmrc
+      - run: bash ./scripts/ci/setup.sh
+      - run: npx lerna exec --scope=@busybox/react-components bash scripts/ci/publish-storybook.sh
+name: Publish to Chromatic
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'packages/react-components/**'

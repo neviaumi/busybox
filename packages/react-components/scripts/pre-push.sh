@@ -2,4 +2,4 @@
 
 set -ex
 
-npm run lint
+bash scripts/ci/test.sh

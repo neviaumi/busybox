@@ -10,6 +10,8 @@ module.exports = {
       },
       plugins: ['eslint-plugin-react', 'eslint-plugin-react-hooks'],
       rules: {
+        'import/no-default-export': 'off',
+        'import/prefer-default-export': 'error',
         'react-hooks/exhaustive-deps': 'error',
         'react-hooks/rules-of-hooks': 'error',
         'react/jsx-sort-props': 'error',

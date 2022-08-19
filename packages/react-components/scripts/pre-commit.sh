@@ -2,6 +2,4 @@
 
 set -ex
 
-npm install
-npm run build
-
+npx lint-staged

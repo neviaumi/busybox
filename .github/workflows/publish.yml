@@ -14,8 +14,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
-      - run: bash ./scripts/setup.sh
-      - run: bash ./scripts/test.sh
+      - run: bash ./scripts/ci/setup.sh
+      - run: bash ./scripts/ci/test.sh
       - run: bash ./scripts/publish.sh
       - env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

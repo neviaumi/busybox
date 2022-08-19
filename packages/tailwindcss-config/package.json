@@ -1,0 +1,27 @@
+{
+  "devDependencies": {
+    "tailwindcss": "3.1.8"
+  },
+  "engines": {
+    "node": ">=14",
+    "yarn": "Use npm"
+  },
+  "files": [
+    "tailwind.config.js"
+  ],
+  "license": "MIT",
+  "main": "tailwind.config.js",
+  "name": "@busybox/tailwindcss-config",
+  "peerDependencies": {
+    "tailwindcss": ">=3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": "packages/tailwindcss-config",
+    "type": "git",
+    "url": "git@github.com:davidNHK/busybox.git"
+  },
+  "version": "1.0.0"
+}

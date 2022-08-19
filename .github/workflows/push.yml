@@ -5,13 +5,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: '0'
       - name: Use Node.js lts
         uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
-      - run: bash ./scripts/setup.sh
-      - run: bash ./scripts/lint.sh
-      - run: bash ./scripts/test.sh
+      - run: bash ./scripts/ci/setup.sh
+      - run: bash ./scripts/ci/test.sh
 name: after-push-build-test
 
 on:

@@ -2,4 +2,5 @@
 
 set -ex
 
-npm test
+npx vite build
+npx tsc

@@ -1,0 +1,96 @@
+{
+  "author": "",
+  "dependencies": {
+    "@heroicons/react": "1.0.6",
+    "@lit-labs/react": "1.0.8",
+    "classnames": "2.3.1",
+    "parse-ms": "3.0.0",
+    "roughjs": "4.4.5",
+    "wired-elements": "3.0.0-rc.6"
+  },
+  "description": "",
+  "devDependencies": {
+    "@busybox/eslint-config": "5.13.0",
+    "@busybox/prettier-config": "1.2.4",
+    "@busybox/tailwindcss-config": "1.0.0",
+    "@busybox/tsconfig": "1.7.2",
+    "@storybook/addon-actions": "6.5.10",
+    "@storybook/addon-essentials": "6.5.10",
+    "@storybook/addon-interactions": "6.5.10",
+    "@storybook/addon-links": "6.5.10",
+    "@storybook/addon-postcss": "2.0.0",
+    "@storybook/builder-vite": "0.2.2",
+    "@storybook/jest": "0.0.10",
+    "@storybook/react": "6.5.10",
+    "@storybook/test-runner": "0.5.0",
+    "@storybook/testing-library": "0.0.13",
+    "@storybook/testing-react": "1.3.0",
+    "@testing-library/cypress": "8.0.3",
+    "@vitejs/plugin-react": "2.0.1",
+    "autoprefixer": "10.4.8",
+    "chromatic": "6.7.4",
+    "cypress": "10.6.0",
+    "eslint": "8.22.0",
+    "eslint-plugin-simple-import-sort": "7.0.0",
+    "eslint-plugin-sort-keys-fix": "1.1.2",
+    "local-cypress": "1.2.6",
+    "postcss": "8.4.16",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "source-map-explorer": "2.5.2",
+    "start-server-and-test": "1.14.0",
+    "storybook": "6.5.10",
+    "tailwindcss": "3.1.8",
+    "typescript": "4.7.4",
+    "vite": "3.0.8"
+  },
+  "engines": {
+    "node": ">=16",
+    "yarn": "Use npm"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/react-components.mjs",
+      "require": "./dist/react-components.umd.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "main": "./dist/react-components.umd.js",
+  "module": "dist/react-components.mjs",
+  "name": "@busybox/react-components",
+  "overrides": {
+    "react": "$react",
+    "react-dom": "$react-dom",
+    "wired-elements": {
+      "roughjs": "$roughjs"
+    }
+  },
+  "peerDependencies": {
+    "react": ">= 18",
+    "react-dom": ">= 18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": "packages/react-components",
+    "type": "git",
+    "url": "git@github.com:davidNHK/busybox.git"
+  },
+  "scripts": {
+    "analyze": "npm run build && source-map-explorer ./dist/*.mjs --no-border-checks",
+    "build": "vite build",
+    "build:storybook": "build-storybook",
+    "storybook": "start-storybook -p 6006",
+    "test": "cypress open --component -b chrome",
+    "test:storybook": "test-storybook"
+  },
+  "sideEffects": [
+    "./cypress/support/*.ts"
+  ],
+  "types": "./dist/out-tsc/src/index.d.ts",
+  "version": "1.0.0"
+}
