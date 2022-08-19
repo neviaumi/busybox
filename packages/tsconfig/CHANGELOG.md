@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/davidNHK/busybox/compare/@busybox/tsconfig@1.7.2...@busybox/tsconfig@1.8.0) (2022-08-19)
+
+
+### Features
+
+* react-component ([7d5d9c6](https://github.com/davidNHK/busybox/commit/7d5d9c632094497e49255ef28568ba58a566a058))
+
+
+
+
+
 ## [1.7.2](https://github.com/davidNHK/busybox/compare/@busybox/tsconfig@1.7.1...@busybox/tsconfig@1.7.2) (2022-07-15)
 
 **Note:** Version bump only for package @busybox/tsconfig
