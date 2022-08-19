@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/davidNHK/busybox/compare/@busybox/react-components@1.2.0...@busybox/react-components@1.3.0) (2022-08-19)
+
+
+### Features
+
+* include icon in upload button ([33d242e](https://github.com/davidNHK/busybox/commit/33d242e96b616f2a50ea6fef247c5932b6cf16a5))
+
+
+
+
+
 # [1.2.0](https://github.com/davidNHK/busybox/compare/@busybox/react-components@1.1.0...@busybox/react-components@1.2.0) (2022-08-19)
 
 
