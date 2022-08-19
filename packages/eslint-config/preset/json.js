@@ -72,7 +72,13 @@ module.exports = {
             ],
           },
         ],
-        'node-dependencies/absolute-version': 'error',
+        'node-dependencies/absolute-version': [
+          'error',
+          {
+            dependencies: 'always',
+            devDependencies: 'always',
+          },
+        ],
         'node-dependencies/compat-engines': 'off',
         'node-dependencies/valid-semver': 'off',
       },
