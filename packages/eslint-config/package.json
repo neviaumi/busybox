@@ -4,7 +4,7 @@
     "@angular-eslint/eslint-plugin": "14.0.2",
     "@angular-eslint/eslint-plugin-template": "14.0.2",
     "@angular-eslint/schematics": "14.0.2",
-    "@angular-eslint/template-parser": "14.0.2",
+    "@angular-eslint/template-parser": "14.0.3",
     "@spotify/eslint-config-base": "14.1.0",
     "@spotify/web-scripts-utils": "14.1.0",
     "@typescript-eslint/eslint-plugin": "5.33.1",
