@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/davidNHK/busybox/compare/@busybox/react-components@1.3.0...@busybox/react-components@1.3.1) (2022-08-26)
+
+
+### Bug Fixes
+
+* publish storybook action failed ([b7b3955](https://github.com/davidNHK/busybox/commit/b7b3955ab0c40a85c7c0d568ec6a59587b9b57b0))
+
+
+
+
+
 # [1.3.0](https://github.com/davidNHK/busybox/compare/@busybox/react-components@1.2.0...@busybox/react-components@1.3.0) (2022-08-19)
 
 
