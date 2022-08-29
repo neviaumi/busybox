@@ -26,7 +26,7 @@
     "autoprefixer": "10.4.8",
     "chromatic": "6.8.0",
     "cypress": "10.6.0",
-    "eslint": "8.22.0",
+    "eslint": "8.23.0",
     "eslint-plugin-simple-import-sort": "7.0.0",
     "eslint-plugin-sort-keys-fix": "1.1.2",
     "jest-playwright-preset": "2.0.0",
