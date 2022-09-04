@@ -4,6 +4,7 @@ coverage/
 dist/
 node_modules/
 packages/react-components/
+packages/angular-components/
 out/
 **/__fixtures__/*.json
 package-lock.json
