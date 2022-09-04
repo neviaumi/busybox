@@ -1,0 +1,16 @@
+{
+  "extends": "../../.eslintrc.json",
+  "ignorePatterns": ["!**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "createDefaultProgram": true,
+        "project": [
+          "projects/ngx-components/tsconfig.lib.json",
+          "projects/ngx-components/tsconfig.spec.json"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  },
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "noEmit": false,
+    "outDir": "./dist/out-tsc",
+    "paths": {
+      "@busybox/ngx-components": ["dist/ngx-components"]
+    }
+  },
+  "extends": "@busybox/tsconfig"
+}
