@@ -1,5 +1,6 @@
 import 'wired-elements/lib/wired-button';
 
+import { CommonModule } from '@angular/common';
 import { Attribute, Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import cn from 'classnames';
 
@@ -7,6 +8,7 @@ import { generateTestIdWithPrefix, TEST_ID } from '../../test-helpers/test-id';
 import { palette } from '../../theme';
 
 @Component({
+  imports: [CommonModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   selector: 'ngx-button',
   standalone: true,

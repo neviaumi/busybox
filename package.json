@@ -7,18 +7,20 @@
     "eslint": "8.23.0",
     "husky": "8.0.1",
     "is-ci": "3.0.1",
-    "jest": "29.0.1",
     "lerna": "5.5.0",
     "lint-staged": "13.0.3",
     "pinst": "3.0.0",
     "prettier": "2.7.1"
   },
   "engines": {
-    "node": ">=14",
+    "node": ">=16",
     "yarn": "Use npm"
   },
   "license": "MIT",
   "name": "busybox",
+  "overrides": {
+    "roughjs": "4.4.5"
+  },
   "private": true,
   "repository": "git@github.com:davidNHK/busybox.git",
   "scripts": {

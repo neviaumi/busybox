@@ -12,7 +12,9 @@ import { RouterModule } from '@angular/router';
       TestBed
     </h1>
     <section class="tw-flex tw-justify-center">
-      <router-outlet></router-outlet>
+      <div class="tw-w-2/3">
+        <router-outlet></router-outlet>
+      </div>
     </section>
   </main>`,
 })

@@ -9,7 +9,7 @@
     "@angular/platform-browser-dynamic": "14.2.0",
     "@angular/router": "14.2.0",
     "classnames": "2.3.1",
-    "roughjs": "4.5.2",
+    "roughjs": "4.4.5",
     "rxjs": "7.5.6",
     "tslib": "2.4.0",
     "wired-elements": "3.0.0-rc.6",
@@ -47,6 +47,11 @@
   },
   "license": "MIT",
   "name": "@busybox/angular",
+  "overrides": {
+    "wired-elements": {
+      "roughjs": "$roughjs"
+    }
+  },
   "private": true,
   "scripts": {
     "build": "ng build",
