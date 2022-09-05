@@ -29,7 +29,7 @@
     "@busybox/tailwindcss-config": "1.1.0",
     "@busybox/tsconfig": "1.8.0",
     "@playwright/test": "1.25.1",
-    "@types/jasmine": "4.0.0",
+    "@types/jasmine": "4.3.0",
     "@typescript-eslint/eslint-plugin": "5.29.0",
     "@typescript-eslint/parser": "5.29.0",
     "autoprefixer": "10.4.8",
