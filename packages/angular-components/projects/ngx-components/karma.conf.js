@@ -21,6 +21,12 @@ module.exports = function (config) {
       reporters: [{ type: 'html' }, { type: 'text-summary' }],
       subdir: '.',
     },
+    customLaunchers: {
+      ChromeHeadlessCI: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox', '--autoplay-policy=no-user-gesture-required'],
+      },
+    },
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     jasmineHtmlReporter: {
       suppressAll: true, // removes the duplicated traces
