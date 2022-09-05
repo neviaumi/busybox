@@ -146,5 +146,13 @@
       "sourceRoot": "projects/test-app/src"
     }
   },
+  "schematics": {
+    "@schematics/angular:component": {
+      "inlineStyle": true,
+      "inlineTemplate": true,
+      "project": "ngx-components",
+      "standalone": true
+    }
+  },
   "version": 1
 }

@@ -1,25 +1,20 @@
 import 'wired-elements/lib/wired-button';
 
-import {
-  Attribute,
-  Component,
-  CUSTOM_ELEMENTS_SCHEMA,
-  OnInit,
-} from '@angular/core';
+import { Attribute, Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import cn from 'classnames';
 
-import { generateTestIdWithPrefix, TEST_ID } from '../test-helpers/test-id';
-import { palette } from '../theme';
+import { generateTestIdWithPrefix, TEST_ID } from '../../test-helpers/test-id';
+import { palette } from '../../theme';
 
 @Component({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   selector: 'ngx-button',
   standalone: true,
-  template: `<wired-button class="{{ classNames }}" data-testid="ngx-button"
+  template: `<wired-button class="{{ classNames }}" [attr.data-testid]="testId"
     ><ng-content></ng-content
   ></wired-button>`,
 })
-export class ButtonComponent implements OnInit {
+export class ButtonComponent {
   testId = 'ngx-button';
 
   classNames = '';
@@ -32,11 +27,8 @@ export class ButtonComponent implements OnInit {
       palette.primary.hover.main,
       palette.primary.hover.contrastText,
     );
-  }
-
-  ngOnInit(): void {
     this.testId = generateTestIdWithPrefix({
-      id: this.testIdSuffix,
+      id: testIdSuffix,
       prefix: this.testId,
     });
   }
