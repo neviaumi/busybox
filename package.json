@@ -5,7 +5,6 @@
     "@commitlint/config-conventional": "17.1.0",
     "@commitlint/config-lerna-scopes": "17.0.2",
     "eslint": "8.23.0",
-    "eslint-plugin-yml": "1.2.0",
     "husky": "8.0.1",
     "is-ci": "3.0.1",
     "lerna": "5.5.0",
