@@ -1,5 +1,4 @@
 import type { StorybookViteConfig } from '@storybook/builder-vite';
-import { mergeConfig } from 'vite';
 
 const config: StorybookViteConfig = {
   addons: [
@@ -22,13 +21,7 @@ const config: StorybookViteConfig = {
   framework: '@storybook/react',
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   viteFinal(viteConfig) {
-    return mergeConfig(viteConfig, {
-      resolve: {
-        alias: [
-          { find: /^roughjs(.*)/, replacement: './node_modules/roughjs$1.js' },
-        ],
-      },
-    });
+    return viteConfig;
   },
   webpackFinal() {
     throw new Error('Should not loaded webpack');

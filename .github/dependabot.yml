@@ -1,9 +1,11 @@
 updates:
   - directory: /
+    ignore:
+      - dependency-name: roughjs
+
     package-ecosystem: npm
     schedule:
       interval: daily
-
   - directory: /
     package-ecosystem: github-actions
     schedule:
