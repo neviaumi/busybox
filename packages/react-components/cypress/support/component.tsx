@@ -1,29 +1,11 @@
-// ***********************************************************
-// This example support/component.ts is processed and
-// loaded automatically before your test files.
-//
-// This is a great place to put global configuration and
-// behavior that modifies Cypress.
-//
-// You can change the location of this file or turn off
-// automatically serving support files with the
-// 'supportFile' configuration option.
-//
-// You can read more here:
-// https://on.cypress.io/configuration
-// ***********************************************************
-
-// Import commands.js using ES2015 syntax:
 import './commands.js';
 
+import { cy, Cypress } from '@busybox/cypress';
 import { setGlobalConfig } from '@storybook/testing-react';
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
 import { mount } from 'cypress/react18';
 import type { PropsWithChildren } from 'react';
 
 import * as globalStorybookConfig from '../../.storybook/preview.js';
-import { cy, Cypress } from '../../src/test-helpers/test-runner.js';
 
 setGlobalConfig(globalStorybookConfig);
 
@@ -45,10 +27,20 @@ function TestBed(props: PropsWithChildren) {
   );
 }
 
-Cypress.Commands.add('mount', element => mount(<TestBed>{element}</TestBed>));
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace Cypress {
+    interface Chainable {
+      getComponentCanvasRoot(): Chainable<JQuery<HTMLElement>>;
+      mount: typeof mount;
+    }
+  }
+}
 
 // Example use:
 // cy.mount(<MyComponent />)
+Cypress.Commands.add('mount', element => mount(<TestBed>{element}</TestBed>));
+
 Cypress.Commands.add('getComponentCanvasRoot', () => {
   return cy.get(`div[data-cy-root]`);
 });

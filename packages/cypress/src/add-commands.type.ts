@@ -1,6 +1,4 @@
-import './component.js';
-
-import type { mount } from 'cypress/react';
+import '@testing-library/cypress';
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
@@ -14,8 +12,8 @@ declare global {
         dataTestPrefixAttribute: string,
         args?: any,
       ): Chainable<JQuery<HTMLElement>>;
-      getComponentCanvasRoot(): Chainable<JQuery<HTMLElement>>;
-      mount: typeof mount;
     }
   }
 }
+
+export {};
