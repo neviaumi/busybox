@@ -3,6 +3,7 @@
  */
 
 export { ButtonComponent } from './lib/button/button.component';
+export { CardComponent } from './lib/card/card.component';
 export {
   NavBarComponent,
   NavBarModule,

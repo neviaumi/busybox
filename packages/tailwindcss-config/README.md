@@ -16,4 +16,13 @@ module.exports = {
 };
 ```
 
-[React Example](../react-components/tailwind.config.js)
+3. In your project css
+
+```css
+@import '@busybox/tailwindcss-config/tailwind.css';
+```
+
+[React example](../react-components/tailwind.config.js)
+[React example CSS](../react-components/.storybook/preview.css)
+[Angular example config](../angular-components/tailwind.config.js)
+[Angular example CSS](../angular-components/projects/test-app/src/styles.css)

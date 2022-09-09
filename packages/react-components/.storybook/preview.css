@@ -1,3 +1,1 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import '@busybox/tailwindcss-config/tailwind.css';

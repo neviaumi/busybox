@@ -15,11 +15,15 @@ export const palette = {
     text: 'tw-text-red-500',
   },
   primary: {
-    contrastText: 'tw-text-black',
+    contrastText: 'tw-text-primary-text',
     hover: {
-      contrastText: 'hover:tw-text-gray-700',
-      main: 'hover:tw-bg-gray-50',
+      contrastText: 'hover:tw-text-primary-main-text-hover',
+      main: 'hover:tw-bg-primary-main-hover',
     },
-    main: 'tw-bg-white',
+    main: 'tw-bg-primary-main',
+  },
+  warning: {
+    contrastText: 'tw-text-warning-text',
+    main: 'tw-bg-warning-main',
   },
 };
