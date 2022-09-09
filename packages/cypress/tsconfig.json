@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "module": "ESNext",
+    "noEmit": false,
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "types": ["cypress", "@testing-library/cypress"]
+  },
+  "extends": "@busybox/tsconfig/tsconfig-react.json",
+  "include": ["src"]
+}
