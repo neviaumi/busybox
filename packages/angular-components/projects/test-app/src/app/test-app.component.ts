@@ -1,16 +1,19 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { CardComponent } from '@busybox/ngx-components';
 
 @Component({
-  imports: [RouterModule],
+  imports: [RouterModule, CardComponent],
   selector: 'app-test-root',
   standalone: true,
   template: `<main>
-    <h1
-      class="tw-mb-1 tw-block tw-border-b-2 tw-border-red-400 tw-bg-blue-100 tw-text-center tw-text-9xl tw-font-bold tw-text-gray-600"
-    >
-      TestBed
-    </h1>
+    <ngx-card class="tw-mb-1 tw-block tw-w-full" variant="warning">
+      <h1
+        class="tw-text-center tw-text-9xl tw-font-bold tw-text-warning-main-text hover:tw-text-warning-hover-text"
+      >
+        TestBed
+      </h1>
+    </ngx-card>
     <section class="tw-flex tw-justify-center">
       <div class="tw-w-2/3">
         <router-outlet></router-outlet>

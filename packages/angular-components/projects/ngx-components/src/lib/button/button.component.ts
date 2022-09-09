@@ -5,7 +5,7 @@ import { Attribute, Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import cn from 'classnames';
 
 import { generateTestIdWithPrefix, TEST_ID } from '../../test-helpers/test-id';
-import { palette } from '../../theme';
+import { palette } from '../theme';
 
 @Component({
   imports: [CommonModule],
