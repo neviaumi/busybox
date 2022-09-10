@@ -15,9 +15,7 @@ import { CardComponent } from '@busybox/ngx-components';
       </h1>
     </ngx-card>
     <section class="tw-flex tw-justify-center">
-      <div class="tw-w-2/3">
-        <router-outlet></router-outlet>
-      </div>
+      <router-outlet></router-outlet>
     </section>
   </main>`,
 })

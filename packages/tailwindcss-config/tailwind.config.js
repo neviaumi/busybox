@@ -14,9 +14,9 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          hover: colors.gray['50'],
+          hover: colors.gray['300'],
           'hover-text': colors.gray['700'],
-          main: colors.white,
+          main: colors.gray['100'],
           'main-text': colors.black,
         },
         warning: {

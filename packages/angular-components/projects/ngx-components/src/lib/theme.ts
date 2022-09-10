@@ -15,9 +15,9 @@ export const palette = {
     text: 'tw-text-red-500',
   },
   primary: {
-    contrastText: 'tw-text-primary-text',
+    contrastText: 'tw-text-primary-main-text',
     hover: {
-      contrastText: 'hover:tw-text-primary-main-text-hover',
+      contrastText: 'hover:tw-text-primary-hover-text',
       main: 'hover:tw-bg-primary-main-hover',
     },
     main: 'tw-bg-primary-main',
