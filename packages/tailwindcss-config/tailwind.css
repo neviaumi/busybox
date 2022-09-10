@@ -4,5 +4,7 @@
 
 :root {
     --colors-warning: theme(colors.warning.main);
+    --colors-warning-hover: theme(colors.warning.hover);
     --colors-primary: theme(colors.primary.main);
+    --colors-primary-hover: theme(colors.primary.hover);
 }

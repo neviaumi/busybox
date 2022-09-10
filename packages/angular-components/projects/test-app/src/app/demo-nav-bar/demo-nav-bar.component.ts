@@ -34,7 +34,7 @@ export const ROUTES: Route[] = [
   imports: [CommonModule, NavBarModule, RouterModule],
   selector: 'app-demo-nav-bar',
   standalone: true,
-  styles: [],
+  styles: [':host { width: 100%}'],
   template: `
     <ngx-nav-bar>
       <ngx-nav-item
