@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CardComponent } from '@busybox/ngx-components';
+import { CardComponent, Variant } from '@busybox/ngx-components';
 
 @Component({
   imports: [RouterModule, CardComponent],
   selector: 'app-test-root',
   standalone: true,
   template: `<main>
-    <ngx-card class="tw-mb-1 tw-block tw-w-full" variant="warning">
+    <ngx-card class="tw-mb-1 tw-block tw-w-full" [variant]="Variant.Warning">
       <h1
         class="tw-text-center tw-text-9xl tw-font-bold tw-text-warning-main-text hover:tw-text-warning-hover-text"
       >
@@ -19,4 +19,6 @@ import { CardComponent } from '@busybox/ngx-components';
     </section>
   </main>`,
 })
-export class TestAppComponent {}
+export class TestAppComponent {
+  Variant = Variant;
+}

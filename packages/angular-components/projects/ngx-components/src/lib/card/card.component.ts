@@ -1,15 +1,10 @@
 import 'wired-elements/lib/wired-card';
 
 import { CommonModule } from '@angular/common';
-import {
-  Attribute,
-  Component,
-  CUSTOM_ELEMENTS_SCHEMA,
-  Input,
-} from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, Input } from '@angular/core';
 
 import { RootCssVariablesService } from '../root-css-variables.service';
-import { VARIANT, Variant } from '../variant';
+import { Variant } from '../variant';
 
 @Component({
   imports: [CommonModule],
@@ -31,12 +26,15 @@ import { VARIANT, Variant } from '../variant';
 export class CardComponent {
   @Input() public hover = false;
 
-  @Input() public testId = 'ngx-card';
+  @Input() public 'data-testid' = 'ngx-card';
 
-  constructor(
-    @Attribute(VARIANT) public variant: Variant,
-    public rootCssVariablesService: RootCssVariablesService,
-  ) {}
+  @Input() public variant: Variant = Variant.Primary;
+
+  constructor(public rootCssVariablesService: RootCssVariablesService) {}
+
+  get testId() {
+    return this['data-testid'];
+  }
 
   get fill() {
     if (this.variant === Variant.Warning) {
@@ -44,6 +42,14 @@ export class CardComponent {
         return this.rootCssVariablesService.getVariable('colors-warning-hover');
       }
       return this.rootCssVariablesService.getVariable('colors-warning');
+    }
+    if (this.variant === Variant.Secondary) {
+      if (this.hover) {
+        return this.rootCssVariablesService.getVariable(
+          'colors-secondary-hover',
+        );
+      }
+      return this.rootCssVariablesService.getVariable('colors-secondary');
     }
     if (this.hover) {
       return this.rootCssVariablesService.getVariable('colors-primary-hover');

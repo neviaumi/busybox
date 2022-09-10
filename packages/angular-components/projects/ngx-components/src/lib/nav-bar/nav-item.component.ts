@@ -1,18 +1,18 @@
 import 'wired-elements/lib/wired-item';
 
-import { Attribute, Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { generateTestIdWithPrefix, TEST_ID } from '../../test-helpers/test-id';
+import { generateTestIdWithPrefix } from '../../test-helpers/test-id';
 import { SelectedNavBarItemService } from './selected-nav-bar-item.service';
 
 @Component({
-  selector: 'ngx-nav-item',
+  selector: 'ngx-nav-item[value]',
   template: `
     <wired-item
       role="tab"
       class="tw-w-full tw-justify-center tw-text-center"
-      [attr.data-testid]="dataTestId"
+      [attr.data-testid]="testId"
       [attr.aria-selected]="selected"
       [attr.value]="value"
       [attr.selected]="selected"
@@ -23,16 +23,18 @@ import { SelectedNavBarItemService } from './selected-nav-bar-item.service';
   `,
 })
 export class NavItemComponent {
+  @Input() value!: string;
+
+  @Input() 'data-testid' = '';
+
   constructor(
-    @Attribute('value') public value: string,
-    @Attribute(TEST_ID) public testIdSuffix: string,
     public selectedService: SelectedNavBarItemService,
     public router: Router,
   ) {}
 
-  get dataTestId() {
+  get testId() {
     return generateTestIdWithPrefix({
-      id: this.testIdSuffix,
+      id: this['data-testid'],
       prefix: 'ngx-nav-bar-item',
     });
   }

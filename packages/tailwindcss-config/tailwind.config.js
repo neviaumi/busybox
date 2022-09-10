@@ -17,7 +17,13 @@ module.exports = {
           hover: colors.gray['300'],
           'hover-text': colors.gray['700'],
           main: colors.gray['100'],
-          'main-text': colors.black,
+          'main-text': colors.gray['900'],
+        },
+        secondary: {
+          hover: colors.gray['800'],
+          'hover-text': colors.gray['300'],
+          main: colors.gray['500'],
+          'main-text': colors.gray['100'],
         },
         warning: {
           hover: colors.orange['300'],

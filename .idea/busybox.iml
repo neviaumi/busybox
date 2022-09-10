@@ -7,6 +7,7 @@
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/react-components/dist-babel" />
       <excludeFolder url="file://$MODULE_DIR$/packages/react-components/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/angular-components/.angular" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

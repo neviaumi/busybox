@@ -1,8 +1,8 @@
 import 'wired-elements/lib/wired-listbox';
 
-import { Attribute, Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
-import { generateTestIdWithPrefix, TEST_ID } from '../../test-helpers/test-id';
+import { generateTestIdWithPrefix } from '../../test-helpers/test-id';
 import { SelectedNavBarItemService } from './selected-nav-bar-item.service';
 
 @Component({
@@ -12,7 +12,7 @@ import { SelectedNavBarItemService } from './selected-nav-bar-item.service';
       role="tablist"
       class="tw-flex tw-w-full tw-justify-center"
       horizontal
-      [attr.data-testid]="dataTestId"
+      [attr.data-testid]="testId"
       [attr.selected]="selectedService.selectedValue"
     >
       <ng-content></ng-content>
@@ -20,14 +20,13 @@ import { SelectedNavBarItemService } from './selected-nav-bar-item.service';
   `,
 })
 export class NavBarComponent {
-  constructor(
-    @Attribute(TEST_ID) public testIdSuffix: string,
-    public selectedService: SelectedNavBarItemService,
-  ) {}
+  @Input() 'data-testid' = '';
 
-  get dataTestId() {
+  constructor(public selectedService: SelectedNavBarItemService) {}
+
+  get testId() {
     return generateTestIdWithPrefix({
-      id: this.testIdSuffix,
+      id: this['data-testid'],
       prefix: 'ngx-nav-bar',
     });
   }

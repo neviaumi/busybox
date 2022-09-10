@@ -7,4 +7,6 @@
     --colors-warning-hover: theme(colors.warning.hover);
     --colors-primary: theme(colors.primary.main);
     --colors-primary-hover: theme(colors.primary.hover);
+    --colors-secondary: theme(colors.secondary.main);
+    --colors-secondary-hover: theme(colors.secondary.hover);
 }

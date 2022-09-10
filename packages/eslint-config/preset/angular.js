@@ -12,6 +12,7 @@ module.exports = {
         project: ['tsconfig.app.json', 'tsconfig.spec.json'],
       },
       rules: {
+        '@angular-eslint/no-attribute-decorator': 'error',
         'dot-notation': 'off',
         'max-params': 'off',
         'no-useless-constructor': 'off',

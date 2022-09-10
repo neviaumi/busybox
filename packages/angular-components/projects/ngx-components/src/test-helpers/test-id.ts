@@ -9,5 +9,6 @@ export function generateTestIdWithPrefix({
 }) {
   if (!prefix) return id;
   if (!id) return prefix;
+  if (id.includes('ngx')) return id;
   return [prefix, id].join('-');
 }
