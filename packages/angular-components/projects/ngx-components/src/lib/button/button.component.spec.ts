@@ -10,6 +10,6 @@ describe('ButtonComponent', () => {
     const { fixture } = await testBed.setupTest();
     const ngxButton: HTMLElement = fixture.nativeElement;
     const wiredButton = ngxButton.querySelector("[data-testid='ngx-button']");
-    expect(wiredButton).toBeDefined();
+    expect(wiredButton).not.toBeNull();
   });
 });

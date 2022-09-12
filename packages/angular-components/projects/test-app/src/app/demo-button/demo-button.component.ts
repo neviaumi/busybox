@@ -10,7 +10,7 @@ import { ButtonComponent } from '@busybox/ngx-components';
       >Hello World</ngx-button
     >
     <div>
-      <h1>CLick count</h1>
+      <h1>Click count</h1>
       <p>{{ clickCount }}</p>
     </div>
   `,

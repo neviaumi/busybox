@@ -6,10 +6,12 @@ describe('CardComponent', () => {
     imports: [CardComponent],
   });
 
-  it('should have default data-testid', async () => {
-    const { fixture } = await testBed.setupTest();
-    const ngxButton: HTMLElement = fixture.nativeElement;
-    const wiredButton = ngxButton.querySelector("[data-testid='ngx-card']");
-    expect(wiredButton).toBeDefined();
+  it('should set data-testid', async () => {
+    const { component, fixture } = await testBed.setupTest();
+    component['data-testid'] = 'ngx-card';
+    fixture.detectChanges();
+    const ngxCard: HTMLElement = fixture.nativeElement;
+    const wiredButton = ngxCard.querySelector("[data-testid='ngx-card']");
+    expect(wiredButton).not.toBeNull();
   });
 });

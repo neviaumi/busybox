@@ -3,6 +3,7 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 import { DemoButtonComponent } from './app/demo-button/demo-button.component';
+import { DemoFileUploadComponent } from './app/demo-file-upload/demo-file-upload.component';
 import { DemoNavBarComponent } from './app/demo-nav-bar/demo-nav-bar.component';
 import { TestAppComponent } from './app/test-app.component';
 import { environment } from './environments/environment';
@@ -23,6 +24,10 @@ bootstrapApplication(TestAppComponent, {
               mod => mod.ROUTES,
             ),
           path: 'demo/nav-bar',
+        },
+        {
+          component: DemoFileUploadComponent,
+          path: 'demo/file-upload',
         },
       ]),
     ),
