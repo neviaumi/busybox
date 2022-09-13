@@ -1,5 +1,5 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "$schema": "../../node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
     "analytics": "97d73e90-9d01-4edf-932e-7b81520c7cee",
     "schematicCollections": ["@angular-eslint/schematics"]
