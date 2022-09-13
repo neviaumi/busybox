@@ -2,6 +2,7 @@
 
 set -ex
 
+npm install -g npm@latest
 node -v
 npm --version
 npm install
