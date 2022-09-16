@@ -1,6 +1,7 @@
-import react from '@vitejs/plugin-react';
 import { resolve } from 'node:path';
-import { defineConfig } from 'vite';
+
+import react from '@vitejs/plugin-react';
+import { defineConfig, searchForWorkspaceRoot } from 'vite';
 
 // https://vitejs.dev/config/
 // eslint-disable-next-line import/no-default-export
@@ -27,9 +28,9 @@ export default defineConfig({
     sourcemap: true,
   },
   plugins: [react()],
-  resolve: {
-    alias: [
-      { find: /^roughjs(.*)/, replacement: './node_modules/roughjs$1.js' },
-    ],
+  server: {
+    fs: {
+      allow: [searchForWorkspaceRoot(process.cwd())],
+    },
   },
 });

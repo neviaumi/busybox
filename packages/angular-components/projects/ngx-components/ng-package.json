@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../../node_modules/ng-packagr/ng-package.schema.json",
+  "allowedNonPeerDependencies": [
+    "classnames",
+    "roughjs",
+    "wired-elements",
+    "@ng-icons/core",
+    "@ng-icons/heroicons"
+  ],
+  "dest": "../../dist/ngx-components",
+  "lib": {
+    "entryFile": "src/public-api.ts"
+  }
+}

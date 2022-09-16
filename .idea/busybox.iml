@@ -7,9 +7,11 @@
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/packages/react-components/dist-babel" />
       <excludeFolder url="file://$MODULE_DIR$/packages/react-components/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/angular-components/.angular" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="@types/jest" level="application" />
+    <orderEntry type="library" name="ts-external-references" level="project" />
   </component>
 </module>

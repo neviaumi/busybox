@@ -1,0 +1,44 @@
+{
+  "author": "",
+  "dependencies": {
+    "@testing-library/cypress": "8.0.3",
+    "cypress": "10.8.0"
+  },
+  "description": "",
+  "devDependencies": {
+    "eslint": "8.23.1"
+  },
+  "engines": {
+    "node": ">=16",
+    "yarn": "Use npm"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./types/index.d.ts"
+    },
+    "./add-commands": {
+      "import": "./dist/add-commands.js",
+      "types": "./types/add-commands.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "module": "dist/index.js",
+  "name": "@busybox/cypress",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": "packages/cypress",
+    "type": "git",
+    "url": "git@github.com:davidNHK/busybox.git"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "types": "./dist/index.d.ts",
+  "version": "1.0.0"
+}

@@ -1,6 +1,6 @@
+import { cy, describe, it } from '@busybox/cypress';
 import { composeStories } from '@storybook/testing-react';
 
-import { cy, describe, it } from '../test-helpers/test-runner.js';
 import * as stories from './FileUpload.stories.js';
 
 const { FileUpload } = composeStories(stories);
