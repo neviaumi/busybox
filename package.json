@@ -28,6 +28,7 @@
   },
   "version": "1.0.0",
   "workspaces": [
-    "./packages/*"
+    "./packages/*",
+    "./packages/angular-components/projects/*"
   ]
 }
