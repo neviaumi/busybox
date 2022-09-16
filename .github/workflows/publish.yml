@@ -27,12 +27,12 @@ jobs:
 name: publish packages
 
 on:
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'Release version'
-        required: true
   push:
     branches:
       - master
       - development
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Release version
+        required: true

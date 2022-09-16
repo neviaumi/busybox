@@ -5,8 +5,6 @@ set -ex
 git config user.email "github-action@github.com"
 git config user.name "GitHub Action"
 echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > ~/.npmrc
-npx lerna exec --stream -- "test ! -f  scripts/ci/pre-publish.sh || bash \
-scripts/ci/pre-publish.sh"
 
 if [-z "$PREFERRED_VERSION"]; then
   VERSION=$PREFERRED_VERSION
@@ -17,5 +15,6 @@ if [-z "$PREFERRED_VERSION"]; then
   fi
 fi
 HUSKY=0 npx lerna version --yes $VERSION
-
+npx lerna exec --stream -- "test ! -f  scripts/ci/pre-publish.sh || bash \
+scripts/ci/pre-publish.sh"
 HUSKY=0 npx lerna publish --yes from-git
