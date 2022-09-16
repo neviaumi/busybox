@@ -2,7 +2,7 @@ env:
   CI: true
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 jobs:
-  build-test:
+  publish:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
     steps:
@@ -16,14 +16,23 @@ jobs:
           node-version-file: .nvmrc
       - run: bash ./scripts/ci/setup.sh
       - run: bash ./scripts/ci/test.sh
-      - run: bash ./scripts/publish.sh
+      - env:
+          PREFERRED_VERSION: ${{ inputs.version }}
+        name: Publish to NPM
+        run: bash ./scripts/publish.sh
       - env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
         name: Open PR to development
         run: gh pr create --fill --base development
-name: publish-after-push-master
+name: publish packages
 
 on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version'
+        required: true
   push:
     branches:
       - master
+      - development
