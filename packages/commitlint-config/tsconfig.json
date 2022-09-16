@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "module": "CommonJS",
+    "noEmit": false,
+    "outDir": "./dist/",
+    "sourceMap": true
+  },
+  "extends": "@busybox/tsconfig",
+  "include": ["src"]
+}
