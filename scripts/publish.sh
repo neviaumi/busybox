@@ -8,4 +8,4 @@ echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > ~/.npmrc
 npx lerna exec --stream -- "test ! -f  scripts/ci/pre-publish.sh || bash \
 scripts/ci/pre-publish.sh"
 
-HUSKY=0 npx lerna publish --yes
+HUSKY=0 npx lerna publish --yes from-git
