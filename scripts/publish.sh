@@ -6,11 +6,16 @@ git config user.email "github-action@github.com"
 git config user.name "GitHub Action"
 echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > ~/.npmrc
 
-if [-z "$PREFERRED_VERSION"]; then
+if [ -n "$PREFERRED_VERSION" ]; then
+  echo "Use version: $PREFERRED_VERSION"
   VERSION=$PREFERRED_VERSION
-  if ["$GITHUB_REF_NAME" -eq "development"]; then
+else
+  echo "Use date version"
+  if [ "$GITHUB_REF_NAME" == "development" ]; then
+    echo "Use date version on development"
     VERSION=$(date +'%Y.%-m.%-d-alpha.%-H%-M')
   else
+    echo "Use date version on master"
     VERSION=$(date +'%Y.%-m.%-d')
   fi
 fi
