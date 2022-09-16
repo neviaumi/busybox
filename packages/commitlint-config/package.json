@@ -1,0 +1,43 @@
+{
+  "author": "",
+  "dependencies": {
+    "@commitlint/cli": "17.1.2",
+    "commitlint-config-jira": "1.6.4",
+    "commitlint-plugin-jira-rules": "1.6.4"
+  },
+  "description": "",
+  "devDependencies": {
+    "eslint": "8.23.1"
+  },
+  "engines": {
+    "node": ">=16",
+    "yarn": "Use npm"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./types/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "name": "@busybox/commitlint-config",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": "packages/commitlint-config",
+    "type": "git",
+    "url": "git@github.com:davidNHK/busybox.git"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "types": "./dist/index.d.ts",
+  "version": "1.0.0"
+}

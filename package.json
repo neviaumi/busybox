@@ -1,9 +1,6 @@
 {
   "author": "David Ng <david.ng.dev@gmail.com>",
   "devDependencies": {
-    "@commitlint/cli": "17.1.2",
-    "@commitlint/config-conventional": "17.1.0",
-    "@commitlint/config-lerna-scopes": "17.0.2",
     "eslint": "8.23.1",
     "husky": "8.0.1",
     "is-ci": "3.0.1",

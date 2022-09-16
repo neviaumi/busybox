@@ -6,6 +6,7 @@ node_modules/
 packages/react-components/
 packages/angular-components/
 packages/cypress/
+packages/commitlint-config/
 out/
 **/__fixtures__/*.json
 package-lock.json
