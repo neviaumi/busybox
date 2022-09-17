@@ -28,4 +28,5 @@ git push --set-upstream origin "$RELEASE_BRANCH"
 npx lerna version --yes $VERSION
 npx lerna exec --stream -- "test ! -f  scripts/ci/pre-publish.sh || bash \
 scripts/ci/pre-publish.sh"
-npx lerna publish --yes from-git
+npx lerna publish --message "release(npm): publish $VERSION [skip ci]" --yes from-git
+export RELEASE_VERSION=$VERSION
