@@ -14,7 +14,7 @@ else
   echo "Use date version"
   if [ "$GITHUB_REF_NAME" == "development" ]; then
     echo "Use date version on development"
-    VERSION=$(date +"%Y.%-m.%-d-alpha.$(($(date +"%-H") + 1))%-M")
+    VERSION=$(date +"%Y.%-m.%-d-alpha.$(($(date +"%-H") + 1))%M")
   else
     echo "Use date version on master"
     VERSION=$(date +'%Y.%-m.%-d')
