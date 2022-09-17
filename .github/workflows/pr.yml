@@ -13,13 +13,6 @@ jobs:
           node-version-file: .nvmrc
       - run: bash ./scripts/ci/setup.sh
       - run: bash ./scripts/ci/test.sh
-      - env:
-          GITHUB_TOKEN: ${{secrets.REPO_SCOPED_TOKEN}}
-          PR_URL: ${{github.event.pull_request.html_url}}
-        name: Enable auto-merge after test pass
-        run: gh pr merge --auto --merge "$PR_URL"
 name: Verify PR
 
 on: pull_request_target
-permissions:
-  pull-requests: write

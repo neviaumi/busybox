@@ -1,0 +1,18 @@
+env:
+  CI: true
+jobs:
+  enable-auto-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          GITHUB_TOKEN: ${{secrets.REPO_SCOPED_TOKEN}}
+          PR_URL: ${{github.event.pull_request.html_url}}
+        name: Enable auto-merge after test pass
+        run: gh pr merge --auto --merge "$PR_URL"
+name: Auto merge PR
+
+on: pull_request_target
+
+permissions:
+  contents: write
+  pull-requests: write
