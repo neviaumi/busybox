@@ -20,13 +20,13 @@ else
     VERSION=$(date +'%Y.%-m.%-d')
   fi
 fi
-RELEASE_BRANCH="release-$VERSION"
-
+export RELEASE_BRANCH="release-$VERSION"
+COMMIT_MESSAGE="release(npm): publish $VERSION [skip ci]"
 git switch -c "$RELEASE_BRANCH"
 git push --set-upstream origin "$RELEASE_BRANCH"
 
-npx lerna version --yes $VERSION
+npx lerna version --message "$COMMIT_MESSAGE" --yes $VERSION
 npx lerna exec --stream -- "test ! -f  scripts/ci/pre-publish.sh || bash \
 scripts/ci/pre-publish.sh"
-npx lerna publish --message "release(npm): publish $VERSION [skip ci]" --yes from-git
+npx lerna publish --message "$COMMIT_MESSAGE" --yes from-git
 export RELEASE_VERSION=$VERSION
