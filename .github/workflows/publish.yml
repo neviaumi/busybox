@@ -22,13 +22,17 @@ jobs:
         name: Publish to NPM
         run: bash ./scripts/publish.sh
       - env:
+          GITHUB_REF: ${{github.ref}}
+        name: Debug
+        run: echo $GITHUB_REF
+      - env:
           GITHUB_TOKEN: ${{secrets.REPO_SCOPED_TOKEN}}
-        if: ${{ env.GITHUB_REF_NAME == 'development' }}
+        if: "contains(github.ref, 'development')"
         name: Open PR to development
         run: gh pr create --fill --base "$GITHUB_REF_NAME"
       - env:
           GITHUB_TOKEN: ${{secrets.REPO_SCOPED_TOKEN}}
-        if: ${{ env.GITHUB_REF_NAME == 'master' }}
+        if: "contains(github.ref, 'master')"
         name: Open PR to master
         run: gh pr create --fill --base "$GITHUB_REF_NAME"
 name: Publish packages
