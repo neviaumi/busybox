@@ -2,8 +2,30 @@ env:
   CI: true
   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 jobs:
+  merge-back:
+    needs: publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{needs.publish.outputs.release_branch}}
+      - env:
+          GITHUB_TOKEN: ${{secrets.REPO_SCOPED_TOKEN}}
+          PR_TITLE: ${{format('Merge back {0} to development', needs.publish.outputs.released_version)}}
+        if: "contains(github.ref, 'development')"
+        name: Open PR to development
+        run: gh pr create --fill -t "$PR_TITLE" -l auto-merge --base development
+      - env:
+          GITHUB_TOKEN: ${{secrets.REPO_SCOPED_TOKEN}}
+          PR_TITLE: ${{format('Merge back {0} to master', needs.publish.outputs.released_version)}}
+        if: "contains(github.ref, 'master')"
+        name: Open PR to master
+        run: gh pr create --fill -t "$PR_TITLE" -l auto-merge --base master
   publish:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    outputs:
+      release_branch: ${{steps.publish.outputs.release_branch}}
+      released_version: ${{ steps.publish.outputs.released_version }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -24,18 +46,8 @@ jobs:
         run: |
           bash ./scripts/publish.sh;
           echo "::set-output name=released_version::$RELEASE_VERSION";
-      - env:
-          GITHUB_TOKEN: ${{secrets.REPO_SCOPED_TOKEN}}
-          PR_TITLE: ${{format('Merge back {0} to development', steps.publish.outputs.released_version)}}
-        if: "contains(github.ref, 'development')"
-        name: Open PR to development
-        run: gh pr create --fill -t "$PR_TITLE" -l auto-merge --base development
-      - env:
-          GITHUB_TOKEN: ${{secrets.REPO_SCOPED_TOKEN}}
-          PR_TITLE: ${{format('Merge back {0} to master', steps.publish.outputs.released_version)}}
-        if: "contains(github.ref, 'master')"
-        name: Open PR to master
-        run: gh pr create --fill -t "$PR_TITLE" -l auto-merge --base master
+          echo "::set-output name=release_branch::RELEASE_BRANCH";
+          echo "Do i running?";
 name: Publish packages
 
 on:
