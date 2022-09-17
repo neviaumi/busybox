@@ -44,10 +44,12 @@ jobs:
         id: publish
         name: Publish to NPM
         run: |
-          bash ./scripts/publish.sh;
+          source ./scripts/publish.sh;
+          echo "Do i get release branch? $RELEASE_BRANCH";
+          echo "Do i get released version? $RELEASE_VERSION";
           echo "::set-output name=released_version::$RELEASE_VERSION";
           echo "::set-output name=release_branch::$RELEASE_BRANCH";
-          echo "Do i running?";
+        shell: bash
 name: Publish packages
 
 on:
