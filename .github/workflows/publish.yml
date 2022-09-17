@@ -23,8 +23,8 @@ jobs:
         run: bash ./scripts/publish.sh
       - env:
           GITHUB_TOKEN: ${{secrets.REPO_SCOPED_TOKEN}}
-        name: Open PR to development
-        run: gh pr create --fill --base development
+        name: Open PR to ${{ env.GITHUB_REF_NAME }}
+        run: gh pr create --fill --base "$GITHUB_REF_NAME"
 name: Publish packages
 
 on:
