@@ -22,10 +22,6 @@ jobs:
         name: Publish to NPM
         run: bash ./scripts/publish.sh
       - env:
-          GITHUB_REF: ${{github.ref}}
-        name: Debug
-        run: echo $GITHUB_REF
-      - env:
           GITHUB_TOKEN: ${{secrets.REPO_SCOPED_TOKEN}}
         if: "contains(github.ref, 'development')"
         name: Open PR to development
