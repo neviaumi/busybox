@@ -19,18 +19,23 @@ jobs:
         run: bash ./scripts/ci/test.sh
       - env:
           PREFERRED_VERSION: ${{ inputs.version }}
+        id: publish
         name: Publish to NPM
-        run: bash ./scripts/publish.sh
+        run: |
+          bash ./scripts/publish.sh;
+          echo "::set-output name=released_version::$RELEASE_VERSION";
       - env:
           GITHUB_TOKEN: ${{secrets.REPO_SCOPED_TOKEN}}
+          PR_TITLE: ${{format('Merge back {0} to development', steps.publish.outputs.released_version)}}
         if: "contains(github.ref, 'development')"
         name: Open PR to development
-        run: gh pr create --fill -l auto-merge --base "$GITHUB_REF_NAME"
+        run: gh pr create --fill -t "$PR_TITLE" -l auto-merge --base development
       - env:
           GITHUB_TOKEN: ${{secrets.REPO_SCOPED_TOKEN}}
+          PR_TITLE: ${{format('Merge back {0} to master', steps.publish.outputs.released_version)}}
         if: "contains(github.ref, 'master')"
         name: Open PR to master
-        run: gh pr create --fill -l auto-merge --base "$GITHUB_REF_NAME"
+        run: gh pr create --fill -t "$PR_TITLE" -l auto-merge --base master
 name: Publish packages
 
 on:

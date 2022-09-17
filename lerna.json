@@ -7,8 +7,7 @@
         "**/__mocks__/**",
         "**/__tests__/**",
         "CHANGELOG.md"
-      ],
-      "message": "release: publish npm[skip ci]"
+      ]
     }
   },
   "npmClient": "npm",
