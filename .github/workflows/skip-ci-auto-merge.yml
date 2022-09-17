@@ -4,13 +4,11 @@ jobs:
   enable-auto-merge:
     runs-on: ubuntu-latest
     steps:
-      - name: Debug
-        uses: hmarr/debug-action@v2
       - env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           PR_URL: ${{github.event.pull_request.html_url}}
-        if: "contains(github.event.commits[0].message, '[skip ci]')"
-        name: Enable auto-merge when commit message have skip ci
+        if: "contains(github.event.pull_request.title, '[skip ci]')"
+        name: Enable auto-merge when PR title have skip ci
         run: gh pr merge --auto --merge "$PR_URL"
 name: Auto merge Skip CI PR
 
