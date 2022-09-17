@@ -14,5 +14,5 @@
   "npmClient": "npm",
   "useNx": true,
   "useWorkspaces": true,
-  "version": "1970.01.01-alpha.000000"
+  "version": "2022.9.17-alpha.926"
 }
