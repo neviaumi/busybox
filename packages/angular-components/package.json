@@ -61,5 +61,5 @@
     "test:debug": "npx playwright test --debug",
     "watch": "ng build --watch --configuration development"
   },
-  "version": "2022.9.17-alpha.132"
+  "version": "2022.9.17-alpha.1312"
 }
