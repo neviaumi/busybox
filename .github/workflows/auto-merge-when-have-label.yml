@@ -1,16 +1,16 @@
 env:
   CI: true
 jobs:
-  enable-auto-merge:
+  enable:
     runs-on: ubuntu-latest
     steps:
       - env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           PR_URL: ${{github.event.pull_request.html_url}}
-        if: "contains(github.event.pull_request.title, '[skip ci]')"
-        name: Enable auto-merge when PR title have skip ci
+        if: contains(github.event.pull_request.labels.*.name, 'auto-merge')
+        name: Enable auto-merge when have auto-merge label
         run: gh pr merge --auto --merge "$PR_URL"
-name: Auto merge Skip CI PR
+name: Auto merge PR
 
 on: pull_request_target
 

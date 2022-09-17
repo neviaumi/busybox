@@ -25,12 +25,12 @@ jobs:
           GITHUB_TOKEN: ${{secrets.REPO_SCOPED_TOKEN}}
         if: "contains(github.ref, 'development')"
         name: Open PR to development
-        run: gh pr create --fill --base "$GITHUB_REF_NAME"
+        run: gh pr create --fill -l auto-merge --base "$GITHUB_REF_NAME"
       - env:
           GITHUB_TOKEN: ${{secrets.REPO_SCOPED_TOKEN}}
         if: "contains(github.ref, 'master')"
         name: Open PR to master
-        run: gh pr create --fill --base "$GITHUB_REF_NAME"
+        run: gh pr create --fill -l auto-merge --base "$GITHUB_REF_NAME"
 name: Publish packages
 
 on:
