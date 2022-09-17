@@ -2,13 +2,17 @@ env:
   CI: true
 jobs:
   enable-auto-merge:
-    if: "contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
     steps:
       - env:
+          COMMIT_MESSAGE: ${{github.event.head_commit.message}}
+        name: Debug
+        run: echo 'commit messages' && echo $COMMIT_MESSAGE
+      - env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           PR_URL: ${{github.event.pull_request.html_url}}
-        name: Enable auto-merge after test pass
+        if: "contains(github.event.head_commit.message, '[skip ci]')"
+        name: Enable auto-merge when commit message have skip ci
         run: gh pr merge --auto --merge "$PR_URL"
 name: Auto merge Skip CI PR
 
