@@ -11,16 +11,18 @@ jobs:
           ref: ${{needs.publish.outputs.release_branch}}
       - env:
           GITHUB_TOKEN: ${{secrets.REPO_SCOPED_TOKEN}}
-          PR_TITLE: ${{format('Merge back {0} to development', needs.publish.outputs.released_version)}}
+          PR_BODY: ${{format('Bump version to v{0}', needs.publish.outputs.released_version)}}
+          PR_TITLE: ${{format('Merge back v{0} to development', needs.publish.outputs.released_version)}}
         if: "contains(github.ref, 'development')"
         name: Open PR to development
-        run: gh pr create --fill -t "$PR_TITLE" -l auto-merge --base development
+        run: gh pr create --title "$PR_TITLE" --body "$PR_BODY" --label auto-merge --base development
       - env:
           GITHUB_TOKEN: ${{secrets.REPO_SCOPED_TOKEN}}
-          PR_TITLE: ${{format('Merge back {0} to master', needs.publish.outputs.released_version)}}
+          PR_BODY: ${{format('Bump version to v{0}', needs.publish.outputs.released_version)}}
+          PR_TITLE: ${{format('Merge back v{0} to master', needs.publish.outputs.released_version)}}
         if: "contains(github.ref, 'master')"
         name: Open PR to master
-        run: gh pr create --fill -t "$PR_TITLE" -l auto-merge --base master
+        run: gh pr create --title "$PR_TITLE" --body "$PR_BODY" --label auto-merge --base master
   publish:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     outputs:
@@ -45,8 +47,6 @@ jobs:
         name: Publish to NPM
         run: |
           source ./scripts/publish.sh;
-          echo "Do i get release branch? $RELEASE_BRANCH";
-          echo "Do i get released version? $RELEASE_VERSION";
           echo "::set-output name=released_version::$RELEASE_VERSION";
           echo "::set-output name=release_branch::$RELEASE_BRANCH";
         shell: bash

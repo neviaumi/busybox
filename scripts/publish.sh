@@ -21,7 +21,7 @@ else
   fi
 fi
 export RELEASE_BRANCH="release-$VERSION"
-COMMIT_MESSAGE="release(npm): publish $VERSION [skip ci]"
+COMMIT_MESSAGE="publish v$VERSION [skip ci]"
 git switch -c "$RELEASE_BRANCH"
 git push --set-upstream origin "$RELEASE_BRANCH"
 
