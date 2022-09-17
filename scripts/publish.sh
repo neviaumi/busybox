@@ -2,6 +2,7 @@
 
 set -ex
 
+export HUSKY=0
 git config user.email "github-action@github.com"
 git config user.name "GitHub Action"
 echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > ~/.npmrc
@@ -19,7 +20,12 @@ else
     VERSION=$(date +'%Y.%-m.%-d')
   fi
 fi
-HUSKY=0 npx lerna version --yes $VERSION
+RELEASE_BRANCH="release-$VERSION"
+
+git switch -c "$RELEASE_BRANCH"
+git push --set-upstream origin "$RELEASE_BRANCH"
+
+npx lerna version --yes $VERSION
 npx lerna exec --stream -- "test ! -f  scripts/ci/pre-publish.sh || bash \
 scripts/ci/pre-publish.sh"
-HUSKY=0 npx lerna publish --yes from-git
+npx lerna publish --yes from-git
