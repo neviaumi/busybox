@@ -12,8 +12,7 @@ jobs:
       - env:
           GITHUB_TOKEN: ${{secrets.REPO_SCOPED_TOKEN}}
           PR_BODY: ${{format('Bump version to v{0}', needs.publish.outputs.released_version)}}
-          PR_TITLE: ${{format('Merge back v{0} to {1}', needs.publish.outputs.released_version, env.GITHUB_REF_NAME)}}
-        if: "contains(github.ref, 'development')"
+          PR_TITLE: ${{format('Merge back v{0} to {1}', needs.publish.outputs.released_version, github.ref)}}
         name: Open PR to $GITHUB_REF_NAME
         run: |
           PR_URL=$(gh pr create --title "$PR_TITLE" --body "$PR_BODY" --label auto-create-pr --base "$GITHUB_REF_NAME")
