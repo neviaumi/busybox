@@ -85,5 +85,5 @@
     "./cypress/support/*.ts"
   ],
   "types": "./dist/out-tsc/src/index.d.ts",
-  "version": "2022.9.18-alpha.2311"
+  "version": "2022.9.18-alpha.2322"
 }
