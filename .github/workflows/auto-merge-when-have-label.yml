@@ -2,7 +2,7 @@ env:
   CI: true
 jobs:
   enable:
-    if: contains(github.event.pull_request.labels.*.name, 'auto-merge')
+    if: contains(github.event.pull_request.labels.*.name, 'disable-auto-merge')
     runs-on: ubuntu-latest
     steps:
       - env:

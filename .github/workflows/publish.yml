@@ -14,15 +14,10 @@ jobs:
           PR_BODY: ${{format('Bump version to v{0}', needs.publish.outputs.released_version)}}
           PR_TITLE: ${{format('Merge back v{0} to development', needs.publish.outputs.released_version)}}
         if: "contains(github.ref, 'development')"
-        name: Open PR to development
-        run: gh pr create --title "$PR_TITLE" --body "$PR_BODY" --label auto-merge --base development
-      - env:
-          GITHUB_TOKEN: ${{secrets.REPO_SCOPED_TOKEN}}
-          PR_BODY: ${{format('Bump version to v{0}', needs.publish.outputs.released_version)}}
-          PR_TITLE: ${{format('Merge back v{0} to master', needs.publish.outputs.released_version)}}
-        if: "contains(github.ref, 'master')"
-        name: Open PR to master
-        run: gh pr create --title "$PR_TITLE" --body "$PR_BODY" --label auto-merge --base master
+        name: Open PR to $GITHUB_REF_NAME
+        run: |
+          PR_URL=$(gh pr create --title "$PR_TITLE" --body "$PR_BODY" --label auto-merge --base "$GITHUB_REF_NAME")
+          gh pr merge --auto --merge "$PR_URL"
   publish:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     outputs:
