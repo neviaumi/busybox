@@ -12,10 +12,11 @@ jobs:
       - env:
           GITHUB_TOKEN: ${{secrets.REPO_SCOPED_TOKEN}}
           PR_BODY: ${{format('Bump version to v{0}', needs.publish.outputs.released_version)}}
-          PR_TITLE: ${{format('Merge back v{0} to {1}', needs.publish.outputs.released_version, github.ref)}}
+          PR_TITLE: ${{format('Merge back v{0} to', needs.publish.outputs.released_version)}}
         name: Open PR to $GITHUB_REF_NAME
         run: |
-          PR_URL=$(gh pr create --title "$PR_TITLE" --body "$PR_BODY" --label auto-create-pr --base "$GITHUB_REF_NAME")
+          PR_URL=$(gh pr create --title "$PR_TITLE $GITHUB_REF_NAME" --body "$PR_BODY" --label auto-create-pr --base \
+          "$GITHUB_REF_NAME")
           gh pr merge --auto --rebase --delete-branch "$PR_URL"
   publish:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
