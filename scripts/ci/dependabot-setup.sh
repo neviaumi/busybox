@@ -3,7 +3,7 @@
 set -x
 
 bash ./scripts/reset.sh
-git diff --exit-code
+git diff --exit-code > /dev/null
 GIT_DIFF_EXIST_CODE=$?
 set -e
 if [ $GIT_DIFF_EXIST_CODE -eq 1 ]; then
