@@ -3,8 +3,9 @@
 set -ex
 
 export HUSKY=0
-git config user.email "github-action@github.com"
-git config user.name "GitHub Action"
+# https://github.com/orgs/community/discussions/26560
+git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+git config user.name "github-actions[bot]"
 echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > ~/.npmrc
 
 if [ -n "$PREFERRED_VERSION" ]; then
