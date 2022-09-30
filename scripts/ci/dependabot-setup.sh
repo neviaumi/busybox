@@ -7,6 +7,7 @@ git diff --exit-code > /dev/null
 GIT_DIFF_EXIST_CODE=$?
 set -e
 if [ $GIT_DIFF_EXIST_CODE -eq 1 ]; then
+  export HUSKY=0
   git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
   git config user.name "github-actions[bot]"
   git add .
