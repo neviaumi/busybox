@@ -39,5 +39,5 @@
     "build": "tsc"
   },
   "types": "./dist/index.d.ts",
-  "version": "2022.9.20-alpha.1950"
+  "version": "2022.9.30-alpha.1716"
 }
