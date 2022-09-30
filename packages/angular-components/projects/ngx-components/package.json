@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@ng-icons/core": "22.1.0",
-    "@ng-icons/heroicons": "22.1.0",
+    "@ng-icons/heroicons": "22.2.0",
     "classnames": "2.3.1",
     "roughjs": "4.4.5",
     "tslib": "2.4.0",
@@ -27,5 +27,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "2022.9.20-alpha.1950"
+  "version": "2022.9.30-alpha.1716"
 }
