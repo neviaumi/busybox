@@ -2,7 +2,7 @@
   "author": "",
   "dependencies": {
     "@testing-library/cypress": "8.0.3",
-    "cypress": "10.8.0"
+    "cypress": "10.10.0"
   },
   "description": "",
   "devDependencies": {
