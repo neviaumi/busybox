@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@ng-icons/core": "22.1.0",
+    "@ng-icons/core": "22.4.0",
     "@ng-icons/heroicons": "22.2.0",
     "classnames": "2.3.1",
     "roughjs": "4.4.5",
