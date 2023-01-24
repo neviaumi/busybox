@@ -1,6 +1,7 @@
+env:
+  CI: true
 jobs:
   test:
-    if: ${{ github.actor == 'dependabot[bot]' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -10,11 +11,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
-      - run: bash ./scripts/ci/dependabot-setup.sh
+      - run: bash ./scripts/ci/setup.sh
       - run: bash ./scripts/ci/test.sh
-name: Dependabot PR check
-on: pull_request_target
+name: Verify PR
 
-permissions:
-  contents: write
-  pull-requests: write
+on: pull_request_target
