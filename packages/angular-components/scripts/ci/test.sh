@@ -4,6 +4,6 @@ set -ex
 
 # npx ng test --no-watch --no-progress --browsers=ChromeHeadlessCI ngx-components
 # not linting test-app because it would complain import/no-unresolved on CI
-npx ng lint ngx-components
-npx ng build ngx-components
+./node_modules/.bin/ng lint ngx-components
+./node_modules/.bin/ng build ngx-components
 npm run test
