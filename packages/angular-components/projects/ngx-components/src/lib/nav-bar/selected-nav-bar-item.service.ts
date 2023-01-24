@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
 import { filter } from 'rxjs';
+// @TODO: Fix me!
+const filterWithoutType = filter as any;
 
 @Injectable()
 export class SelectedNavBarItemService {
@@ -9,8 +11,12 @@ export class SelectedNavBarItemService {
   constructor(private router: Router) {
     this.selectedValue = router.url;
     this.router.events
-      .pipe(filter((e): e is NavigationStart => e instanceof NavigationStart))
-      .subscribe((e: NavigationStart) => {
+      .pipe(
+        filterWithoutType(
+          (e: unknown): e is NavigationStart => e instanceof NavigationStart,
+        ),
+      )
+      .subscribe((e: any) => {
         this.selectedValue = e.url;
       });
   }

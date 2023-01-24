@@ -2,7 +2,7 @@ updates:
   - directory: /
     ignore:
       - dependency-name: roughjs
-
+      - dependency-name: rxjs
     package-ecosystem: npm
     schedule:
       interval: daily

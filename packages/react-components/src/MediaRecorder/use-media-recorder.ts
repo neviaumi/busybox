@@ -39,7 +39,8 @@ export function useAudioRecorder(
       if (!mediaStream) return undefined;
       const recorder = new MediaRecorder(mediaStream, options);
       setAudioRecorder(recorder);
-      const onError = (event: MediaRecorderErrorEvent) => {
+      const onError = (event: MediaRecorderEventMap['error']) => {
+        // @ts-expect-error Don't spend useless time on typing
         setRecorderError(event.error);
       };
       const onStart = () => {
