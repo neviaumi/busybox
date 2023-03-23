@@ -24,5 +24,5 @@ module.exports = {
 
 [React example](../react-components/tailwind.config.js)
 [React example CSS](../react-components/.storybook/preview.css)
-[Angular example config](../angular-components/tailwind.config.js)
-[Angular example CSS](../angular-components/projects/test-app/src/styles.css)
+[Angular example config](https://github.com/davidNHK/angular-components/blob/531cdce0c49b517ae31163aead9cd338e484b56e/tailwind.config.js#L2)
+[Angular example CSS](https://github.com/davidNHK/angular-components/blob/531cdce0c49b517ae31163aead9cd338e484b56e/projects/test-app/src/styles.css#L1)
