@@ -9,10 +9,11 @@ Shared module/config across my repo
 
 A shared config included:
 
-1. [eslint-config](./packages/eslint-config) [![npm version](https://badge.fury.io/js/%40busybox%2Feslint-config.svg)](https://badge.fury.io/js/%40busybox%2Feslint-config)
-2. [npm-package-json-lint-config](./packages/npm-package-json-lint-config) [![npm version](https://badge.fury.io/js/%40busybox%2Fnpm-package-json-lint-config.svg)](https://badge.fury.io/js/%40busybox%2Fnpm-package-json-lint-config)
-3. [prettier-config](./packages/prettier-config) [![npm version](https://badge.fury.io/js/%40busybox%2Fprettier-config.svg)](https://badge.fury.io/js/%40busybox%2Fprettier-config)
-4. [babel-preset](./packages/babel-preset) [![npm version](https://badge.fury.io/js/%40busybox%2Fbabel-preset.svg)]
-   (https://badge.fury.io/js/%40busybox%2Fbabel-preset)
-5. [tsconfig](./packages/tsconfig) [![npm version](https://badge.fury.io/js/%40busybox%2Ftsconfig.svg)](https://badge.
+1. [commitlint-config](./packages/commitlint-config) [![npm version](https://badge.fury.io/js/%40busybox%2Fcommitlint-config.svg)](https://badge.fury.io/js/%40busybox%2Fcommitlint-config.svg)
+2. [cypress](./packages/cypress) [![npm version](https://badge.fury.io/js/%40busybox%2Fcypress.svg)](https://badge.fury.io/js/%40busybox%2Fcypress.svg)
+3. [eslint-config](./packages/eslint-config) [![npm version](https://badge.fury.io/js/%40busybox%2Feslint-config.svg)](https://badge.fury.io/js/%40busybox%2Feslint-config.svg)
+4. [prettier-config](./packages/prettier-config) [![npm version](https://badge.fury.io/js/%40busybox%2Fprettier-config.svg)](https://badge.fury.io/js/%40busybox%2Fprettier-config)
+5. [tailwindcss-config](./packages/tailwindcss-config) [![npm version](https://badge.fury.io/js/%40busybox%2Ftailwindcss-config.svg)]
+   (<https://badge.fury.io/js/%40busybox%2Ftailwindcss-config.svg>)
+6. [tsconfig](./packages/tsconfig) [![npm version](https://badge.fury.io/js/%40busybox%2Ftsconfig.svg)](https://badge.
    fury.io/js/%40busybox%2Ftsconfig)

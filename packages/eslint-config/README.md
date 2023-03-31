@@ -1,16 +1,16 @@
 # @busybox/eslint-config
 
-# Installation
+## Installation
 
-1. Install dependencies
+- Install dependencies
 
-```
+```bash
 npm install --save-dev @busybox/eslint-config
 ```
 
-2. Setup [prettier](../prettier-config)
+- Setup [prettier](../prettier-config)
 
-3) In your project root `eslint.js`
+- In your project root `eslint.js`
 
 ```js
 'use strict';
