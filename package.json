@@ -1,6 +1,7 @@
 {
   "author": "David Ng <david.ng.dev@gmail.com>",
   "devDependencies": {
+    "@commitlint/cli": "17.5.1",
     "eslint": "8.23.1",
     "husky": "8.0.1",
     "is-ci": "3.0.1",
