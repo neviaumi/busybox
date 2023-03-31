@@ -6,7 +6,7 @@
   },
   "description": "",
   "devDependencies": {
-    "eslint": "8.23.1"
+    "eslint": "8.37.0"
   },
   "engines": {
     "node": ">=16",
