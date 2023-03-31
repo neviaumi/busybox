@@ -22,7 +22,7 @@ module.exports = {
 @import '@busybox/tailwindcss-config/tailwind.css';
 ```
 
-[React example](../react-components/tailwind.config.js)
-[React example CSS](../react-components/.storybook/preview.css)
+[React example](https://github.com/davidNHK/react-components/blob/ac3aa619b0680297210346644df3476b2121bb10/tailwind.config.js#L1)
+[React example CSS](https://github.com/davidNHK/react-components/blob/ac3aa619b0680297210346644df3476b2121bb10/.storybook/preview.css#L1)
 [Angular example config](https://github.com/davidNHK/angular-components/blob/531cdce0c49b517ae31163aead9cd338e484b56e/tailwind.config.js#L2)
 [Angular example CSS](https://github.com/davidNHK/angular-components/blob/531cdce0c49b517ae31163aead9cd338e484b56e/projects/test-app/src/styles.css#L1)
