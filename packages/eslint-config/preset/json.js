@@ -28,7 +28,7 @@ module.exports = {
                     engines: {
                       properties: {
                         node: {
-                          enum: ['>=14', '>=16'],
+                          enum: ['>=14', '>=16', '>=18'],
                           type: 'string',
                         },
                         yarn: {
