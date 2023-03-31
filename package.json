@@ -1,38 +1,39 @@
 {
-  "author": "David Ng <david.ng.dev@gmail.com>",
-  "devDependencies": {
-    "@busybox/eslint-config": "file:./packages/eslint-config/busybox-eslint-config-latest.tgz",
-    "@busybox/prettier-config": "file:./packages/prettier-config/busybox-prettier-config-latest.tgz",
-    "eslint": "8.37.0",
-    "husky": "8.0.1",
-    "is-ci": "3.0.1",
-    "lerna": "5.5.4",
-    "lint-staged": "13.0.3",
-    "pinst": "3.0.0",
-    "prettier": "2.8.7"
-  },
-  "engines": {
-    "node": ">=18",
-    "yarn": "Use npm"
-  },
-  "license": "MIT",
-  "name": "busybox",
-  "overrides": {
-    "roughjs": "4.4.5"
-  },
-  "private": true,
-  "repository": "git@github.com:davidNHK/busybox.git",
-  "scripts": {
-    "build": "lerna run build",
-    "postinstall": "is-ci || husky install",
-    "postpublish": "pinst --enable",
-    "prepublishOnly": "pinst --disable"
-  },
-  "version": "1.0.0",
-  "workspaces": [
-    "./packages/commitlint-conifg",
-    "./packages/cypress",
-    "./packages/tailwindcss-config",
-    "./packages/tsconfig"
-  ]
+    "author": "David Ng <david.ng.dev@gmail.com>",
+    "devDependencies": {
+        "@busybox/eslint-config": "file:./packages/eslint-config/busybox-eslint-config-latest.tgz",
+        "@busybox/prettier-config": "file:./packages/prettier-config/busybox-prettier-config-latest.tgz",
+        "@commitlint/cli": "17.5.1",
+        "eslint": "8.37.0",
+        "husky": "8.0.1",
+        "is-ci": "3.0.1",
+        "lerna": "5.5.4",
+        "lint-staged": "13.0.3",
+        "pinst": "3.0.0",
+        "prettier": "2.8.7"
+    },
+    "engines": {
+        "node": ">=18",
+        "yarn": "Use npm"
+    },
+    "license": "MIT",
+    "name": "busybox",
+    "overrides": {
+        "roughjs": "4.4.5"
+    },
+    "private": true,
+    "repository": "git@github.com:davidNHK/busybox.git",
+    "scripts": {
+        "build": "lerna run build",
+        "postinstall": "is-ci || husky install",
+        "postpublish": "pinst --enable",
+        "prepublishOnly": "pinst --disable"
+    },
+    "version": "1.0.0",
+    "workspaces": [
+        "./packages/commitlint-conifg",
+        "./packages/cypress",
+        "./packages/tailwindcss-config",
+        "./packages/tsconfig"
+    ]
 }
