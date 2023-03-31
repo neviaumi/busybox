@@ -1,8 +1,10 @@
 {
   "author": "David Ng <david.ng.dev@gmail.com>",
   "devDependencies": {
+    "@busybox/eslint-config": "file:./packages/eslint-config",
+    "@busybox/prettier-config": "file:./packages/prettier-config",
     "@commitlint/cli": "17.5.1",
-    "eslint": "8.23.1",
+    "eslint": "8.37.0",
     "husky": "8.0.1",
     "is-ci": "3.0.1",
     "lerna": "5.5.4",
@@ -11,7 +13,7 @@
     "prettier": "2.8.7"
   },
   "engines": {
-    "node": ">=16",
+    "node": ">=18",
     "yarn": "Use npm"
   },
   "license": "MIT",
@@ -29,6 +31,9 @@
   },
   "version": "1.0.0",
   "workspaces": [
-    "./packages/*"
+    "./packages/commitlint-config",
+    "./packages/cypress",
+    "./packages/tailwindcss-config",
+    "./packages/tsconfig"
   ]
 }
