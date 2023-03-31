@@ -44,6 +44,7 @@ function isESM() {
   }) || { packageJson: {}, path: getConsumingRoot() };
   return packageJson?.type === 'module';
 }
+
 const hasESM = isESM();
 
 module.exports = {
@@ -53,6 +54,7 @@ module.exports = {
     './preset/javascript.js',
     './preset/json.js',
     './preset/yml.js',
+    './preset/markdown.js',
     hasTypescript ? './preset/typescript.js' : '',
     hasESM ? './preset/esm.js' : '',
     hasNest ? './preset/nest.js' : '',

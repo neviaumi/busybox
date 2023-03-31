@@ -1,8 +1,8 @@
 # @busybox/tsconfig
 
-# Installation
+## Installation
 
-```
+```bash
 npm install --save-dev @busybox/tsconfig
 ```
 
