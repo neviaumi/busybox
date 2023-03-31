@@ -1,7 +1,7 @@
 {
   "author": "",
   "dependencies": {
-    "@commitlint/cli": "17.5.0",
+    "@commitlint/cli": "17.5.1",
     "commitlint-config-jira": "1.6.4",
     "commitlint-plugin-jira-rules": "1.6.4"
   },
