@@ -14,7 +14,7 @@
   "main": "tsconfig.json",
   "name": "@busybox/tsconfig",
   "peerDependencies": {
-    "typescript": ">=4"
+    "typescript": ">=4 <5"
   },
   "publishConfig": {
     "access": "public"

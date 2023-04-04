@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 set -ex
-
-#npx lint-staged
+npm ci
+npm link

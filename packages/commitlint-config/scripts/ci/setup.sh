@@ -2,4 +2,5 @@
 
 set -ex
 
+npm ci
 npx tsc
