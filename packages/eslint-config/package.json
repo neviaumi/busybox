@@ -9,7 +9,7 @@
     "@typescript-eslint/parser": "5.56.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-import-resolver-typescript": "3.5.1",
-    "eslint-plugin-cypress": "2.12.1",
+    "eslint-plugin-cypress": "2.13.2",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-jest": "27.0.4",
     "eslint-plugin-json-schema-validator": "4.0.2",
