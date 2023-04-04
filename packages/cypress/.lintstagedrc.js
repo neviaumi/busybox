@@ -1,6 +1,8 @@
 'use strict';
 
 module.exports = {
-  '*.md': ['prettier --write'],
-  '*.{json,js,ts,tsx}': ['eslint --fix', 'prettier --write'],
+  '*.{json,js,ts,tsx}': [
+    'eslint --resolve-plugins-relative-to ../../node_modules/@busybox/eslint-config --fix',
+    'prettier --write',
+  ],
 };

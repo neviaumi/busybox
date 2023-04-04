@@ -9,6 +9,5 @@ const Configuration: UserConfig = {
   },
 };
 
-// eslint-disable-next-line import/no-default-export
-export default Configuration;
 module.exports = Configuration;
+exports.default = Configuration;

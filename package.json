@@ -1,8 +1,9 @@
 {
   "author": "David Ng <david.ng.dev@gmail.com>",
   "devDependencies": {
-    "@busybox/eslint-config": "file:./packages/eslint-config",
-    "@busybox/prettier-config": "file:./packages/prettier-config",
+    "@busybox/commitlint-config": "./packages/commitlint-config",
+    "@busybox/eslint-config": "./packages/eslint-config",
+    "@busybox/prettier-config": "./packages/prettier-config",
     "@commitlint/cli": "17.5.1",
     "eslint": "8.37.0",
     "husky": "8.0.3",
@@ -29,11 +30,5 @@
     "postpublish": "pinst --enable",
     "prepublishOnly": "pinst --disable"
   },
-  "version": "1.0.0",
-  "workspaces": [
-    "./packages/commitlint-config",
-    "./packages/cypress",
-    "./packages/tailwindcss-config",
-    "./packages/tsconfig"
-  ]
+  "version": "1.0.0"
 }

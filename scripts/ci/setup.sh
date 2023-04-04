@@ -11,5 +11,5 @@ CURRENT_WORKING_DIRECTORY=$(pwd)
 
 npm ci
 npx lerna bootstrap
-npx lerna exec --stream -- "test ! -f  scripts/ci/setup.sh || bash \
+npx lerna exec --concurrency 1 --stream -- "test ! -f  scripts/ci/setup.sh || bash \
 scripts/ci/setup.sh"

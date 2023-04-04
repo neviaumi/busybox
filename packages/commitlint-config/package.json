@@ -5,6 +5,10 @@
     "commitlint-plugin-jira-rules": "1.6.4"
   },
   "description": "",
+  "devDependencies": {
+    "@busybox/tsconfig": "../tsconfig/",
+    "typescript": "4.9.5"
+  },
   "engines": {
     "node": ">=16",
     "yarn": "Use npm"
