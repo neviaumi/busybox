@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@spotify/tsconfig": "14.1.0"
+    "@spotify/tsconfig": "14.1.6"
   },
   "engines": {
     "node": ">=14",
@@ -14,7 +14,7 @@
   "main": "tsconfig.json",
   "name": "@busybox/tsconfig",
   "peerDependencies": {
-    "typescript": ">=4"
+    "typescript": ">=4 <5"
   },
   "publishConfig": {
     "access": "public"
@@ -24,5 +24,5 @@
     "type": "git",
     "url": "git@github.com:davidNHK/busybox.git"
   },
-  "version": "1.8.0"
+  "version": "2023.4.4-alpha.2047"
 }

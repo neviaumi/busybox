@@ -3,8 +3,6 @@ build/
 coverage/
 dist/
 node_modules/
-packages/react-components/
-packages/angular-components/
 packages/cypress/
 packages/commitlint-config/
 out/

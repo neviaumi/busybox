@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "tailwindcss": "3.1.8"
+    "tailwindcss": "3.3.1"
   },
   "engines": {
     "node": ">=14",
@@ -24,5 +24,5 @@
     "type": "git",
     "url": "git@github.com:davidNHK/busybox.git"
   },
-  "version": "1.1.0"
+  "version": "2023.4.4-alpha.2047"
 }

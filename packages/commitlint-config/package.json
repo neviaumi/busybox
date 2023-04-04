@@ -1,13 +1,12 @@
 {
   "author": "",
   "dependencies": {
-    "@commitlint/cli": "17.1.2",
     "commitlint-config-jira": "1.6.4",
     "commitlint-plugin-jira-rules": "1.6.4"
   },
   "description": "",
   "devDependencies": {
-    "eslint": "8.23.1"
+    "typescript": "5.0.3"
   },
   "engines": {
     "node": ">=16",
@@ -27,6 +26,9 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "name": "@busybox/commitlint-config",
+  "peerDependencies": {
+    "@commitlint/cli": ">=17 <18"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -39,5 +41,5 @@
     "build": "tsc"
   },
   "types": "./dist/index.d.ts",
-  "version": "1.0.0"
+  "version": "2023.4.4-alpha.2047"
 }

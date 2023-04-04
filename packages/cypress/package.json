@@ -1,12 +1,12 @@
 {
   "author": "",
   "dependencies": {
-    "@testing-library/cypress": "8.0.3",
-    "cypress": "10.8.0"
+    "@testing-library/cypress": "9.0.0"
   },
   "description": "",
   "devDependencies": {
-    "eslint": "8.23.1"
+    "cypress": "12.9.0",
+    "typescript": "5.0.3"
   },
   "engines": {
     "node": ">=16",
@@ -28,6 +28,9 @@
   "license": "MIT",
   "module": "dist/index.js",
   "name": "@busybox/cypress",
+  "peerDependencies": {
+    "cypress": ">=12"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -40,5 +43,5 @@
     "build": "tsc"
   },
   "types": "./dist/index.d.ts",
-  "version": "1.0.0"
+  "version": "2023.4.4-alpha.2047"
 }

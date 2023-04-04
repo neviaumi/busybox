@@ -1,14 +1,14 @@
 # @busybox/prettier-config
 
-# Installation
+## Installation
 
-1. Install prettier and config
+- Install prettier and config
 
-```
+```bash
 npm install --save-dev @busybox/prettier-config
 ```
 
-2. In your project root `.prettierrc.js`
+- In your project root `.prettierrc.js`
 
 ```js
 module.exports = {

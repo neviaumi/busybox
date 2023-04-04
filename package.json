@@ -1,16 +1,17 @@
 {
   "author": "David Ng <david.ng.dev@gmail.com>",
   "devDependencies": {
-    "eslint": "8.23.1",
-    "husky": "8.0.1",
+    "@commitlint/cli": "17.5.1",
+    "eslint": "8.37.0",
+    "husky": "8.0.3",
     "is-ci": "3.0.1",
-    "lerna": "5.5.1",
-    "lint-staged": "13.0.3",
+    "lerna": "6.6.1",
+    "lint-staged": "13.2.0",
     "pinst": "3.0.0",
-    "prettier": "2.7.1"
+    "prettier": "2.8.7"
   },
   "engines": {
-    "node": ">=16",
+    "node": ">=18",
     "yarn": "Use npm"
   },
   "license": "MIT",
@@ -26,8 +27,5 @@
     "postpublish": "pinst --enable",
     "prepublishOnly": "pinst --disable"
   },
-  "version": "1.0.0",
-  "workspaces": [
-    "./packages/*"
-  ]
+  "version": "1.0.0"
 }

@@ -1,4 +1,5 @@
 {
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "command": {
     "publish": {
       "ignoreChanges": [
@@ -10,7 +11,14 @@
     }
   },
   "npmClient": "npm",
-  "packages": ["packages/*"],
-  "useWorkspaces": true,
-  "version": "independent"
+  "packages": [
+    "./packages/prettier-config",
+    "./packages/eslint-config",
+    "./packages/tsconfig",
+    "./packages/commitlint-config",
+    "./packages/cypress",
+    "./packages/tailwindcss-config"
+  ],
+  "useNx": true,
+  "version": "2023.4.4-alpha.2047"
 }
