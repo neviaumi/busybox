@@ -1,9 +1,6 @@
 {
   "author": "David Ng <david.ng.dev@gmail.com>",
   "devDependencies": {
-    "@busybox/commitlint-config": "./packages/commitlint-config",
-    "@busybox/eslint-config": "./packages/eslint-config",
-    "@busybox/prettier-config": "./packages/prettier-config",
     "@commitlint/cli": "17.5.1",
     "eslint": "8.37.0",
     "husky": "8.0.3",

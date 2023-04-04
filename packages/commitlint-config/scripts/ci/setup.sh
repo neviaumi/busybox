@@ -3,4 +3,5 @@
 set -ex
 
 npm ci
+npm install --no-save "@busybox/tsconfig@../tsconfig"
 npx tsc

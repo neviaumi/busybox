@@ -6,7 +6,6 @@
   },
   "description": "",
   "devDependencies": {
-    "@busybox/tsconfig": "../tsconfig/",
     "typescript": "4.9.5"
   },
   "engines": {
