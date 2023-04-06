@@ -2,6 +2,9 @@
   "dependencies": {
     "@spotify/tsconfig": "14.1.6"
   },
+  "devDependencies": {
+    "typescript": "4.9.5"
+  },
   "engines": {
     "node": ">=14",
     "yarn": "Use npm"
