@@ -5,6 +5,7 @@ dist/
 node_modules/
 packages/cypress/
 packages/commitlint-config/
+packages/tailwindcss-config/
 out/
 **/__fixtures__/*.json
 package-lock.json
