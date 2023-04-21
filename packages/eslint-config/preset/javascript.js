@@ -4,7 +4,7 @@ module.exports = {
       extends: ['plugin:import/recommended', 'plugin:n/recommended'],
       files: ['*.js', '*.jsx', '*.cjs', '*.mjs', '*.ts', '*.tsx'],
       parserOptions: {
-        ecmaVersion: 'latest',
+        ecmaVersion: '2020',
         sourceType: 'module',
       },
       plugins: [
@@ -19,9 +19,7 @@ module.exports = {
         'block-scoped-var': 'error',
 
         'import/first': 'error',
-
         'import/newline-after-import': 'error',
-
         'import/no-default-export': 'error',
 
         'import/no-duplicates': 'error',

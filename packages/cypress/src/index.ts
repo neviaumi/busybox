@@ -1,3 +1,3 @@
-import './add-commands.type';
+import './add-commands.type.js';
 
-export * from './test-runner';
+export * from './test-runner.js';
