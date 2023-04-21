@@ -1,21 +1,14 @@
 module.exports = {
   overrides: [
     {
+      extends: ['plugin:n/recommended'],
       files: ['*.js', '*.jsx', '*.mjs', '*.ts', '*.tsx'],
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
       },
-      plugins: ['eslint-plugin-import'],
       rules: {
-        'import/extensions': [
-          'error',
-          'ignorePackages',
-          {
-            ts: 'never',
-            tsx: 'never',
-          },
-        ],
+        'n/file-extension-in-import': ['error'],
       },
     },
   ],
