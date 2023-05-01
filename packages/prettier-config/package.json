@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@spotify/prettier-config": "14.1.6",
-    "prettier-plugin-tailwindcss": "0.2.7"
+    "prettier-plugin-tailwindcss": "0.2.8"
   },
   "engines": {
     "node": ">=14",
