@@ -30,7 +30,7 @@
     "eslint-plugin-yml": "1.6.0",
     "jsonc-eslint-parser": "2.3.0",
     "read-pkg-up": "7.0.1",
-    "yaml-eslint-parser": "1.2.1"
+    "yaml-eslint-parser": "1.2.2"
   },
   "devDependencies": {
     "eslint": "8.40.0"
