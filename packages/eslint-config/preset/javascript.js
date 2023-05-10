@@ -4,7 +4,7 @@ module.exports = {
       extends: ['plugin:import/recommended', 'plugin:n/recommended'],
       files: ['*.js', '*.jsx', '*.cjs', '*.mjs', '*.ts', '*.tsx'],
       parserOptions: {
-        ecmaVersion: '2020',
+        ecmaVersion: '2021',
         sourceType: 'module',
       },
       plugins: [
