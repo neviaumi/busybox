@@ -35,6 +35,8 @@ const hasCypress = hasConfig([
 ]);
 
 const hasTailwindcss = hasConfig([
+  { dependency: 'tailwindcss', type: 'dependency' },
+  { dependency: 'tailwindcss', dependencyType: 'peer', type: 'dependency' },
   { dependency: 'tailwindcss', dependencyType: 'dev', type: 'dependency' },
 ]);
 
