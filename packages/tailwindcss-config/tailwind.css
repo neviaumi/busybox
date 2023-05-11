@@ -1,12 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-    --colors-warning: theme(colors.warning.bg.DEFAULT);
-    --colors-warning-hover: theme(colors.warning.bg.hover);
-    --colors-primary: theme(colors.primary.bg.DEFAULT);
-    --colors-primary-hover: theme(colors.primary.bg.hover);
-    --colors-secondary: theme(colors.secondary.bg.DEFAULT);
-    --colors-secondary-hover: theme(colors.secondary.bg.hover);
-}
