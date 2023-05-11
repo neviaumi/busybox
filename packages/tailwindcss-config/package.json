@@ -31,5 +31,5 @@
   },
   "type": "module",
   "types": "./dist/tailwind.config.d.cts",
-  "version": "2023.5.10-alpha.2216"
+  "version": "2023.5.11-alpha.2048"
 }
