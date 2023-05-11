@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-    --colors-warning: theme(colors.warning.main);
-    --colors-warning-hover: theme(colors.warning.hover);
-    --colors-primary: theme(colors.primary.main);
-    --colors-primary-hover: theme(colors.primary.hover);
-    --colors-secondary: theme(colors.secondary.main);
-    --colors-secondary-hover: theme(colors.secondary.hover);
+    --colors-warning: theme(colors.warning.bg.DEFAULT);
+    --colors-warning-hover: theme(colors.warning.bg.hover);
+    --colors-primary: theme(colors.primary.bg.DEFAULT);
+    --colors-primary-hover: theme(colors.primary.bg.hover);
+    --colors-secondary: theme(colors.secondary.bg.DEFAULT);
+    --colors-secondary-hover: theme(colors.secondary.bg.hover);
 }
