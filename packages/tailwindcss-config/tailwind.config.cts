@@ -1,6 +1,7 @@
 import { assocPath, path, pipe } from 'ramda';
 import { Config } from 'tailwindcss';
 import colors from 'tailwindcss/colors.js';
+import tailwindCssFormsPlugin from "@tailwindcss/forms"
 
 function extractColor(colorPath: string[]) {
   return assocPath(colorPath, path(colorPath, colors));
@@ -14,6 +15,7 @@ function computeRemFromPx(px: number) {
 
 const tailwindConfig: Omit<Config, 'content'> = {
   prefix: 'tw-',
+  plugins: [tailwindCssFormsPlugin],
   theme: {
     backgroundColor: ({ theme }: { theme: (path: string) => unknown }) => {
       return pipe(
