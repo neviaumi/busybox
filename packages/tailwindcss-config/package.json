@@ -17,7 +17,7 @@
     "tailwind.css"
   ],
   "license": "MIT",
-  "main": "dist/tailwind.config.cjs",
+  "module": "dist/tailwind.config.mjs",
   "name": "@busybox/tailwindcss-config",
   "peerDependencies": {
     "tailwindcss": ">=3"
@@ -31,6 +31,6 @@
     "url": "git@github.com:davidNHK/busybox.git"
   },
   "type": "module",
-  "types": "./dist/tailwind.config.d.cts",
+  "types": "./dist/tailwind.config.d.mts",
   "version": "2023.5.11-alpha.2048"
 }

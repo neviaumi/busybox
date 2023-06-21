@@ -93,4 +93,4 @@ const tailwindConfig: Omit<Config, 'content'> = {
   },
 };
 
-export = tailwindConfig;
+export default tailwindConfig;

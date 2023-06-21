@@ -3,11 +3,11 @@
     "baseUrl": "./",
     "declaration": true,
     "esModuleInterop": true,
-    "module": "CommonJS",
+    "module": "ESNext",
     "noEmit": false,
     "outDir": "./dist/",
     "sourceMap": true
   },
   "extends": "@busybox/tsconfig",
-  "include": ["tailwind.config.cts"]
+  "include": ["tailwind.config.mts"]
 }
