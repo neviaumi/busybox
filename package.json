@@ -23,9 +23,12 @@
   "repository": "git@github.com:davidNHK/busybox.git",
   "scripts": {
     "build": "lerna run build",
-    "postinstall": "is-ci || husky install",
     "postpublish": "pinst --enable",
+    "prepare": "is-ci || husky install",
     "prepublishOnly": "pinst --disable"
   },
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "workspaces": [
+    "./packages/*"
+  ]
 }

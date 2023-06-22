@@ -11,14 +11,7 @@
     }
   },
   "npmClient": "npm",
-  "packages": [
-    "packages/prettier-config",
-    "packages/eslint-config",
-    "packages/tsconfig",
-    "packages/commitlint-config",
-    "packages/cypress",
-    "packages/tailwindcss-config"
-  ],
+  "packages": ["packages/*"],
   "useNx": true,
   "version": "2023.5.11-alpha.2048"
 }
