@@ -2,4 +2,3 @@
 
 set -ex
 npm ci
-npm link
