@@ -12,12 +12,15 @@
     "node": ">=14",
     "yarn": "Use npm"
   },
+  "exports": {
+    ".": "./dist/tailwind.config.mjs",
+    "./tailwind.css": "./tailwind.css"
+  },
   "files": [
     "dist",
     "tailwind.css"
   ],
   "license": "MIT",
-  "module": "dist/tailwind.config.mjs",
   "name": "@busybox/tailwindcss-config",
   "peerDependencies": {
     "tailwindcss": ">=3"
@@ -32,5 +35,5 @@
   },
   "type": "module",
   "types": "./dist/tailwind.config.d.mts",
-  "version": "2023.6.22-alpha.217"
+  "version": "2023.6.22"
 }
