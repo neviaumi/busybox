@@ -15,7 +15,9 @@ function computeRemFromPx(px: number) {
 
 const tailwindConfig: Omit<Config, 'content'> = {
   prefix: 'tw-',
-  plugins: [tailwindCssFormsPlugin],
+  plugins: [tailwindCssFormsPlugin({
+    strategy: 'class',
+  })],
   theme: {
     backgroundColor: ({ theme }: { theme: (path: string) => unknown }) => {
       return pipe(
