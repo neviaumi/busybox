@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
+    "allowImportingTsExtensions": false,
     "baseUrl": ".",
     "declaration": true,
     "module": "ESNext",
+    "moduleResolution": "NodeNext",
     "noEmit": false,
     "outDir": "./dist/",
     "sourceMap": true,
-
     "types": ["cypress", "@testing-library/cypress"]
   },
   "extends": "@busybox/tsconfig/tsconfig-react.json",
