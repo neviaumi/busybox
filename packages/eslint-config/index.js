@@ -1,14 +1,9 @@
 const { getConsumingRoot, hasConfig } = require('@spotify/web-scripts-utils');
-const readPkgUp = require('read-pkg-up');
+const fs = require('fs');
 
 const hasReact = hasConfig([
   { dependency: 'react', type: 'dependency' },
   { dependency: 'react', dependencyType: 'peer', type: 'dependency' },
-]);
-
-const hasAngular = hasConfig([
-  { dependency: '@angular/core', type: 'dependency' },
-  { dependency: '@angular/core', dependencyType: 'peer', type: 'dependency' },
 ]);
 
 const hasNest = hasConfig([
@@ -41,9 +36,9 @@ const hasTailwindcss = hasConfig([
 ]);
 
 function isESM() {
-  const { packageJson } = readPkgUp.sync({
-    cwd: getConsumingRoot(),
-  }) || { packageJson: {}, path: getConsumingRoot() };
+  const packageJson = JSON.parse(
+    fs.readFileSync(`${getConsumingRoot()}/package.json`, 'utf8'),
+  );
   return packageJson?.type === 'module';
 }
 
@@ -60,7 +55,6 @@ module.exports = {
     hasTypescript ? './preset/typescript.js' : '',
     hasESM ? './preset/esm.js' : '',
     hasNest ? './preset/nest.js' : '',
-    hasAngular ? './preset/angular.js' : '',
     hasReact ? './preset/react-jsx.js' : '',
     hasStorybook ? './preset/storybook.js' : '',
     hasJest ? './preset/jest.js' : '',
