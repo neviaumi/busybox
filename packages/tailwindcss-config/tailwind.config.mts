@@ -13,6 +13,15 @@ function computeRemFromPx(px: number) {
   return `${px / 16.0}rem`; // Use browser default font size - 16px
 }
 
+enum Variant {
+  DISABLED = 'disabled',
+    ERROR = 'error',
+    PRIMARY = 'primary',
+    SECONDARY = 'secondary',
+  WARNING = 'warning'
+}
+
+
 const tailwindConfig: Omit<Config, 'content'> = {
   prefix: 'tw-',
   plugins: [tailwindCssFormsPlugin({
@@ -21,19 +30,23 @@ const tailwindConfig: Omit<Config, 'content'> = {
   theme: {
     backgroundColor: ({ theme }: { theme: (path: string) => unknown }) => {
       return pipe(
-        assocPath(['error'], {
+          assocPath([Variant.DISABLED], {
+            DEFAULT: theme('colors.gray.200'),
+            hover: theme('colors.gray.50'),
+          }),
+        assocPath([Variant.ERROR], {
           DEFAULT: theme('colors.rose.500'),
           hover: theme('colors.rose.600'),
         }),
-        assocPath(['warning'], {
+        assocPath([Variant.WARNING], {
           DEFAULT: theme('colors.amber.500'),
           hover: theme('colors.amber.600'),
         }),
-        assocPath(['primary'], {
+        assocPath([Variant.PRIMARY], {
           DEFAULT: theme('colors.emerald.50'),
           hover: theme('colors.emerald.100'),
         }),
-        assocPath(['secondary'], {
+        assocPath([Variant.SECONDARY], {
           DEFAULT: theme('colors.sky.500'),
           hover: theme('colors.sky.600'),
         }),
@@ -74,19 +87,23 @@ const tailwindConfig: Omit<Config, 'content'> = {
     },
     textColor: ({ theme }: { theme: (path: string) => unknown }) => {
       return pipe(
-        assocPath(['error'], {
+          assocPath([Variant.DISABLED], {
+            DEFAULT: theme('colors.gray.800'),
+            hover: theme('colors.gray.600'),
+          }),
+        assocPath([Variant.ERROR], {
           DEFAULT: theme('colors.gray.50'),
           hover: theme('colors.white'),
         }),
-        assocPath(['warning'], {
+        assocPath([Variant.WARNING], {
           DEFAULT: theme('colors.gray.50'),
           hover: theme('colors.white'),
         }),
-        assocPath(['primary'], {
+        assocPath([Variant.PRIMARY], {
           DEFAULT: theme('colors.gray.700'),
           hover: theme('colors.black'),
         }),
-        assocPath(['secondary'], {
+        assocPath([Variant.SECONDARY], {
           DEFAULT: theme('colors.gray.50'),
           hover: theme('colors.white'),
         }),
