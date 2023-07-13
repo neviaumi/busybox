@@ -1,8 +1,5 @@
 {
   "dependencies": {
-    "@angular-eslint/eslint-plugin": "16.1.0",
-    "@angular-eslint/eslint-plugin-template": "16.1.0",
-    "@angular-eslint/template-parser": "16.1.0",
     "@spotify/eslint-config-base": "15.0.0",
     "@spotify/web-scripts-utils": "15.0.0",
     "@typescript-eslint/eslint-plugin": "6.0.0",
@@ -29,7 +26,6 @@
     "eslint-plugin-typescript-sort-keys": "2.3.0",
     "eslint-plugin-yml": "1.8.0",
     "jsonc-eslint-parser": "2.3.0",
-    "read-pkg-up": "10.0.0",
     "yaml-eslint-parser": "1.2.2"
   },
   "devDependencies": {
