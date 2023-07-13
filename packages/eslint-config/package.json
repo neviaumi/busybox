@@ -1,12 +1,9 @@
 {
   "dependencies": {
-    "@angular-eslint/eslint-plugin": "16.0.3",
-    "@angular-eslint/eslint-plugin-template": "16.0.3",
-    "@angular-eslint/template-parser": "16.0.3",
     "@spotify/eslint-config-base": "15.0.0",
     "@spotify/web-scripts-utils": "15.0.0",
-    "@typescript-eslint/eslint-plugin": "5.60.0",
-    "@typescript-eslint/parser": "5.60.0",
+    "@typescript-eslint/eslint-plugin": "6.0.0",
+    "@typescript-eslint/parser": "6.0.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-import-resolver-typescript": "3.5.5",
     "eslint-plugin-cypress": "2.13.3",
@@ -24,16 +21,15 @@
     "eslint-plugin-sort-destructure-keys": "1.5.0",
     "eslint-plugin-sort-keys-fix": "1.1.2",
     "eslint-plugin-storybook": "0.6.12",
-    "eslint-plugin-tailwindcss": "3.12.1",
+    "eslint-plugin-tailwindcss": "3.13.0",
     "eslint-plugin-testing-library": "5.11.0",
     "eslint-plugin-typescript-sort-keys": "2.3.0",
     "eslint-plugin-yml": "1.8.0",
     "jsonc-eslint-parser": "2.3.0",
-    "read-pkg-up": "7.0.1",
     "yaml-eslint-parser": "1.2.2"
   },
   "devDependencies": {
-    "eslint": "8.43.0"
+    "eslint": "8.44.0"
   },
   "engines": {
     "node": ">=14",
@@ -49,7 +45,7 @@
   "peerDependencies": {
     "eslint": ">=7 <9",
     "prettier": ">=2 <3",
-    "typescript": ">=4"
+    "typescript": ">=5"
   },
   "publishConfig": {
     "access": "public"
@@ -59,5 +55,5 @@
     "type": "git",
     "url": "git@github.com:davidNHK/busybox.git"
   },
-  "version": "2023.6.26-alpha.1946"
+  "version": "2023.7.13-alpha.257"
 }
