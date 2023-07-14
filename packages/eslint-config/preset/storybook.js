@@ -6,6 +6,7 @@ module.exports = {
       rules: {
         'import/no-default-export': 'off',
         'import/no-named-export': 'off',
+        'react-hooks/rules-of-hooks': 'off',
       },
     },
   ],
