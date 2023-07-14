@@ -2,7 +2,18 @@ module.exports = {
   overrides: [
     {
       extends: ['plugin:import/recommended', 'plugin:n/recommended'],
-      files: ['*.js', '*.jsx', '*.cjs', '*.mjs', '*.ts', '*.tsx'],
+      files: [
+        '*.js',
+        '*.jsx',
+        '*.cjs',
+        '*.mjs',
+        '*.ts',
+        '*.tsx',
+        '.cts',
+        '.ctsx',
+        '.mts',
+        '.mtsx',
+      ],
       parserOptions: {
         ecmaVersion: '2021',
         sourceType: 'module',
@@ -17,18 +28,18 @@ module.exports = {
       ],
       rules: {
         'block-scoped-var': 'error',
-
         'import/first': 'error',
+
         'import/newline-after-import': 'error',
         'import/no-default-export': 'error',
-
         'import/no-duplicates': 'error',
 
         'import/no-named-as-default': 'off',
+
         // auto sort import statements
         'import/order': 'off',
-        'lines-between-class-members': 'error',
 
+        'lines-between-class-members': 'error',
         'max-lines': [
           'error',
           {
@@ -47,6 +58,8 @@ module.exports = {
             max: 40,
           },
         ],
+
+        'n/no-missing-import': ['off'],
 
         'new-cap': 'off',
 
