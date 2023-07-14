@@ -9,6 +9,7 @@ module.exports = {
       },
       rules: {
         'import/extensions': ['error', 'ignorePackages'],
+        'n/no-missing-import': ['off'],
       },
     },
   ],

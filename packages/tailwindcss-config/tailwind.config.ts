@@ -1,7 +1,7 @@
+import tailwindCssFormsPlugin from '@tailwindcss/forms';
 import { assocPath, path, pipe } from 'ramda';
 import { Config } from 'tailwindcss';
-import colors from 'tailwindcss/colors.js';
-import tailwindCssFormsPlugin from "@tailwindcss/forms"
+import colors from 'tailwindcss/colors';
 
 function extractColor(colorPath: string[]) {
   return assocPath(colorPath, path(colorPath, colors));
@@ -10,30 +10,31 @@ function extractColor(colorPath: string[]) {
 const spacingScaleSize = 257;
 function computeRemFromPx(px: number) {
   if (px === 0) return 0;
-  return `${px / 16.0}rem`; // Use browser default font size - 16px
+  return `${px / 16}rem`; // Use browser default font size - 16px
 }
 
 enum Variant {
   DISABLED = 'disabled',
-    ERROR = 'error',
-    PRIMARY = 'primary',
-    SECONDARY = 'secondary',
-  WARNING = 'warning'
+  ERROR = 'error',
+  PRIMARY = 'primary',
+  SECONDARY = 'secondary',
+  WARNING = 'warning',
 }
 
-
 const tailwindConfig: Omit<Config, 'content'> = {
+  plugins: [
+    tailwindCssFormsPlugin({
+      strategy: 'class',
+    }),
+  ],
   prefix: 'tw-',
-  plugins: [tailwindCssFormsPlugin({
-    strategy: 'class',
-  })],
   theme: {
     backgroundColor: ({ theme }: { theme: (path: string) => unknown }) => {
       return pipe(
-          assocPath([Variant.DISABLED], {
-            DEFAULT: theme('colors.gray.200'),
-            hover: theme('colors.gray.50'),
-          }),
+        assocPath([Variant.DISABLED], {
+          DEFAULT: theme('colors.gray.200'),
+          hover: theme('colors.gray.50'),
+        }),
         assocPath([Variant.ERROR], {
           DEFAULT: theme('colors.rose.500'),
           hover: theme('colors.rose.600'),
@@ -87,10 +88,10 @@ const tailwindConfig: Omit<Config, 'content'> = {
     },
     textColor: ({ theme }: { theme: (path: string) => unknown }) => {
       return pipe(
-          assocPath([Variant.DISABLED], {
-            DEFAULT: theme('colors.gray.800'),
-            hover: theme('colors.gray.600'),
-          }),
+        assocPath([Variant.DISABLED], {
+          DEFAULT: theme('colors.gray.800'),
+          hover: theme('colors.gray.600'),
+        }),
         assocPath([Variant.ERROR], {
           DEFAULT: theme('colors.gray.50'),
           hover: theme('colors.white'),

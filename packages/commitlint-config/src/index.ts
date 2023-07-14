@@ -1,6 +1,6 @@
 import type { UserConfig } from '@commitlint/types';
 
-import regexMatch from './plugins/regex-match/index.js';
+import regexMatch from './plugins/linking-to-github-issue/index.js';
 
 const Configuration: UserConfig = {
   extends: ['jira'],
@@ -11,6 +11,5 @@ const Configuration: UserConfig = {
     'linking-to-github-issue': [2, 'always'],
   },
 };
-
 module.exports = Configuration;
-exports.default = Configuration;
+export default Configuration;

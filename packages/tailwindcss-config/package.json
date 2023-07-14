@@ -4,6 +4,8 @@
     "ramda": "0.29.0"
   },
   "devDependencies": {
+    "@babel/cli": "7.22.9",
+    "@babel/core": "7.22.9",
     "@types/ramda": "0.29.3",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
@@ -13,7 +15,10 @@
     "yarn": "Use npm"
   },
   "exports": {
-    ".": "./dist/tailwind.config.mjs",
+    ".": {
+      "import": "./dist/tailwind.config.js",
+      "types": "./dist/tailwind.config.d.ts"
+    },
     "./tailwind.css": "./tailwind.css"
   },
   "files": [
