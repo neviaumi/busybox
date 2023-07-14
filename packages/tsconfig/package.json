@@ -11,7 +11,8 @@
   },
   "files": [
     "tsconfig.json",
-    "tsconfig-react.json"
+    "tsconfig-react.json",
+    "tsconfig-commonjs.json"
   ],
   "license": "MIT",
   "main": "tsconfig.json",
@@ -27,5 +28,5 @@
     "type": "git",
     "url": "git@github.com:davidNHK/busybox.git"
   },
-  "version": "2023.7.13"
+  "version": "2023.7.14-alpha.1912"
 }

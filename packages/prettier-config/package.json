@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@spotify/prettier-config": "15.0.0",
-    "prettier-plugin-tailwindcss": "0.4.0"
+    "prettier-plugin-tailwindcss": "0.4.1"
   },
   "engines": {
     "node": ">=14",
@@ -24,5 +24,5 @@
     "type": "git",
     "url": "git@github.com:davidNHK/busybox.git"
   },
-  "version": "2023.7.13"
+  "version": "2023.7.14-alpha.1912"
 }

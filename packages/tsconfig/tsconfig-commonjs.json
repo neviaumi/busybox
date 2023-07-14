@@ -1,8 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"]
+    "allowImportingTsExtensions": false,
+    "module": "CommonJS",
+    "moduleResolution": "NodeNext"
   },
   "extends": "./tsconfig.json"
 }

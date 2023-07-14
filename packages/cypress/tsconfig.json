@@ -3,6 +3,7 @@
     "allowImportingTsExtensions": false,
     "baseUrl": ".",
     "declaration": true,
+    "emitDeclarationOnly": true,
     "module": "ESNext",
     "moduleResolution": "NodeNext",
     "noEmit": false,

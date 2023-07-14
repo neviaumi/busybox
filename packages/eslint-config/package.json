@@ -8,7 +8,7 @@
     "eslint-import-resolver-typescript": "3.5.5",
     "eslint-plugin-cypress": "2.13.3",
     "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-jest": "27.2.2",
+    "eslint-plugin-jest": "27.2.3",
     "eslint-plugin-json-schema-validator": "4.5.0",
     "eslint-plugin-jsonc": "2.9.0",
     "eslint-plugin-markdownlint": "0.4.1",
@@ -24,12 +24,13 @@
     "eslint-plugin-tailwindcss": "3.13.0",
     "eslint-plugin-testing-library": "5.11.0",
     "eslint-plugin-typescript-sort-keys": "2.3.0",
+    "eslint-plugin-unicorn": "47.0.0",
     "eslint-plugin-yml": "1.8.0",
     "jsonc-eslint-parser": "2.3.0",
     "yaml-eslint-parser": "1.2.2"
   },
   "devDependencies": {
-    "eslint": "8.44.0"
+    "eslint": "8.45.0"
   },
   "engines": {
     "node": ">=14",
@@ -55,5 +56,5 @@
     "type": "git",
     "url": "git@github.com:davidNHK/busybox.git"
   },
-  "version": "2023.7.13"
+  "version": "2023.7.14-alpha.1912"
 }

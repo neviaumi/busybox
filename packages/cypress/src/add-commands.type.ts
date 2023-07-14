@@ -6,11 +6,11 @@ declare global {
     interface Chainable {
       getBySel(
         dataTestAttribute: string,
-        args?: any,
+        commandArguments?: any,
       ): Chainable<JQuery<HTMLElement>>;
       getBySelLike(
         dataTestPrefixAttribute: string,
-        args?: any,
+        commandArguments?: any,
       ): Chainable<JQuery<HTMLElement>>;
     }
   }
