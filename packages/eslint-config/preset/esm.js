@@ -1,7 +1,7 @@
 module.exports = {
   overrides: [
     {
-      extends: ['plugin:n/recommended'],
+      extends: ['plugin:n/recommended', 'plugin:unicorn/recommended'],
       files: ['*.js', '*.jsx', '*.mjs', '*.ts', '*.tsx', '.mts', '.mtsx'],
       parserOptions: {
         ecmaVersion: '2021',
