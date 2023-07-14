@@ -30,7 +30,7 @@
     "yaml-eslint-parser": "1.2.2"
   },
   "devDependencies": {
-    "eslint": "8.44.0"
+    "eslint": "8.45.0"
   },
   "engines": {
     "node": ">=14",
@@ -56,5 +56,5 @@
     "type": "git",
     "url": "git@github.com:davidNHK/busybox.git"
   },
-  "version": "2023.7.13"
+  "version": "2023.7.14-alpha.1852"
 }
