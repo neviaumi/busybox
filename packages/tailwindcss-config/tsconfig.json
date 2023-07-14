@@ -1,13 +1,8 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
-    "declaration": true,
-    "esModuleInterop": true,
-    "module": "ESNext",
-    "noEmit": false,
-    "outDir": "./dist/",
-    "sourceMap": true
+    "outDir": "./dist/"
   },
   "extends": "@busybox/tsconfig",
-  "include": ["tailwind.config.mts"]
+  "include": ["tailwind.config.ts"]
 }
