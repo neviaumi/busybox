@@ -42,5 +42,5 @@
     "build": "tsc"
   },
   "types": "./dist/index.d.ts",
-  "version": "2023.7.15-alpha.1255"
+  "version": "2023.7.15-alpha.1910"
 }
