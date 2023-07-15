@@ -1,6 +1,6 @@
 import tailwindCssFormsPlugin from '@tailwindcss/forms';
 import { assocPath, path, pipe } from 'ramda';
-import { Config } from 'tailwindcss';
+import { type Config } from 'tailwindcss';
 import colors from 'tailwindcss/colors';
 
 function extractColor(colorPath: string[]) {

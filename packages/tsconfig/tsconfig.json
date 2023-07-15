@@ -24,7 +24,8 @@
     "sourceMap": true,
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "useUnknownInCatchVariables": true
+    "useUnknownInCatchVariables": true,
+    "verbatimModuleSyntax": true
   },
   "extends": "@spotify/tsconfig"
 }
