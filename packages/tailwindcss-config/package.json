@@ -17,6 +17,7 @@
   "exports": {
     ".": {
       "import": "./dist/tailwind.config.js",
+      "require": "./dist/tailwind.config.js",
       "types": "./dist/tailwind.config.d.ts"
     },
     "./tailwind.css": "./tailwind.css"
