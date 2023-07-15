@@ -1,10 +1,10 @@
-import type { UserConfig } from '@commitlint/types';
+import type { Plugin, UserConfig } from '@commitlint/types';
 
-import regexMatch from './plugins/linking-to-github-issue/index.js';
+import linkingToGithubIssue = require('./plugins/linking-to-github-issue/index.js');
 
 const Configuration: UserConfig = {
   extends: ['jira'],
-  plugins: ['commitlint-plugin-jira-rules', regexMatch],
+  plugins: ['commitlint-plugin-jira-rules', linkingToGithubIssue as Plugin],
   rules: {
     'jira-task-id-max-length': [2, 'always', 5 + 1 + 6],
     'jira-task-id-project-key': [2, 'always', 'ISSUE'],
@@ -12,4 +12,3 @@ const Configuration: UserConfig = {
   },
 };
 module.exports = Configuration;
-export default Configuration;

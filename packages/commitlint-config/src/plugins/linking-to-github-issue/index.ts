@@ -1,6 +1,6 @@
 import type { Plugin } from '@commitlint/types';
 
-const commitLintPlugin: Plugin = {
+const linkingToGithubIssue: Plugin = {
   rules: {
     'linking-to-github-issue': parsed => {
       // https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword
@@ -27,5 +27,4 @@ const commitLintPlugin: Plugin = {
   },
 };
 
-// eslint-disable-next-line import/no-default-export
-export default commitLintPlugin;
+module.exports = linkingToGithubIssue;
