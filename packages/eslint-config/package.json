@@ -15,7 +15,7 @@
     "eslint-plugin-n": "16.0.1",
     "eslint-plugin-node-dependencies": "0.11.0",
     "eslint-plugin-prettier": "4.2.1",
-    "eslint-plugin-react": "7.33.0",
+    "eslint-plugin-react": "7.33.1",
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-react-refresh": "0.4.3",
     "eslint-plugin-simple-import-sort": "10.0.0",
