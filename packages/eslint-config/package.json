@@ -24,7 +24,7 @@
     "eslint-plugin-storybook": "0.6.13",
     "eslint-plugin-tailwindcss": "3.13.0",
     "eslint-plugin-testing-library": "6.0.1",
-    "eslint-plugin-typescript-sort-keys": "2.3.0",
+    "eslint-plugin-typescript-sort-keys": "3.0.0",
     "eslint-plugin-unicorn": "48.0.1",
     "eslint-plugin-yml": "1.8.0",
     "jsonc-eslint-parser": "2.3.0",
