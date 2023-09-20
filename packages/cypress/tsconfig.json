@@ -4,8 +4,6 @@
     "baseUrl": ".",
     "declaration": true,
     "emitDeclarationOnly": true,
-    "module": "ESNext",
-    "moduleResolution": "NodeNext",
     "noEmit": false,
     "outDir": "./dist/",
     "sourceMap": true,
