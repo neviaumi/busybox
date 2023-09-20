@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
+    "allowImportingTsExtensions": false,
     "baseUrl": "./",
+    "noEmit": false,
     "outDir": "./dist/"
   },
   "extends": "@busybox/tsconfig",
