@@ -5,7 +5,7 @@
   },
   "devDependencies": {
     "@babel/cli": "7.23.0",
-    "@babel/core": "7.22.20",
+    "@babel/core": "7.23.0",
     "@types/ramda": "0.29.4",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2"
