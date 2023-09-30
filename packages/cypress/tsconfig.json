@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "allowImportingTsExtensions": false,
     "baseUrl": ".",
     "declaration": true,
     "emitDeclarationOnly": true,
