@@ -30,7 +30,7 @@ jobs:
           fetch-depth: '0'
       - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
       - name: Use Node.js lts
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
       - run: bash ./scripts/ci/setup.sh
