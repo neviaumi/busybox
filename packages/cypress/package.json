@@ -8,7 +8,7 @@
     "@babel/cli": "7.23.0",
     "@babel/core": "7.23.2",
     "@babel/preset-typescript": "7.23.2",
-    "cypress": "13.4.0",
+    "cypress": "13.5.0",
     "typescript": "5.2.2"
   },
   "engines": {
