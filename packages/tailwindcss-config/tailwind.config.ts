@@ -17,6 +17,14 @@ export const withColors = (config: ConfigPreset) => {
     SECONDARY = 'secondary',
     WARNING = 'warning',
   }
+  enum ColorSuffix {
+    // https://tailwindcss.com/docs/customizing-colors#color-object-syntax
+    // DEFAULT mean without suffix
+    DEFAULT = 'DEFAULT',
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes#user_action_pseudo-classes
+    // When user perform action on element
+    USER_ACTION = 'user-action',
+  }
   function extractColor(colorPath: string[]) {
     return assocPath(colorPath, path(colorPath, colors));
   }
@@ -56,69 +64,69 @@ export const withColors = (config: ConfigPreset) => {
     assocPath(['theme', 'borderColor'], ({ theme }: PluginUtils) => {
       return pipe(
         assocPath([Variant.DISABLED], {
-          DEFAULT: theme('colors.gray.200'),
+          [ColorSuffix.DEFAULT]: theme('colors.gray.200'),
         }),
         assocPath([Variant.ERROR], {
-          DEFAULT: theme('colors.rose.500'),
-          hover: theme('colors.rose.600'),
+          [ColorSuffix.DEFAULT]: theme('colors.rose.500'),
+          [ColorSuffix.USER_ACTION]: theme('colors.rose.600'),
         }),
         assocPath([Variant.WARNING], {
-          DEFAULT: theme('colors.amber.500'),
-          hover: theme('colors.amber.600'),
+          [ColorSuffix.DEFAULT]: theme('colors.amber.500'),
+          [ColorSuffix.USER_ACTION]: theme('colors.amber.600'),
         }),
         assocPath([Variant.PRIMARY], {
-          DEFAULT: theme('colors.emerald.200'),
-          hover: theme('colors.emerald.300'),
+          [ColorSuffix.DEFAULT]: theme('colors.emerald.200'),
+          [ColorSuffix.USER_ACTION]: theme('colors.emerald.300'),
         }),
         assocPath([Variant.SECONDARY], {
-          DEFAULT: theme('colors.sky.200'),
-          hover: theme('colors.sky.300'),
+          [ColorSuffix.DEFAULT]: theme('colors.sky.200'),
+          [ColorSuffix.USER_ACTION]: theme('colors.sky.300'),
         }),
       )(theme('colors'));
     }),
     assocPath(['theme', 'backgroundColor'], ({ theme }: PluginUtils) => {
       return pipe(
         assocPath([Variant.DISABLED], {
-          DEFAULT: theme('colors.gray.100'),
+          [ColorSuffix.DEFAULT]: theme('colors.gray.100'),
         }),
         assocPath([Variant.ERROR], {
-          DEFAULT: theme('colors.rose.200'),
-          hover: theme('colors.rose.300'),
+          [ColorSuffix.DEFAULT]: theme('colors.rose.200'),
+          [ColorSuffix.USER_ACTION]: theme('colors.rose.300'),
         }),
         assocPath([Variant.WARNING], {
-          DEFAULT: theme('colors.amber.200'),
-          hover: theme('colors.amber.300'),
+          [ColorSuffix.DEFAULT]: theme('colors.amber.200'),
+          [ColorSuffix.USER_ACTION]: theme('colors.amber.300'),
         }),
         assocPath([Variant.PRIMARY], {
-          DEFAULT: theme('colors.emerald.50'),
-          hover: theme('colors.emerald.100'),
+          [ColorSuffix.DEFAULT]: theme('colors.emerald.50'),
+          [ColorSuffix.USER_ACTION]: theme('colors.emerald.100'),
         }),
         assocPath([Variant.SECONDARY], {
-          DEFAULT: theme('colors.sky.50'),
-          hover: theme('colors.sky.100'),
+          [ColorSuffix.DEFAULT]: theme('colors.sky.50'),
+          [ColorSuffix.USER_ACTION]: theme('colors.sky.100'),
         }),
       )(theme('colors'));
     }),
     assocPath(['theme', 'textColor'], ({ theme }: PluginUtils) => {
       return pipe(
         assocPath([Variant.DISABLED], {
-          DEFAULT: theme('colors.gray.400'),
+          [ColorSuffix.DEFAULT]: theme('colors.gray.400'),
         }),
         assocPath([Variant.ERROR], {
-          DEFAULT: theme('colors.rose.800'),
-          hover: theme('colors.rose.900'),
+          [ColorSuffix.DEFAULT]: theme('colors.rose.800'),
+          [ColorSuffix.USER_ACTION]: theme('colors.rose.900'),
         }),
         assocPath([Variant.WARNING], {
-          DEFAULT: theme('colors.amber.800'),
-          hover: theme('colors.amber.900'),
+          [ColorSuffix.DEFAULT]: theme('colors.amber.800'),
+          [ColorSuffix.USER_ACTION]: theme('colors.amber.900'),
         }),
         assocPath([Variant.PRIMARY], {
-          DEFAULT: theme('colors.gray.800'),
-          hover: theme('colors.gray.900'),
+          [ColorSuffix.DEFAULT]: theme('colors.gray.800'),
+          [ColorSuffix.USER_ACTION]: theme('colors.gray.900'),
         }),
         assocPath([Variant.SECONDARY], {
-          DEFAULT: theme('colors.sky.800'),
-          hover: theme('colors.sky.900'),
+          [ColorSuffix.DEFAULT]: theme('colors.sky.800'),
+          [ColorSuffix.USER_ACTION]: theme('colors.sky.900'),
         }),
       )(theme('colors'));
     }),
@@ -146,7 +154,7 @@ export const withSpacing = (config: ConfigPreset) => {
   return assocPath(['theme', 'spacing'], spacing)(config);
 };
 
-const tailwindConfig: Omit<Config, 'content'> = {
+const tailwindConfig: ConfigPreset = {
   plugins: [
     tailwindCssFormsPlugin({
       strategy: 'class',
