@@ -47,5 +47,5 @@
   },
   "type": "module",
   "types": "./dist/index.d.ts",
-  "version": "2023.11.3-alpha.2041"
+  "version": "2023.11.11-alpha.145"
 }
