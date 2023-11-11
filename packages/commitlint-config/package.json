@@ -42,5 +42,5 @@
     "build": "tsc"
   },
   "types": "./dist/index.d.ts",
-  "version": "2023.11.11-alpha.145"
+  "version": "2023.11.11-alpha.249"
 }
