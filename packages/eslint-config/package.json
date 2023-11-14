@@ -3,7 +3,7 @@
     "@spotify/eslint-config-base": "15.0.0",
     "@spotify/web-scripts-utils": "15.0.0",
     "@typescript-eslint/eslint-plugin": "6.11.0",
-    "@typescript-eslint/parser": "6.10.0",
+    "@typescript-eslint/parser": "6.11.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-import-resolver-typescript": "3.6.1",
     "eslint-plugin-cypress": "2.15.1",
