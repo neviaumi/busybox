@@ -7,7 +7,7 @@
   "description": "",
   "devDependencies": {
     "@commitlint/types": "18.4.0",
-    "typescript": "5.2.2"
+    "typescript": "5.3.2"
   },
   "engines": {
     "node": ">=16",
