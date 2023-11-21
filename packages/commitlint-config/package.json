@@ -6,7 +6,7 @@
   },
   "description": "",
   "devDependencies": {
-    "@commitlint/types": "18.4.0",
+    "@commitlint/types": "18.4.3",
     "typescript": "5.3.2"
   },
   "engines": {
