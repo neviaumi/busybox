@@ -18,6 +18,8 @@ export const withColors = (config: ConfigPreset) => {
     WARNING = 'warning',
   }
   enum ColorSuffix {
+    // When used with background-color
+    CONTRAST = 'contrast',
     // https://tailwindcss.com/docs/customizing-colors#color-object-syntax
     // DEFAULT mean without suffix
     DEFAULT = 'DEFAULT',
@@ -57,6 +59,7 @@ export const withColors = (config: ConfigPreset) => {
         extractColor(['sky', '100']),
         extractColor(['sky', '200']),
         extractColor(['sky', '300']),
+        extractColor(['sky', '500']),
         extractColor(['sky', '800']),
         extractColor(['sky', '900']),
       )({}),
@@ -113,19 +116,23 @@ export const withColors = (config: ConfigPreset) => {
           [ColorSuffix.DEFAULT]: theme('colors.gray.400'),
         }),
         assocPath([Variant.ERROR], {
-          [ColorSuffix.DEFAULT]: theme('colors.rose.800'),
+          [ColorSuffix.DEFAULT]: theme('colors.rose.500'),
+          [ColorSuffix.CONTRAST]: theme('colors.rose.800'),
           [ColorSuffix.USER_ACTION]: theme('colors.rose.900'),
         }),
         assocPath([Variant.WARNING], {
-          [ColorSuffix.DEFAULT]: theme('colors.amber.800'),
+          [ColorSuffix.DEFAULT]: theme('colors.amber.500'),
+          [ColorSuffix.CONTRAST]: theme('colors.amber.800'),
           [ColorSuffix.USER_ACTION]: theme('colors.amber.900'),
         }),
         assocPath([Variant.PRIMARY], {
-          [ColorSuffix.DEFAULT]: theme('colors.gray.800'),
+          [ColorSuffix.DEFAULT]: theme('colors.black'),
+          [ColorSuffix.CONTRAST]: theme('colors.gray.800'),
           [ColorSuffix.USER_ACTION]: theme('colors.gray.900'),
         }),
         assocPath([Variant.SECONDARY], {
-          [ColorSuffix.DEFAULT]: theme('colors.sky.800'),
+          [ColorSuffix.DEFAULT]: theme('colors.sky.500'),
+          [ColorSuffix.CONTRAST]: theme('colors.sky.800'),
           [ColorSuffix.USER_ACTION]: theme('colors.sky.900'),
         }),
       )(theme('colors'));
