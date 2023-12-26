@@ -125,7 +125,8 @@ export default [
       },
     },
     plugins: {
-        unicorn: eslintPluginUnicorn,
+      import: eslintPluginImport,
+      unicorn: eslintPluginUnicorn,
     },
     rules: {
       'import/extensions': ['error', 'ignorePackages'],
