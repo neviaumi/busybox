@@ -1,20 +1,26 @@
 {
   "dependencies": {
-    "@spotify/prettier-config": "15.0.0",
     "prettier-plugin-tailwindcss": "0.4.1"
   },
   "engines": {
     "node": ">=14",
     "yarn": "Use npm"
   },
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.cjs"
+    }
+  },
   "files": [
-    "index.js"
+    "index.mjs",
+    "index.cjs"
   ],
   "license": "MIT",
-  "main": "index.js",
+  "main": "index.mjs",
   "name": "@busybox/prettier-config",
   "peerDependencies": {
-    "prettier": ">=2 <3"
+    "prettier": ">=3 <4"
   },
   "publishConfig": {
     "access": "public"
@@ -24,5 +30,6 @@
     "type": "git",
     "url": "git@github.com:davidNHK/busybox.git"
   },
+  "type": "module",
   "version": "2023.11.25-alpha.232"
 }
