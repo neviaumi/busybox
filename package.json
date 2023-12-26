@@ -27,6 +27,7 @@
     "prepare": "is-ci || husky install",
     "prepublishOnly": "pinst --disable"
   },
+  "type": "module",
   "version": "1.0.0",
   "workspaces": [
     "./packages/*"

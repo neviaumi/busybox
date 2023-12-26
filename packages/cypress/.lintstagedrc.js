@@ -1,5 +1,3 @@
-'use strict';
-
-module.exports = {
+export default {
   '*.{json,js,ts,tsx}': ['eslint --fix', 'prettier --write'],
 };

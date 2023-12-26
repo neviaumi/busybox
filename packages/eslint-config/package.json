@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@eslint/js": "8.56.0",
     "@spotify/eslint-config-base": "15.0.0",
     "@spotify/web-scripts-utils": "15.0.0",
     "@typescript-eslint/eslint-plugin": "6.15.0",
@@ -27,7 +28,10 @@
     "eslint-plugin-typescript-sort-keys": "3.1.0",
     "eslint-plugin-unicorn": "50.0.1",
     "eslint-plugin-yml": "1.11.0",
+    "globals": "13.24.0",
     "jsonc-eslint-parser": "2.4.0",
+    "ramda": "0.29.1",
+    "read-package-up": "11.0.0",
     "yaml-eslint-parser": "1.2.2"
   },
   "devDependencies": {
@@ -36,6 +40,18 @@
   "engines": {
     "node": ">=14",
     "yarn": "Use npm"
+  },
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js"
+    },
+    "./plugins/eslint-plugin-n": {
+      "import": "./plugins/eslint-plugin-n.mjs"
+    },
+    "./plugins/eslint-plugin-import": {
+      "import": "./plugins/eslint-plugin-import.mjs"
+    }
   },
   "files": [
     "index.js",
