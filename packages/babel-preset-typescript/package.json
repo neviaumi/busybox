@@ -31,5 +31,6 @@
     "type": "git",
     "url": "git@github.com:davidNHK/busybox.git"
   },
+  "type": "module",
   "version": "2023.12.26-alpha.209"
 }
