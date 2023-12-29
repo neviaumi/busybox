@@ -41,5 +41,5 @@
   },
   "type": "module",
   "types": "./dist/tailwind.config.d.mts",
-  "version": "2023.12.26-alpha.915"
+  "version": "2023.12.29-alpha.320"
 }
