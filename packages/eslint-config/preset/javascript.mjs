@@ -6,11 +6,11 @@ import eslintPluginSortDestructureKeys from 'eslint-plugin-sort-destructure-keys
 import eslintPluginSortKeysFix from 'eslint-plugin-sort-keys-fix';
 import eslintPluginUnicorn from "eslint-plugin-unicorn"
 import js from "@eslint/js";
-import {hasConfig} from "../utils/has-config.mjs";
+import {isDefaultEsm} from "../utils/is-default-esm.mjs";
 import {jsFileSuffixes, typescriptFileSuffixes} from "../utils/file-patterns.mjs"
 import globals from "globals";
 
-const isDefaultESModule = await hasConfig([{type: 'package.json', property: 'type', value: 'module'}])
+const isDefaultESModule = await isDefaultEsm()
 const esmSuffixes = ['*.jsx',
   '*.mjs',
   '*.ts',
