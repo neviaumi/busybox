@@ -1,12 +1,10 @@
-import {readPackageUp} from 'read-package-up';
 import {promises as fs} from "node:fs"
 import {path} from "ramda"
-const {packageJson, projectPath} = await readPackageUp({
-  cwd: process.cwd(),
-});
 
+import packageJsonMod from "./package-json.mjs"
 export async function hasConfig(config) {
-  return config.some((c) => {
+  const {packageJson, projectPath} = await packageJsonMod.readClosestPackageJson()
+  for (const c of config) {
     if (c.type === 'dependency') {
       const dependencyType = c.dependencyType || 'prod';
       const dependencyKey = {
@@ -14,13 +12,20 @@ export async function hasConfig(config) {
         peer: 'peerDependencies',
         prod: 'dependencies',
       }[dependencyType]
-      return packageJson[dependencyKey]?.[c.dependency] !== undefined;
+      if (path([dependencyKey, c.dependency], packageJson) !== undefined) {
+        return true;
+      }
     } else if (c.type === 'file') {
-      return fs.access(`${projectPath}/${c.pattern}`, fs.constants.R_OK).then(() => true).catch(() => false)
+      try {
+        await fs.access(`${projectPath}/${c.pattern}`, fs.constants.R_OK)
+        return true;
+      } catch (err) {}
     } else if (c.type === 'package.json') {
       const {property, value} = c
-      return path(property, packageJson)  === value
+      if (path(property, packageJson)  === value) {
+        return true;
+      }
     }
-    return false;
-  });
+  }
+  return false;
 }
