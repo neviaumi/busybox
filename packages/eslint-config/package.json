@@ -55,7 +55,9 @@
   },
   "files": [
     "index.js",
-    "preset"
+    "index.mjs",
+    "preset",
+    "plugins"
   ],
   "license": "MIT",
   "main": "index.js",
