@@ -57,7 +57,8 @@
     "index.js",
     "index.mjs",
     "preset",
-    "plugins"
+    "plugins",
+    "utils"
   ],
   "license": "MIT",
   "main": "index.js",
