@@ -1,14 +1,14 @@
-import type { Plugin, UserConfig } from '@commitlint/types';
+import type { UserConfig } from '@commitlint/types';
 
-import linkingToGithubIssue = require('./plugins/linking-to-github-issue/index.js');
+import linkBodyToIssue from './plugins/link-body-to-issue.ts';
 
 const Configuration: UserConfig = {
   extends: ['jira'],
-  plugins: ['commitlint-plugin-jira-rules', linkingToGithubIssue as Plugin],
+  plugins: ['commitlint-plugin-jira-rules', linkBodyToIssue],
   rules: {
     'jira-task-id-max-length': [2, 'always', 5 + 1 + 6],
     'jira-task-id-project-key': [2, 'always', 'ISSUE'],
-    'linking-to-github-issue': [2, 'always'],
+    'link-body-to-issue': [2, 'always'],
   },
 };
-module.exports = Configuration;
+export default Configuration;

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "allowImportingTsExtensions": false,
     "baseUrl": "./",
+    "emitDeclarationOnly": true,
     "noEmit": false,
     "outDir": "./dist/"
   },

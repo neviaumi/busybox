@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "emitDeclarationOnly": false,
+    "baseUrl": "./",
+    "emitDeclarationOnly": true,
     "noEmit": false,
     "outDir": "./dist/"
   },
-  "extends": "@busybox/tsconfig/tsconfig-commonjs.json",
+  "extends": "@busybox/tsconfig",
   "include": ["src"]
 }
