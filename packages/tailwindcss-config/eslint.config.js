@@ -2,6 +2,10 @@ import busyboxEslintConfig, { globals } from '@busybox/eslint-config';
 import eslintPluginN from '@busybox/eslint-config/plugins/eslint-plugin-n';
 
 export default [
+  ...busyboxEslintConfig,
+  {
+    ignores: ['dist/'],
+  },
   {
     languageOptions: {
       globals: {
@@ -9,7 +13,6 @@ export default [
       },
     },
   },
-  ...busyboxEslintConfig,
   {
     plugins: {
       n: eslintPluginN,

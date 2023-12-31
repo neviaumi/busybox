@@ -3,6 +3,9 @@ import eslintPluginN from '@busybox/eslint-config/plugins/eslint-plugin-n';
 
 export default [
   {
+    ignores: ['dist/'],
+  },
+  {
     languageOptions: {
       globals: {
         ...globals.browser,

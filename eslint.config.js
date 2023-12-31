@@ -3,6 +3,13 @@ import eslintPluginN from '@busybox/eslint-config/plugins/eslint-plugin-n';
 
 export default [
   {
+    ignores: [
+      'packages/cypress/',
+      'packages/tailwindcss-config/',
+      'package-lock.json',
+    ],
+  },
+  {
     languageOptions: {
       globals: {
         ...globals.node,

@@ -3,6 +3,6 @@
 set -ex
 
 # npm audit
-npx eslint --ignore-pattern package-lock.json .
+npx eslint .
 npx lerna exec --stream -- "test ! -f  scripts/ci/test.sh || bash \
 scripts/ci/test.sh"

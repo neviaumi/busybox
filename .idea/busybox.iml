@@ -9,6 +9,7 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/react-components/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/angular-components/.angular" />
       <excludeFolder url="file://$MODULE_DIR$/packages/commitlint-config/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/cypress/dist" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
