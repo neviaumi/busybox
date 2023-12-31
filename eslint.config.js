@@ -18,7 +18,11 @@ export default [
       'n/no-extraneous-import': [
         'error',
         {
-          allowModules: ['@busybox/eslint-config', '@busybox/prettier-config'],
+          allowModules: [
+            '@busybox/eslint-config',
+            '@busybox/prettier-config',
+            '@busybox/commitlint-config',
+          ],
         },
       ],
     },

@@ -41,6 +41,7 @@
   "scripts": {
     "build": "tsc"
   },
+  "type": "module",
   "types": "./dist/index.d.ts",
   "version": "2023.12.30-alpha.1648"
 }

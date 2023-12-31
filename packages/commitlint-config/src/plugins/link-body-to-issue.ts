@@ -1,8 +1,8 @@
 import type { Plugin } from '@commitlint/types';
 
-const linkingToGithubIssue: Plugin = {
+const linkBodyToIssue: Plugin = {
   rules: {
-    'linking-to-github-issue': parsed => {
+    'link-body-to-issue': parsed => {
       // https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword
       const bodyRegex =
         /^this (close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved) #(?<issueId>\d+)$/i;
@@ -27,4 +27,4 @@ const linkingToGithubIssue: Plugin = {
   },
 };
 
-module.exports = linkingToGithubIssue;
+export default linkBodyToIssue;
