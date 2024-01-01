@@ -1,9 +1,5 @@
 {
   "author": "",
-  "dependencies": {
-    "commitlint-config-jira": "1.6.4",
-    "commitlint-plugin-jira-rules": "1.6.4"
-  },
   "description": "",
   "devDependencies": {
     "@commitlint/types": "18.4.3",
