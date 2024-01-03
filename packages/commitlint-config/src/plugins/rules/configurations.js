@@ -1,9 +1,4 @@
-export type ruleConfig = {
-  issuePrefix?: string;
-  separator?: string;
-};
-
-export const ISSUE_PREFIX = '(ISSUE|GH)';
+export const ISSUE_PREFIX = '(ISSUE)';
 export const SEPARATOR = ': ';
 
 export const defaultConfig = {
