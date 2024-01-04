@@ -1,8 +1,6 @@
-import type { UserConfig } from '@commitlint/types';
+import linkCommitToIssue from './plugins/link-commit-to-issue.js';
 
-import linkCommitToIssue from './plugins/link-commit-to-issue.ts';
-
-const Configuration: UserConfig = {
+const Configuration = {
   plugins: [linkCommitToIssue],
   rules: {
     'link-body-to-issue': [2, 'always'],

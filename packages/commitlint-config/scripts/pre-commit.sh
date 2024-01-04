@@ -2,4 +2,4 @@
 
 set -ex
 
-#npx lint-staged
+npx lint-staged

@@ -1,6 +1,6 @@
-import type { Commit, Rule } from '@commitlint/types';
+import { parseIssueFromHeader } from './link-title-to-issue.js';
 
-const linkBodyToIssue: Rule = (parsed: Commit) => {
+const linkBodyToIssue = parsed => {
   // https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword
   const bodyRegex =
     /^this (close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved) #(?<issueId>\d+)$/i;
@@ -15,7 +15,8 @@ const linkBodyToIssue: Rule = (parsed: Commit) => {
     ];
   }
   const bodyIssueId = messageBody.match(bodyRegex)?.groups?.['issueId'];
-  const headerIssueId = header.match(headerRegex)?.groups?.['issueId'];
+  const { issueId: headerIssueId } =
+    parseIssueFromHeader(header, 'ISSUE') || {};
 
   return [
     bodyIssueId === headerIssueId,
