@@ -1,4 +1,4 @@
-export const ISSUE_PREFIX = '(ISSUE)';
+export const ISSUE_PREFIX = ['GH'];
 export const SEPARATOR = ': ';
 
 export const defaultConfig = {

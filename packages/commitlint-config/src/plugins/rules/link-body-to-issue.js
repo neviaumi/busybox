@@ -1,10 +1,14 @@
 import { parseIssueFromHeader } from './link-title-to-issue.js';
+import { defaultConfig } from './configurations.js';
 
-const linkBodyToIssue = parsed => {
+const linkBodyToIssue = (parsed, _, value) => {
+  const { issuePrefix = defaultConfig.issuePrefix } = value || {};
+  const issuePrefixRegex = `(${issuePrefix.map(i => i + '-').join('|')}|#)`;
   // https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword
-  const bodyRegex =
-    /^this (close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved) #(?<issueId>\d+)$/i;
-  const headerRegex = /^ISSUE-(?<issueId>\d+): .*$/;
+  const bodyRegex = new RegExp(
+    `^(this (close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved) )?${issuePrefixRegex}(?<issueId>\\d+)$`,
+    'i',
+  );
   const { body, footer, header } = parsed;
   const messageBody = body || footer;
   const isValid = messageBody !== null && bodyRegex.test(messageBody);
@@ -16,7 +20,7 @@ const linkBodyToIssue = parsed => {
   }
   const bodyIssueId = messageBody.match(bodyRegex)?.groups?.['issueId'];
   const { issueId: headerIssueId } =
-    parseIssueFromHeader(header, 'ISSUE') || {};
+    parseIssueFromHeader(header, `(${issuePrefix.join('|')})`) || {};
 
   return [
     bodyIssueId === headerIssueId,

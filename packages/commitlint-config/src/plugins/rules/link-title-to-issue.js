@@ -14,19 +14,20 @@ const linkTitleToIssue = (parsed, _, value) => {
     issuePrefix = defaultConfig.issuePrefix,
     separator = defaultConfig.separator,
   } = value || {};
+  const issuePrefixRegex = `(${issuePrefix.join('|')})`;
   const { header } = parsed;
   const isHeaderStartWithIssuePrefix = new RegExp(
-    `^(?<issue>${issuePrefix}-\\d+)`,
+    `^(?<issue>${issuePrefixRegex}-\\d+)`,
   ).test(header);
   if (!isHeaderStartWithIssuePrefix) {
     return [
       false,
-      `commit header (${header}) must start with ${issuePrefix}-{Issue Id}, example: ${issuePrefix}-1234${separator}your commit message`,
+      `commit header (${header}) must start with ${issuePrefixRegex}-{Issue Id}, example: ${issuePrefixRegex}-1234${separator}your commit message`,
     ];
   }
-  const { issue } = parseIssueFromHeader(header, issuePrefix);
+  const { issue } = parseIssueFromHeader(header, issuePrefixRegex);
   const isHeaderContainSeparator = new RegExp(
-    `^(?<issue>${issuePrefix}-\\d+)${separator}`,
+    `^(?<issue>${issuePrefixRegex}-\\d+)${separator}`,
   ).test(header);
   if (!isHeaderContainSeparator) {
     return [
@@ -35,7 +36,7 @@ const linkTitleToIssue = (parsed, _, value) => {
     ];
   }
   const isHeaderContainMessage = new RegExp(
-    `^(?<issue>${issuePrefix}-\\d+)${separator}(?<message>[a-zA-Z-0-9][a-zA-Z-0-9 ]+)`,
+    `^(?<issue>${issuePrefixRegex}-\\d+)${separator}(?<message>[a-zA-Z-0-9][a-zA-Z-0-9 ]+)`,
   ).test(header);
   if (!isHeaderContainMessage) {
     return [
