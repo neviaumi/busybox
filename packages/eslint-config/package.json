@@ -1,8 +1,6 @@
 {
   "dependencies": {
     "@eslint/js": "8.56.0",
-    "@spotify/eslint-config-base": "15.0.0",
-    "@spotify/web-scripts-utils": "15.0.0",
     "@typescript-eslint/eslint-plugin": "6.17.0",
     "@typescript-eslint/parser": "6.17.0",
     "eslint-config-prettier": "9.1.0",
@@ -43,8 +41,7 @@
   },
   "exports": {
     ".": {
-      "import": "./index.mjs",
-      "require": "./index.js"
+      "import": "./index.mjs"
     },
     "./plugins/eslint-plugin-n": {
       "import": "./plugins/eslint-plugin-n.mjs"
@@ -54,7 +51,6 @@
     }
   },
   "files": [
-    "index.js",
     "index.mjs",
     "preset",
     "plugins",
@@ -76,5 +72,6 @@
     "type": "git",
     "url": "git@github.com:davidNHK/busybox.git"
   },
+  "type": "module",
   "version": "2024.1.4-alpha.2458"
 }
