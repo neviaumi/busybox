@@ -65,8 +65,9 @@ const eslintConfig = [
 
 export default eslintConfig
 
-export function withConfigPrint() {
-  console.debug(`
+export function withConfigurationPrint() {
+  return (config) => {
+    console.log(`
 hasTypescript: ${hasTypescript}
 hasReact: ${hasReact}
 hasJest: ${hasJest}
@@ -76,7 +77,8 @@ hasStorybook: ${hasStorybook}
 hasTailwindcss: ${hasTailwindcss}
 isDefaultEsm: ${isDefaultESModule}
 `)
-  return eslintConfig
+    return config
+  }
 }
 
 export const globals = eslintGlobals
