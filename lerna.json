@@ -13,5 +13,5 @@
   "npmClient": "npm",
   "packages": ["packages/*"],
   "useNx": true,
-  "version": "2024.1.10-alpha.2158"
+  "version": "2024.1.12-alpha.2358"
 }
