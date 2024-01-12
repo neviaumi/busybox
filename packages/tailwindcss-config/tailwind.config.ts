@@ -64,25 +64,44 @@ export const withColors = (config: ConfigPreset) => {
         extractColor(['sky', '900']),
       )({}),
     ),
-      assocPath(['theme', 'ringColor'], ({ theme }: PluginUtils) => {
-        return pipe(
-            assocPath([Variant.DISABLED], {
-              [ColorSuffix.DEFAULT]: theme('colors.gray.300'),
-            }),
-            assocPath([Variant.ERROR], {
-              [ColorSuffix.DEFAULT]: theme('colors.rose.500'),
-            }),
-            assocPath([Variant.WARNING], {
-              [ColorSuffix.DEFAULT]: theme('colors.amber.500'),
-            }),
-            assocPath([Variant.PRIMARY], {
-              [ColorSuffix.DEFAULT]: theme('colors.emerald.200'),
-            }),
-            assocPath([Variant.SECONDARY], {
-              [ColorSuffix.DEFAULT]: theme('colors.sky.200'),
-            }),
-        )(theme('colors'));
-      }),
+    assocPath(['theme', 'outlineColor'], ({ theme }: PluginUtils) => {
+      return pipe(
+        assocPath([Variant.DISABLED], {
+          [ColorSuffix.DEFAULT]: theme('colors.gray.300'),
+        }),
+        assocPath([Variant.ERROR], {
+          [ColorSuffix.DEFAULT]: theme('colors.rose.500'),
+        }),
+        assocPath([Variant.WARNING], {
+          [ColorSuffix.DEFAULT]: theme('colors.amber.500'),
+        }),
+        assocPath([Variant.PRIMARY], {
+          [ColorSuffix.DEFAULT]: theme('colors.emerald.200'),
+        }),
+        assocPath([Variant.SECONDARY], {
+          [ColorSuffix.DEFAULT]: theme('colors.sky.200'),
+        }),
+      )(theme('colors'));
+    }),
+    assocPath(['theme', 'ringColor'], ({ theme }: PluginUtils) => {
+      return pipe(
+        assocPath([Variant.DISABLED], {
+          [ColorSuffix.DEFAULT]: theme('colors.gray.300'),
+        }),
+        assocPath([Variant.ERROR], {
+          [ColorSuffix.DEFAULT]: theme('colors.rose.500'),
+        }),
+        assocPath([Variant.WARNING], {
+          [ColorSuffix.DEFAULT]: theme('colors.amber.500'),
+        }),
+        assocPath([Variant.PRIMARY], {
+          [ColorSuffix.DEFAULT]: theme('colors.emerald.200'),
+        }),
+        assocPath([Variant.SECONDARY], {
+          [ColorSuffix.DEFAULT]: theme('colors.sky.200'),
+        }),
+      )(theme('colors'));
+    }),
     assocPath(['theme', 'borderColor'], ({ theme }: PluginUtils) => {
       return pipe(
         assocPath([Variant.DISABLED], {
