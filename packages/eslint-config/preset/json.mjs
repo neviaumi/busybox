@@ -39,7 +39,7 @@ export default [
                   engines: {
                     properties: {
                       node: {
-                        enum: ['>=14', '>=16', '>=18'],
+                        enum: ['>=16', '>=18', '>=20'],
                         type: 'string',
                       },
                       yarn: {
