@@ -48,6 +48,9 @@
     },
     "./plugins/eslint-plugin-import": {
       "import": "./plugins/eslint-plugin-import.mjs"
+    },
+    "./plugins/eslint-plugin-prettier": {
+      "import": "./plugins/eslint-plugin-prettier.mjs"
     }
   },
   "files": [
