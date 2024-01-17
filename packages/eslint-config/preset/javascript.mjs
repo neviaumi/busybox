@@ -1,54 +1,49 @@
+import js from '@eslint/js';
 import eslintPluginImport from 'eslint-plugin-import';
 import eslintPluginN from 'eslint-plugin-n';
 import eslintPluginPrettier from 'eslint-plugin-prettier';
 import eslintPluginSimpleImportSort from 'eslint-plugin-simple-import-sort';
 import eslintPluginSortDestructureKeys from 'eslint-plugin-sort-destructure-keys';
 import eslintPluginSortKeysFix from 'eslint-plugin-sort-keys-fix';
-import eslintPluginUnicorn from "eslint-plugin-unicorn"
-import js from "@eslint/js";
-import {isDefaultEsm} from "../utils/is-default-esm.mjs";
-import {jsFileSuffixes, typescriptFileSuffixes} from "../utils/file-patterns.mjs"
-import globals from "globals";
+import eslintPluginUnicorn from 'eslint-plugin-unicorn';
+import globals from 'globals';
 
-const isDefaultESModule = await isDefaultEsm()
-const esmSuffixes = ['*.jsx',
-  '*.mjs',
-  '*.ts',
-  '*.tsx',
-  '*.mts',
-  '*.mtsx',];
+import {
+  jsFileSuffixes,
+  typescriptFileSuffixes,
+} from '../utils/file-patterns.mjs';
+import { isDefaultEsm } from '../utils/is-default-esm.mjs';
+
+const isDefaultESModule = await isDefaultEsm();
+const esmSuffixes = ['*.jsx', '*.mjs', '*.ts', '*.tsx', '*.mts', '*.mtsx'];
 export default [
   {
-    files: ['*.js'],
+    files: ['**/*.js'],
     languageOptions: {
       ecmaVersion: 'latest',
-      sourceType: isDefaultESModule ? 'commonjs': 'module',
-    }
+      sourceType: isDefaultESModule ? 'commonjs' : 'module',
+    },
   },
   {
-    files: esmSuffixes,
+    files: esmSuffixes.map(fileSuffix => `**/${fileSuffix}`),
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
     },
   },
   {
-    files: [
-      '*.cjs',
-      '*.cts',
-      '*.ctsx',
-      '*.cjsx'
-    ],
+    files: ['*.cjs', '*.cts', '*.ctsx', '*.cjsx'].map(
+      fileSuffix => `**/${fileSuffix}`,
+    ),
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'commonjs',
     },
   },
   {
-    files: [
-        ...jsFileSuffixes,
-        ...typescriptFileSuffixes,
-    ],
+    files: [...jsFileSuffixes, ...typescriptFileSuffixes].map(
+      fileSuffix => `**/*.${fileSuffix}`,
+    ),
     plugins: {
       import: eslintPluginImport,
       n: eslintPluginN,
@@ -59,7 +54,7 @@ export default [
     },
     rules: {
       ...js.configs.recommended.rules, // Recommended config applied to all files
-      ...eslintPluginImport.configs.recommended.rules,
+      // ...eslintPluginImport.configs.recommended.rules,
       ...eslintPluginN.configs['recommended-module'].rules,
       'block-scoped-var': 'error',
       'import/first': 'error',
@@ -116,13 +111,15 @@ export default [
     },
   },
   {
-    files: isDefaultESModule ? ['*.js',...esmSuffixes] : esmSuffixes,
+    files: (isDefaultESModule ? ['*.js', ...esmSuffixes] : esmSuffixes).map(
+      fileSuffix => `**/${fileSuffix}`,
+    ),
     languageOptions: {
       ecmaVersion: 'latest',
-      sourceType: 'module',
       globals: {
         ...globals.es2024,
       },
+      sourceType: 'module',
     },
     plugins: {
       import: eslintPluginImport,
@@ -131,7 +128,7 @@ export default [
     rules: {
       'import/extensions': ['error', 'ignorePackages'],
       'n/no-missing-import': ['off'],
-      'unicorn/consistent-function-scoping': 'error',
+      'unicorn/consistent-function-scoping': 'off',
       'unicorn/prefer-node-protocol': 'error',
     },
   },

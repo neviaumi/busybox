@@ -1,19 +1,21 @@
-import {typescriptJSXFileSuffixes, jsJSXFileSuffixes, jsJSXTestFilePatterns, typescriptJSXTestFilePattern} from "../utils/file-patterns.mjs"
-import eslintPluginReact from "eslint-plugin-react"
-import eslintPluginReactHooks from "eslint-plugin-react-hooks"
-import eslintPluginReactRefresh from "eslint-plugin-react-refresh"
-import eslintPluginTestingLibrary from "eslint-plugin-testing-library"
 import eslintPluginImport from 'eslint-plugin-import';
+import eslintPluginReact from 'eslint-plugin-react';
+import eslintPluginReactHooks from 'eslint-plugin-react-hooks';
+import eslintPluginReactRefresh from 'eslint-plugin-react-refresh';
+import eslintPluginTestingLibrary from 'eslint-plugin-testing-library';
+
+import {
+  jsJSXFileSuffixes,
+  jsJSXTestFilePatterns,
+  typescriptJSXFileSuffixes,
+  typescriptJSXTestFilePattern,
+} from '../utils/file-patterns.mjs';
 
 export default [
   {
-    files: [...jsJSXFileSuffixes, ...typescriptJSXFileSuffixes].map((ext) => `*.${ext}`),
-    plugins: {
-      react: eslintPluginReact,
-      'react-hooks': eslintPluginReactHooks,
-      'react-refresh': eslintPluginReactRefresh,
-      'import': eslintPluginImport,
-    },
+    files: [...jsJSXFileSuffixes, ...typescriptJSXFileSuffixes].map(
+      ext => `**/*.${ext}`,
+    ),
     languageOptions: {
       parserOptions: {
         ecmaFeatures: {
@@ -21,10 +23,11 @@ export default [
         },
       },
     },
-    settings: {
-      react: {
-        version: 'detect',
-      },
+    plugins: {
+      import: eslintPluginImport,
+      react: eslintPluginReact,
+      'react-hooks': eslintPluginReactHooks,
+      'react-refresh': eslintPluginReactRefresh,
     },
     rules: {
       ...eslintPluginReact.configs.recommended.rules,
@@ -36,15 +39,22 @@ export default [
       'react/jsx-sort-props': 'error',
       'react/react-in-jsx-scope': 'off',
     },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
   },
   {
-    files: typescriptJSXFileSuffixes.map((ext) => `*.${ext}`),
+    files: typescriptJSXFileSuffixes.map(ext => `**/*.${ext}`),
     rules: {
       'react/prop-types': 'off',
     },
   },
   {
-    files: [...typescriptJSXTestFilePattern, ...jsJSXTestFilePatterns],
+    files: [...typescriptJSXTestFilePattern, ...jsJSXTestFilePatterns].map(
+      ext => `**/*.${ext}`,
+    ),
     plugins: {
       'testing-library': eslintPluginTestingLibrary,
     },
@@ -54,5 +64,5 @@ export default [
       'react/prop-types': 'off',
       'testing-library/prefer-screen-queries': 'error',
     },
-  }
-]
+  },
+];

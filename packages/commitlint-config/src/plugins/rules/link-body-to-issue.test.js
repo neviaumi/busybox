@@ -1,21 +1,22 @@
-import { describe, it } from 'node:test';
 import assert from 'node:assert';
+import { describe, it } from 'node:test';
+
 import linkBodyToIssue from './link-body-to-issue.js';
 
 describe('rule: link-body-to-issue', () => {
   function createParsed({ body, footer, header }) {
     return {
-      header,
       body,
       footer,
+      header,
     };
   }
 
   it('return true when body have linking keyword and issue is match to header', () => {
     const [rulePass, failureReason] = linkBodyToIssue(
       createParsed({
-        header: 'GH-1234: what is that',
         body: 'this close #1234',
+        header: 'GH-1234: what is that',
       }),
       null,
     );
@@ -25,8 +26,8 @@ describe('rule: link-body-to-issue', () => {
   it('return false when body have linking keyword but mismatch issue id to header', () => {
     const [rulePass, failureReason] = linkBodyToIssue(
       createParsed({
-        header: 'GH-4321: what is that',
         body: 'this close #1234',
+        header: 'GH-4321: what is that',
       }),
       null,
     );
@@ -40,7 +41,7 @@ describe('rule: link-body-to-issue', () => {
   it("return true when body don't have linking keyword but have commit message", () => {
     ['#1234', 'GH-1234'].forEach(body => {
       const [rulePass, failureReason] = linkBodyToIssue(
-        createParsed({ header: 'GH-1234: what is that', body: body }),
+        createParsed({ body: body, header: 'GH-1234: what is that' }),
         null,
       );
       assert.strictEqual(rulePass, true, failureReason);

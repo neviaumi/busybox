@@ -1,17 +1,18 @@
-import jsCommonConfig from './preset/javascript.mjs';
+import eslintGlobals from 'globals';
+
 import cypressConfig from './preset/cypress.mjs';
-import jestConfig from "./preset/jest.mjs"
+import jsCommonConfig from './preset/javascript.mjs';
+import jestConfig from './preset/jest.mjs';
 import jsonConfig from './preset/json.mjs';
+import markdownConfig from './preset/markdown.mjs';
+import nestConfig from './preset/nest.mjs';
+import reactConfig from './preset/react-jsx.mjs';
+import storybookConfig from './preset/storybook.mjs';
+import tailwindCSSConfig from './preset/tailwindcss.mjs';
+import typescriptConfig from './preset/typescript.mjs';
+import ymlConfig from './preset/yml.mjs';
 import { hasConfig } from './utils/has-config.mjs';
-import eslintGlobals from "globals";
-import markdownConfig from "./preset/markdown.mjs"
-import nestConfig from "./preset/nest.mjs"
-import reactConfig from "./preset/react-jsx.mjs"
-import storybookConfig from "./preset/storybook.mjs"
-import typescriptConfig from "./preset/typescript.mjs"
-import tailwindCSSConfig from "./preset/tailwindcss.mjs"
-import ymlConfig from "./preset/yml.mjs"
-import {isDefaultEsm} from "./utils/is-default-esm.mjs"
+import { isDefaultEsm } from './utils/is-default-esm.mjs';
 
 const hasReact = await hasConfig([
   { dependency: 'react', type: 'dependency' },
@@ -47,7 +48,7 @@ const hasTailwindcss = await hasConfig([
   { dependency: 'tailwindcss', dependencyType: 'dev', type: 'dependency' },
 ]);
 
-const isDefaultESModule = await isDefaultEsm()
+const isDefaultESModule = await isDefaultEsm();
 
 const eslintConfig = [
   jsCommonConfig,
@@ -56,17 +57,18 @@ const eslintConfig = [
   ymlConfig,
   hasTypescript ? typescriptConfig : [],
   hasReact ? reactConfig : [],
-  hasJest ? jestConfig: [],
+  hasJest ? jestConfig : [],
   hasCypress ? cypressConfig : [],
-  hasNest ? nestConfig: [],
-  hasStorybook ? storybookConfig: [],
-  hasTailwindcss ? tailwindCSSConfig: [],
+  hasNest ? nestConfig : [],
+  hasStorybook ? storybookConfig : [],
+  hasTailwindcss ? tailwindCSSConfig : [],
 ].flat();
 
-export default eslintConfig
+export default eslintConfig;
 
 export function withConfigurationPrint() {
-  return (config) => {
+  return config => {
+    // eslint-disable-next-line no-console
     console.log(`
 hasTypescript: ${hasTypescript}
 hasReact: ${hasReact}
@@ -76,9 +78,9 @@ hasNest: ${hasNest}
 hasStorybook: ${hasStorybook}
 hasTailwindcss: ${hasTailwindcss}
 isDefaultEsm: ${isDefaultESModule}
-`)
-    return config
-  }
+`);
+    return config;
+  };
 }
 
-export const globals = eslintGlobals
+export const globals = eslintGlobals;

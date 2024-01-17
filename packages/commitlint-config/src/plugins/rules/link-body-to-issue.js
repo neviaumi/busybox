@@ -1,5 +1,5 @@
-import { parseIssueFromHeader } from './link-title-to-issue.js';
 import { defaultConfig } from './configurations.js';
+import { parseIssueFromHeader } from './link-title-to-issue.js';
 
 const linkBodyToIssue = (parsed, _, value) => {
   const { issuePrefix = defaultConfig.issuePrefix } = value || {};

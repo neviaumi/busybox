@@ -1,15 +1,15 @@
-import eslintPluginMarkdownlint from "eslint-plugin-markdownlint";
-import eslintPluginMarkdownlintParser from "eslint-plugin-markdownlint/parser.js";
+import eslintPluginMarkdownlint from 'eslint-plugin-markdownlint';
+import eslintPluginMarkdownlintParser from 'eslint-plugin-markdownlint/parser.js';
 
 export default [
   {
-    files: ['*.md'],
-    plugins: {markdownlint: eslintPluginMarkdownlint},
+    files: ['**/*.md'],
     languageOptions: {
-      parser: eslintPluginMarkdownlintParser
+      parser: eslintPluginMarkdownlintParser,
     },
+    plugins: { markdownlint: eslintPluginMarkdownlint },
     rules: {
-      ...eslintPluginMarkdownlint.configs.recommended.rules
-    }
-  }
-]
+      ...eslintPluginMarkdownlint.configs.recommended.rules,
+    },
+  },
+];

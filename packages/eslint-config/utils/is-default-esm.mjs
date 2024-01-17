@@ -1,3 +1,4 @@
-import {hasConfig} from "./has-config.mjs";
+import { hasConfig } from './has-config.mjs';
 
-export const isDefaultEsm = () => hasConfig([{type: 'package.json', property: ['type'], value: 'module'}])
+export const isDefaultEsm = () =>
+  hasConfig([{ property: ['type'], type: 'package.json', value: 'module' }]);
