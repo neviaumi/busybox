@@ -1,5 +1,6 @@
-import { describe, it } from 'node:test';
 import assert from 'node:assert';
+import { describe, it } from 'node:test';
+
 import linkTitleToIssue from './link-title-to-issue.js';
 
 describe('rule: link-title-to-issue', () => {

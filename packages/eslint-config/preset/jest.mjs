@@ -1,19 +1,24 @@
-import eslintPluginJest from "eslint-plugin-jest"
-import eslintParserTypescript from "@typescript-eslint/parser"
-import eslintPluginTypescript from "@typescript-eslint/eslint-plugin"
+import eslintPluginTypescript from '@typescript-eslint/eslint-plugin';
+import eslintParserTypescript from '@typescript-eslint/parser';
+import eslintPluginJest from 'eslint-plugin-jest';
 
-import {typescriptTestFilePatterns, jsTestFilePatterns} from "../utils/file-patterns.mjs"
+import {
+  jsTestFilePatterns,
+  typescriptTestFilePatterns,
+} from '../utils/file-patterns.mjs';
 
 export default [
   {
-    files: [...jsTestFilePatterns,...typescriptTestFilePatterns],
+    files: [...jsTestFilePatterns, ...typescriptTestFilePatterns].map(
+      fileSuffix => `**/${fileSuffix}`,
+    ),
+    languageOptions: {
+      globals: {
+        ...eslintPluginJest.configs.recommended.env,
+      },
+    },
     plugins: {
       jest: eslintPluginJest,
-    },
-    languageOptions: {
-        globals: {
-            ...eslintPluginJest.configs.recommended.env
-        }
     },
     rules: {
       ...eslintPluginJest.configs.recommended.rules,
@@ -35,13 +40,13 @@ export default [
     },
   },
   {
-    plugins: {
-      '@typescript-eslint': eslintPluginTypescript,
-    },
+    files: typescriptTestFilePatterns.map(fileSuffix => `**/${fileSuffix}`),
     languageOptions: {
       parser: eslintParserTypescript,
     },
-    files: typescriptTestFilePatterns,
+    plugins: {
+      '@typescript-eslint': eslintPluginTypescript,
+    },
     rules: {
       '@typescript-eslint/ban-ts-comment': [
         'error',
@@ -53,5 +58,5 @@ export default [
         },
       ],
     },
-  }
-]
+  },
+];

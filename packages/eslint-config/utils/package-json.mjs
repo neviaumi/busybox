@@ -1,18 +1,21 @@
-import {readPackageUp} from "read-package-up";
-const {packageJson, projectPath} = await readPackageUp({
-    cwd: process.cwd(),
+import { readPackageUp } from 'read-package-up';
+
+const { packageJson, projectPath } = await readPackageUp({
+  cwd: process.cwd(),
 });
 
 export async function readClosestPackageJson() {
-    return {
-        packageJson, projectPath
-    }
+  return {
+    packageJson,
+    projectPath,
+  };
 }
 
 export default {
-    readClosestPackageJson: async () => {
-        return {
-            packageJson, projectPath
-        }
-    }
-}
+  readClosestPackageJson: async () => {
+    return {
+      packageJson,
+      projectPath,
+    };
+  },
+};

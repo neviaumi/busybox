@@ -36,18 +36,18 @@
     "eslint": "8.56.0"
   },
   "engines": {
-    "node": ">=14",
+    "node": ">=18",
     "yarn": "Use npm"
   },
   "exports": {
     ".": {
       "import": "./index.mjs"
     },
-    "./plugins/eslint-plugin-n": {
-      "import": "./plugins/eslint-plugin-n.mjs"
-    },
     "./plugins/eslint-plugin-import": {
       "import": "./plugins/eslint-plugin-import.mjs"
+    },
+    "./plugins/eslint-plugin-n": {
+      "import": "./plugins/eslint-plugin-n.mjs"
     },
     "./plugins/eslint-plugin-prettier": {
       "import": "./plugins/eslint-plugin-prettier.mjs"

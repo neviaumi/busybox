@@ -1,24 +1,30 @@
-import eslintPluginCypress from "eslint-plugin-cypress"
-import {typescriptFileSuffixes, jsFileSuffixes} from "../utils/file-patterns.mjs"
+import eslintPluginCypress from 'eslint-plugin-cypress';
+
+import {
+  jsFileSuffixes,
+  typescriptFileSuffixes,
+} from '../utils/file-patterns.mjs';
 
 export default [
   {
-    plugins: {
-      cypress: eslintPluginCypress,
-    },
     files: [
-        [...jsFileSuffixes, ...typescriptFileSuffixes].map((fileSuffix) => `*.cy.${fileSuffix}`),
-            'cypress/**/*',
+      [...jsFileSuffixes, ...typescriptFileSuffixes].map(
+        fileSuffix => `**/*.cy.${fileSuffix}`,
+      ),
+      'cypress/**/*',
     ].flat(),
     languageOptions: {
       globals: {
-        ...eslintPluginCypress.environments.globals
-      }
+        ...eslintPluginCypress.environments.globals,
+      },
+    },
+    plugins: {
+      cypress: eslintPluginCypress,
     },
     rules: {
       ...eslintPluginCypress.configs.recommended.rules,
       'cypress/no-pause': 'error',
       'no-unused-expressions': 'off',
     },
-  }
-]
+  },
+];

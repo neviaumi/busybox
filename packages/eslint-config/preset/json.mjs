@@ -1,17 +1,17 @@
-import eslintPluginJson from "eslint-plugin-jsonc"
-import eslintParserJson from "jsonc-eslint-parser"
-import eslintPluginJsonSchemaValidator from "eslint-plugin-json-schema-validator"
-import eslintPluginNodeDependencies from "eslint-plugin-node-dependencies"
+import eslintPluginJsonSchemaValidator from 'eslint-plugin-json-schema-validator';
+import eslintPluginJson from 'eslint-plugin-jsonc';
+import eslintPluginNodeDependencies from 'eslint-plugin-node-dependencies';
+import eslintParserJson from 'jsonc-eslint-parser';
 
 export default [
   {
-    files: ['*.json'],
-    plugins: {
-      jsonc: eslintPluginJson,
-    },
+    files: ['**/*.json'],
+    ignores: ['package-lock.json'],
     languageOptions: {
       parser: eslintParserJson,
-
+    },
+    plugins: {
+      jsonc: eslintPluginJson,
     },
     rules: {
       ...eslintPluginJson.configs.prettier.rules,
@@ -19,7 +19,7 @@ export default [
     },
   },
   {
-    files: ['package.json'],
+    files: ['**/package.json'],
     plugins: {
       'json-schema-validator': eslintPluginJsonSchemaValidator,
       'node-dependencies': eslintPluginNodeDependencies,
@@ -93,5 +93,5 @@ export default [
       'node-dependencies/compat-engines': 'off',
       'node-dependencies/valid-semver': 'off',
     },
-  }
-]
+  },
+];

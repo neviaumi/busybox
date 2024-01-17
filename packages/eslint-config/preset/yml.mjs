@@ -1,9 +1,9 @@
-import eslintPluginYml from "eslint-plugin-yml"
-import eslintParserYml from "yaml-eslint-parser"
+import eslintPluginYml from 'eslint-plugin-yml';
+import eslintParserYml from 'yaml-eslint-parser';
 
 export default [
   {
-    files: ['*.yml', '*.yaml'],
+    files: ['**/*.yml', '**/*.yaml'],
     languageOptions: {
       parser: eslintParserYml,
     },
@@ -15,5 +15,5 @@ export default [
       'yml/quotes': ['error', { prefer: 'single' }],
       'yml/sort-keys': 'error',
     },
-  }
-]
+  },
+];

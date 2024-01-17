@@ -1,24 +1,20 @@
-import eslintPluginImportTypescript  from "eslint-plugin-import"
-import eslintPluginTypescriptSortKeys from "eslint-plugin-typescript-sort-keys"
-import eslintPluginTypescript        from "@typescript-eslint/eslint-plugin"
-import eslintParserTypescript from "@typescript-eslint/parser"
-import {typescriptFileSuffixes} from "../utils/file-patterns.mjs"
+import eslintPluginTypescript from '@typescript-eslint/eslint-plugin';
+import eslintParserTypescript from '@typescript-eslint/parser';
+import eslintPluginImportTypescript from 'eslint-plugin-import';
+import eslintPluginTypescriptSortKeys from 'eslint-plugin-typescript-sort-keys';
+
+import { typescriptFileSuffixes } from '../utils/file-patterns.mjs';
+
 export default [
   {
-    files: typescriptFileSuffixes.map(ext => `*.${ext}`),
+    files: typescriptFileSuffixes.map(ext => `**/*.${ext}`),
     languageOptions: {
-        parser: eslintParserTypescript,
+      parser: eslintParserTypescript,
     },
     plugins: {
-          '@typescript-eslint': eslintPluginTypescript,
-            'import': eslintPluginImportTypescript,
-            'typescript-sort-keys': eslintPluginTypescriptSortKeys,
-    },
-    settings: {
-      ...eslintPluginImportTypescript.configs.typescript.settings,
-      'import/resolver': {
-        typescript: {},
-      },
+      '@typescript-eslint': eslintPluginTypescript,
+      import: eslintPluginImportTypescript,
+      'typescript-sort-keys': eslintPluginTypescriptSortKeys,
     },
     rules: {
       ...eslintPluginTypescript.configs.recommended.rules,
@@ -43,7 +39,13 @@ export default [
       // Unable work with Global namespace
       'no-undef': 'off',
       'no-use-before-define': 'off',
-    }
+    },
+    settings: {
+      ...eslintPluginImportTypescript.configs.typescript.settings,
+      'import/resolver': {
+        typescript: {},
+      },
+    },
   },
   {
     files: ['typings/**/*.d.ts'],
@@ -51,4 +53,4 @@ export default [
       '@typescript-eslint/no-unused-vars': 'off', // Not work for type declaration file
     },
   },
-]
+];
