@@ -4,11 +4,12 @@ import { describe, it } from 'node:test';
 import linkBodyToIssue from './link-body-to-issue.js';
 
 describe('rule: link-body-to-issue', () => {
-  function createParsed({ body, footer, header }) {
+  function createParsed({ body, footer, header, raw }) {
     return {
       body,
       footer,
       header,
+      raw,
     };
   }
 
@@ -46,5 +47,16 @@ describe('rule: link-body-to-issue', () => {
       );
       assert.strictEqual(rulePass, true, failureReason);
     });
+  });
+
+  it.only('return true when body parse failed but linking present', () => {
+    const [rulePass, failureReason] = linkBodyToIssue(
+      createParsed({
+        header: 'GH-1882: fix commitlint',
+        raw: 'GH-1882: fix commitlint\n\n#1882\n\n',
+      }),
+      null,
+    );
+    assert.strictEqual(rulePass, true, failureReason);
   });
 });
