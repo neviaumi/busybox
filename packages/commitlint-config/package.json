@@ -15,8 +15,6 @@
     "src"
   ],
   "license": "MIT",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
   "name": "@busybox/commitlint-config",
   "peerDependencies": {
     "@commitlint/cli": ">=17 <18"

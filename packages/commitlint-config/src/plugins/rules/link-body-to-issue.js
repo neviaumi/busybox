@@ -9,8 +9,14 @@ const linkBodyToIssue = (parsed, _, value) => {
     `^(this (close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved) )?${issuePrefixRegex}(?<issueId>\\d+)$`,
     'i',
   );
-  const { body, footer, header } = parsed;
-  const messageBody = body || footer;
+  const { body, footer, header, raw } = parsed;
+  let messageBody = body || footer;
+  if (!messageBody) {
+    messageBody = raw
+      .split('\n')
+      .filter(line => line.trim())
+      .filter(line => line.length > 0)[1];
+  }
   const isValid = messageBody !== null && bodyRegex.test(messageBody);
   if (!isValid) {
     return [
