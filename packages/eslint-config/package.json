@@ -43,6 +43,9 @@
     ".": {
       "import": "./index.mjs"
     },
+    "./plugins/eslint-plugin-cypress": {
+      "import": "./plugins/eslint-plugin-cypress.mjs"
+    },
     "./plugins/eslint-plugin-import": {
       "import": "./plugins/eslint-plugin-import.mjs"
     },

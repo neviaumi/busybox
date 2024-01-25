@@ -50,36 +50,63 @@ const hasTailwindcss = await hasConfig([
 
 const isDefaultESModule = await isDefaultEsm();
 
-const eslintConfig = [
-  jsCommonConfig,
-  jsonConfig,
-  markdownConfig,
-  ymlConfig,
-  hasTypescript ? typescriptConfig : [],
-  hasReact ? reactConfig : [],
-  hasJest ? jestConfig : [],
-  hasCypress ? cypressConfig : [],
-  hasNest ? nestConfig : [],
-  hasStorybook ? storybookConfig : [],
-  hasTailwindcss ? tailwindCSSConfig : [],
-].flat();
+function createEsLintConfig({
+  hasCypress,
+  hasJest,
+  hasNest,
+  hasReact,
+  hasStorybook,
+  hasTailwindcss,
+  hasTypescript,
+}) {
+  const eslintConfig = [
+    jsCommonConfig,
+    jsonConfig,
+    markdownConfig,
+    ymlConfig,
+    hasTypescript ? typescriptConfig : [],
+    hasReact ? reactConfig : [],
+    hasJest ? jestConfig : [],
+    hasCypress ? cypressConfig : [],
+    hasNest ? nestConfig : [],
+    hasStorybook ? storybookConfig : [],
+    hasTailwindcss ? tailwindCSSConfig : [],
+  ].flat();
+  return eslintConfig;
+}
 
-export default eslintConfig;
+export default createEsLintConfig({
+  hasCypress,
+  hasJest,
+  hasNest,
+  hasReact,
+  hasStorybook,
+  hasTailwindcss,
+  hasTypescript,
+});
 
-export function withConfigurationPrint() {
-  return config => {
-    // eslint-disable-next-line no-console
-    console.log(`
-hasTypescript: ${hasTypescript}
-hasReact: ${hasReact}
-hasJest: ${hasJest}
-hasCypress: ${hasCypress}
-hasNest: ${hasNest}
-hasStorybook: ${hasStorybook}
-hasTailwindcss: ${hasTailwindcss}
-isDefaultEsm: ${isDefaultESModule}
-`);
-    return config;
+export function withOverridePackageAutoDetect(overrides = {}) {
+  const {
+    hasCypress: hasCypressOverride = hasCypress,
+    hasJest: hasJestOverride = hasJest,
+    hasNest: hasNestOverride = hasNest,
+    hasReact: hasReactOverride = hasReact,
+    hasStorybook: hasStorybookOverride = hasStorybook,
+    hasTailwindcss: hasTailwindcssOverride = hasTailwindcss,
+    hasTypescript: hasTypescriptOverride = hasTypescript,
+    isDefaultESModule: isDefaultESModuleOverride = isDefaultESModule,
+  } = overrides;
+  return () => {
+    return createEsLintConfig({
+      hasCypress: hasCypressOverride,
+      hasJest: hasJestOverride,
+      hasNest: hasNestOverride,
+      hasReact: hasReactOverride,
+      hasStorybook: hasStorybookOverride,
+      hasTailwindcss: hasTailwindcssOverride,
+      hasTypescript: hasTypescriptOverride,
+      isDefaultESModule: isDefaultESModuleOverride,
+    });
   };
 }
 
