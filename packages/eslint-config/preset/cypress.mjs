@@ -15,7 +15,7 @@ export default [
     ].flat(),
     languageOptions: {
       globals: {
-        ...eslintPluginCypress.environments.globals,
+        ...eslintPluginCypress.environments.globals.globals,
       },
     },
     plugins: {
