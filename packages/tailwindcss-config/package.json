@@ -4,11 +4,7 @@
     "ramda": "0.29.1"
   },
   "devDependencies": {
-    "@babel/cli": "7.23.4",
-    "@babel/core": "7.23.7",
-    "@types/ramda": "0.29.10",
-    "tailwindcss": "3.4.1",
-    "typescript": "5.3.3"
+    "tailwindcss": "3.4.1"
   },
   "engines": {
     "node": ">=20",
@@ -16,15 +12,21 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/tailwind.config.js",
-      "require": "./dist/tailwind.config.js",
-      "types": "./dist/tailwind.config.d.ts"
+      "import": "./tailwind.config.js"
     },
-    "./tailwind.css": "./tailwind.css"
+    "./tailwind.css": "./tailwind.css",
+    "./themes/colors": {
+      "import": "./themes/with-colors.js"
+    },
+    "./themes/spacing": {
+      "import": "./themes/with-spacing.js"
+    }
   },
   "files": [
-    "dist",
-    "tailwind.css"
+    "tailwind.css",
+    "tailwind.config.js",
+    "themes/with-colors.js",
+    "themes/with-spacing.js"
   ],
   "license": "MIT",
   "name": "@busybox/tailwindcss-config",
@@ -40,6 +42,5 @@
     "url": "git@github.com:davidNHK/busybox.git"
   },
   "type": "module",
-  "types": "./dist/tailwind.config.d.mts",
   "version": "2024.1.25-alpha.1904"
 }

@@ -1,33 +1,27 @@
-import tailwindCssFormsPlugin from '@tailwindcss/forms';
-import { apply, assocPath, path, pipe } from 'ramda';
-import { type Config } from 'tailwindcss';
+import { assocPath, path, pipe } from 'ramda';
 import colors from 'tailwindcss/colors.js';
 
-interface PluginUtils {
-  theme: (path: string) => unknown;
-}
+export const Variant = {
+  DISABLED: 'disabled',
+  ERROR: 'error',
+  PLACEHOLDER: 'placeholder',
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
+  WARNING: 'warning',
+};
 
-type ConfigPreset = Omit<Config, 'content'>;
-
-export const withColors = (config: ConfigPreset) => {
-  enum Variant {
-    DISABLED = 'disabled',
-    ERROR = 'error',
-    PRIMARY = 'primary',
-    SECONDARY = 'secondary',
-    WARNING = 'warning',
-  }
-  enum ColorSuffix {
+export const withColors = config => {
+  const ColorSuffix = {
     // When used with background-color
-    CONTRAST = 'contrast',
+    CONTRAST: 'contrast',
     // https://tailwindcss.com/docs/customizing-colors#color-object-syntax
     // DEFAULT mean without suffix
-    DEFAULT = 'DEFAULT',
+    DEFAULT: 'DEFAULT',
     // https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes#user_action_pseudo-classes
     // When user perform action on element
-    USER_ACTION = 'user-action',
-  }
-  function extractColor(colorPath: string[]) {
+    USER_ACTION: 'user-action',
+  };
+  function extractColor(colorPath) {
     return assocPath(colorPath, path(colorPath, colors));
   }
   return pipe(
@@ -64,7 +58,7 @@ export const withColors = (config: ConfigPreset) => {
         extractColor(['sky', '900']),
       )({}),
     ),
-    assocPath(['theme', 'outlineColor'], ({ theme }: PluginUtils) => {
+    assocPath(['theme', 'outlineColor'], ({ theme }) => {
       return pipe(
         assocPath([Variant.DISABLED], {
           [ColorSuffix.DEFAULT]: theme('colors.gray.300'),
@@ -83,7 +77,7 @@ export const withColors = (config: ConfigPreset) => {
         }),
       )(theme('colors'));
     }),
-    assocPath(['theme', 'ringColor'], ({ theme }: PluginUtils) => {
+    assocPath(['theme', 'ringColor'], ({ theme }) => {
       return pipe(
         assocPath([Variant.DISABLED], {
           [ColorSuffix.DEFAULT]: theme('colors.gray.300'),
@@ -102,7 +96,7 @@ export const withColors = (config: ConfigPreset) => {
         }),
       )(theme('colors'));
     }),
-    assocPath(['theme', 'borderColor'], ({ theme }: PluginUtils) => {
+    assocPath(['theme', 'borderColor'], ({ theme }) => {
       return pipe(
         assocPath([Variant.DISABLED], {
           [ColorSuffix.DEFAULT]: theme('colors.gray.200'),
@@ -125,7 +119,7 @@ export const withColors = (config: ConfigPreset) => {
         }),
       )(theme('colors'));
     }),
-    assocPath(['theme', 'backgroundColor'], ({ theme }: PluginUtils) => {
+    assocPath(['theme', 'backgroundColor'], ({ theme }) => {
       return pipe(
         assocPath([Variant.DISABLED], {
           [ColorSuffix.DEFAULT]: theme('colors.gray.100'),
@@ -148,10 +142,13 @@ export const withColors = (config: ConfigPreset) => {
         }),
       )(theme('colors'));
     }),
-    assocPath(['theme', 'textColor'], ({ theme }: PluginUtils) => {
+    assocPath(['theme', 'textColor'], ({ theme }) => {
       return pipe(
         assocPath([Variant.DISABLED], {
           [ColorSuffix.DEFAULT]: theme('colors.gray.400'),
+        }),
+        assocPath([Variant.PLACEHOLDER], {
+          [ColorSuffix.DEFAULT]: theme('colors.gray.500'),
         }),
         assocPath([Variant.ERROR], {
           [ColorSuffix.DEFAULT]: theme('colors.rose.500'),
@@ -177,35 +174,3 @@ export const withColors = (config: ConfigPreset) => {
     }),
   )(config);
 };
-
-export const withSpacing = (config: ConfigPreset) => {
-  const spacingScaleSize = 257;
-  // eslint-disable-next-line unicorn/consistent-function-scoping
-  function computeRemFromPx(px: number) {
-    if (px === 0) return 0;
-    return `${px / 16}rem`; // Use browser default font size - 16px
-  }
-  const spacing = apply(
-    pipe,
-    Array.from({ length: spacingScaleSize }, (_, index) => {
-      const step = Math.floor(index / 2);
-      const keyName = index % 2 === 0 ? step : step + 0.5;
-      const remValue = computeRemFromPx(index * 4); // 4pt grid system
-      return assocPath([keyName], remValue);
-    }) as any,
-  )({
-    px: '1px',
-  });
-  return assocPath(['theme', 'spacing'], spacing)(config);
-};
-
-const tailwindConfig: ConfigPreset = {
-  plugins: [
-    tailwindCssFormsPlugin({
-      strategy: 'class',
-    }),
-  ],
-  prefix: 'tw-',
-};
-
-export default tailwindConfig;
