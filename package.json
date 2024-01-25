@@ -11,7 +11,7 @@
     "prettier": "3.2.4"
   },
   "engines": {
-    "node": ">=18",
+    "node": ">=20",
     "yarn": "Use npm"
   },
   "license": "MIT",
