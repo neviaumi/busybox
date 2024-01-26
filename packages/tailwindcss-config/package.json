@@ -29,6 +29,8 @@
     "themes/with-spacing.js"
   ],
   "license": "MIT",
+  "main": "tailwind.config.js",
+  "module": "tailwind.config.js",
   "name": "@busybox/tailwindcss-config",
   "peerDependencies": {
     "tailwindcss": ">=3"
