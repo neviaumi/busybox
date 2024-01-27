@@ -12,25 +12,29 @@
   },
   "exports": {
     ".": {
-      "import": "./tailwind.config.js"
+      "import": "./tailwind.config.js",
+      "require": "./tailwind.config.cjs"
     },
     "./tailwind.css": "./tailwind.css",
     "./themes/colors": {
-      "import": "./themes/with-colors.js"
+      "import": "./themes/with-colors.js",
+      "require": "./themes/with-colors.cjs"
     },
     "./themes/spacing": {
-      "import": "./themes/with-spacing.js"
+      "import": "./themes/with-spacing.js",
+      "require": "./themes/with-spacing.cjs"
     }
   },
   "files": [
     "tailwind.css",
     "tailwind.config.js",
+    "tailwind.config.cjs",
     "themes/with-colors.js",
-    "themes/with-spacing.js"
+    "themes/with-colors.cjs",
+    "themes/with-spacing.js",
+    "themes/with-spacing.cjs"
   ],
   "license": "MIT",
-  "main": "tailwind.config.js",
-  "module": "tailwind.config.js",
   "name": "@busybox/tailwindcss-config",
   "peerDependencies": {
     "tailwindcss": ">=3"
