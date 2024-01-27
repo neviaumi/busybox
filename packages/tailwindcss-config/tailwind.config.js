@@ -1,12 +1,3 @@
-import tailwindCssFormsPlugin from '@tailwindcss/forms';
-
-const tailwindConfig = {
-  plugins: [
-    tailwindCssFormsPlugin({
-      strategy: 'class',
-    }),
-  ],
-  prefix: 'tw-',
-};
+import tailwindConfig from './tailwind.config.cjs';
 
 export default tailwindConfig;
