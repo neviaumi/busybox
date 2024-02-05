@@ -8,7 +8,7 @@
     "lerna": "8.0.2",
     "lint-staged": "15.2.1",
     "pinst": "3.0.0",
-    "prettier": "3.2.4"
+    "prettier": "3.2.5"
   },
   "engines": {
     "node": ">=20",
