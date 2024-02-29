@@ -17,7 +17,7 @@
   "license": "MIT",
   "name": "@busybox/commitlint-config",
   "peerDependencies": {
-    "@commitlint/cli": ">=17 <18"
+    "@commitlint/cli": ">=19 <20"
   },
   "publishConfig": {
     "access": "public"
