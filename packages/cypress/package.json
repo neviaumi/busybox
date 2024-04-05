@@ -9,7 +9,7 @@
     "@babel/core": "7.24.4",
     "@babel/preset-typescript": "7.24.1",
     "cypress": "13.7.2",
-    "typescript": "5.4.3"
+    "typescript": "5.4.4"
   },
   "engines": {
     "node": ">=20",
