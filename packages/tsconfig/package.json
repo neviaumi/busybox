@@ -3,7 +3,7 @@
     "@spotify/tsconfig": "15.0.0"
   },
   "devDependencies": {
-    "typescript": "5.4.4"
+    "typescript": "5.4.5"
   },
   "engines": {
     "node": ">=20",
