@@ -28,7 +28,7 @@
     "eslint-plugin-yml": "1.14.0",
     "globals": "15.1.0",
     "jsonc-eslint-parser": "2.4.0",
-    "ramda": "0.29.1",
+    "ramda": "0.30.0",
     "read-package-up": "11.0.0",
     "yaml-eslint-parser": "1.2.2"
   },
