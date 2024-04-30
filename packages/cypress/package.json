@@ -6,7 +6,7 @@
   "description": "",
   "devDependencies": {
     "@babel/cli": "7.24.5",
-    "@babel/core": "7.24.4",
+    "@babel/core": "7.24.5",
     "@babel/preset-typescript": "7.24.1",
     "cypress": "13.8.1",
     "typescript": "5.4.5"
