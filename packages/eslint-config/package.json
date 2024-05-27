@@ -30,7 +30,7 @@
     "jsonc-eslint-parser": "2.4.0",
     "ramda": "0.30.0",
     "read-package-up": "11.0.0",
-    "yaml-eslint-parser": "1.2.2"
+    "yaml-eslint-parser": "1.2.3"
   },
   "devDependencies": {
     "eslint": "8.57.0"
