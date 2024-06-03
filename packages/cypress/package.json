@@ -1,7 +1,7 @@
 {
   "author": "",
   "dependencies": {
-    "@testing-library/cypress": "10.0.1"
+    "@testing-library/cypress": "10.0.2"
   },
   "description": "",
   "devDependencies": {
