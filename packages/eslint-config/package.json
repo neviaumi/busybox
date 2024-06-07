@@ -21,7 +21,7 @@
     "eslint-plugin-sort-destructure-keys": "2.0.0",
     "eslint-plugin-sort-keys-fix": "1.1.2",
     "eslint-plugin-storybook": "0.8.0",
-    "eslint-plugin-tailwindcss": "3.17.2",
+    "eslint-plugin-tailwindcss": "3.17.3",
     "eslint-plugin-testing-library": "6.2.2",
     "eslint-plugin-typescript-sort-keys": "3.2.0",
     "eslint-plugin-unicorn": "53.0.0",
