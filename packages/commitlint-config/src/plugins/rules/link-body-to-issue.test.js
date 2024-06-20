@@ -49,7 +49,7 @@ describe('rule: link-body-to-issue', () => {
     });
   });
 
-  it.only('return true when body parse failed but linking present', () => {
+  it('return true when body parse failed but linking present', () => {
     const [rulePass, failureReason] = linkBodyToIssue(
       createParsed({
         header: 'GH-1882: fix commitlint',
