@@ -47,5 +47,5 @@
   },
   "type": "module",
   "types": "./dist/index.d.ts",
-  "version": "2024.2.29-alpha.203"
+  "version": "2024.6.20-alpha.321"
 }
