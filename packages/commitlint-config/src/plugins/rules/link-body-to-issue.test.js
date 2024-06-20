@@ -13,16 +13,18 @@ describe('rule: link-body-to-issue', () => {
     };
   }
 
-  it('return true when body have linking keyword and issue is match to header', () => {
-    const [rulePass, failureReason] = linkBodyToIssue(
-      createParsed({
-        body: 'this close #1234',
-        header: 'GH-1234: what is that',
-      }),
-      null,
-    );
-    assert.strictEqual(rulePass, true, failureReason);
-  });
+  ['this close #1234', 'this part of #1234'].forEach(body =>
+    it(`return true when body ${body} have linking keyword and issue is match to header`, () => {
+      const [rulePass, failureReason] = linkBodyToIssue(
+        createParsed({
+          body: body,
+          header: 'GH-1234: what is that',
+        }),
+        null,
+      );
+      assert.strictEqual(rulePass, true, failureReason);
+    }),
+  );
 
   it('return false when body have linking keyword but mismatch issue id to header', () => {
     const [rulePass, failureReason] = linkBodyToIssue(

@@ -6,7 +6,7 @@ const linkBodyToIssue = (parsed, _, value) => {
   const issuePrefixRegex = `(${issuePrefix.map(i => i + '-').join('|')}|#)`;
   // https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword
   const bodyRegex = new RegExp(
-    `^(this (close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved) )?${issuePrefixRegex}(?<issueId>\\d+)$`,
+    `^(this (close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved|part of) )?${issuePrefixRegex}(?<issueId>\\d+)$`,
     'i',
   );
   const { body, footer, header, raw } = parsed;
