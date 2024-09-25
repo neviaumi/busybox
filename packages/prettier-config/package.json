@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "prettier-plugin-tailwindcss": "0.6.6"
+    "prettier-plugin-tailwindcss": "0.6.8"
   },
   "engines": {
     "node": ">=20",
