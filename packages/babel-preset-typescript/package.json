@@ -1,7 +1,7 @@
 {
   "author": "",
   "dependencies": {
-    "@babel/preset-typescript": "7.24.7"
+    "@babel/preset-typescript": "7.25.7"
   },
   "description": "",
   "engines": {
