@@ -33,7 +33,7 @@
     "yaml-eslint-parser": "1.2.3"
   },
   "devDependencies": {
-    "eslint": "8.57.0"
+    "eslint": "9.11.1"
   },
   "engines": {
     "node": ">=20",
