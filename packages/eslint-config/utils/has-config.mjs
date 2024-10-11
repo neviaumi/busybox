@@ -22,7 +22,7 @@ export async function hasConfig(config) {
       try {
         await fs.access(`${projectPath}/${c.pattern}`, fs.constants.R_OK);
         return true;
-      } catch (err) {
+      } catch {
         return false;
       }
     } else if (c.type === 'package.json') {
