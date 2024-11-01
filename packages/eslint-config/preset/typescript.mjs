@@ -1,7 +1,6 @@
 import eslintPluginTypescript from '@typescript-eslint/eslint-plugin';
 import eslintParserTypescript from '@typescript-eslint/parser';
 import eslintPluginImportTypescript from 'eslint-plugin-import';
-import eslintPluginTypescriptSortKeys from 'eslint-plugin-typescript-sort-keys';
 
 import { typescriptFileSuffixes } from '../utils/file-patterns.mjs';
 
@@ -14,12 +13,10 @@ export default [
     plugins: {
       '@typescript-eslint': eslintPluginTypescript,
       import: eslintPluginImportTypescript,
-      'typescript-sort-keys': eslintPluginTypescriptSortKeys,
     },
     rules: {
       ...eslintPluginTypescript.configs.recommended.rules,
       ...eslintPluginImportTypescript.configs.typescript.rules,
-      ...eslintPluginTypescriptSortKeys.configs.recommended.rules,
       '@typescript-eslint/explicit-function-return-type': 'off',
 
       '@typescript-eslint/explicit-module-boundary-types': 'off',
