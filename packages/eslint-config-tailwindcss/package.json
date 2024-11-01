@@ -1,0 +1,41 @@
+{
+  "dependencies": {
+    "eslint-plugin-tailwindcss": "3.17.5",
+    "globals": "15.11.0"
+  },
+  "devDependencies": {
+    "eslint": "9.13.0"
+  },
+  "engines": {
+    "node": ">=20",
+    "yarn": "Use npm"
+  },
+  "exports": {
+    ".": {
+      "import": "./index.mjs"
+    },
+    "./plugins/eslint-plugin-tailwindcss": {
+      "import": "./plugins/eslint-plugin-tailwindcss.mjs"
+    }
+  },
+  "files": [
+    "index.mjs",
+    "plugins"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@busybox/eslint-config-tailwindcss",
+  "peerDependencies": {
+    "eslint": ">=8 <10"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "directory": "packages/eslint-config-tailwindcss",
+    "type": "git",
+    "url": "git@github.com:davidNHK/busybox.git"
+  },
+  "type": "module",
+  "version": "2024.10.11-alpha.2224"
+}
