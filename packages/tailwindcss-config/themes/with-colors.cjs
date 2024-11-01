@@ -1,5 +1,4 @@
-const { assocPath, path, pipe } = require('ramda');
-const colors = require('tailwindcss/colors');
+const { assocPath, pipe } = require('ramda');
 
 const Variant = {
   DISABLED: 'disabled',
@@ -21,43 +20,7 @@ function withColors(config) {
     // When user perform action on element
     USER_ACTION: 'user-action',
   };
-  function extractColor(colorPath) {
-    return assocPath(colorPath, path(colorPath, colors));
-  }
   return pipe(
-    assocPath(
-      ['theme', 'colors'],
-      pipe(
-        extractColor(['current']),
-        extractColor(['transparent']),
-        extractColor(['rose', '200']),
-        extractColor(['rose', '300']),
-        extractColor(['rose', '500']),
-        extractColor(['rose', '600']),
-        extractColor(['rose', '800']),
-        extractColor(['rose', '900']),
-        extractColor(['gray']),
-        extractColor(['white']),
-        extractColor(['black']),
-        extractColor(['amber', '200']),
-        extractColor(['amber', '300']),
-        extractColor(['amber', '500']),
-        extractColor(['amber', '600']),
-        extractColor(['amber', '800']),
-        extractColor(['amber', '900']),
-        extractColor(['emerald', '50']),
-        extractColor(['emerald', '100']),
-        extractColor(['emerald', '200']),
-        extractColor(['emerald', '300']),
-        extractColor(['sky', '50']),
-        extractColor(['sky', '100']),
-        extractColor(['sky', '200']),
-        extractColor(['sky', '300']),
-        extractColor(['sky', '500']),
-        extractColor(['sky', '800']),
-        extractColor(['sky', '900']),
-      )({}),
-    ),
     assocPath(['theme', 'outlineColor'], ({ theme }) => {
       return pipe(
         assocPath([Variant.DISABLED], {
