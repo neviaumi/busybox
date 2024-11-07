@@ -20,7 +20,7 @@
   ],
   "license": "MIT",
   "main": "index.js",
-  "name": "@busybox/eslint-config-jest",
+  "name": "@busybox/eslint-config-vitest",
   "peerDependencies": {
     "eslint": ">=9 <10"
   },
@@ -28,7 +28,7 @@
     "access": "public"
   },
   "repository": {
-    "directory": "packages/eslint-config-jest",
+    "directory": "packages/eslint-config-vitest",
     "type": "git",
     "url": "git@github.com:davidNHK/busybox.git"
   },

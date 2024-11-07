@@ -6,7 +6,7 @@ import pkgJson from './package.json' with { type: 'json' };
 
 const config = [
   {
-    files: ['**/*.ts[x]?'],
+    files: ['**/*.ts*(x)'],
     languageOptions: {
       parser: eslintParserTypescript,
     },

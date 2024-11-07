@@ -5,7 +5,7 @@
 - Install dependencies
 
 ```bash
-npm install --save-dev @busybox/eslint-config
+npm install --save-dev @busybox/eslint-config-esm
 ```
 
 - Setup [prettier](../prettier-config)
@@ -14,10 +14,8 @@ npm install --save-dev @busybox/eslint-config
 
 ```js
 'use strict';
-
-module.exports = {
-  extends: ['@busybox'],
-};
+import { useESModuleEslintConfig } from '@busybox/eslint-config-esm';
+export default [useESModuleEslintConfig()];
 ```
 
 [Example](../../.eslintrc.js)

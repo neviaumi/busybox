@@ -1,29 +1,30 @@
-import busyboxEslintConfig, { globals } from '@busybox/eslint-config';
-import eslintPluginN from '@busybox/eslint-config/plugins/eslint-plugin-n';
+import { useESModuleEslintConfig } from '@busybox/eslint-config-esm';
+import globals from 'globals';
+
+import pkgJson from './package.json' with { type: 'json' };
 
 export default [
-  ...busyboxEslintConfig,
-  {
-    ignores: ['dist/'],
-  },
   {
     languageOptions: {
-      globals: {
-        ...globals.node,
-      },
+      globals: globals.node,
     },
+    name: pkgJson.name,
   },
   {
-    plugins: {
-      n: eslintPluginN,
-    },
+    ignores: ['dist/**/*'],
+    name: pkgJson.name,
+  },
+  useESModuleEslintConfig({
     rules: {
       'n/no-extraneous-import': [
         'error',
         {
-          allowModules: ['@busybox/eslint-config', '@busybox/prettier-config'],
+          allowModules: [
+            '@busybox/eslint-config-esm',
+            '@busybox/prettier-config',
+          ],
         },
       ],
     },
-  },
+  }),
 ];
