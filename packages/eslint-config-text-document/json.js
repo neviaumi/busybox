@@ -3,13 +3,16 @@ import eslintPluginJson from 'eslint-plugin-jsonc';
 import eslintPluginNodeDependencies from 'eslint-plugin-node-dependencies';
 import eslintParserJson from 'jsonc-eslint-parser';
 
+import pkgJson from './package.json' with { type: 'json' };
+
 export default [
   {
     files: ['**/*.json'],
-    ignores: ['package-lock.json'],
+    ignores: ['**/package-lock.json'],
     languageOptions: {
       parser: eslintParserJson,
     },
+    name: pkgJson.name,
     plugins: {
       jsonc: eslintPluginJson,
     },
@@ -20,6 +23,7 @@ export default [
   },
   {
     files: ['**/package.json'],
+    name: pkgJson.name,
     plugins: {
       'json-schema-validator': eslintPluginJsonSchemaValidator,
       'node-dependencies': eslintPluginNodeDependencies,

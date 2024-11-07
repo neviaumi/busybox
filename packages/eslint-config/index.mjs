@@ -2,9 +2,6 @@ import eslintGlobals from 'globals';
 
 import jsCommonConfig from './preset/javascript.mjs';
 import jestConfig from './preset/jest.mjs';
-import jsonConfig from './preset/json.mjs';
-import markdownConfig from './preset/markdown.mjs';
-import ymlConfig from './preset/yml.mjs';
 import { hasConfig } from './utils/has-config.mjs';
 import { isDefaultEsm } from './utils/is-default-esm.mjs';
 
@@ -15,13 +12,7 @@ const hasJest = await hasConfig([
 const isDefaultESModule = await isDefaultEsm();
 
 function createEsLintConfig({ hasJest }) {
-  const eslintConfig = [
-    jsCommonConfig,
-    jsonConfig,
-    markdownConfig,
-    ymlConfig,
-    hasJest ? jestConfig : [],
-  ].flat();
+  const eslintConfig = [jsCommonConfig, hasJest ? jestConfig : []].flat();
   return eslintConfig;
 }
 
