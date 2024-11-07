@@ -6,11 +6,14 @@ export function parseIssueFromHeader(header, issuePrefix) {
   if (!issue) {
     return null;
   }
-  return { issue, issueId: issue.split('-')[1] };
+  return { issue, issueId: issue.split('-')[1].trim() };
 }
 
 const linkTitleToIssue = (parsed, _, value) => {
   const {
+    checkIssueAlignedWithBranchName = defaultConfig.checkIssueAlignedWithBranchName,
+    currentBranch = defaultConfig.currentBranch,
+    issueNumber = defaultConfig.issueNumber,
     issuePrefix = defaultConfig.issuePrefix,
     separator = defaultConfig.separator,
   } = value || {};
@@ -25,7 +28,7 @@ const linkTitleToIssue = (parsed, _, value) => {
       `commit header (${header}) must start with ${issuePrefixRegex}-{Issue Id}, example: ${issuePrefixRegex}-1234${separator}your commit message`,
     ];
   }
-  const { issue } = parseIssueFromHeader(header, issuePrefixRegex);
+  const { issue, issueId } = parseIssueFromHeader(header, issuePrefixRegex);
   const isHeaderContainSeparator = new RegExp(
     `^(?<issue>${issuePrefixRegex}-\\d+)${separator}`,
   ).test(header);
@@ -42,6 +45,12 @@ const linkTitleToIssue = (parsed, _, value) => {
     return [
       false,
       `commit header (${header}) must contain message after ${issue}${separator}, example: ${issue}${separator}your commit message`,
+    ];
+  }
+  if (checkIssueAlignedWithBranchName && issueNumber !== issueId) {
+    return [
+      false,
+      `Issue id (${issueId})  on commit header (${header}) must have same issue id (${issueNumber}) that configurate on branch name "${currentBranch}"`,
     ];
   }
 

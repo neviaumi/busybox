@@ -12,8 +12,23 @@ describe('rule: link-body-to-issue', () => {
       raw,
     };
   }
+  it('allow long body that started with linking keyword', () => {
+    const [rulePass, failureReason] = linkBodyToIssue(
+      createParsed({
+        body: `this part of #1234
 
-  ['this close #1234', 'this part of #1234'].forEach(body =>
+Removed TailwindCSS-related ESLint configurations and integrated TypeScript configurations separately. Adjusted package.json and other related files to encapsulate changes appropriately.`,
+        header: 'GH-1234: what is that',
+      }),
+      null,
+      {
+        issueNumber: '1234',
+      },
+    );
+    assert.strictEqual(rulePass, true, failureReason);
+  });
+
+  [('this close #1234', 'this part of #1234')].forEach(body =>
     it(`return true when body ${body} have linking keyword and issue is match to header`, () => {
       const [rulePass, failureReason] = linkBodyToIssue(
         createParsed({
@@ -21,6 +36,9 @@ describe('rule: link-body-to-issue', () => {
           header: 'GH-1234: what is that',
         }),
         null,
+        {
+          issueNumber: '1234',
+        },
       );
       assert.strictEqual(rulePass, true, failureReason);
     }),
@@ -33,6 +51,9 @@ describe('rule: link-body-to-issue', () => {
         header: 'GH-4321: what is that',
       }),
       null,
+      {
+        issueNumber: '1234',
+      },
     );
     assert.strictEqual(
       failureReason,
@@ -46,6 +67,9 @@ describe('rule: link-body-to-issue', () => {
       const [rulePass, failureReason] = linkBodyToIssue(
         createParsed({ body: body, header: 'GH-1234: what is that' }),
         null,
+        {
+          issueNumber: '1234',
+        },
       );
       assert.strictEqual(rulePass, true, failureReason);
     });
@@ -58,6 +82,9 @@ describe('rule: link-body-to-issue', () => {
         raw: 'GH-1882: fix commitlint\n\n#1882\n\n',
       }),
       null,
+      {
+        issueNumber: '1882',
+      },
     );
     assert.strictEqual(rulePass, true, failureReason);
   });

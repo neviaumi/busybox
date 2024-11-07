@@ -1,29 +1,34 @@
-import busyboxEslintConfig, { globals } from '@busybox/eslint-config';
-import eslintPluginN from '@busybox/eslint-config/plugins/eslint-plugin-n';
+import { useESModuleEslintConfig } from '@busybox/eslint-config-esm';
+import { useTypescriptEslintConfig } from '@busybox/eslint-config-typescript';
+import globals from 'globals';
+
+import pkgJson from './package.json' with { type: 'json' };
 
 export default [
   {
-    ignores: ['dist/'],
-  },
-  {
+    // ignores: ['dist/*'],
     languageOptions: {
-      globals: {
-        ...globals.browser,
-      },
+      globals: Object.assign({}, globals.browser, globals.node),
     },
+    name: pkgJson.name,
   },
-  ...busyboxEslintConfig,
   {
-    plugins: {
-      n: eslintPluginN,
-    },
+    ignores: ['dist/**/*'],
+    name: pkgJson.name,
+  },
+  useESModuleEslintConfig({
     rules: {
       'n/no-extraneous-import': [
         'error',
         {
-          allowModules: ['@busybox/eslint-config', '@busybox/prettier-config'],
+          allowModules: [
+            '@busybox/eslint-config-esm',
+            '@busybox/prettier-config',
+            '@busybox/eslint-config-typescript',
+          ],
         },
       ],
     },
-  },
-];
+  }),
+  useTypescriptEslintConfig(),
+].flat();

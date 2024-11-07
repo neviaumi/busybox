@@ -48,26 +48,30 @@ describe('rule: link-title-to-issue', () => {
 
   it('return true if commit message start with issue key, contain separator and have message after', () => {
     ['GH-1234: commit message'].forEach(header => {
-      const [rulePass] = linkTitleToIssue(createParsed(header), null);
-      assert.strictEqual(rulePass, true);
+      const [rulePass, failureReason] = linkTitleToIssue(
+        createParsed(header),
+        null,
+        { issueNumber: '1234' },
+      );
+      assert.strictEqual(rulePass, true, failureReason);
     });
   });
 
   it('able to configure issue prefix by setting option issuePrefix', () => {
-    const [rulePass] = linkTitleToIssue(
+    const [rulePass, failureReason] = linkTitleToIssue(
       createParsed('CUSTOM-1234: commit message'),
       null,
-      { issuePrefix: ['CUSTOM'] },
+      { issueNumber: '1234', issuePrefix: ['CUSTOM'] },
     );
-    assert.strictEqual(rulePass, true);
+    assert.strictEqual(rulePass, true, failureReason);
   });
 
   it('able to configure separator by setting option separator', () => {
-    const [rulePass] = linkTitleToIssue(
+    const [rulePass, failureReason] = linkTitleToIssue(
       createParsed('GH-1234 commit message'),
       null,
-      { separator: ' ' },
+      { issueNumber: '1234', separator: ' ' },
     );
-    assert.strictEqual(rulePass, true);
+    assert.strictEqual(rulePass, true, failureReason);
   });
 });
