@@ -13,12 +13,18 @@ describe('rule: link-body-to-issue', () => {
     };
   }
   it('allow long body that started with linking keyword', () => {
-    const [rulePass, failureReason] = linkBodyToIssue({
-      body: `this part of #1234
+    const [rulePass, failureReason] = linkBodyToIssue(
+      createParsed({
+        body: `this part of #1234
 
 Removed TailwindCSS-related ESLint configurations and integrated TypeScript configurations separately. Adjusted package.json and other related files to encapsulate changes appropriately.`,
-      header: 'GH-1234: what is that',
-    });
+        header: 'GH-1234: what is that',
+      }),
+      null,
+      {
+        issueNumber: '1234',
+      },
+    );
     assert.strictEqual(rulePass, true, failureReason);
   });
 
@@ -30,6 +36,9 @@ Removed TailwindCSS-related ESLint configurations and integrated TypeScript conf
           header: 'GH-1234: what is that',
         }),
         null,
+        {
+          issueNumber: '1234',
+        },
       );
       assert.strictEqual(rulePass, true, failureReason);
     }),
@@ -42,6 +51,9 @@ Removed TailwindCSS-related ESLint configurations and integrated TypeScript conf
         header: 'GH-4321: what is that',
       }),
       null,
+      {
+        issueNumber: '1234',
+      },
     );
     assert.strictEqual(
       failureReason,
@@ -55,6 +67,9 @@ Removed TailwindCSS-related ESLint configurations and integrated TypeScript conf
       const [rulePass, failureReason] = linkBodyToIssue(
         createParsed({ body: body, header: 'GH-1234: what is that' }),
         null,
+        {
+          issueNumber: '1234',
+        },
       );
       assert.strictEqual(rulePass, true, failureReason);
     });
@@ -67,6 +82,9 @@ Removed TailwindCSS-related ESLint configurations and integrated TypeScript conf
         raw: 'GH-1882: fix commitlint\n\n#1882\n\n',
       }),
       null,
+      {
+        issueNumber: '1882',
+      },
     );
     assert.strictEqual(rulePass, true, failureReason);
   });
