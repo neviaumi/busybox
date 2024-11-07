@@ -1,6 +1,9 @@
 import eslintPluginTailwindCSS from 'eslint-plugin-tailwindcss';
 
+import pkgJson from './package.json' with { type: 'json' };
+
 const config = {
+  name: pkgJson.name,
   plugins: {
     tailwindcss: eslintPluginTailwindCSS,
   },

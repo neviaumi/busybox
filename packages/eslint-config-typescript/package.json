@@ -16,14 +16,10 @@
   "exports": {
     ".": {
       "import": "./index.js"
-    },
-    "./plugins/eslint-plugin-import": {
-      "import": "./plugins/eslint-plugin-import.js"
     }
   },
   "files": [
-    "index.mjs",
-    "plugins"
+    "index.js"
   ],
   "license": "MIT",
   "main": "index.js",
@@ -36,7 +32,7 @@
     "access": "public"
   },
   "repository": {
-    "directory": "packages/eslint-config-tailwindcss",
+    "directory": "packages/eslint-config-typescript",
     "type": "git",
     "url": "git@github.com:davidNHK/busybox.git"
   },

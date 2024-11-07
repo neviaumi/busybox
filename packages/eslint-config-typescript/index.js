@@ -2,12 +2,15 @@ import eslintPluginTypescript from '@typescript-eslint/eslint-plugin';
 import eslintParserTypescript from '@typescript-eslint/parser';
 import eslintPluginImportTypescript from 'eslint-plugin-import';
 
+import pkgJson from './package.json' with { type: 'json' };
+
 const config = [
   {
-    files: ['*.ts[x]?'],
+    files: ['**/*.ts[x]?'],
     languageOptions: {
       parser: eslintParserTypescript,
     },
+    name: pkgJson.name,
     plugins: {
       '@typescript-eslint': eslintPluginTypescript,
       import: eslintPluginImportTypescript,
@@ -37,6 +40,7 @@ const config = [
   },
   {
     files: ['typings/**/*.d.ts'],
+    name: pkgJson.name,
     rules: {
       '@typescript-eslint/no-unused-vars': 'off', // Not work for type declaration file
     },
