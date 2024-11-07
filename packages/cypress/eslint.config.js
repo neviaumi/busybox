@@ -1,5 +1,6 @@
 import busyboxEslintConfig, { globals } from '@busybox/eslint-config';
 import eslintPluginN from '@busybox/eslint-config/plugins/eslint-plugin-n';
+import { useTypescriptEslintConfig } from '@busybox/eslint-config-typescript';
 
 export default [
   {
@@ -13,6 +14,7 @@ export default [
     },
   },
   ...busyboxEslintConfig,
+  useTypescriptEslintConfig(),
   {
     plugins: {
       n: eslintPluginN,
@@ -21,9 +23,13 @@ export default [
       'n/no-extraneous-import': [
         'error',
         {
-          allowModules: ['@busybox/eslint-config', '@busybox/prettier-config'],
+          allowModules: [
+            '@busybox/eslint-config',
+            '@busybox/prettier-config',
+            '@busybox/eslint-config-typescript',
+          ],
         },
       ],
     },
   },
-];
+].flat();

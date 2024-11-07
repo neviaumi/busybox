@@ -1,5 +1,3 @@
-import eslintPluginTypescript from '@typescript-eslint/eslint-plugin';
-import eslintParserTypescript from '@typescript-eslint/parser';
 import eslintPluginJest from 'eslint-plugin-jest';
 
 import {
@@ -37,26 +35,6 @@ export default [
       'jest/prefer-spy-on': 'error',
 
       'jest/valid-expect': ['error', { maxArgs: 2, minArgs: 1 }],
-    },
-  },
-  {
-    files: typescriptTestFilePatterns.map(fileSuffix => `**/${fileSuffix}`),
-    languageOptions: {
-      parser: eslintParserTypescript,
-    },
-    plugins: {
-      '@typescript-eslint': eslintPluginTypescript,
-    },
-    rules: {
-      '@typescript-eslint/ban-ts-comment': [
-        'error',
-        {
-          'ts-check': false,
-          'ts-expect-error': false,
-          'ts-ignore': true,
-          'ts-nocheck': true,
-        },
-      ],
     },
   },
 ];

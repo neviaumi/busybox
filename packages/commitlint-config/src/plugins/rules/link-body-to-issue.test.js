@@ -12,8 +12,17 @@ describe('rule: link-body-to-issue', () => {
       raw,
     };
   }
+  it('allow long body that started with linking keyword', () => {
+    const [rulePass, failureReason] = linkBodyToIssue({
+      body: `this part of #1234
 
-  ['this close #1234', 'this part of #1234'].forEach(body =>
+Removed TailwindCSS-related ESLint configurations and integrated TypeScript configurations separately. Adjusted package.json and other related files to encapsulate changes appropriately.`,
+      header: 'GH-1234: what is that',
+    });
+    assert.strictEqual(rulePass, true, failureReason);
+  });
+
+  [('this close #1234', 'this part of #1234')].forEach(body =>
     it(`return true when body ${body} have linking keyword and issue is match to header`, () => {
       const [rulePass, failureReason] = linkBodyToIssue(
         createParsed({

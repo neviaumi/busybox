@@ -2,11 +2,9 @@ import eslintPluginTypescript from '@typescript-eslint/eslint-plugin';
 import eslintParserTypescript from '@typescript-eslint/parser';
 import eslintPluginImportTypescript from 'eslint-plugin-import';
 
-import { typescriptFileSuffixes } from '../utils/file-patterns.mjs';
-
-export default [
+const config = [
   {
-    files: typescriptFileSuffixes.map(ext => `**/*.${ext}`),
+    files: ['*.ts[x]?'],
     languageOptions: {
       parser: eslintParserTypescript,
     },
@@ -18,21 +16,14 @@ export default [
       ...eslintPluginTypescript.configs.recommended.rules,
       ...eslintPluginImportTypescript.configs.typescript.rules,
       '@typescript-eslint/explicit-function-return-type': 'off',
-
       '@typescript-eslint/explicit-module-boundary-types': 'off',
-
       '@typescript-eslint/no-explicit-any': 'off',
-
       '@typescript-eslint/no-non-null-assertion': 'off',
-
       '@typescript-eslint/no-unused-vars': 'error',
-
       // Conflict with TS4111 https://www.typescriptlang.org/tsconfig#noPropertyAccessFromIndexSignature
       'dot-notation': 'off',
-
       // enum will prompt already declared in the upper scope
       'no-shadow': 'off',
-
       // Unable work with Global namespace
       'no-undef': 'off',
       'no-use-before-define': 'off',
@@ -51,3 +42,13 @@ export default [
     },
   },
 ];
+
+export function useTypescriptEslintConfig(override = {}) {
+  return Object.assign(config, {
+    ...override,
+    rules: {
+      ...config.rules,
+      ...override.rules,
+    },
+  });
+}
