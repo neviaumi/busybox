@@ -6,7 +6,7 @@ import eslintPluginReactRefresh from 'eslint-plugin-react-refresh';
 import pkgJson from './package.json' with { type: 'json' };
 
 const config = {
-  files: [`**/*.[jt]sx`],
+  files: [`**/*.+(j|t)sx`],
   languageOptions: {
     parserOptions: {
       ecmaFeatures: {
