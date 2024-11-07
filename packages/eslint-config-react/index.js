@@ -28,7 +28,6 @@ const config = {
     'react-hooks/exhaustive-deps': 'error',
     'react-hooks/rules-of-hooks': 'error',
     'react-refresh/only-export-components': 'error',
-    'react/jsx-sort-props': 'error',
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
   },

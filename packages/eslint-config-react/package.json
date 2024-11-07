@@ -26,8 +26,8 @@
   "name": "@busybox/eslint-config-react",
   "peerDependencies": {
     "eslint": ">=9 <10",
-    "react": ">=18",
-    "globals": "*"
+    "globals": "*",
+    "react": ">=18"
   },
   "publishConfig": {
     "access": "public"

@@ -23,8 +23,8 @@
   "name": "@busybox/eslint-config-tailwindcss",
   "peerDependencies": {
     "eslint": ">=8 <10",
-    "tailwindcss": ">=3",
-    "globals": "*"
+    "globals": "*",
+    "tailwindcss": ">=3"
   },
   "publishConfig": {
     "access": "public"

@@ -1,12 +1,6 @@
 {
   "dependencies": {
-    "@eslint/js": "9.14.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-import": "2.31.0",
-    "eslint-plugin-n": "17.12.0",
-    "eslint-plugin-node-dependencies": "0.12.0",
-    "eslint-plugin-prettier": "5.2.1",
-    "eslint-plugin-unicorn": "56.0.0"
+    "eslint-plugin-perfectionist": "3.9.1"
   },
   "devDependencies": {
     "eslint": "9.14.0",
@@ -26,7 +20,7 @@
   ],
   "license": "MIT",
   "main": "index.js",
-  "name": "@busybox/eslint-config-esm",
+  "name": "@busybox/eslint-config-code-sorting",
   "peerDependencies": {
     "eslint": ">=8 <10",
     "globals": "*",
@@ -36,7 +30,7 @@
     "access": "public"
   },
   "repository": {
-    "directory": "packages/eslint-config-esm",
+    "directory": "packages/eslint-config-code-sorting",
     "type": "git",
     "url": "git@github.com:davidNHK/busybox.git"
   },

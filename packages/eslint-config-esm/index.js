@@ -2,16 +2,13 @@ import js from '@eslint/js';
 import eslintPluginImport from 'eslint-plugin-import';
 import eslintPluginN from 'eslint-plugin-n';
 import eslintPluginPrettier from 'eslint-plugin-prettier';
-import eslintPluginSimpleImportSort from 'eslint-plugin-simple-import-sort';
-import eslintPluginSortDestructureKeys from 'eslint-plugin-sort-destructure-keys';
-import eslintPluginSortKeysFix from 'eslint-plugin-sort-keys-fix';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import globals from 'globals';
 
 import pkgJson from './package.json' with { type: 'json' };
 
 const config = {
-  files: ['**/*.*(m)+(j|t)s*(m)'],
+  files: ['**/*.*(m)+(j|t)s*(x)'],
 
   languageOptions: {
     ecmaVersion: 'latest',
@@ -23,9 +20,6 @@ const config = {
     import: eslintPluginImport,
     n: eslintPluginN,
     prettier: eslintPluginPrettier,
-    'simple-import-sort': eslintPluginSimpleImportSort,
-    'sort-destructure-keys': eslintPluginSortDestructureKeys,
-    'sort-keys-fix': eslintPluginSortKeysFix,
     unicorn: eslintPluginUnicorn,
   },
   rules: {
@@ -80,11 +74,7 @@ const config = {
     'prefer-promise-reject-errors': 'error',
     'prettier/prettier': 'error',
     radix: 'error',
-    'simple-import-sort/exports': 'error',
-    'simple-import-sort/imports': 'error',
-    'sort-destructure-keys/sort-destructure-keys': 'error',
     'sort-imports': 'off',
-    'sort-keys-fix/sort-keys-fix': 'error',
     'unicorn/consistent-function-scoping': 'off',
     'unicorn/prefer-node-protocol': 'error',
   },
