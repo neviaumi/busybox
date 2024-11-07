@@ -1,10 +1,10 @@
 {
   "dependencies": {
-    "eslint-plugin-tailwindcss": "3.17.5",
-    "globals": "15.12.0"
+    "eslint-plugin-tailwindcss": "3.17.5"
   },
   "devDependencies": {
-    "eslint": "9.14.0"
+    "eslint": "9.14.0",
+    "globals": "15.12.0"
   },
   "engines": {
     "node": ">=20",
@@ -23,7 +23,8 @@
   "name": "@busybox/eslint-config-tailwindcss",
   "peerDependencies": {
     "eslint": ">=8 <10",
-    "tailwindcss": ">=3"
+    "tailwindcss": ">=3",
+    "globals": "*"
   },
   "publishConfig": {
     "access": "public"
