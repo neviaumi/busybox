@@ -58,8 +58,8 @@ const config = {
         max: 40,
       },
     ],
-
     'n/no-missing-import': ['off'],
+    'n/no-unsupported-features/node-builtins': ['off'],
 
     // 'n/no-missing-import': ['off'],
     'new-cap': 'off',
