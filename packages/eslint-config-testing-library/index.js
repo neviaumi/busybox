@@ -1,5 +1,6 @@
+import eslintPluginTestingLibrary from 'eslint-plugin-testing-library';
+
 import pkgJson from './package.json' with { type: 'json' };
-import eslintPluginTestingLibrary from './plugins/eslint-plugin-testing-library.js';
 
 export const presets = Object.fromEntries(
   Object.entries(eslintPluginTestingLibrary.configs).map(([key, value]) => {

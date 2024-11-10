@@ -5,23 +5,8 @@ import eslintParserJson from 'jsonc-eslint-parser';
 
 import pkgJson from './package.json' with { type: 'json' };
 
-export default [
-  {
-    files: ['**/*.json'],
-    ignores: ['**/package-lock.json'],
-    languageOptions: {
-      parser: eslintParserJson,
-    },
-    name: pkgJson.name,
-    plugins: {
-      jsonc: eslintPluginJson,
-    },
-    rules: {
-      ...eslintPluginJson.configs.prettier.rules,
-      'jsonc/sort-keys': 'error',
-    },
-  },
-  {
+export function usePackageJsonEslintConfig(override = {}) {
+  const packageJsonEslintConfig = {
     files: ['**/package.json'],
     name: pkgJson.name,
     plugins: {
@@ -97,5 +82,38 @@ export default [
       'node-dependencies/compat-engines': 'off',
       'node-dependencies/valid-semver': 'off',
     },
-  },
-];
+  };
+
+  return Object.assign(packageJsonEslintConfig, {
+    ...override,
+    rules: {
+      ...packageJsonEslintConfig.rules,
+      ...override.rules,
+    },
+  });
+}
+
+export function useJSONEslintConfig(override = {}) {
+  const jsonEslintConfig = {
+    files: ['**/*.json'],
+    ignores: ['**/package-lock.json'],
+    languageOptions: {
+      parser: eslintParserJson,
+    },
+    name: pkgJson.name,
+    plugins: {
+      jsonc: eslintPluginJson,
+    },
+    rules: {
+      ...eslintPluginJson.configs.prettier.rules,
+      'jsonc/sort-keys': 'error',
+    },
+  };
+  return Object.assign(jsonEslintConfig, {
+    ...override,
+    rules: {
+      ...jsonEslintConfig.rules,
+      ...override.rules,
+    },
+  });
+}
