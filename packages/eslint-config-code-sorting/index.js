@@ -2,21 +2,14 @@ import eslintPluginPerfectionist from 'eslint-plugin-perfectionist';
 
 import pkgJson from './package.json' with { type: 'json' };
 
-const config = {
-  files: ['**/*.*(m)+(j|t)s*(x)'],
-  name: pkgJson.name,
-  plugins: {
-    perfectionist: eslintPluginPerfectionist,
-  },
-  rules: eslintPluginPerfectionist.configs['recommended-alphabetical'].rules,
-};
-
-export function useCodeSortingEslintConfig(override = {}) {
-  return Object.assign(config, {
-    ...override,
-    rules: {
-      ...config.rules,
-      ...override.rules,
+export function useCodeSortingEslintConfig() {
+  const config = {
+    files: ['**/*.*(m)+(j|t)s*(x)'],
+    name: pkgJson.name,
+    plugins: {
+      perfectionist: eslintPluginPerfectionist,
     },
-  });
+    rules: eslintPluginPerfectionist.configs['recommended-alphabetical'].rules,
+  };
+  return config;
 }

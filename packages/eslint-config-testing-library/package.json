@@ -13,14 +13,10 @@
   "exports": {
     ".": {
       "import": "./index.js"
-    },
-    "./plugins/eslint-plugin-testing-library": {
-      "import": "./plugins/eslint-plugin-testing-library.js"
     }
   },
   "files": [
-    "index.js",
-    "plugins"
+    "index.js"
   ],
   "license": "MIT",
   "main": "index.js",

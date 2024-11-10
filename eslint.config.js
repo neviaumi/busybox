@@ -9,6 +9,14 @@ import globals from 'globals';
 
 import pkgJson from './package.json' with { type: 'json' };
 
+function withOverride(override) {
+  return config => {
+    return Object.assign(config, {
+      rules: Object.assign(config.rules ?? {}, override.rules ?? {}),
+    });
+  };
+}
+
 export default [
   {
     languageOptions: {
@@ -24,7 +32,7 @@ export default [
     ],
     name: pkgJson.name,
   },
-  useESModuleEslintConfig({
+  withOverride({
     rules: {
       'n/no-extraneous-import': [
         'error',
@@ -39,7 +47,7 @@ export default [
         },
       ],
     },
-  }),
+  })(useESModuleEslintConfig()),
   useCodeSortingEslintConfig(),
   useJSONEslintConfig(),
   useYamlEslintConfig(),
