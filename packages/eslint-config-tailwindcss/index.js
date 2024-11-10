@@ -2,11 +2,11 @@ import eslintPluginTailwindCSS from 'eslint-plugin-tailwindcss';
 
 import pkgJson from './package.json' with { type: 'json' };
 
-export function useTailwindCSSEslintConfig(override) {
-  if (!override?.files || !override?.files.length) {
+export function useTailwindCSSEslintConfig(config) {
+  if (!config?.files || !config?.files.length) {
     throw new Error('You must provide a list of files to lint');
   }
-  const config = {
+  const _config = {
     name: pkgJson.name,
     plugins: {
       tailwindcss: eslintPluginTailwindCSS,
@@ -17,11 +17,5 @@ export function useTailwindCSSEslintConfig(override) {
       'tailwindcss/no-custom-classname': 'error',
     },
   };
-  return Object.assign(config, {
-    ...override,
-    rules: {
-      ...config.rules,
-      ...override.rules,
-    },
-  });
+  return _config;
 }

@@ -7,7 +7,7 @@ import globals from 'globals';
 
 import pkgJson from './package.json' with { type: 'json' };
 
-export function useESModuleEslintConfig(override = {}) {
+export function useESModuleEslintConfig() {
   const config = {
     files: ['**/*.*(m)+(j|t)s*(x)'],
 
@@ -80,11 +80,5 @@ export function useESModuleEslintConfig(override = {}) {
       'unicorn/prefer-node-protocol': 'error',
     },
   };
-  return Object.assign(config, {
-    ...override,
-    rules: {
-      ...config.rules,
-      ...override.rules,
-    },
-  });
+  return config;
 }

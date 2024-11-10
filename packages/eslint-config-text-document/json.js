@@ -93,7 +93,7 @@ export function usePackageJsonEslintConfig(override = {}) {
   });
 }
 
-export function useJSONEslintConfig(override = {}) {
+export function useJSONEslintConfig() {
   const jsonEslintConfig = {
     files: ['**/*.json'],
     ignores: ['**/package-lock.json'],
@@ -109,11 +109,5 @@ export function useJSONEslintConfig(override = {}) {
       'jsonc/sort-keys': 'error',
     },
   };
-  return Object.assign(jsonEslintConfig, {
-    ...override,
-    rules: {
-      ...jsonEslintConfig.rules,
-      ...override.rules,
-    },
-  });
+  return jsonEslintConfig;
 }

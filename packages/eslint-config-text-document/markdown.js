@@ -3,7 +3,7 @@ import eslintPluginMarkdownlintParser from 'eslint-plugin-markdownlint/parser.js
 
 import pkgJson from './package.json' with { type: 'json' };
 
-export function useMarkdownEslintConfig(override = {}) {
+export function useMarkdownEslintConfig() {
   const mdConfig = {
     files: ['**/*.md'],
     languageOptions: {
@@ -15,11 +15,5 @@ export function useMarkdownEslintConfig(override = {}) {
       ...eslintPluginMarkdownlint.configs.recommended.rules,
     },
   };
-  return Object.assign(mdConfig, {
-    ...override,
-    rules: {
-      ...mdConfig.rules,
-      ...override.rules,
-    },
-  });
+  return mdConfig;
 }

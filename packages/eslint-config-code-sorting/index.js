@@ -2,7 +2,7 @@ import eslintPluginPerfectionist from 'eslint-plugin-perfectionist';
 
 import pkgJson from './package.json' with { type: 'json' };
 
-export function useCodeSortingEslintConfig(override = {}) {
+export function useCodeSortingEslintConfig() {
   const config = {
     files: ['**/*.*(m)+(j|t)s*(x)'],
     name: pkgJson.name,
@@ -11,11 +11,5 @@ export function useCodeSortingEslintConfig(override = {}) {
     },
     rules: eslintPluginPerfectionist.configs['recommended-alphabetical'].rules,
   };
-  return Object.assign(config, {
-    ...override,
-    rules: {
-      ...config.rules,
-      ...override.rules,
-    },
-  });
+  return config;
 }

@@ -5,7 +5,7 @@ import eslintPluginReactRefresh from 'eslint-plugin-react-refresh';
 
 import pkgJson from './package.json' with { type: 'json' };
 
-export function useReactEslintConfig(override = {}) {
+export function useReactEslintConfig() {
   const config = {
     files: [`**/*.+(j|t)sx`],
     languageOptions: {
@@ -38,11 +38,5 @@ export function useReactEslintConfig(override = {}) {
       },
     },
   };
-  return Object.assign(config, {
-    ...override,
-    rules: {
-      ...config.rules,
-      ...override.rules,
-    },
-  });
+  return config;
 }

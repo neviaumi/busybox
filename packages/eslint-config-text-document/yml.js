@@ -3,7 +3,7 @@ import eslintParserYml from 'yaml-eslint-parser';
 
 import pkgJson from './package.json' with { type: 'json' };
 
-export function useYamlEslintConfig(override = {}) {
+export function useYamlEslintConfig() {
   const ymlConfig = {
     files: ['**/*.yml', '**/*.yaml'],
 
@@ -20,11 +20,5 @@ export function useYamlEslintConfig(override = {}) {
       'yml/sort-keys': 'error',
     },
   };
-  return Object.assign(ymlConfig, {
-    ...override,
-    rules: {
-      ...ymlConfig.rules,
-      ...override.rules,
-    },
-  });
+  return ymlConfig;
 }

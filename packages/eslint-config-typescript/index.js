@@ -18,7 +18,7 @@ export function useTypescriptDefinitionEslintConfig() {
   return typescriptDefinitionEslintConfig;
 }
 
-export function useTypescriptEslintConfig(override = {}) {
+export function useTypescriptEslintConfig() {
   const typescriptEslintConfig = {
     files: ['**/*.ts*(x)'],
     languageOptions: {
@@ -55,11 +55,5 @@ export function useTypescriptEslintConfig(override = {}) {
     },
   };
 
-  return Object.assign(typescriptEslintConfig, {
-    ...typescriptEslintConfig,
-    rules: {
-      ...typescriptEslintConfig.rules,
-      ...override.rules,
-    },
-  });
+  return typescriptEslintConfig;
 }

@@ -8,11 +8,12 @@ export const presets = Object.fromEntries(
   }),
 );
 
-export function useTestingLibraryEslintConfig(preset, override = {}) {
-  if (!override?.files || !override?.files.length) {
+export function useTestingLibraryEslintConfig(preset, config) {
+  if (!config?.files || !config?.files.length) {
     throw new Error('You must provide a list of files to lint');
   }
-  const config = {
+  const _config = {
+    files: config.files,
     name: pkgJson.name,
     plugins: {
       'testing-library': eslintPluginTestingLibrary,
@@ -26,11 +27,5 @@ export function useTestingLibraryEslintConfig(preset, override = {}) {
       },
     },
   };
-  return Object.assign(config, {
-    ...override,
-    rules: {
-      ...config.rules,
-      ...override.rules,
-    },
-  });
+  return _config;
 }

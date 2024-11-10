@@ -2,11 +2,12 @@ import vitest from '@vitest/eslint-plugin';
 
 import pkgJson from './package.json' with { type: 'json' };
 
-export function useVitestEslintConfig(override = {}) {
-  if (!override?.files || !override?.files.length) {
+export function useVitestEslintConfig(config) {
+  if (!config?.files || !config?.files.length) {
     throw new Error('You must provide a list of files to lint');
   }
-  const config = {
+  const _config = {
+    files: config.files,
     name: pkgJson.name,
     plugins: {
       vitest,
@@ -30,11 +31,5 @@ export function useVitestEslintConfig(override = {}) {
       'vitest/valid-expect': ['error', { maxArgs: 2, minArgs: 1 }],
     },
   };
-  return Object.assign(config, {
-    ...override,
-    rules: {
-      ...config.rules,
-      ...override.rules,
-    },
-  });
+  return _config;
 }
