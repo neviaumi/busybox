@@ -1,7 +1,4 @@
 {
-  "dependencies": {
-    "prettier-plugin-tailwindcss": "0.6.9"
-  },
   "engines": {
     "node": ">=20",
     "yarn": "Use npm"
