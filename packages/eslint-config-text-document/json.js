@@ -47,7 +47,7 @@ export function usePackageJsonEslintConfig(override = {}) {
                   engines: {
                     properties: {
                       node: {
-                        enum: ['>=16', '>=18', '>=20'],
+                        enum: ['>=18', '>=20', '>=22'],
                         type: 'string',
                       },
                       yarn: {
