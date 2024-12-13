@@ -22,9 +22,8 @@
   "main": "index.js",
   "name": "@busybox/eslint-config-code-sorting",
   "peerDependencies": {
-    "eslint": ">=8 <10",
-    "globals": "*",
-    "prettier": ">=3 <4"
+    "eslint": ">=9 <10",
+    "globals": "*"
   },
   "publishConfig": {
     "access": "public"
