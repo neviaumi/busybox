@@ -25,9 +25,8 @@
   "main": "index.js",
   "name": "@busybox/eslint-config-typescript",
   "peerDependencies": {
-    "eslint": ">=8 <10",
-    "globals": "*",
-    "tailwindcss": ">=3"
+    "eslint": ">=9 <10",
+    "globals": "*"
   },
   "publishConfig": {
     "access": "public"

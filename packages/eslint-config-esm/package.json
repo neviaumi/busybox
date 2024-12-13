@@ -28,7 +28,7 @@
   "main": "index.js",
   "name": "@busybox/eslint-config-esm",
   "peerDependencies": {
-    "eslint": ">=8 <10",
+    "eslint": ">=9 <10",
     "globals": "*",
     "prettier": ">=3 <4"
   },

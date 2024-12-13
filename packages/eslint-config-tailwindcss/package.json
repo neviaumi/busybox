@@ -22,7 +22,7 @@
   "main": "index.js",
   "name": "@busybox/eslint-config-tailwindcss",
   "peerDependencies": {
-    "eslint": ">=8 <10",
+    "eslint": ">=9 <10",
     "globals": "*",
     "tailwindcss": ">=3"
   },
