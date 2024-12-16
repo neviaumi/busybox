@@ -9,7 +9,7 @@
     "eslint-plugin-unicorn": "56.0.1"
   },
   "devDependencies": {
-    "eslint": "9.16.0",
+    "eslint": "9.17.0",
     "globals": "15.13.0"
   },
   "engines": {
