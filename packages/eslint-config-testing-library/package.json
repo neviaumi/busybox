@@ -4,7 +4,7 @@
   },
   "devDependencies": {
     "eslint": "9.17.0",
-    "globals": "15.13.0"
+    "globals": "15.14.0"
   },
   "engines": {
     "node": ">=20",
