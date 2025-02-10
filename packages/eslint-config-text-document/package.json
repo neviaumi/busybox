@@ -10,7 +10,7 @@
     "yaml-eslint-parser": "1.2.3"
   },
   "devDependencies": {
-    "eslint": "9.19.0",
+    "eslint": "9.20.0",
     "globals": "15.14.0"
   },
   "engines": {
