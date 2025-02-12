@@ -3,7 +3,7 @@
     "eslint-plugin-tailwindcss": "3.18.0"
   },
   "devDependencies": {
-    "eslint": "9.20.0",
+    "eslint": "9.20.1",
     "globals": "15.14.0"
   },
   "engines": {
