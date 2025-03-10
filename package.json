@@ -1,7 +1,7 @@
 {
   "author": "David Ng <david.ng.dev@gmail.com>",
   "devDependencies": {
-    "@commitlint/cli": "19.7.1",
+    "@commitlint/cli": "19.8.0",
     "@eslint/config-inspector": "1.0.2",
     "eslint": "9.21.0",
     "globals": "16.0.0",
