@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "eslint-plugin-json-schema-validator": "5.3.2",
+    "eslint-plugin-json-schema-validator": "5.4.0",
     "eslint-plugin-jsonc": "2.20.0",
     "eslint-plugin-markdownlint": "0.6.0",
     "eslint-plugin-node-dependencies": "0.12.0",
