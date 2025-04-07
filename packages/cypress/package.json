@@ -10,7 +10,7 @@
     "@babel/preset-typescript": "7.27.0",
     "cypress": "14.2.1",
     "globals": "16.0.0",
-    "typescript": "5.8.2"
+    "typescript": "5.8.3"
   },
   "engines": {
     "node": ">=20",
