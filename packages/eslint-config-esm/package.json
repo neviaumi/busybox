@@ -6,7 +6,7 @@
     "eslint-plugin-n": "17.17.0",
     "eslint-plugin-node-dependencies": "1.0.1",
     "eslint-plugin-prettier": "5.4.0",
-    "eslint-plugin-unicorn": "59.0.0"
+    "eslint-plugin-unicorn": "59.0.1"
   },
   "devDependencies": {
     "eslint": "9.26.0",
