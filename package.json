@@ -4,7 +4,7 @@
     "@commitlint/cli": "19.8.0",
     "@eslint/config-inspector": "1.0.2",
     "eslint": "9.26.0",
-    "globals": "16.0.0",
+    "globals": "16.1.0",
     "husky": "9.1.7",
     "is-ci": "4.1.0",
     "lerna": "8.2.2",
