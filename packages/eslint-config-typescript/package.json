@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "8.32.0",
-    "@typescript-eslint/parser": "8.32.0",
+    "@typescript-eslint/parser": "8.32.1",
     "eslint-import-resolver-typescript": "4.3.4",
     "eslint-plugin-import": "2.31.0"
   },
