@@ -2,7 +2,7 @@
   "dependencies": {
     "eslint-plugin-json-schema-validator": "5.4.0",
     "eslint-plugin-jsonc": "2.20.1",
-    "eslint-plugin-markdownlint": "0.7.0",
+    "eslint-plugin-markdownlint": "0.9.0",
     "eslint-plugin-node-dependencies": "1.1.0",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-yml": "1.18.0",
