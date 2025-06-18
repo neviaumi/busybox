@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "eslint-plugin-perfectionist": "4.14.0"
+    "eslint-plugin-perfectionist": "4.15.0"
   },
   "devDependencies": {
     "eslint": "9.29.0",
