@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "eslint-plugin-testing-library": "7.6.3"
+    "eslint-plugin-testing-library": "7.6.4"
   },
   "devDependencies": {
     "eslint": "9.32.0",
