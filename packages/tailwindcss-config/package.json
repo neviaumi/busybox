@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@tailwindcss/forms": "0.5.10",
-    "ramda": "0.31.3"
+    "ramda": "0.32.0"
   },
   "devDependencies": {
     "globals": "16.4.0",
