@@ -10,7 +10,7 @@
     "lerna": "9.0.3",
     "lint-staged": "16.2.7",
     "pinst": "3.0.0",
-    "prettier": "3.7.0"
+    "prettier": "3.7.1"
   },
   "engines": {
     "node": ">=20",
