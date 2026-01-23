@@ -9,7 +9,7 @@
     "@babel/core": "7.28.6",
     "@babel/preset-typescript": "7.28.5",
     "cypress": "15.9.0",
-    "globals": "17.0.0",
+    "globals": "17.1.0",
     "typescript": "5.9.3"
   },
   "engines": {
