@@ -21,7 +21,7 @@
   "name": "@busybox/babel-preset-typescript",
   "peerDependencies": {
     "@babel/cli": ">= 7",
-    "@babel/core": ">= 7"
+    "@babel/core": "7.29.6"
   },
   "publishConfig": {
     "access": "public"
